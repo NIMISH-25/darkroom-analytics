@@ -1,0 +1,2311 @@
+{
+ "batch_id": "batch_1",
+ "simulated_received_at": "2026-10-15T23:59:59-07:00",
+ "as_of": "2026-10-15",
+ "files": [
+  {
+   "path": "orders/aurelle/2026-04.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-04.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-04.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-05.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-05.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-05.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-06.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-06.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-06.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-07.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-07.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-07.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-08.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-08-page2.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-08.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-08.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-09.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-09.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-09.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-04.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-04.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-04.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-05.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-05.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-05.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-06.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-06.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-06.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-07.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-07.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-07.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-08.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-08.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-08.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-09.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-09.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-09.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-04.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-04.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-04.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-05.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-05.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-05.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-06.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-06.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-06.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-07.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-07.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-07.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-08.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-08.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-08.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-09.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-09.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-09.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/threadline/2026-04.json",
+   "source_type": "orders",
+   "brand_id": "threadline",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/threadline/2026-04.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "threadline",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "returns/threadline/2026-04.json",
+   "source_type": "returns",
+   "brand_id": "threadline",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "orders/threadline/2026-05.json",
+   "source_type": "orders",
+   "brand_id": "threadline",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/threadline/2026-05.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "threadline",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "returns/threadline/2026-05.json",
+   "source_type": "returns",
+   "brand_id": "threadline",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "orders/threadline/2026-06.json",
+   "source_type": "orders",
+   "brand_id": "threadline",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/threadline/2026-06.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "threadline",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "returns/threadline/2026-06.json",
+   "source_type": "returns",
+   "brand_id": "threadline",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "orders/threadline/2026-07.json",
+   "source_type": "orders",
+   "brand_id": "threadline",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/threadline/2026-07.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "threadline",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "returns/threadline/2026-07.json",
+   "source_type": "returns",
+   "brand_id": "threadline",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "orders/threadline/2026-08.json",
+   "source_type": "orders",
+   "brand_id": "threadline",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/threadline/2026-08.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "threadline",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "returns/threadline/2026-08.json",
+   "source_type": "returns",
+   "brand_id": "threadline",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "orders/threadline/2026-09.json",
+   "source_type": "orders",
+   "brand_id": "threadline",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/threadline/2026-09.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "threadline",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "returns/threadline/2026-09.json",
+   "source_type": "returns",
+   "brand_id": "threadline",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "orders/threadline/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "threadline",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/threadline/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "threadline",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/threadline/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "threadline",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-04.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-04.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-04.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-01",
+   "period_end": "2026-04-30",
+   "kind": "increment",
+   "src_updated_at": "2026-05-01T02:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-05.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-05.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-05.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-05-01",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T02:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-06.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-06.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-06.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-30",
+   "kind": "increment",
+   "src_updated_at": "2026-07-01T02:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-07.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-07.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-07.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-07-01",
+   "period_end": "2026-07-31",
+   "kind": "increment",
+   "src_updated_at": "2026-08-01T02:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-08.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-08.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-08.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-08-01",
+   "period_end": "2026-08-31",
+   "kind": "increment",
+   "src_updated_at": "2026-09-01T02:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-09.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-09.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-09.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-09-01",
+   "period_end": "2026-09-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-01T02:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/aurelle.csv",
+   "source_type": "products",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/verdant.csv",
+   "source_type": "products",
+   "brand_id": "verdant",
+   "period_start": "2026-04-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/crunchwell.csv",
+   "source_type": "products",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/threadline.csv",
+   "source_type": "products",
+   "brand_id": "threadline",
+   "period_start": "2026-04-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/glowhaus.csv",
+   "source_type": "products",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W14.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-03-30",
+   "period_end": "2026-04-05",
+   "kind": "increment",
+   "src_updated_at": "2026-04-06T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W15.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-06",
+   "period_end": "2026-04-12",
+   "kind": "increment",
+   "src_updated_at": "2026-04-13T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W16.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-13",
+   "period_end": "2026-04-19",
+   "kind": "increment",
+   "src_updated_at": "2026-04-20T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W17.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-20",
+   "period_end": "2026-04-26",
+   "kind": "increment",
+   "src_updated_at": "2026-04-27T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W18.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-04-27",
+   "period_end": "2026-05-03",
+   "kind": "increment",
+   "src_updated_at": "2026-05-04T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W19.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-05-04",
+   "period_end": "2026-05-10",
+   "kind": "increment",
+   "src_updated_at": "2026-05-11T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W20.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-05-11",
+   "period_end": "2026-05-17",
+   "kind": "increment",
+   "src_updated_at": "2026-05-18T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W21.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-05-18",
+   "period_end": "2026-05-24",
+   "kind": "increment",
+   "src_updated_at": "2026-05-25T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W22.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-05-25",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W23.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-07",
+   "kind": "increment",
+   "src_updated_at": "2026-06-08T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W24.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-08",
+   "period_end": "2026-06-14",
+   "kind": "increment",
+   "src_updated_at": "2026-06-15T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W25.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-15",
+   "period_end": "2026-06-21",
+   "kind": "increment",
+   "src_updated_at": "2026-06-22T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W26.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-22",
+   "period_end": "2026-06-28",
+   "kind": "increment",
+   "src_updated_at": "2026-06-29T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W27.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-06-29",
+   "period_end": "2026-07-05",
+   "kind": "increment",
+   "src_updated_at": "2026-07-06T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W28.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-07-06",
+   "period_end": "2026-07-12",
+   "kind": "increment",
+   "src_updated_at": "2026-07-13T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W29.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-07-13",
+   "period_end": "2026-07-19",
+   "kind": "increment",
+   "src_updated_at": "2026-07-20T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W30.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-07-20",
+   "period_end": "2026-07-26",
+   "kind": "increment",
+   "src_updated_at": "2026-07-27T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W31.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-07-27",
+   "period_end": "2026-08-02",
+   "kind": "increment",
+   "src_updated_at": "2026-08-03T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W32.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-03",
+   "period_end": "2026-08-09",
+   "kind": "increment",
+   "src_updated_at": "2026-08-10T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W33.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-10",
+   "period_end": "2026-08-16",
+   "kind": "increment",
+   "src_updated_at": "2026-08-17T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W34.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-17",
+   "period_end": "2026-08-23",
+   "kind": "increment",
+   "src_updated_at": "2026-08-24T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W35.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-24",
+   "period_end": "2026-08-30",
+   "kind": "increment",
+   "src_updated_at": "2026-08-31T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W36.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-08-31",
+   "period_end": "2026-09-06",
+   "kind": "increment",
+   "src_updated_at": "2026-09-07T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W37.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-07",
+   "period_end": "2026-09-13",
+   "kind": "increment",
+   "src_updated_at": "2026-09-14T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W38.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-14",
+   "period_end": "2026-09-20",
+   "kind": "increment",
+   "src_updated_at": "2026-09-21T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W39.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-21",
+   "period_end": "2026-09-27",
+   "kind": "increment",
+   "src_updated_at": "2026-09-28T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-05T03:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-12T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W14.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-03-30",
+   "period_end": "2026-04-05",
+   "kind": "increment",
+   "src_updated_at": "2026-04-06T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W15.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-06",
+   "period_end": "2026-04-12",
+   "kind": "increment",
+   "src_updated_at": "2026-04-13T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W16.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-13",
+   "period_end": "2026-04-19",
+   "kind": "increment",
+   "src_updated_at": "2026-04-20T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W17.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-20",
+   "period_end": "2026-04-26",
+   "kind": "increment",
+   "src_updated_at": "2026-04-27T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W18.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-04-27",
+   "period_end": "2026-05-03",
+   "kind": "increment",
+   "src_updated_at": "2026-05-04T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W19.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-05-04",
+   "period_end": "2026-05-10",
+   "kind": "increment",
+   "src_updated_at": "2026-05-11T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W20.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-05-11",
+   "period_end": "2026-05-17",
+   "kind": "increment",
+   "src_updated_at": "2026-05-18T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W21.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-05-18",
+   "period_end": "2026-05-24",
+   "kind": "increment",
+   "src_updated_at": "2026-05-25T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W22.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-05-25",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W23.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-07",
+   "kind": "increment",
+   "src_updated_at": "2026-06-08T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W24.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-08",
+   "period_end": "2026-06-14",
+   "kind": "increment",
+   "src_updated_at": "2026-06-15T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W25.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-15",
+   "period_end": "2026-06-21",
+   "kind": "increment",
+   "src_updated_at": "2026-06-22T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W26.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-22",
+   "period_end": "2026-06-28",
+   "kind": "increment",
+   "src_updated_at": "2026-06-29T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W27.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-06-29",
+   "period_end": "2026-07-05",
+   "kind": "increment",
+   "src_updated_at": "2026-07-06T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W28.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-07-06",
+   "period_end": "2026-07-12",
+   "kind": "increment",
+   "src_updated_at": "2026-07-13T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W29.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-07-13",
+   "period_end": "2026-07-19",
+   "kind": "increment",
+   "src_updated_at": "2026-07-20T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W30.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-07-20",
+   "period_end": "2026-07-26",
+   "kind": "increment",
+   "src_updated_at": "2026-07-27T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W31.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-07-27",
+   "period_end": "2026-08-02",
+   "kind": "increment",
+   "src_updated_at": "2026-08-03T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W32.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-03",
+   "period_end": "2026-08-09",
+   "kind": "increment",
+   "src_updated_at": "2026-08-10T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W33.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-10",
+   "period_end": "2026-08-16",
+   "kind": "increment",
+   "src_updated_at": "2026-08-17T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W34.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-17",
+   "period_end": "2026-08-23",
+   "kind": "increment",
+   "src_updated_at": "2026-08-24T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W35.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-24",
+   "period_end": "2026-08-30",
+   "kind": "increment",
+   "src_updated_at": "2026-08-31T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W36.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-08-31",
+   "period_end": "2026-09-06",
+   "kind": "increment",
+   "src_updated_at": "2026-09-07T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W37.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-09-07",
+   "period_end": "2026-09-13",
+   "kind": "increment",
+   "src_updated_at": "2026-09-14T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W38.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-09-14",
+   "period_end": "2026-09-20",
+   "kind": "increment",
+   "src_updated_at": "2026-09-21T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W39.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-09-21",
+   "period_end": "2026-09-27",
+   "kind": "increment",
+   "src_updated_at": "2026-09-28T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-05T03:00:00Z"
+  },
+  {
+   "path": "videos/crunchwell/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-12T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W14.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-03-30",
+   "period_end": "2026-04-05",
+   "kind": "increment",
+   "src_updated_at": "2026-04-06T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W15.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-06",
+   "period_end": "2026-04-12",
+   "kind": "increment",
+   "src_updated_at": "2026-04-13T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W16.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-13",
+   "period_end": "2026-04-19",
+   "kind": "increment",
+   "src_updated_at": "2026-04-20T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W17.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-20",
+   "period_end": "2026-04-26",
+   "kind": "increment",
+   "src_updated_at": "2026-04-27T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W18.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-04-27",
+   "period_end": "2026-05-03",
+   "kind": "increment",
+   "src_updated_at": "2026-05-04T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W19.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-05-04",
+   "period_end": "2026-05-10",
+   "kind": "increment",
+   "src_updated_at": "2026-05-11T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W20.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-05-11",
+   "period_end": "2026-05-17",
+   "kind": "increment",
+   "src_updated_at": "2026-05-18T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W21.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-05-18",
+   "period_end": "2026-05-24",
+   "kind": "increment",
+   "src_updated_at": "2026-05-25T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W22.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-05-25",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W23.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-07",
+   "kind": "increment",
+   "src_updated_at": "2026-06-08T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W24.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-08",
+   "period_end": "2026-06-14",
+   "kind": "increment",
+   "src_updated_at": "2026-06-15T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W25.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-15",
+   "period_end": "2026-06-21",
+   "kind": "increment",
+   "src_updated_at": "2026-06-22T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W26.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-22",
+   "period_end": "2026-06-28",
+   "kind": "increment",
+   "src_updated_at": "2026-06-29T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W27.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-06-29",
+   "period_end": "2026-07-05",
+   "kind": "increment",
+   "src_updated_at": "2026-07-06T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W28.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-07-06",
+   "period_end": "2026-07-12",
+   "kind": "increment",
+   "src_updated_at": "2026-07-13T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W29.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-07-13",
+   "period_end": "2026-07-19",
+   "kind": "increment",
+   "src_updated_at": "2026-07-20T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W30.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-07-20",
+   "period_end": "2026-07-26",
+   "kind": "increment",
+   "src_updated_at": "2026-07-27T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W31.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-07-27",
+   "period_end": "2026-08-02",
+   "kind": "increment",
+   "src_updated_at": "2026-08-03T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W32.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-08-03",
+   "period_end": "2026-08-09",
+   "kind": "increment",
+   "src_updated_at": "2026-08-10T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W33.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-08-10",
+   "period_end": "2026-08-16",
+   "kind": "increment",
+   "src_updated_at": "2026-08-17T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W34.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-08-17",
+   "period_end": "2026-08-23",
+   "kind": "increment",
+   "src_updated_at": "2026-08-24T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W35.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-08-24",
+   "period_end": "2026-08-30",
+   "kind": "increment",
+   "src_updated_at": "2026-08-31T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W38.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-09-14",
+   "period_end": "2026-09-20",
+   "kind": "increment",
+   "src_updated_at": "2026-09-21T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W39.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-09-21",
+   "period_end": "2026-09-27",
+   "kind": "increment",
+   "src_updated_at": "2026-09-28T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-05T03:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-12T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W14.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-03-30",
+   "period_end": "2026-04-05",
+   "kind": "increment",
+   "src_updated_at": "2026-04-06T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W15.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-04-06",
+   "period_end": "2026-04-12",
+   "kind": "increment",
+   "src_updated_at": "2026-04-13T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W16.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-04-13",
+   "period_end": "2026-04-19",
+   "kind": "increment",
+   "src_updated_at": "2026-04-20T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W17.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-04-20",
+   "period_end": "2026-04-26",
+   "kind": "increment",
+   "src_updated_at": "2026-04-27T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W18.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-04-27",
+   "period_end": "2026-05-03",
+   "kind": "increment",
+   "src_updated_at": "2026-05-04T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W19.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-05-04",
+   "period_end": "2026-05-10",
+   "kind": "increment",
+   "src_updated_at": "2026-05-11T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W20.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-05-11",
+   "period_end": "2026-05-17",
+   "kind": "increment",
+   "src_updated_at": "2026-05-18T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W21.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-05-18",
+   "period_end": "2026-05-24",
+   "kind": "increment",
+   "src_updated_at": "2026-05-25T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W22.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-05-25",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W23.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-07",
+   "kind": "increment",
+   "src_updated_at": "2026-06-08T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W24.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-06-08",
+   "period_end": "2026-06-14",
+   "kind": "increment",
+   "src_updated_at": "2026-06-15T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W25.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-06-15",
+   "period_end": "2026-06-21",
+   "kind": "increment",
+   "src_updated_at": "2026-06-22T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W26.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-06-22",
+   "period_end": "2026-06-28",
+   "kind": "increment",
+   "src_updated_at": "2026-06-29T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W27.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-06-29",
+   "period_end": "2026-07-05",
+   "kind": "increment",
+   "src_updated_at": "2026-07-06T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W28.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-07-06",
+   "period_end": "2026-07-12",
+   "kind": "increment",
+   "src_updated_at": "2026-07-13T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W29.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-07-13",
+   "period_end": "2026-07-19",
+   "kind": "increment",
+   "src_updated_at": "2026-07-20T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W30.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-07-20",
+   "period_end": "2026-07-26",
+   "kind": "increment",
+   "src_updated_at": "2026-07-27T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W31.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-07-27",
+   "period_end": "2026-08-02",
+   "kind": "increment",
+   "src_updated_at": "2026-08-03T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W32.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-03",
+   "period_end": "2026-08-09",
+   "kind": "increment",
+   "src_updated_at": "2026-08-10T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W33.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-10",
+   "period_end": "2026-08-16",
+   "kind": "increment",
+   "src_updated_at": "2026-08-17T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W34.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-17",
+   "period_end": "2026-08-23",
+   "kind": "increment",
+   "src_updated_at": "2026-08-24T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W35.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-24",
+   "period_end": "2026-08-30",
+   "kind": "increment",
+   "src_updated_at": "2026-08-31T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W36.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-31",
+   "period_end": "2026-09-06",
+   "kind": "increment",
+   "src_updated_at": "2026-09-07T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W37.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-07",
+   "period_end": "2026-09-13",
+   "kind": "increment",
+   "src_updated_at": "2026-09-14T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W38.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-14",
+   "period_end": "2026-09-20",
+   "kind": "increment",
+   "src_updated_at": "2026-09-21T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W39.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-21",
+   "period_end": "2026-09-27",
+   "kind": "increment",
+   "src_updated_at": "2026-09-28T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-05T03:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-12T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W14.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-03-30",
+   "period_end": "2026-04-05",
+   "kind": "increment",
+   "src_updated_at": "2026-04-06T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W15.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-04-06",
+   "period_end": "2026-04-12",
+   "kind": "increment",
+   "src_updated_at": "2026-04-13T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W16.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-04-13",
+   "period_end": "2026-04-19",
+   "kind": "increment",
+   "src_updated_at": "2026-04-20T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W17.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-04-20",
+   "period_end": "2026-04-26",
+   "kind": "increment",
+   "src_updated_at": "2026-04-27T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W18.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-04-27",
+   "period_end": "2026-05-03",
+   "kind": "increment",
+   "src_updated_at": "2026-05-04T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W19.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-05-04",
+   "period_end": "2026-05-10",
+   "kind": "increment",
+   "src_updated_at": "2026-05-11T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W20.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-05-11",
+   "period_end": "2026-05-17",
+   "kind": "increment",
+   "src_updated_at": "2026-05-18T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W21.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-05-18",
+   "period_end": "2026-05-24",
+   "kind": "increment",
+   "src_updated_at": "2026-05-25T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W22.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-05-25",
+   "period_end": "2026-05-31",
+   "kind": "increment",
+   "src_updated_at": "2026-06-01T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W23.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-06-01",
+   "period_end": "2026-06-07",
+   "kind": "increment",
+   "src_updated_at": "2026-06-08T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W24.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-06-08",
+   "period_end": "2026-06-14",
+   "kind": "increment",
+   "src_updated_at": "2026-06-15T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W25.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-06-15",
+   "period_end": "2026-06-21",
+   "kind": "increment",
+   "src_updated_at": "2026-06-22T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W26.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-06-22",
+   "period_end": "2026-06-28",
+   "kind": "increment",
+   "src_updated_at": "2026-06-29T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W27.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-06-29",
+   "period_end": "2026-07-05",
+   "kind": "increment",
+   "src_updated_at": "2026-07-06T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W28.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-07-06",
+   "period_end": "2026-07-12",
+   "kind": "increment",
+   "src_updated_at": "2026-07-13T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W29.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-07-13",
+   "period_end": "2026-07-19",
+   "kind": "increment",
+   "src_updated_at": "2026-07-20T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W30.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-07-20",
+   "period_end": "2026-07-26",
+   "kind": "increment",
+   "src_updated_at": "2026-07-27T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W31.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-07-27",
+   "period_end": "2026-08-02",
+   "kind": "increment",
+   "src_updated_at": "2026-08-03T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W32.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-08-03",
+   "period_end": "2026-08-09",
+   "kind": "increment",
+   "src_updated_at": "2026-08-10T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W33.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-08-10",
+   "period_end": "2026-08-16",
+   "kind": "increment",
+   "src_updated_at": "2026-08-17T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W34.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-08-17",
+   "period_end": "2026-08-23",
+   "kind": "increment",
+   "src_updated_at": "2026-08-24T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W35.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-08-24",
+   "period_end": "2026-08-30",
+   "kind": "increment",
+   "src_updated_at": "2026-08-31T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W36.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-08-31",
+   "period_end": "2026-09-06",
+   "kind": "increment",
+   "src_updated_at": "2026-09-07T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W37.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-09-07",
+   "period_end": "2026-09-13",
+   "kind": "increment",
+   "src_updated_at": "2026-09-14T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W38.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-09-14",
+   "period_end": "2026-09-20",
+   "kind": "increment",
+   "src_updated_at": "2026-09-21T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W39.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-09-21",
+   "period_end": "2026-09-27",
+   "kind": "increment",
+   "src_updated_at": "2026-09-28T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-05T03:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-12T03:00:00Z"
+  },
+  {
+   "path": "roster/roster.xlsx",
+   "source_type": "roster",
+   "brand_id": "all",
+   "period_start": "2026-04-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "samples/samples.xlsx",
+   "source_type": "samples",
+   "brand_id": "all",
+   "period_start": "2026-04-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/aurelle.json",
+   "source_type": "plans",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/verdant.json",
+   "source_type": "plans",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/crunchwell.json",
+   "source_type": "plans",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/threadline.json",
+   "source_type": "plans",
+   "brand_id": "threadline",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/glowhaus.json",
+   "source_type": "plans",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  }
+ ]
+}

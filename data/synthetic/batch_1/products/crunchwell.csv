@@ -1,0 +1,7 @@
+shop_id,product_id,sku_id,product_name,list_price,unit_cost,update_time
+shop_crunchwell,P_CRU_1,SKU_CRU_1,Crunch Box Original,24.00,8.40,1759300000
+shop_crunchwell,P_CRU_2,SKU_CRU_2,Spicy Chickpea Bites,16.00,5.60,1759300000
+shop_crunchwell,P_CRU_3,SKU_CRU_3,Protein Clusters,29.00,10.15,1759300000
+shop_crunchwell,P_CRU_4,SKU_CRU_4,Seaweed Chips,14.00,4.90,1759300000
+shop_crunchwell,P_CRU_5,SKU_CRU_5,Trail Mix Pack,21.00,7.35,1759300000
+shop_crunchwell,P_CRU_6,SKU_CRU_6,Honey Granola,19.00,6.65,1759300000

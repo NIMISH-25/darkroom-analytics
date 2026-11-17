@@ -1,0 +1,385 @@
+{
+ "batch_id": "batch_1",
+ "simulated_received_at": "2026-10-15T23:59:59-07:00",
+ "as_of": "2026-10-15",
+ "files": [
+  {
+   "path": "orders/aurelle/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/aurelle/2026-10-page2.json",
+   "source_type": "orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/aurelle/2026-10-page2.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/aurelle/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/verdant/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/verdant/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/crunchwell/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/crunchwell/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/crunchwell/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "orders/glowhaus/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "affiliate_orders/glowhaus/2026-10.json",
+   "source_type": "affiliate_orders",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "returns/glowhaus/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/aurelle.csv",
+   "source_type": "products",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/verdant.csv",
+   "source_type": "products",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/crunchwell.csv",
+   "source_type": "products",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/threadline.csv",
+   "source_type": "products",
+   "brand_id": "threadline",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "products/glowhaus.csv",
+   "source_type": "products",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W38.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-14",
+   "period_end": "2026-09-20",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W39.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-21",
+   "period_end": "2026-09-27",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/aurelle/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/glowhaus/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "glowhaus",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W33.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-10",
+   "period_end": "2026-08-16",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W34.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-17",
+   "period_end": "2026-08-23",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W35.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-24",
+   "period_end": "2026-08-30",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W36.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-08-31",
+   "period_end": "2026-09-06",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W37.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-07",
+   "period_end": "2026-09-13",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W38.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-14",
+   "period_end": "2026-09-20",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W39.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-21",
+   "period_end": "2026-09-27",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/threadline/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "threadline",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W40.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-09-28",
+   "period_end": "2026-10-04",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "videos/verdant/2026-W41.xlsx",
+   "source_type": "videos_weekly",
+   "brand_id": "verdant",
+   "period_start": "2026-10-05",
+   "period_end": "2026-10-11",
+   "kind": "increment",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "roster/roster.xlsx",
+   "source_type": "roster",
+   "brand_id": "all",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "samples/samples.xlsx",
+   "source_type": "samples",
+   "brand_id": "threadline",
+   "period_start": "2026-08-01",
+   "period_end": "2026-10-15",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/aurelle.json",
+   "source_type": "plans",
+   "brand_id": "aurelle",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/verdant.json",
+   "source_type": "plans",
+   "brand_id": "verdant",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/crunchwell.json",
+   "source_type": "plans",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/threadline.json",
+   "source_type": "plans",
+   "brand_id": "threadline",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  },
+  {
+   "path": "plans/glowhaus.json",
+   "source_type": "plans",
+   "brand_id": "glowhaus",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-31",
+   "kind": "snapshot",
+   "src_updated_at": "2026-10-15T07:00:00Z"
+  }
+ ]
+}

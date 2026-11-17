@@ -1,0 +1,15 @@
+{
+ "returns": [
+  {
+   "return_id": "R_A1",
+   "order_id": "O_A1",
+   "line_item_id": "L_A1_1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "20.00",
+   "refund_tax": "0.00",
+   "create_time": 1792252800,
+   "completed_time": 1792522800,
+   "update_time": 1792522800
+  }
+ ]
+}

@@ -1,0 +1,5824 @@
+{
+ "orders": [
+  {
+   "order_id": "CR9987926482",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775052895,
+   "paid_time": 1775053555,
+   "update_time": 1775754895,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "25.60"
+   },
+   "line_items": [
+    {
+     "id": "CR9987926482-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9987926482-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2800465850",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775079216,
+   "paid_time": 1775079876,
+   "update_time": 1775356416,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "CR2800465850-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3136079966",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1775081090,
+   "paid_time": 1775081630,
+   "update_time": 1775952290,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "32.55"
+   },
+   "line_items": [
+    {
+     "id": "CR3136079966-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "CR3136079966-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4740757263",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775083487,
+   "paid_time": 1775083967,
+   "update_time": 1775861087,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "51.30"
+   },
+   "line_items": [
+    {
+     "id": "CR4740757263-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4740757263-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4740757263-3",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "16.15",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8987099101",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775086835,
+   "paid_time": 1775087495,
+   "update_time": 1775792435,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR8987099101-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3190810403",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775087832,
+   "paid_time": 1775088192,
+   "update_time": 1775537832,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.05"
+   },
+   "line_items": [
+    {
+     "id": "CR3190810403-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1503890873",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775095750,
+   "paid_time": 1775096470,
+   "update_time": 1775538550,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.80"
+   },
+   "line_items": [
+    {
+     "id": "CR1503890873-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1503890873-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8064678819",
+   "shop_id": "shop_crunchwell",
+   "status": "UNPAID",
+   "create_time": 1775144639,
+   "paid_time": null,
+   "update_time": 1775591039,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "43.20"
+   },
+   "line_items": [
+    {
+     "id": "CR8064678819-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "CR8064678819-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7485221391",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1775146788,
+   "paid_time": null,
+   "update_time": 1775499588,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "68.40"
+   },
+   "line_items": [
+    {
+     "id": "CR7485221391-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "CR7485221391-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "CR7485221391-3",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3643769261",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775149690,
+   "paid_time": 1775150350,
+   "update_time": 1775840890,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.80"
+   },
+   "line_items": [
+    {
+     "id": "CR3643769261-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6399342831",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775156395,
+   "paid_time": 1775156995,
+   "update_time": 1775429995,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "55.10"
+   },
+   "line_items": [
+    {
+     "id": "CR6399342831-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6399342831-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "26.10",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2669090932",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775177520,
+   "paid_time": 1775178180,
+   "update_time": 1775883120,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "CR2669090932-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9791973975",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775184263,
+   "paid_time": 1775184923,
+   "update_time": 1775713463,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "55.10"
+   },
+   "line_items": [
+    {
+     "id": "CR9791973975-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9791973975-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9791973975-3",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1420200592",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775235101,
+   "paid_time": 1775235581,
+   "update_time": 1775587901,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.80"
+   },
+   "line_items": [
+    {
+     "id": "CR1420200592-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3897919738",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775254292,
+   "paid_time": 1775254532,
+   "update_time": 1775607092,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.40"
+   },
+   "line_items": [
+    {
+     "id": "CR3897919738-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "10.50",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3897919738-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.90",
+     "original_price": "14.00",
+     "seller_discount": "1.40",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1743180609",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775254959,
+   "paid_time": 1775255499,
+   "update_time": 1775521359,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "26.60"
+   },
+   "line_items": [
+    {
+     "id": "CR1743180609-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1743180609-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7044019028",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775272198,
+   "paid_time": 1775272678,
+   "update_time": 1776150598,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "48.00"
+   },
+   "line_items": [
+    {
+     "id": "CR7044019028-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7044019028-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7044019028-3",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3201679153",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775280495,
+   "paid_time": 1775280975,
+   "update_time": 1775896095,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.20"
+   },
+   "line_items": [
+    {
+     "id": "CR3201679153-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2527185645",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775333158,
+   "paid_time": 1775333518,
+   "update_time": 1776024358,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "35.70"
+   },
+   "line_items": [
+    {
+     "id": "CR2527185645-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2527185645-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "18.90",
+     "original_price": "21.00",
+     "seller_discount": "2.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1502569693",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775336760,
+   "paid_time": 1775337480,
+   "update_time": 1776045960,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "32.30"
+   },
+   "line_items": [
+    {
+     "id": "CR1502569693-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "16.15",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1502569693-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "16.15",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5278240758",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775342753,
+   "paid_time": 1775343353,
+   "update_time": 1775778353,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.50"
+   },
+   "line_items": [
+    {
+     "id": "CR5278240758-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5278240758-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "10.50",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4173661783",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775347312,
+   "paid_time": 1775347552,
+   "update_time": 1776214912,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.65"
+   },
+   "line_items": [
+    {
+     "id": "CR4173661783-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "24.65",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8083665648",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775355205,
+   "paid_time": 1775355745,
+   "update_time": 1776064405,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.30"
+   },
+   "line_items": [
+    {
+     "id": "CR8083665648-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8083665648-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2104617793",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775400026,
+   "paid_time": 1775400266,
+   "update_time": 1776271226,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR2104617793-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3880995524",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775406655,
+   "paid_time": 1775407255,
+   "update_time": 1776281455,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.95"
+   },
+   "line_items": [
+    {
+     "id": "CR3880995524-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1413975127",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775409178,
+   "paid_time": 1775409778,
+   "update_time": 1775848378,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "25.60"
+   },
+   "line_items": [
+    {
+     "id": "CR1413975127-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1413975127-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9065031044",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775414345,
+   "paid_time": 1775414825,
+   "update_time": 1776026345,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.20"
+   },
+   "line_items": [
+    {
+     "id": "CR9065031044-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5871973253",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775422030,
+   "paid_time": 1775422450,
+   "update_time": 1775944030,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.40"
+   },
+   "line_items": [
+    {
+     "id": "CR5871973253-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5871973253-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5871973253-3",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5064664978",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775430565,
+   "paid_time": 1775430805,
+   "update_time": 1775956165,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "14.00"
+   },
+   "line_items": [
+    {
+     "id": "CR5064664978-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3301027644",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775439052,
+   "paid_time": 1775439232,
+   "update_time": 1775705452,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "46.80"
+   },
+   "line_items": [
+    {
+     "id": "CR3301027644-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3301027644-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2552270371",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775447688,
+   "paid_time": 1775447748,
+   "update_time": 1775879688,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.75"
+   },
+   "line_items": [
+    {
+     "id": "CR2552270371-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2552270371-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3919866704",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775485350,
+   "paid_time": 1775485470,
+   "update_time": 1775676150,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "43.20"
+   },
+   "line_items": [
+    {
+     "id": "CR3919866704-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3919866704-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4017061226",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775492944,
+   "paid_time": 1775493484,
+   "update_time": 1776184144,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "25.20"
+   },
+   "line_items": [
+    {
+     "id": "CR4017061226-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4017061226-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5984488878",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775497418,
+   "paid_time": 1775497598,
+   "update_time": 1776195818,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.10"
+   },
+   "line_items": [
+    {
+     "id": "CR5984488878-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5984488878-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3147191980",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775508714,
+   "paid_time": 1775509014,
+   "update_time": 1775944314,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.20"
+   },
+   "line_items": [
+    {
+     "id": "CR3147191980-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4586793423",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775513330,
+   "paid_time": 1775513810,
+   "update_time": 1775790530,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.00"
+   },
+   "line_items": [
+    {
+     "id": "CR4586793423-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "14.40",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4586793423-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "14.40",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4586793423-3",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "15.20",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3278437678",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775520104,
+   "paid_time": 1775520764,
+   "update_time": 1775883704,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.40"
+   },
+   "line_items": [
+    {
+     "id": "CR3278437678-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3278437678-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8566960402",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775522234,
+   "paid_time": 1775522894,
+   "update_time": 1775619434,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "35.70"
+   },
+   "line_items": [
+    {
+     "id": "CR8566960402-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8566960402-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7941118390",
+   "shop_id": "shop_crunchwell",
+   "status": "UNPAID",
+   "create_time": 1775528995,
+   "paid_time": null,
+   "update_time": 1776061795,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "CR7941118390-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "CR7941118390-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1604981922",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775530463,
+   "paid_time": 1775530523,
+   "update_time": 1776232463,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.00"
+   },
+   "line_items": [
+    {
+     "id": "CR1604981922-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5976084938",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775574120,
+   "paid_time": 1775574240,
+   "update_time": 1775844120,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "48.30"
+   },
+   "line_items": [
+    {
+     "id": "CR5976084938-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5976084938-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5976084938-3",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3201391267",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775590595,
+   "paid_time": 1775590715,
+   "update_time": 1776382595,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR3201391267-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8785280269",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775593236,
+   "paid_time": 1775593356,
+   "update_time": 1776212436,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "34.20"
+   },
+   "line_items": [
+    {
+     "id": "CR8785280269-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8785280269-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4822623912",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775594434,
+   "paid_time": 1775594734,
+   "update_time": 1775774434,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.55"
+   },
+   "line_items": [
+    {
+     "id": "CR4822623912-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6688119277",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775603769,
+   "paid_time": 1775604309,
+   "update_time": 1776053769,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.90"
+   },
+   "line_items": [
+    {
+     "id": "CR6688119277-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "18.90",
+     "original_price": "21.00",
+     "seller_discount": "2.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1351231201",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775610079,
+   "paid_time": 1775610499,
+   "update_time": 1776225679,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "52.50"
+   },
+   "line_items": [
+    {
+     "id": "CR1351231201-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1351231201-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1351231201-3",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5373542849",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775615648,
+   "paid_time": 1775616128,
+   "update_time": 1776148448,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "43.20"
+   },
+   "line_items": [
+    {
+     "id": "CR5373542849-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5373542849-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3506596005",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775669705,
+   "paid_time": 1775670065,
+   "update_time": 1775770505,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.65"
+   },
+   "line_items": [
+    {
+     "id": "CR3506596005-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "24.65",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1712869249",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775693540,
+   "paid_time": 1775693600,
+   "update_time": 1776125540,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "26.40"
+   },
+   "line_items": [
+    {
+     "id": "CR1712869249-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.00",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1712869249-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "14.40",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1240283915",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775705960,
+   "paid_time": 1775706020,
+   "update_time": 1776569960,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "58.00"
+   },
+   "line_items": [
+    {
+     "id": "CR1240283915-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1240283915-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5590558678",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775747213,
+   "paid_time": 1775747813,
+   "update_time": 1776542813,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "CR5590558678-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5590558678-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1050308831",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775748400,
+   "paid_time": 1775748460,
+   "update_time": 1775921200,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "12.80"
+   },
+   "line_items": [
+    {
+     "id": "CR1050308831-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3069896495",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775781572,
+   "paid_time": 1775782232,
+   "update_time": 1776569972,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.00"
+   },
+   "line_items": [
+    {
+     "id": "CR3069896495-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6279178977",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775791015,
+   "paid_time": 1775791735,
+   "update_time": 1776143815,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "CR6279178977-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2191947290",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775791993,
+   "paid_time": 1775792233,
+   "update_time": 1776569593,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "52.20"
+   },
+   "line_items": [
+    {
+     "id": "CR2191947290-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2191947290-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "23.20",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5409964743",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775794532,
+   "paid_time": 1775794892,
+   "update_time": 1776399332,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.75"
+   },
+   "line_items": [
+    {
+     "id": "CR5409964743-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1172185467",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775796664,
+   "paid_time": 1775797264,
+   "update_time": 1775987464,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "26.60"
+   },
+   "line_items": [
+    {
+     "id": "CR1172185467-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1172185467-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "12.60",
+     "original_price": "14.00",
+     "seller_discount": "1.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5526698460",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775831887,
+   "paid_time": 1775832007,
+   "update_time": 1776436687,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "40.95"
+   },
+   "line_items": [
+    {
+     "id": "CR5526698460-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5526698460-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2896029337",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775836904,
+   "paid_time": 1775837204,
+   "update_time": 1776456104,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "87.00"
+   },
+   "line_items": [
+    {
+     "id": "CR2896029337-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2896029337-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2896029337-3",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4024982512",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775844875,
+   "paid_time": 1775845295,
+   "update_time": 1776284075,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "13.30"
+   },
+   "line_items": [
+    {
+     "id": "CR4024982512-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2429267689",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775862609,
+   "paid_time": 1775862669,
+   "update_time": 1776046209,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "49.30"
+   },
+   "line_items": [
+    {
+     "id": "CR2429267689-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "26.10",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2429267689-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "23.20",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9430508612",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775867093,
+   "paid_time": 1775867513,
+   "update_time": 1776043493,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.40"
+   },
+   "line_items": [
+    {
+     "id": "CR9430508612-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9430508612-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9430508612-3",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9498591398",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775874193,
+   "paid_time": 1775874913,
+   "update_time": 1776496993,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.05"
+   },
+   "line_items": [
+    {
+     "id": "CR9498591398-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7605558960",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775880641,
+   "paid_time": 1775880881,
+   "update_time": 1776139841,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR7605558960-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5725439955",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775886029,
+   "paid_time": 1775886149,
+   "update_time": 1776231629,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.40"
+   },
+   "line_items": [
+    {
+     "id": "CR5725439955-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5725439955-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5768030037",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775942474,
+   "paid_time": 1775942534,
+   "update_time": 1776115274,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.20"
+   },
+   "line_items": [
+    {
+     "id": "CR5768030037-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "15.20",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8208727415",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775942633,
+   "paid_time": 1775943233,
+   "update_time": 1776558233,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "32.30"
+   },
+   "line_items": [
+    {
+     "id": "CR8208727415-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8208727415-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6557250062",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775946970,
+   "paid_time": 1775947510,
+   "update_time": 1776123370,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "CR6557250062-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5105833237",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775969147,
+   "paid_time": 1775969807,
+   "update_time": 1776761147,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.20"
+   },
+   "line_items": [
+    {
+     "id": "CR5105833237-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3271893472",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1775971023,
+   "paid_time": 1775971743,
+   "update_time": 1776680223,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "11.20"
+   },
+   "line_items": [
+    {
+     "id": "CR3271893472-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7665337480",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776016114,
+   "paid_time": 1776016774,
+   "update_time": 1776361714,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "CR7665337480-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4765864046",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776025239,
+   "paid_time": 1776025899,
+   "update_time": 1776806439,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.95"
+   },
+   "line_items": [
+    {
+     "id": "CR4765864046-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2936969265",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776034616,
+   "paid_time": 1776035216,
+   "update_time": 1776225416,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.55"
+   },
+   "line_items": [
+    {
+     "id": "CR2936969265-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7321310034",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776041525,
+   "paid_time": 1776041885,
+   "update_time": 1776732725,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "CR7321310034-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1041681794",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776050809,
+   "paid_time": 1776051109,
+   "update_time": 1776828409,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "34.20"
+   },
+   "line_items": [
+    {
+     "id": "CR1041681794-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1041681794-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1969469854",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776058835,
+   "paid_time": 1776059255,
+   "update_time": 1776238835,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "56.70"
+   },
+   "line_items": [
+    {
+     "id": "CR1969469854-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1969469854-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1969469854-3",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5319756072",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776109490,
+   "paid_time": 1776109610,
+   "update_time": 1776807890,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.75"
+   },
+   "line_items": [
+    {
+     "id": "CR5319756072-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "15.75",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2690467788",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776121775,
+   "paid_time": 1776122495,
+   "update_time": 1776647375,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "13.30"
+   },
+   "line_items": [
+    {
+     "id": "CR2690467788-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8970345558",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776130140,
+   "paid_time": 1776130320,
+   "update_time": 1776666540,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "52.20"
+   },
+   "line_items": [
+    {
+     "id": "CR8970345558-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "23.20",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8970345558-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1087425911",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776130953,
+   "paid_time": 1776131673,
+   "update_time": 1776235353,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "50.75"
+   },
+   "line_items": [
+    {
+     "id": "CR1087425911-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1087425911-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "23.20",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1669608414",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776140552,
+   "paid_time": 1776141212,
+   "update_time": 1776403352,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.05"
+   },
+   "line_items": [
+    {
+     "id": "CR1669608414-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1669608414-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7293822112",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776178603,
+   "paid_time": 1776179263,
+   "update_time": 1776715003,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "26.10"
+   },
+   "line_items": [
+    {
+     "id": "CR7293822112-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "26.10",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4192790775",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776183704,
+   "paid_time": 1776184304,
+   "update_time": 1776446504,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "11.20"
+   },
+   "line_items": [
+    {
+     "id": "CR4192790775-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1610900163",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776188073,
+   "paid_time": 1776188613,
+   "update_time": 1777052073,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.80"
+   },
+   "line_items": [
+    {
+     "id": "CR1610900163-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1610900163-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6482020262",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776196168,
+   "paid_time": 1776196468,
+   "update_time": 1777078168,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "13.60"
+   },
+   "line_items": [
+    {
+     "id": "CR6482020262-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "13.60",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4286102256",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776272717,
+   "paid_time": 1776273197,
+   "update_time": 1776719117,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.20"
+   },
+   "line_items": [
+    {
+     "id": "CR4286102256-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6847933526",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776277387,
+   "paid_time": 1776278107,
+   "update_time": 1776536587,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "58.00"
+   },
+   "line_items": [
+    {
+     "id": "CR6847933526-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6847933526-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3362195209",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776281762,
+   "paid_time": 1776281822,
+   "update_time": 1776904562,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR3362195209-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3944709007",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776286425,
+   "paid_time": 1776286785,
+   "update_time": 1776549225,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.00"
+   },
+   "line_items": [
+    {
+     "id": "CR3944709007-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1567347965",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1776292595,
+   "paid_time": 1776292715,
+   "update_time": 1776828995,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.70"
+   },
+   "line_items": [
+    {
+     "id": "CR1567347965-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "CR1567347965-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "10.50",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.70",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6486597614",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776305507,
+   "paid_time": 1776306107,
+   "update_time": 1776744707,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR6486597614-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4365679788",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776349440,
+   "paid_time": 1776349560,
+   "update_time": 1776954240,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "49.30"
+   },
+   "line_items": [
+    {
+     "id": "CR4365679788-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "26.10",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4365679788-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "23.20",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3815607147",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1776352474,
+   "paid_time": null,
+   "update_time": 1777137274,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "40.80"
+   },
+   "line_items": [
+    {
+     "id": "CR3815607147-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "CR3815607147-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "CR3815607147-3",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.00",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.80",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7461461014",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776366813,
+   "paid_time": 1776367173,
+   "update_time": 1777158813,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR7461461014-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6254267277",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776368387,
+   "paid_time": 1776368687,
+   "update_time": 1776980387,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "75.40"
+   },
+   "line_items": [
+    {
+     "id": "CR6254267277-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "26.10",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6254267277-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "21.75",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6254267277-3",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8995535224",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776369949,
+   "paid_time": 1776370009,
+   "update_time": 1776715549,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.00"
+   },
+   "line_items": [
+    {
+     "id": "CR8995535224-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3657531025",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776374061,
+   "paid_time": 1776374301,
+   "update_time": 1776809661,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "32.30"
+   },
+   "line_items": [
+    {
+     "id": "CR3657531025-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3657531025-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7956811041",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776382552,
+   "paid_time": 1776383212,
+   "update_time": 1776818152,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "39.90"
+   },
+   "line_items": [
+    {
+     "id": "CR7956811041-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.90",
+     "original_price": "14.00",
+     "seller_discount": "1.40",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7956811041-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7956811041-3",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3940632599",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776384112,
+   "paid_time": 1776384472,
+   "update_time": 1776484912,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "CR3940632599-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3940632599-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5527818200",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776386473,
+   "paid_time": 1776387013,
+   "update_time": 1776904873,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "CR5527818200-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4615302631",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776392831,
+   "paid_time": 1776393011,
+   "update_time": 1776493631,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "45.60"
+   },
+   "line_items": [
+    {
+     "id": "CR4615302631-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4615302631-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6206747751",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776441470,
+   "paid_time": 1776441830,
+   "update_time": 1776538670,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "28.80"
+   },
+   "line_items": [
+    {
+     "id": "CR6206747751-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "15.20",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6206747751-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "13.60",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7355508941",
+   "shop_id": "shop_crunchwell",
+   "status": "UNPAID",
+   "create_time": 1776467924,
+   "paid_time": null,
+   "update_time": 1777256324,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.40"
+   },
+   "line_items": [
+    {
+     "id": "CR7355508941-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1317589881",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776479484,
+   "paid_time": 1776479604,
+   "update_time": 1776922284,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "12.60"
+   },
+   "line_items": [
+    {
+     "id": "CR1317589881-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "12.60",
+     "original_price": "14.00",
+     "seller_discount": "1.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8763936234",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1776482565,
+   "paid_time": null,
+   "update_time": 1777098165,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.00"
+   },
+   "line_items": [
+    {
+     "id": "CR8763936234-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1005424365",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776525429,
+   "paid_time": 1776525669,
+   "update_time": 1776712629,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.80"
+   },
+   "line_items": [
+    {
+     "id": "CR1005424365-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1005424365-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7342565704",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1776535028,
+   "paid_time": 1776535748,
+   "update_time": 1777402628,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.60"
+   },
+   "line_items": [
+    {
+     "id": "CR7342565704-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5468576835",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776545878,
+   "paid_time": 1776546298,
+   "update_time": 1777255078,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.00"
+   },
+   "line_items": [
+    {
+     "id": "CR5468576835-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5468576835-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9856349026",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776546246,
+   "paid_time": 1776546846,
+   "update_time": 1776989046,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "56.55"
+   },
+   "line_items": [
+    {
+     "id": "CR9856349026-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9856349026-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2786750467",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776547452,
+   "paid_time": 1776547812,
+   "update_time": 1776979452,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "14.00"
+   },
+   "line_items": [
+    {
+     "id": "CR2786750467-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3249146668",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776548884,
+   "paid_time": 1776549124,
+   "update_time": 1777168084,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "47.20"
+   },
+   "line_items": [
+    {
+     "id": "CR3249146668-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "15.20",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3249146668-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3249146668-3",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7024453952",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776565355,
+   "paid_time": 1776565655,
+   "update_time": 1777011755,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.40"
+   },
+   "line_items": [
+    {
+     "id": "CR7024453952-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2386280220",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1776574614,
+   "paid_time": 1776575094,
+   "update_time": 1776765414,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.30"
+   },
+   "line_items": [
+    {
+     "id": "CR2386280220-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "CR2386280220-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9505021146",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776608739,
+   "paid_time": 1776609279,
+   "update_time": 1777386339,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "12.80"
+   },
+   "line_items": [
+    {
+     "id": "CR9505021146-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2762528264",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776634909,
+   "paid_time": 1776635509,
+   "update_time": 1777243309,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "46.80"
+   },
+   "line_items": [
+    {
+     "id": "CR2762528264-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2762528264-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7139026481",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776639355,
+   "paid_time": 1776639715,
+   "update_time": 1777254955,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "CR7139026481-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7139026481-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4009126211",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776645426,
+   "paid_time": 1776645786,
+   "update_time": 1777268226,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.75"
+   },
+   "line_items": [
+    {
+     "id": "CR4009126211-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "21.75",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8394735600",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776645752,
+   "paid_time": 1776646052,
+   "update_time": 1777423352,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "CR8394735600-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9351308424",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776654328,
+   "paid_time": 1776654388,
+   "update_time": 1777017928,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "CR9351308424-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9351308424-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1750623283",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776656998,
+   "paid_time": 1776657718,
+   "update_time": 1777088998,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "29.00"
+   },
+   "line_items": [
+    {
+     "id": "CR1750623283-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4938890402",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776657196,
+   "paid_time": 1776657556,
+   "update_time": 1777276396,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "64.80"
+   },
+   "line_items": [
+    {
+     "id": "CR4938890402-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4938890402-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4938890402-3",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9851949378",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776710236,
+   "paid_time": 1776710356,
+   "update_time": 1777073836,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.00"
+   },
+   "line_items": [
+    {
+     "id": "CR9851949378-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4658963086",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776710436,
+   "paid_time": 1776710616,
+   "update_time": 1777405236,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "60.00"
+   },
+   "line_items": [
+    {
+     "id": "CR4658963086-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4658963086-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4658963086-3",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9283310336",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776715023,
+   "paid_time": 1776715503,
+   "update_time": 1777154223,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.40"
+   },
+   "line_items": [
+    {
+     "id": "CR9283310336-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9283310336-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2757008758",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776726207,
+   "paid_time": 1776726627,
+   "update_time": 1777082607,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.75"
+   },
+   "line_items": [
+    {
+     "id": "CR2757008758-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2757008758-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6695945532",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776733228,
+   "paid_time": 1776733408,
+   "update_time": 1777345228,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "11.20"
+   },
+   "line_items": [
+    {
+     "id": "CR6695945532-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1232760658",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776786730,
+   "paid_time": 1776787390,
+   "update_time": 1777315930,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.95"
+   },
+   "line_items": [
+    {
+     "id": "CR1232760658-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5595424338",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776795633,
+   "paid_time": 1776796353,
+   "update_time": 1777414833,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.60"
+   },
+   "line_items": [
+    {
+     "id": "CR5595424338-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7444136636",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776799690,
+   "paid_time": 1776800350,
+   "update_time": 1777062490,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.80"
+   },
+   "line_items": [
+    {
+     "id": "CR7444136636-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7444136636-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7444136636-3",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "12.60",
+     "original_price": "14.00",
+     "seller_discount": "1.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7103267145",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776836825,
+   "paid_time": 1776837065,
+   "update_time": 1777704425,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "43.20"
+   },
+   "line_items": [
+    {
+     "id": "CR7103267145-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "14.40",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7103267145-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7103267145-3",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.80",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1759841147",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776870604,
+   "paid_time": 1776870904,
+   "update_time": 1777234204,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "CR1759841147-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1759841147-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4028531576",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776876045,
+   "paid_time": 1776876105,
+   "update_time": 1777066845,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.80"
+   },
+   "line_items": [
+    {
+     "id": "CR4028531576-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4028531576-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "10.50",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4028531576-3",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7858409132",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776886215,
+   "paid_time": 1776886635,
+   "update_time": 1776972615,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "14.40"
+   },
+   "line_items": [
+    {
+     "id": "CR7858409132-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "14.40",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4543334218",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776886335,
+   "paid_time": 1776886695,
+   "update_time": 1777584735,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.30"
+   },
+   "line_items": [
+    {
+     "id": "CR4543334218-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR4543334218-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4598059504",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776894911,
+   "paid_time": 1776895031,
+   "update_time": 1777769711,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "13.30"
+   },
+   "line_items": [
+    {
+     "id": "CR4598059504-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6008190268",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776896537,
+   "paid_time": 1776897017,
+   "update_time": 1777778537,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "68.40"
+   },
+   "line_items": [
+    {
+     "id": "CR6008190268-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6008190268-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6008190268-3",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8203986506",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776901241,
+   "paid_time": 1776901421,
+   "update_time": 1776991241,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "33.60"
+   },
+   "line_items": [
+    {
+     "id": "CR8203986506-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8203986506-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "16.80",
+     "original_price": "21.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3293369514",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776912912,
+   "paid_time": 1776913272,
+   "update_time": 1777092912,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "40.95"
+   },
+   "line_items": [
+    {
+     "id": "CR3293369514-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "21.00",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3293369514-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8835541191",
+   "shop_id": "shop_crunchwell",
+   "status": "CANCELLED",
+   "create_time": 1776960060,
+   "paid_time": 1776960360,
+   "update_time": 1777838460,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.00"
+   },
+   "line_items": [
+    {
+     "id": "CR8835541191-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5688905622",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1776999313,
+   "paid_time": 1776999553,
+   "update_time": 1777697713,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.95"
+   },
+   "line_items": [
+    {
+     "id": "CR5688905622-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "19.95",
+     "original_price": "21.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1354279214",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777003127,
+   "paid_time": 1777003487,
+   "update_time": 1777265927,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "CR1354279214-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2605176967",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777061262,
+   "paid_time": 1777061442,
+   "update_time": 1777925262,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.70"
+   },
+   "line_items": [
+    {
+     "id": "CR2605176967-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "11.20",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2605176967-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "10.50",
+     "original_price": "14.00",
+     "seller_discount": "2.80",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4402744706",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777061772,
+   "paid_time": 1777061832,
+   "update_time": 1777418172,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "CR4402744706-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7119125497",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777066635,
+   "paid_time": 1777066755,
+   "update_time": 1777855035,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "58.00"
+   },
+   "line_items": [
+    {
+     "id": "CR7119125497-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7119125497-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9895991405",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777067413,
+   "paid_time": 1777068133,
+   "update_time": 1777517413,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "51.30"
+   },
+   "line_items": [
+    {
+     "id": "CR9895991405-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "14.25",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9895991405-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9895991405-3",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9420124578",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777076513,
+   "paid_time": 1777077173,
+   "update_time": 1777868513,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.75"
+   },
+   "line_items": [
+    {
+     "id": "CR9420124578-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "21.75",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5180818254",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777079283,
+   "paid_time": 1777079823,
+   "update_time": 1777169283,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.90"
+   },
+   "line_items": [
+    {
+     "id": "CR5180818254-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "18.90",
+     "original_price": "21.00",
+     "seller_discount": "2.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5165186746",
+   "shop_id": "shop_crunchwell",
+   "status": "UNPAID",
+   "create_time": 1777087133,
+   "paid_time": null,
+   "update_time": 1777619933,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.20"
+   },
+   "line_items": [
+    {
+     "id": "CR5165186746-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "15.20",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.80",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5940122272",
+   "shop_id": "shop_crunchwell",
+   "status": "UNPAID",
+   "create_time": 1777154092,
+   "paid_time": null,
+   "update_time": 1777949692,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "52.20"
+   },
+   "line_items": [
+    {
+     "id": "CR5940122272-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "CR5940122272-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "24.65",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "1.45",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7265829073",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777219641,
+   "paid_time": 1777219821,
+   "update_time": 1777579641,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.95"
+   },
+   "line_items": [
+    {
+     "id": "CR7265829073-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "21.75",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7265829073-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "23.20",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7272362438",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777222835,
+   "paid_time": 1777223075,
+   "update_time": 1777752035,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "23.20"
+   },
+   "line_items": [
+    {
+     "id": "CR7272362438-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "23.20",
+     "original_price": "29.00",
+     "seller_discount": "5.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9948352398",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777227538,
+   "paid_time": 1777227778,
+   "update_time": 1777929538,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.00"
+   },
+   "line_items": [
+    {
+     "id": "CR9948352398-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7914783237",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777245954,
+   "paid_time": 1777246374,
+   "update_time": 1777681554,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.05"
+   },
+   "line_items": [
+    {
+     "id": "CR7914783237-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2464901778",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777247204,
+   "paid_time": 1777247444,
+   "update_time": 1777942004,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "28.00"
+   },
+   "line_items": [
+    {
+     "id": "CR2464901778-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2464901778-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4115774434",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777249502,
+   "paid_time": 1777249682,
+   "update_time": 1777688702,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "29.00"
+   },
+   "line_items": [
+    {
+     "id": "CR4115774434-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2090679316",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777257127,
+   "paid_time": 1777257787,
+   "update_time": 1777602727,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "56.55"
+   },
+   "line_items": [
+    {
+     "id": "CR2090679316-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2090679316-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2253585697",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777259591,
+   "paid_time": 1777260251,
+   "update_time": 1777443191,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "45.60"
+   },
+   "line_items": [
+    {
+     "id": "CR2253585697-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR2253585697-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3185545638",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777260469,
+   "paid_time": 1777260889,
+   "update_time": 1777357669,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "64.80"
+   },
+   "line_items": [
+    {
+     "id": "CR3185545638-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3185545638-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3185545638-3",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR7298322007",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777268216,
+   "paid_time": 1777268696,
+   "update_time": 1777613816,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "30.40"
+   },
+   "line_items": [
+    {
+     "id": "CR7298322007-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "14.40",
+     "original_price": "16.00",
+     "seller_discount": "1.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR7298322007-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR4907926399",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777269573,
+   "paid_time": 1777269873,
+   "update_time": 1778133573,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.20"
+   },
+   "line_items": [
+    {
+     "id": "CR4907926399-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1423283210",
+   "shop_id": "shop_crunchwell",
+   "status": "UNPAID",
+   "create_time": 1777299078,
+   "paid_time": null,
+   "update_time": 1777659078,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "29.00"
+   },
+   "line_items": [
+    {
+     "id": "CR1423283210-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5294385930",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777308642,
+   "paid_time": 1777309122,
+   "update_time": 1778172642,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "53.20"
+   },
+   "line_items": [
+    {
+     "id": "CR5294385930-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5294385930-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5294385930-3",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR6152492554",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777312341,
+   "paid_time": 1777312641,
+   "update_time": 1777920741,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.30"
+   },
+   "line_items": [
+    {
+     "id": "CR6152492554-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "13.30",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.70",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR6152492554-2",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "14.00",
+     "original_price": "14.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5490394056",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777316799,
+   "paid_time": 1777317339,
+   "update_time": 1777417599,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "54.60"
+   },
+   "line_items": [
+    {
+     "id": "CR5490394056-1",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "18.90",
+     "original_price": "21.00",
+     "seller_discount": "2.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5490394056-2",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "17.85",
+     "original_price": "21.00",
+     "seller_discount": "2.10",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5490394056-3",
+     "product_id": "P_CRU_5",
+     "sku_id": "SKU_CRU_5",
+     "sale_price": "17.85",
+     "original_price": "21.00",
+     "seller_discount": "2.10",
+     "platform_discount": "1.05",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5972751723",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777321141,
+   "paid_time": 1777321501,
+   "update_time": 1777843141,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "55.10"
+   },
+   "line_items": [
+    {
+     "id": "CR5972751723-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "26.10",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5972751723-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "29.00",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR2410834378",
+   "shop_id": "shop_crunchwell",
+   "status": "UNPAID",
+   "create_time": 1777334357,
+   "paid_time": null,
+   "update_time": 1777514357,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.40"
+   },
+   "line_items": [
+    {
+     "id": "CR2410834378-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "CR2410834378-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5844761497",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777335538,
+   "paid_time": 1777335958,
+   "update_time": 1777594738,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "53.65"
+   },
+   "line_items": [
+    {
+     "id": "CR5844761497-1",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "27.55",
+     "original_price": "29.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.45",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5844761497-2",
+     "product_id": "P_CRU_3",
+     "sku_id": "SKU_CRU_3",
+     "sale_price": "26.10",
+     "original_price": "29.00",
+     "seller_discount": "2.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1868062539",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777384850,
+   "paid_time": 1777385210,
+   "update_time": 1777748450,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "32.00"
+   },
+   "line_items": [
+    {
+     "id": "CR1868062539-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1868062539-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1689326896",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777392725,
+   "paid_time": 1777392905,
+   "update_time": 1777493525,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "CR1689326896-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1954034104",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777400863,
+   "paid_time": 1777401283,
+   "update_time": 1777660063,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.05"
+   },
+   "line_items": [
+    {
+     "id": "CR1954034104-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1954034104-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3399753343",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777401965,
+   "paid_time": 1777402445,
+   "update_time": 1777668365,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "12.60"
+   },
+   "line_items": [
+    {
+     "id": "CR3399753343-1",
+     "product_id": "P_CRU_4",
+     "sku_id": "SKU_CRU_4",
+     "sale_price": "12.60",
+     "original_price": "14.00",
+     "seller_discount": "1.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR8847026119",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777412315,
+   "paid_time": 1777412855,
+   "update_time": 1777682315,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "49.40"
+   },
+   "line_items": [
+    {
+     "id": "CR8847026119-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "16.15",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8847026119-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR8847026119-3",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "14.25",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5565037115",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777432333,
+   "paid_time": 1777432813,
+   "update_time": 1777792333,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "43.20"
+   },
+   "line_items": [
+    {
+     "id": "CR5565037115-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR5565037115-2",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9925452624",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777432530,
+   "paid_time": 1777432710,
+   "update_time": 1777965330,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "38.00"
+   },
+   "line_items": [
+    {
+     "id": "CR9925452624-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR9925452624-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3411765930",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777434064,
+   "paid_time": 1777434604,
+   "update_time": 1778132464,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "32.00"
+   },
+   "line_items": [
+    {
+     "id": "CR3411765930-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR3411765930-2",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3214904978",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777485924,
+   "paid_time": 1777486644,
+   "update_time": 1777845924,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "CR3214904978-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR5871283547",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777487708,
+   "paid_time": 1777487828,
+   "update_time": 1777674908,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "12.00"
+   },
+   "line_items": [
+    {
+     "id": "CR5871283547-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "12.00",
+     "original_price": "16.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9465779357",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777493824,
+   "paid_time": 1777494544,
+   "update_time": 1777583824,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.00"
+   },
+   "line_items": [
+    {
+     "id": "CR9465779357-1",
+     "product_id": "P_CRU_2",
+     "sku_id": "SKU_CRU_2",
+     "sale_price": "16.00",
+     "original_price": "16.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR1707923471",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777516231,
+   "paid_time": 1777516651,
+   "update_time": 1777789831,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "55.10"
+   },
+   "line_items": [
+    {
+     "id": "CR1707923471-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1707923471-2",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "19.00",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "CR1707923471-3",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "18.05",
+     "original_price": "19.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.95",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR9153685900",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777517564,
+   "paid_time": 1777517984,
+   "update_time": 1778215964,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "CR9153685900-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "17.10",
+     "original_price": "19.00",
+     "seller_discount": "1.90",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3042569181",
+   "shop_id": "shop_crunchwell",
+   "status": "COMPLETED",
+   "create_time": 1777525951,
+   "paid_time": 1777526551,
+   "update_time": 1778141551,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "15.20"
+   },
+   "line_items": [
+    {
+     "id": "CR3042569181-1",
+     "product_id": "P_CRU_6",
+     "sku_id": "SKU_CRU_6",
+     "sale_price": "15.20",
+     "original_price": "19.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "CR3778170839",
+   "shop_id": "shop_crunchwell",
+   "status": "DELIVERED",
+   "create_time": 1777589814,
+   "paid_time": 1777589874,
+   "update_time": 1777849014,
+   "is_sample_order": true,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "0.00"
+   },
+   "line_items": [
+    {
+     "id": "CR3778170839-1",
+     "product_id": "P_CRU_1",
+     "sku_id": "SKU_CRU_1",
+     "sale_price": "0.00",
+     "original_price": "0.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    }
+   ]
+  }
+ ]
+}

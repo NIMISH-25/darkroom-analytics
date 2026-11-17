@@ -1,0 +1,15 @@
+{
+ "returns": [
+  {
+   "return_id": "R_C_REJ",
+   "order_id": "O_C1",
+   "line_item_id": "L_C1_1",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792252800,
+   "completed_time": null,
+   "update_time": 1792339200
+  }
+ ]
+}

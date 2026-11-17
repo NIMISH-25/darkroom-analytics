@@ -1,0 +1,1054 @@
+{
+ "orders": [
+  {
+   "order_id": "VE9924138929",
+   "shop_id": "shop_verdant",
+   "status": "DELIVERED",
+   "create_time": 1792085177,
+   "paid_time": 1792085297,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "30.40"
+   },
+   "line_items": [
+    {
+     "id": "VE9924138929-1",
+     "product_id": "P_VER_2",
+     "sku_id": "SKU_VER_2",
+     "sale_price": "30.40",
+     "original_price": "32.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.60",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE7036798273",
+   "shop_id": "shop_verdant",
+   "status": "DELIVERED",
+   "create_time": 1792086595,
+   "paid_time": 1792087315,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.50"
+   },
+   "line_items": [
+    {
+     "id": "VE7036798273-1",
+     "product_id": "P_VER_6",
+     "sku_id": "SKU_VER_6",
+     "sale_price": "16.50",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "1.10",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE9893572553",
+   "shop_id": "shop_verdant",
+   "status": "DELIVERED",
+   "create_time": 1792107675,
+   "paid_time": 1792107975,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "76.00"
+   },
+   "line_items": [
+    {
+     "id": "VE9893572553-1",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "38.00",
+     "original_price": "38.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    },
+    {
+     "id": "VE9893572553-2",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "38.00",
+     "original_price": "38.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE1330565068",
+   "shop_id": "shop_verdant",
+   "status": "DELIVERED",
+   "create_time": 1792107914,
+   "paid_time": 1792108574,
+   "update_time": 1792194314,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "61.60"
+   },
+   "line_items": [
+    {
+     "id": "VE1330565068-1",
+     "product_id": "P_VER_6",
+     "sku_id": "SKU_VER_6",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    },
+    {
+     "id": "VE1330565068-2",
+     "product_id": "P_VER_6",
+     "sku_id": "SKU_VER_6",
+     "sale_price": "19.80",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    },
+    {
+     "id": "VE1330565068-3",
+     "product_id": "P_VER_6",
+     "sku_id": "SKU_VER_6",
+     "sale_price": "19.80",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE6026262380",
+   "shop_id": "shop_verdant",
+   "status": "DELIVERED",
+   "create_time": 1792116421,
+   "paid_time": 1792116781,
+   "update_time": 1792465621,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "VE6026262380-1",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "17.10",
+     "original_price": "18.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.90",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE5469603231",
+   "shop_id": "shop_verdant",
+   "status": "DELIVERED",
+   "create_time": 1792116671,
+   "paid_time": 1792116911,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "83.60"
+   },
+   "line_items": [
+    {
+     "id": "VE5469603231-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "41.80",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.20",
+     "display_status": "DELIVERED"
+    },
+    {
+     "id": "VE5469603231-2",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "41.80",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.20",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE5303425527",
+   "shop_id": "shop_verdant",
+   "status": "DELIVERED",
+   "create_time": 1792117941,
+   "paid_time": 1792118181,
+   "update_time": 1792391541,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.00"
+   },
+   "line_items": [
+    {
+     "id": "VE5303425527-1",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "18.00",
+     "original_price": "18.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE6099435653",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792178113,
+   "paid_time": 1792178173,
+   "update_time": 1792624513,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.00"
+   },
+   "line_items": [
+    {
+     "id": "VE6099435653-1",
+     "product_id": "P_VER_6",
+     "sku_id": "SKU_VER_6",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE6434145491",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792180098,
+   "paid_time": 1792180818,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "100.70"
+   },
+   "line_items": [
+    {
+     "id": "VE6434145491-1",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "28.50",
+     "original_price": "38.00",
+     "seller_discount": "7.60",
+     "platform_discount": "1.90",
+     "display_status": "IN_TRANSIT"
+    },
+    {
+     "id": "VE6434145491-2",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "38.00",
+     "original_price": "38.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    },
+    {
+     "id": "VE6434145491-3",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "34.20",
+     "original_price": "38.00",
+     "seller_discount": "3.80",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE1200729300",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792185575,
+   "paid_time": 1792185875,
+   "update_time": 1792451975,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "30.40"
+   },
+   "line_items": [
+    {
+     "id": "VE1200729300-1",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "30.40",
+     "original_price": "38.00",
+     "seller_discount": "7.60",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE3061992930",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792200467,
+   "paid_time": 1792201067,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "30.60"
+   },
+   "line_items": [
+    {
+     "id": "VE3061992930-1",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "14.40",
+     "original_price": "18.00",
+     "seller_discount": "3.60",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    },
+    {
+     "id": "VE3061992930-2",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "16.20",
+     "original_price": "18.00",
+     "seller_discount": "1.80",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE2438905665",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792205416,
+   "paid_time": 1792205836,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "30.40"
+   },
+   "line_items": [
+    {
+     "id": "VE2438905665-1",
+     "product_id": "P_VER_2",
+     "sku_id": "SKU_VER_2",
+     "sale_price": "30.40",
+     "original_price": "32.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.60",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE8720840118",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792257153,
+   "paid_time": 1792257393,
+   "update_time": 1792347153,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "41.80"
+   },
+   "line_items": [
+    {
+     "id": "VE8720840118-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "41.80",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.20",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE3138383790",
+   "shop_id": "shop_verdant",
+   "status": "CANCELLED",
+   "create_time": 1792342716,
+   "paid_time": 1792342776,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "35.10"
+   },
+   "line_items": [
+    {
+     "id": "VE3138383790-1",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "18.00",
+     "original_price": "18.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "VE3138383790-2",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "17.10",
+     "original_price": "18.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.90",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "VE4775377742",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792345531,
+   "paid_time": 1792345831,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.10"
+   },
+   "line_items": [
+    {
+     "id": "VE4775377742-1",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "17.10",
+     "original_price": "18.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.90",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE8894280829",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792345860,
+   "paid_time": 1792346520,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.10"
+   },
+   "line_items": [
+    {
+     "id": "VE8894280829-1",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "22.10",
+     "original_price": "26.00",
+     "seller_discount": "2.60",
+     "platform_discount": "1.30",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE9083965351",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792367160,
+   "paid_time": 1792367640,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.10"
+   },
+   "line_items": [
+    {
+     "id": "VE9083965351-1",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "36.10",
+     "original_price": "38.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.90",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE6363039270",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792371583,
+   "paid_time": 1792372243,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "38.00"
+   },
+   "line_items": [
+    {
+     "id": "VE6363039270-1",
+     "product_id": "P_VER_1",
+     "sku_id": "SKU_VER_1",
+     "sale_price": "38.00",
+     "original_price": "38.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE8431692842",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792449781,
+   "paid_time": 1792449961,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "43.20"
+   },
+   "line_items": [
+    {
+     "id": "VE8431692842-1",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "14.40",
+     "original_price": "18.00",
+     "seller_discount": "3.60",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    },
+    {
+     "id": "VE8431692842-2",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "14.40",
+     "original_price": "18.00",
+     "seller_discount": "3.60",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    },
+    {
+     "id": "VE8431692842-3",
+     "product_id": "P_VER_3",
+     "sku_id": "SKU_VER_3",
+     "sale_price": "14.40",
+     "original_price": "18.00",
+     "seller_discount": "3.60",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE3053560152",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792465002,
+   "paid_time": 1792465482,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "71.50"
+   },
+   "line_items": [
+    {
+     "id": "VE3053560152-1",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "26.00",
+     "original_price": "26.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    },
+    {
+     "id": "VE3053560152-2",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "24.70",
+     "original_price": "26.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.30",
+     "display_status": "IN_TRANSIT"
+    },
+    {
+     "id": "VE3053560152-3",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "20.80",
+     "original_price": "26.00",
+     "seller_discount": "5.20",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE4196934077",
+   "shop_id": "shop_verdant",
+   "status": "IN_TRANSIT",
+   "create_time": 1792468677,
+   "paid_time": 1792468917,
+   "update_time": 1792641477,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "26.00"
+   },
+   "line_items": [
+    {
+     "id": "VE4196934077-1",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "26.00",
+     "original_price": "26.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "IN_TRANSIT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE5150409652",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792506298,
+   "paid_time": 1792506538,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.00"
+   },
+   "line_items": [
+    {
+     "id": "VE5150409652-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "44.00",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE3390471311",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792506384,
+   "paid_time": 1792506504,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "41.80"
+   },
+   "line_items": [
+    {
+     "id": "VE3390471311-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "41.80",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.20",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE2284636376",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792512082,
+   "paid_time": 1792512442,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.40"
+   },
+   "line_items": [
+    {
+     "id": "VE2284636376-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "37.40",
+     "original_price": "44.00",
+     "seller_discount": "4.40",
+     "platform_discount": "2.20",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE1970064947",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792519727,
+   "paid_time": 1792520447,
+   "update_time": 1792620527,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "46.80"
+   },
+   "line_items": [
+    {
+     "id": "VE1970064947-1",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "22.10",
+     "original_price": "26.00",
+     "seller_discount": "2.60",
+     "platform_discount": "1.30",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE1970064947-2",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "24.70",
+     "original_price": "26.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.30",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE7274880981",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792529672,
+   "paid_time": 1792530032,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "32.00"
+   },
+   "line_items": [
+    {
+     "id": "VE7274880981-1",
+     "product_id": "P_VER_2",
+     "sku_id": "SKU_VER_2",
+     "sale_price": "32.00",
+     "original_price": "32.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE9697562181",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792535523,
+   "paid_time": 1792536063,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "59.20"
+   },
+   "line_items": [
+    {
+     "id": "VE9697562181-1",
+     "product_id": "P_VER_2",
+     "sku_id": "SKU_VER_2",
+     "sale_price": "28.80",
+     "original_price": "32.00",
+     "seller_discount": "3.20",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE9697562181-2",
+     "product_id": "P_VER_2",
+     "sku_id": "SKU_VER_2",
+     "sale_price": "30.40",
+     "original_price": "32.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.60",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE2212975256",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792546241,
+   "paid_time": 1792546421,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "85.80"
+   },
+   "line_items": [
+    {
+     "id": "VE2212975256-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "41.80",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.20",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE2212975256-2",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "44.00",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE2123474666",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792554720,
+   "paid_time": 1792555440,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "72.80"
+   },
+   "line_items": [
+    {
+     "id": "VE2123474666-1",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "20.80",
+     "original_price": "26.00",
+     "seller_discount": "5.20",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE2123474666-2",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "26.00",
+     "original_price": "26.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE2123474666-3",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "26.00",
+     "original_price": "26.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE1675078018",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792606415,
+   "paid_time": 1792607135,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.70"
+   },
+   "line_items": [
+    {
+     "id": "VE1675078018-1",
+     "product_id": "P_VER_6",
+     "sku_id": "SKU_VER_6",
+     "sale_price": "18.70",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "1.10",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE4312586209",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792607336,
+   "paid_time": 1792607756,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "23.40"
+   },
+   "line_items": [
+    {
+     "id": "VE4312586209-1",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "23.40",
+     "original_price": "26.00",
+     "seller_discount": "2.60",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE4981915479",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792608127,
+   "paid_time": 1792608847,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "125.40"
+   },
+   "line_items": [
+    {
+     "id": "VE4981915479-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "39.60",
+     "original_price": "44.00",
+     "seller_discount": "4.40",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE4981915479-2",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "41.80",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.20",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE4981915479-3",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "44.00",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE1027229114",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792621404,
+   "paid_time": 1792622004,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "88.00"
+   },
+   "line_items": [
+    {
+     "id": "VE1027229114-1",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "44.00",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "VE1027229114-2",
+     "product_id": "P_VER_5",
+     "sku_id": "SKU_VER_5",
+     "sale_price": "44.00",
+     "original_price": "44.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "VE7982903909",
+   "shop_id": "shop_verdant",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1792623202,
+   "paid_time": 1792623442,
+   "update_time": 1792652340,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "23.40"
+   },
+   "line_items": [
+    {
+     "id": "VE7982903909-1",
+     "product_id": "P_VER_4",
+     "sku_id": "SKU_VER_4",
+     "sale_price": "23.40",
+     "original_price": "26.00",
+     "seller_discount": "2.60",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  }
+ ]
+}

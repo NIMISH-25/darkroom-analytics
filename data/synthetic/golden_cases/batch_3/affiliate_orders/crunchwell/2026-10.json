@@ -1,0 +1,17 @@
+{
+ "records": [
+  {
+   "affiliate_record_id": "AR_C1",
+   "order_id": "O_C1",
+   "line_item_id": "L_C1_1",
+   "creator_user_id": "cr_0005",
+   "creator_handle": "@golden.crunch",
+   "content_id": "V_C5",
+   "content_type": "video",
+   "commission_rate": "0.12",
+   "commission_amount": "5.40",
+   "commission_status": "pending",
+   "update_time": 1791561600
+  }
+ ]
+}

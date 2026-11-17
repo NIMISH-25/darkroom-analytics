@@ -1,0 +1,15 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-VER-0033",
+   "order_id": "VE7918667671",
+   "line_item_id": "VE7918667671-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "34.20",
+   "refund_tax": "0.00",
+   "create_time": 1791524618,
+   "completed_time": 1792219418,
+   "update_time": 1792219418
+  }
+ ]
+}

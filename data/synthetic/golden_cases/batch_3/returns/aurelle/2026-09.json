@@ -1,0 +1,37 @@
+{
+ "returns": [
+  {
+   "return_id": "R_A3a",
+   "order_id": "O_A3",
+   "line_item_id": "L_A3_1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "15.00",
+   "refund_tax": "0.00",
+   "create_time": 1789488000,
+   "completed_time": 1789923600,
+   "update_time": 1789923600
+  },
+  {
+   "return_id": "R_A3b",
+   "order_id": "O_A3",
+   "line_item_id": "L_A3_1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "10.00",
+   "refund_tax": "0.00",
+   "create_time": 1790006400,
+   "completed_time": 1790355600,
+   "update_time": 1790355600
+  },
+  {
+   "return_id": "R_A3c",
+   "order_id": "O_A3",
+   "line_item_id": "L_A3_2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "40.00",
+   "refund_tax": "0.00",
+   "create_time": 1790092800,
+   "completed_time": 1790442000,
+   "update_time": 1790442000
+  }
+ ]
+}

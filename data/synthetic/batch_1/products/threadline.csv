@@ -1,0 +1,7 @@
+shop_id,product_id,sku_id,product_name,list_price,unit_cost,update_time
+shop_threadline,P_THR_1,SKU_THR_1,Linen Shirt,59.00,20.65,1759300000
+shop_threadline,P_THR_2,SKU_THR_2,Denim Jacket,94.00,32.90,1759300000
+shop_threadline,P_THR_3,SKU_THR_3,Wide Leg Trousers,72.00,25.20,1759300000
+shop_threadline,P_THR_4,SKU_THR_4,Knit Cardigan,66.00,23.10,1759300000
+shop_threadline,P_THR_5,SKU_THR_5,Cotton Tee 3-Pack,39.00,13.65,1759300000
+shop_threadline,P_THR_6,SKU_THR_6,Canvas Tote,25.00,8.75,1759300000

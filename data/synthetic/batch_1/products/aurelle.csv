@@ -1,0 +1,7 @@
+shop_id,product_id,sku_id,product_name,list_price,unit_cost,update_time
+shop_aurelle,P_AUR_1,SKU_AUR_1,Gold Hoop Earrings,48.00,16.80,1759300000
+shop_aurelle,P_AUR_2,SKU_AUR_2,Layered Necklace,62.00,21.70,1759300000
+shop_aurelle,P_AUR_3,SKU_AUR_3,Pearl Studs,35.00,12.25,1759300000
+shop_aurelle,P_AUR_4,SKU_AUR_4,Charm Bracelet,54.00,18.90,1759300000
+shop_aurelle,P_AUR_5,SKU_AUR_5,Signet Ring,70.00,24.50,1759300000
+shop_aurelle,P_AUR_6,SKU_AUR_6,Anklet Set,28.00,9.80,1759300000

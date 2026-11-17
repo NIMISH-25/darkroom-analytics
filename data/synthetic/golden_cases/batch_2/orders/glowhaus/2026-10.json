@@ -1,0 +1,29 @@
+{
+ "orders": [
+  {
+   "order_id": "O_G2",
+   "shop_id": "shop_glowhaus",
+   "status": "AWAITING_SHIPMENT",
+   "create_time": 1793514300,
+   "paid_time": 1793514600,
+   "update_time": 1793552400,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "25.00"
+   },
+   "line_items": [
+    {
+     "id": "L_G2_1",
+     "product_id": "P_G1",
+     "sku_id": "S_G1",
+     "sale_price": "25.00",
+     "original_price": "25.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "batch_id": "batch_older",
+ "simulated_received_at": "2026-10-15T23:59:59-07:00",
+ "as_of": "2026-10-15",
+ "files": [
+  {
+   "path": "orders/crunchwell/2026-10.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-01",
+   "period_end": "2026-10-14",
+   "kind": "increment",
+   "src_updated_at": "2026-10-08T20:00:00Z"
+  }
+ ]
+}

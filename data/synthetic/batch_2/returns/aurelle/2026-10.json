@@ -1,0 +1,37 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-AU-LATE",
+   "order_id": "AUPLANT0918001",
+   "line_item_id": "AUPLANT0918001-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "60.00",
+   "refund_tax": "0.00",
+   "create_time": 1790355600,
+   "completed_time": 1792260000,
+   "update_time": 1792260000
+  },
+  {
+   "return_id": "RET-AUR-0051",
+   "order_id": "AU1117648718",
+   "line_item_id": "AU1117648718-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792304060,
+   "completed_time": null,
+   "update_time": 1792304060
+  },
+  {
+   "return_id": "RET-AUR-0050",
+   "order_id": "AU9076239202",
+   "line_item_id": "AU9076239202-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792530244,
+   "completed_time": null,
+   "update_time": 1792530244
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-GLO-0063",
+   "order_id": "GL5416534259",
+   "line_item_id": "GL5416534259-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792215510,
+   "completed_time": null,
+   "update_time": 1792215510
+  },
+  {
+   "return_id": "RET-GLO-0065",
+   "order_id": "GL4656647358",
+   "line_item_id": "GL4656647358-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792400561,
+   "completed_time": null,
+   "update_time": 1792400561
+  },
+  {
+   "return_id": "RET-GLO-0064",
+   "order_id": "GL6896372182",
+   "line_item_id": "GL6896372182-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792529491,
+   "completed_time": null,
+   "update_time": 1792529491
+  },
+  {
+   "return_id": "RET-GLO-0060",
+   "order_id": "GL8866097466",
+   "line_item_id": "GL8866097466-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "6.00",
+   "refund_tax": "0.00",
+   "create_time": 1791018367,
+   "completed_time": 1792587967,
+   "update_time": 1792587967
+  }
+ ]
+}

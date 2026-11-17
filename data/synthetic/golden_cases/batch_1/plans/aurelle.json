@@ -1,0 +1,27 @@
+{
+ "brand_id": "aurelle",
+ "month": "2026-10",
+ "goals": [
+  {
+   "metric_key": "gmv",
+   "scope": "shop",
+   "basis": "gross",
+   "definition": "Golden GMV goal",
+   "target": 1000
+  },
+  {
+   "metric_key": "videos",
+   "scope": "creator_attributed",
+   "basis": "gross",
+   "definition": "Qualifying videos published",
+   "target": 5
+  },
+  {
+   "metric_key": "active_creators",
+   "scope": "creator_attributed",
+   "basis": "gross",
+   "definition": "Creators with a video",
+   "target": 2
+  }
+ ]
+}

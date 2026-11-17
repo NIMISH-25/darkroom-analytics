@@ -1,0 +1,92 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-AUR-0044",
+   "order_id": "AU4673555958",
+   "line_item_id": "AU4673555958-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1788478129,
+   "completed_time": null,
+   "update_time": 1788478129
+  },
+  {
+   "return_id": "RET-AUR-0040",
+   "order_id": "AU1638550283",
+   "line_item_id": "AU1638550283-2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "9.60",
+   "refund_tax": "0.00",
+   "create_time": 1787415583,
+   "completed_time": 1788797983,
+   "update_time": 1788797983
+  },
+  {
+   "return_id": "RET-AUR-0039",
+   "order_id": "AU2657754896",
+   "line_item_id": "AU2657754896-2",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1787031679,
+   "completed_time": null,
+   "update_time": 1789033279
+  },
+  {
+   "return_id": "RET-AUR-0043",
+   "order_id": "AU7689642364",
+   "line_item_id": "AU7689642364-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "20.25",
+   "refund_tax": "0.00",
+   "create_time": 1787468076,
+   "completed_time": 1789376076,
+   "update_time": 1789376076
+  },
+  {
+   "return_id": "RET-AUR-0045",
+   "order_id": "AU2047147566",
+   "line_item_id": "AU2047147566-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1789615961,
+   "completed_time": null,
+   "update_time": 1789615961
+  },
+  {
+   "return_id": "RET-AUR-0046",
+   "order_id": "AU6198054881",
+   "line_item_id": "AU6198054881-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1789834062,
+   "completed_time": null,
+   "update_time": 1789834062
+  },
+  {
+   "return_id": "RET-AU-LATE",
+   "order_id": "AUPLANT0918001",
+   "line_item_id": "AUPLANT0918001-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1790355600,
+   "completed_time": null,
+   "update_time": 1790355600
+  },
+  {
+   "return_id": "RET-AUR-0044",
+   "order_id": "AU4673555958",
+   "line_item_id": "AU4673555958-2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "26.60",
+   "refund_tax": "0.00",
+   "create_time": 1788478129,
+   "completed_time": 1790490529,
+   "update_time": 1790490529
+  }
+ ]
+}

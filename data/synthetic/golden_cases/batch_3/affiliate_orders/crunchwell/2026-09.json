@@ -1,0 +1,56 @@
+{
+ "records": [
+  {
+   "affiliate_record_id": "AR_C2",
+   "order_id": "O_C2",
+   "line_item_id": "L_C2_1",
+   "creator_user_id": "cr_0005",
+   "creator_handle": "@golden.crunch",
+   "content_id": "V_C2",
+   "content_type": "video",
+   "commission_rate": "0.10",
+   "commission_amount": "4.00",
+   "commission_status": "settled",
+   "update_time": 1789228800
+  },
+  {
+   "affiliate_record_id": "AR_C3",
+   "order_id": "O_C3",
+   "line_item_id": "L_C3_1",
+   "creator_user_id": "cr_0005",
+   "creator_handle": "@golden.crunch",
+   "content_id": "V_C3",
+   "content_type": "video",
+   "commission_rate": "0.10",
+   "commission_amount": "2.00",
+   "commission_status": "settled",
+   "update_time": 1789228800
+  },
+  {
+   "affiliate_record_id": "AR_C4",
+   "order_id": "O_C4",
+   "line_item_id": "L_C4_1",
+   "creator_user_id": "cr_0007",
+   "creator_handle": "@golden.crunch2",
+   "content_id": "V_C4",
+   "content_type": "video",
+   "commission_rate": "0.10",
+   "commission_amount": "3.00",
+   "commission_status": "settled",
+   "update_time": 1789228800
+  },
+  {
+   "affiliate_record_id": "AR_C5",
+   "order_id": "O_C5",
+   "line_item_id": "L_C5_1",
+   "creator_user_id": "cr_0007",
+   "creator_handle": "@golden.crunch2",
+   "content_id": "V_C0",
+   "content_type": "video",
+   "commission_rate": "0.10",
+   "commission_amount": "1.00",
+   "commission_status": "settled",
+   "update_time": 1789228800
+  }
+ ]
+}

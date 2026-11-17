@@ -1,0 +1,158 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-AUR-0021",
+   "order_id": "AU4171029316",
+   "line_item_id": "AU4171029316-2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "55.80",
+   "refund_tax": "0.00",
+   "create_time": 1779835527,
+   "completed_time": 1780634727,
+   "update_time": 1780634727
+  },
+  {
+   "return_id": "RET-AUR-0022",
+   "order_id": "AU3546623598",
+   "line_item_id": "AU3546623598-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "7.88",
+   "refund_tax": "0.00",
+   "create_time": 1780020213,
+   "completed_time": 1780887813,
+   "update_time": 1780887813
+  },
+  {
+   "return_id": "RET-AUR-0025",
+   "order_id": "AU9824344970",
+   "line_item_id": "AU9824344970-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1780955617,
+   "completed_time": null,
+   "update_time": 1780955617
+  },
+  {
+   "return_id": "RET-AUR-0024",
+   "order_id": "AU5467131488",
+   "line_item_id": "AU5467131488-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1780969671,
+   "completed_time": null,
+   "update_time": 1780969671
+  },
+  {
+   "return_id": "RET-AUR-0016",
+   "order_id": "AU4348227050",
+   "line_item_id": "AU4348227050-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "58.90",
+   "refund_tax": "0.00",
+   "create_time": 1778877713,
+   "completed_time": 1781048513,
+   "update_time": 1781048513
+  },
+  {
+   "return_id": "RET-AUR-0025",
+   "order_id": "AU9824344970",
+   "line_item_id": "AU9824344970-1",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1780955617,
+   "completed_time": null,
+   "update_time": 1781243617
+  },
+  {
+   "return_id": "RET-AUR-0026",
+   "order_id": "AU5429952234",
+   "line_item_id": "AU5429952234-3",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1781563475,
+   "completed_time": null,
+   "update_time": 1781563475
+  },
+  {
+   "return_id": "RET-AUR-0023",
+   "order_id": "AU2529090015",
+   "line_item_id": "AU2529090015-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "70.00",
+   "refund_tax": "0.00",
+   "create_time": 1780089595,
+   "completed_time": 1781587195,
+   "update_time": 1781587195
+  },
+  {
+   "return_id": "RET-AUR-0029",
+   "order_id": "AU9400182958",
+   "line_item_id": "AU9400182958-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1781845649,
+   "completed_time": null,
+   "update_time": 1781845649
+  },
+  {
+   "return_id": "RET-AUR-0027",
+   "order_id": "AU9039808188",
+   "line_item_id": "AU9039808188-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1782169699,
+   "completed_time": null,
+   "update_time": 1782169699
+  },
+  {
+   "return_id": "RET-AUR-0028",
+   "order_id": "AU3842459035",
+   "line_item_id": "AU3842459035-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1782170654,
+   "completed_time": null,
+   "update_time": 1782170654
+  },
+  {
+   "return_id": "RET-AUR-0024",
+   "order_id": "AU5467131488",
+   "line_item_id": "AU5467131488-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "22.80",
+   "refund_tax": "0.00",
+   "create_time": 1780969671,
+   "completed_time": 1782190071,
+   "update_time": 1782190071
+  },
+  {
+   "return_id": "RET-AUR-0029",
+   "order_id": "AU9400182958",
+   "line_item_id": "AU9400182958-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "62.00",
+   "refund_tax": "0.00",
+   "create_time": 1781845649,
+   "completed_time": 1782306449,
+   "update_time": 1782306449
+  },
+  {
+   "return_id": "RET-AUR-0030",
+   "order_id": "AU7439961040",
+   "line_item_id": "AU7439961040-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1782773299,
+   "completed_time": null,
+   "update_time": 1782773299
+  }
+ ]
+}

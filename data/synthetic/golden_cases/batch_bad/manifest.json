@@ -1,0 +1,25 @@
+{
+ "batch_id": "batch_bad",
+ "simulated_received_at": "2026-11-02T23:59:59-08:00",
+ "as_of": "2026-11-02",
+ "files": [
+  {
+   "path": "returns/crunchwell/2026-10.json",
+   "source_type": "returns",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-15",
+   "period_end": "2026-11-01",
+   "kind": "increment",
+   "src_updated_at": "2026-11-02T07:00:00Z"
+  },
+  {
+   "path": "orders/verdant/2026-10-extra.json",
+   "source_type": "orders",
+   "brand_id": "verdant",
+   "period_start": "2026-10-15",
+   "period_end": "2026-11-01",
+   "kind": "increment",
+   "src_updated_at": "2026-11-02T07:00:00Z"
+  }
+ ]
+}

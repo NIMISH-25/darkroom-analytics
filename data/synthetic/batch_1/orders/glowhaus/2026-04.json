@@ -1,0 +1,3664 @@
+{
+ "orders": [
+  {
+   "order_id": "GL1527550896",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775066031,
+   "paid_time": 1775066511,
+   "update_time": 1775339631,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "63.60"
+   },
+   "line_items": [
+    {
+     "id": "GL1527550896-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL1527550896-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL1527550896-3",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4000963582",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775067981,
+   "paid_time": 1775068401,
+   "update_time": 1775604381,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "75.60"
+   },
+   "line_items": [
+    {
+     "id": "GL4000963582-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "37.80",
+     "original_price": "42.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL4000963582-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "37.80",
+     "original_price": "42.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9955188760",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775083878,
+   "paid_time": 1775083938,
+   "update_time": 1775440278,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.00"
+   },
+   "line_items": [
+    {
+     "id": "GL9955188760-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1368313123",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775092609,
+   "paid_time": 1775093149,
+   "update_time": 1775279809,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.00"
+   },
+   "line_items": [
+    {
+     "id": "GL1368313123-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5661464674",
+   "shop_id": "shop_glowhaus",
+   "status": "UNPAID",
+   "create_time": 1775093083,
+   "paid_time": null,
+   "update_time": 1775967883,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "31.50"
+   },
+   "line_items": [
+    {
+     "id": "GL5661464674-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "31.50",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "2.10",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9967795896",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775108207,
+   "paid_time": 1775108267,
+   "update_time": 1775633807,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "28.80"
+   },
+   "line_items": [
+    {
+     "id": "GL9967795896-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "28.80",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5972344622",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775140128,
+   "paid_time": 1775140248,
+   "update_time": 1775752128,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.30"
+   },
+   "line_items": [
+    {
+     "id": "GL5972344622-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "17.60",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL5972344622-2",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "18.70",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "1.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4872371240",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775144706,
+   "paid_time": 1775145186,
+   "update_time": 1775922306,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "62.00"
+   },
+   "line_items": [
+    {
+     "id": "GL4872371240-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL4872371240-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2297327840",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775158705,
+   "paid_time": 1775158825,
+   "update_time": 1775777905,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "23.25"
+   },
+   "line_items": [
+    {
+     "id": "GL2297327840-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "23.25",
+     "original_price": "31.00",
+     "seller_discount": "6.20",
+     "platform_discount": "1.55",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4870151895",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775178384,
+   "paid_time": 1775179104,
+   "update_time": 1775966784,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "31.00"
+   },
+   "line_items": [
+    {
+     "id": "GL4870151895-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8398823833",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1775182452,
+   "paid_time": null,
+   "update_time": 1775618052,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "82.15"
+   },
+   "line_items": [
+    {
+     "id": "GL8398823833-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "24.80",
+     "original_price": "31.00",
+     "seller_discount": "6.20",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "GL8398823833-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "29.45",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.55",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "GL8398823833-3",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "27.90",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2646045686",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775188029,
+   "paid_time": 1775188449,
+   "update_time": 1775796429,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "73.50"
+   },
+   "line_items": [
+    {
+     "id": "GL2646045686-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "42.00",
+     "original_price": "42.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2646045686-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "31.50",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "2.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2793962085",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775234224,
+   "paid_time": 1775234404,
+   "update_time": 1775842624,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2793962085-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6718400881",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775248025,
+   "paid_time": 1775248445,
+   "update_time": 1775777225,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "50.00"
+   },
+   "line_items": [
+    {
+     "id": "GL6718400881-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6718400881-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6718400881-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "18.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3916702933",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775248127,
+   "paid_time": 1775248187,
+   "update_time": 1776119327,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.00"
+   },
+   "line_items": [
+    {
+     "id": "GL3916702933-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3643272069",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775256089,
+   "paid_time": 1775256329,
+   "update_time": 1775608889,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.00"
+   },
+   "line_items": [
+    {
+     "id": "GL3643272069-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4478078744",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775258130,
+   "paid_time": 1775258850,
+   "update_time": 1776136530,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.00"
+   },
+   "line_items": [
+    {
+     "id": "GL4478078744-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "36.00",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7105479411",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1775260955,
+   "paid_time": null,
+   "update_time": 1775523755,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "31.00"
+   },
+   "line_items": [
+    {
+     "id": "GL7105479411-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2018817927",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775261268,
+   "paid_time": 1775261328,
+   "update_time": 1775794068,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2018817927-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4880680230",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775267459,
+   "paid_time": 1775267939,
+   "update_time": 1776063059,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "107.10"
+   },
+   "line_items": [
+    {
+     "id": "GL4880680230-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "33.60",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL4880680230-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "33.60",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL4880680230-3",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "39.90",
+     "original_price": "42.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9222942420",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775328158,
+   "paid_time": 1775328218,
+   "update_time": 1776105758,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.00"
+   },
+   "line_items": [
+    {
+     "id": "GL9222942420-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "18.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3657843131",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775332973,
+   "paid_time": 1775333693,
+   "update_time": 1775696573,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.50"
+   },
+   "line_items": [
+    {
+     "id": "GL3657843131-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "16.50",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "1.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4495790767",
+   "shop_id": "shop_glowhaus",
+   "status": "UNPAID",
+   "create_time": 1775340177,
+   "paid_time": null,
+   "update_time": 1775772177,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "71.40"
+   },
+   "line_items": [
+    {
+     "id": "GL4495790767-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "33.60",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    },
+    {
+     "id": "GL4495790767-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "37.80",
+     "original_price": "42.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "AWAITING_SHIPMENT"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8821376811",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775420267,
+   "paid_time": 1775420987,
+   "update_time": 1775949467,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.90"
+   },
+   "line_items": [
+    {
+     "id": "GL8821376811-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL8821376811-2",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "20.90",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7662034866",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775485041,
+   "paid_time": 1775485701,
+   "update_time": 1776007041,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "40.80"
+   },
+   "line_items": [
+    {
+     "id": "GL7662034866-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7662034866-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6950363696",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775485957,
+   "paid_time": 1775486437,
+   "update_time": 1776270757,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.00"
+   },
+   "line_items": [
+    {
+     "id": "GL6950363696-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3909637985",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775486284,
+   "paid_time": 1775487004,
+   "update_time": 1776177484,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.80"
+   },
+   "line_items": [
+    {
+     "id": "GL3909637985-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "19.80",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2979795487",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775496444,
+   "paid_time": 1775496864,
+   "update_time": 1775672844,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2979795487-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2979795487-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2236115733",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775505848,
+   "paid_time": 1775506328,
+   "update_time": 1776031448,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2236115733-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2236115733-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6738673766",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775514879,
+   "paid_time": 1775514999,
+   "update_time": 1776047679,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "40.80"
+   },
+   "line_items": [
+    {
+     "id": "GL6738673766-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6738673766-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3678755224",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775539614,
+   "paid_time": 1775540094,
+   "update_time": 1775986014,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "75.60"
+   },
+   "line_items": [
+    {
+     "id": "GL3678755224-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "42.00",
+     "original_price": "42.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3678755224-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "33.60",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1955490469",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1775578728,
+   "paid_time": null,
+   "update_time": 1775683128,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.90"
+   },
+   "line_items": [
+    {
+     "id": "GL1955490469-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "27.90",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1003413658",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775591543,
+   "paid_time": 1775592263,
+   "update_time": 1775955143,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.80"
+   },
+   "line_items": [
+    {
+     "id": "GL1003413658-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "37.80",
+     "original_price": "42.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8898997191",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775594469,
+   "paid_time": 1775594529,
+   "update_time": 1776116469,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.40"
+   },
+   "line_items": [
+    {
+     "id": "GL8898997191-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3623081625",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775615336,
+   "paid_time": 1775615456,
+   "update_time": 1775971736,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "40.80"
+   },
+   "line_items": [
+    {
+     "id": "GL3623081625-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3623081625-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6580324328",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775678006,
+   "paid_time": 1775678186,
+   "update_time": 1776041606,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "40.80"
+   },
+   "line_items": [
+    {
+     "id": "GL6580324328-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6580324328-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9573010539",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775678156,
+   "paid_time": 1775678636,
+   "update_time": 1776210956,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "51.00"
+   },
+   "line_items": [
+    {
+     "id": "GL9573010539-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL9573010539-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "15.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL9573010539-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8065235493",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775699193,
+   "paid_time": 1775699613,
+   "update_time": 1775879193,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.90"
+   },
+   "line_items": [
+    {
+     "id": "GL8065235493-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "27.90",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6530998940",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775711557,
+   "paid_time": 1775712157,
+   "update_time": 1776489157,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.20"
+   },
+   "line_items": [
+    {
+     "id": "GL6530998940-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "18.00",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6530998940-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6510170675",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775790950,
+   "paid_time": 1775791070,
+   "update_time": 1776316550,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.60"
+   },
+   "line_items": [
+    {
+     "id": "GL6510170675-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2477264577",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775831913,
+   "paid_time": 1775832453,
+   "update_time": 1776105513,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "58.90"
+   },
+   "line_items": [
+    {
+     "id": "GL2477264577-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2477264577-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "27.90",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2752431309",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775833366,
+   "paid_time": 1775833426,
+   "update_time": 1776628966,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "59.40"
+   },
+   "line_items": [
+    {
+     "id": "GL2752431309-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "19.80",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2752431309-2",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "19.80",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2752431309-3",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "19.80",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5812278367",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775843238,
+   "paid_time": 1775843658,
+   "update_time": 1776624438,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "34.20"
+   },
+   "line_items": [
+    {
+     "id": "GL5812278367-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "34.20",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2286582962",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775845477,
+   "paid_time": 1775845717,
+   "update_time": 1776723877,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2286582962-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "36.00",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7858202720",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775865935,
+   "paid_time": 1775866535,
+   "update_time": 1776384335,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "34.20"
+   },
+   "line_items": [
+    {
+     "id": "GL7858202720-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "34.20",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2131893378",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775870307,
+   "paid_time": 1775870667,
+   "update_time": 1776752307,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "28.80"
+   },
+   "line_items": [
+    {
+     "id": "GL2131893378-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "28.80",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3468668379",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1775941418,
+   "paid_time": 1775941598,
+   "update_time": 1776027818,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.00"
+   },
+   "line_items": [
+    {
+     "id": "GL3468668379-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "18.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8119787072",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776006702,
+   "paid_time": 1776006942,
+   "update_time": 1776197502,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "30.60"
+   },
+   "line_items": [
+    {
+     "id": "GL8119787072-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "30.60",
+     "original_price": "36.00",
+     "seller_discount": "3.60",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3761782189",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776024380,
+   "paid_time": 1776024980,
+   "update_time": 1776463580,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "66.00"
+   },
+   "line_items": [
+    {
+     "id": "GL3761782189-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3761782189-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3761782189-3",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9478596380",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776024544,
+   "paid_time": 1776024904,
+   "update_time": 1776546544,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.60"
+   },
+   "line_items": [
+    {
+     "id": "GL9478596380-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2711446143",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776051777,
+   "paid_time": 1776052437,
+   "update_time": 1776152577,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "55.80"
+   },
+   "line_items": [
+    {
+     "id": "GL2711446143-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "27.00",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2711446143-2",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "28.80",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5478998092",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776100090,
+   "paid_time": 1776100330,
+   "update_time": 1776272890,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.00"
+   },
+   "line_items": [
+    {
+     "id": "GL5478998092-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5825040790",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776108545,
+   "paid_time": 1776109025,
+   "update_time": 1776454145,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "39.60"
+   },
+   "line_items": [
+    {
+     "id": "GL5825040790-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL5825040790-2",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "17.60",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3227403409",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776120850,
+   "paid_time": 1776121330,
+   "update_time": 1776909250,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "70.80"
+   },
+   "line_items": [
+    {
+     "id": "GL3227403409-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3227403409-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3227403409-3",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7145985577",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776127889,
+   "paid_time": 1776128609,
+   "update_time": 1777002689,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "GL7145985577-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7277494475",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776134572,
+   "paid_time": 1776134992,
+   "update_time": 1776577372,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "48.00"
+   },
+   "line_items": [
+    {
+     "id": "GL7277494475-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7277494475-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9937124289",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776184699,
+   "paid_time": 1776185299,
+   "update_time": 1776796699,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.00"
+   },
+   "line_items": [
+    {
+     "id": "GL9937124289-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3079629555",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776219966,
+   "paid_time": 1776220626,
+   "update_time": 1776659166,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.40"
+   },
+   "line_items": [
+    {
+     "id": "GL3079629555-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3079629555-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4125490438",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776224356,
+   "paid_time": 1776224836,
+   "update_time": 1776587956,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "54.00"
+   },
+   "line_items": [
+    {
+     "id": "GL4125490438-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL4125490438-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "19.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL4125490438-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "15.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7385999068",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776280070,
+   "paid_time": 1776280610,
+   "update_time": 1776373670,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "88.20"
+   },
+   "line_items": [
+    {
+     "id": "GL7385999068-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "27.00",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7385999068-2",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "27.00",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7385999068-3",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "34.20",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8678706414",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776295227,
+   "paid_time": 1776295587,
+   "update_time": 1776903627,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.80"
+   },
+   "line_items": [
+    {
+     "id": "GL8678706414-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "24.80",
+     "original_price": "31.00",
+     "seller_discount": "6.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5609814413",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776296237,
+   "paid_time": 1776296657,
+   "update_time": 1776994637,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.00"
+   },
+   "line_items": [
+    {
+     "id": "GL5609814413-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7655734645",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1776301197,
+   "paid_time": 1776301617,
+   "update_time": 1776905997,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "22.80"
+   },
+   "line_items": [
+    {
+     "id": "GL7655734645-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2809949856",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776349058,
+   "paid_time": 1776349238,
+   "update_time": 1776453458,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "21.60"
+   },
+   "line_items": [
+    {
+     "id": "GL2809949856-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9911532764",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776382362,
+   "paid_time": 1776382482,
+   "update_time": 1776479562,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "30.60"
+   },
+   "line_items": [
+    {
+     "id": "GL9911532764-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "30.60",
+     "original_price": "36.00",
+     "seller_discount": "3.60",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6191095957",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776384243,
+   "paid_time": 1776384783,
+   "update_time": 1776661443,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "56.00"
+   },
+   "line_items": [
+    {
+     "id": "GL6191095957-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6191095957-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6191095957-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1121940187",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776396872,
+   "paid_time": 1776397292,
+   "update_time": 1776674072,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "37.80"
+   },
+   "line_items": [
+    {
+     "id": "GL1121940187-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "37.80",
+     "original_price": "42.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4971029500",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776434776,
+   "paid_time": 1776434956,
+   "update_time": 1776621976,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "44.00"
+   },
+   "line_items": [
+    {
+     "id": "GL4971029500-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL4971029500-2",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "22.00",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3470911343",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776473371,
+   "paid_time": 1776474091,
+   "update_time": 1777085371,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "38.00"
+   },
+   "line_items": [
+    {
+     "id": "GL3470911343-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "18.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3470911343-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8388156553",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776484554,
+   "paid_time": 1776484734,
+   "update_time": 1777103754,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.20"
+   },
+   "line_items": [
+    {
+     "id": "GL8388156553-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "19.20",
+     "original_price": "24.00",
+     "seller_discount": "4.80",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7622359438",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776521412,
+   "paid_time": 1776521532,
+   "update_time": 1776697812,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.00"
+   },
+   "line_items": [
+    {
+     "id": "GL7622359438-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "36.00",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3544509735",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776529076,
+   "paid_time": 1776529556,
+   "update_time": 1777310276,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.40"
+   },
+   "line_items": [
+    {
+     "id": "GL3544509735-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5683891573",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1776539538,
+   "paid_time": 1776539898,
+   "update_time": 1777151538,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.00"
+   },
+   "line_items": [
+    {
+     "id": "GL5683891573-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9398830063",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776559499,
+   "paid_time": 1776560159,
+   "update_time": 1776660299,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "99.00"
+   },
+   "line_items": [
+    {
+     "id": "GL9398830063-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "30.60",
+     "original_price": "36.00",
+     "seller_discount": "3.60",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL9398830063-2",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "36.00",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL9398830063-3",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "32.40",
+     "original_price": "36.00",
+     "seller_discount": "3.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5024544292",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776562672,
+   "paid_time": 1776563392,
+   "update_time": 1777340272,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "63.00"
+   },
+   "line_items": [
+    {
+     "id": "GL5024544292-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "30.60",
+     "original_price": "36.00",
+     "seller_discount": "3.60",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL5024544292-2",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "32.40",
+     "original_price": "36.00",
+     "seller_discount": "3.60",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8669265750",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776567616,
+   "paid_time": 1776568096,
+   "update_time": 1777104016,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "19.00"
+   },
+   "line_items": [
+    {
+     "id": "GL8669265750-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "19.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7234406885",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776634692,
+   "paid_time": 1776635112,
+   "update_time": 1777066692,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "54.00"
+   },
+   "line_items": [
+    {
+     "id": "GL7234406885-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "17.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7234406885-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "17.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7234406885-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8835961988",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1776694301,
+   "paid_time": 1776694961,
+   "update_time": 1776957101,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "57.20"
+   },
+   "line_items": [
+    {
+     "id": "GL8835961988-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "18.70",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "1.10",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "GL8835961988-2",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "17.60",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "GL8835961988-3",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "20.90",
+     "original_price": "22.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.10",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8480510916",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776717606,
+   "paid_time": 1776718206,
+   "update_time": 1777153206,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.30"
+   },
+   "line_items": [
+    {
+     "id": "GL8480510916-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "19.80",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL8480510916-2",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "16.50",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "1.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2335914101",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776721999,
+   "paid_time": 1776722119,
+   "update_time": 1777600399,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "60.45"
+   },
+   "line_items": [
+    {
+     "id": "GL2335914101-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2335914101-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "29.45",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.55",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3767173973",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1776727961,
+   "paid_time": null,
+   "update_time": 1776821561,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.50"
+   },
+   "line_items": [
+    {
+     "id": "GL3767173973-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "16.50",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "1.10",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5303248589",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1776734452,
+   "paid_time": 1776734512,
+   "update_time": 1776835252,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "69.30"
+   },
+   "line_items": [
+    {
+     "id": "GL5303248589-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "37.80",
+     "original_price": "42.00",
+     "seller_discount": "4.20",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "GL5303248589-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "31.50",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "2.10",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6989655403",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776737059,
+   "paid_time": 1776737779,
+   "update_time": 1777187059,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "64.80"
+   },
+   "line_items": [
+    {
+     "id": "GL6989655403-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6989655403-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "20.40",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6989655403-3",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7676496832",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776867244,
+   "paid_time": 1776867664,
+   "update_time": 1777472044,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "66.60"
+   },
+   "line_items": [
+    {
+     "id": "GL7676496832-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "36.00",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7676496832-2",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "30.60",
+     "original_price": "36.00",
+     "seller_discount": "3.60",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL8916021338",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776877841,
+   "paid_time": 1776878141,
+   "update_time": 1777065041,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "36.00"
+   },
+   "line_items": [
+    {
+     "id": "GL8916021338-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "36.00",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9038556993",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776885612,
+   "paid_time": 1776885912,
+   "update_time": 1777756812,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "73.50"
+   },
+   "line_items": [
+    {
+     "id": "GL9038556993-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "42.00",
+     "original_price": "42.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL9038556993-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "31.50",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "2.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2873076987",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776966080,
+   "paid_time": 1776966740,
+   "update_time": 1777236080,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "39.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2873076987-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "19.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2873076987-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9171097848",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1776976133,
+   "paid_time": 1776976253,
+   "update_time": 1777415333,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "69.60"
+   },
+   "line_items": [
+    {
+     "id": "GL9171097848-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL9171097848-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL9171097848-3",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9791751711",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777052631,
+   "paid_time": 1777053231,
+   "update_time": 1777401831,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.00"
+   },
+   "line_items": [
+    {
+     "id": "GL9791751711-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4559579170",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777066906,
+   "paid_time": 1777067326,
+   "update_time": 1777254106,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "29.45"
+   },
+   "line_items": [
+    {
+     "id": "GL4559579170-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "29.45",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.55",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2941294220",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777079168,
+   "paid_time": 1777079228,
+   "update_time": 1777255568,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "27.90"
+   },
+   "line_items": [
+    {
+     "id": "GL2941294220-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "27.90",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2903918326",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777080952,
+   "paid_time": 1777081432,
+   "update_time": 1777955752,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2903918326-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "42.00",
+     "original_price": "42.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7950143429",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777091630,
+   "paid_time": 1777092230,
+   "update_time": 1777523630,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "53.00"
+   },
+   "line_items": [
+    {
+     "id": "GL7950143429-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "19.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7950143429-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "18.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL7950143429-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6716389240",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777131422,
+   "paid_time": 1777131782,
+   "update_time": 1777826222,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.00"
+   },
+   "line_items": [
+    {
+     "id": "GL6716389240-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "18.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1345000431",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777140189,
+   "paid_time": 1777140249,
+   "update_time": 1778007789,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "34.20"
+   },
+   "line_items": [
+    {
+     "id": "GL1345000431-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "34.20",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2148918998",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777141639,
+   "paid_time": 1777141939,
+   "update_time": 1778009239,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "46.80"
+   },
+   "line_items": [
+    {
+     "id": "GL2148918998-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2148918998-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6582809757",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777147147,
+   "paid_time": 1777147207,
+   "update_time": 1777665547,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "31.00"
+   },
+   "line_items": [
+    {
+     "id": "GL6582809757-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1956781205",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777151341,
+   "paid_time": 1777151761,
+   "update_time": 1778033341,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "46.80"
+   },
+   "line_items": [
+    {
+     "id": "GL1956781205-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "22.80",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.20",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL1956781205-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2753456563",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777154489,
+   "paid_time": 1777154549,
+   "update_time": 1778032889,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "55.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2753456563-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "19.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2753456563-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2753456563-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1744482623",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777160324,
+   "paid_time": 1777160564,
+   "update_time": 1777945124,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "17.60"
+   },
+   "line_items": [
+    {
+     "id": "GL1744482623-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "17.60",
+     "original_price": "22.00",
+     "seller_discount": "4.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7116295284",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777163753,
+   "paid_time": 1777163933,
+   "update_time": 1777854953,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "39.90"
+   },
+   "line_items": [
+    {
+     "id": "GL7116295284-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "39.90",
+     "original_price": "42.00",
+     "seller_discount": "0.00",
+     "platform_discount": "2.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1497845164",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777219106,
+   "paid_time": 1777219526,
+   "update_time": 1777841906,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "97.20"
+   },
+   "line_items": [
+    {
+     "id": "GL1497845164-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "27.00",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL1497845164-2",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "36.00",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL1497845164-3",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "34.20",
+     "original_price": "36.00",
+     "seller_discount": "0.00",
+     "platform_discount": "1.80",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5464644298",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777237843,
+   "paid_time": 1777238383,
+   "update_time": 1777687843,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "45.60"
+   },
+   "line_items": [
+    {
+     "id": "GL5464644298-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL5464644298-2",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "21.60",
+     "original_price": "24.00",
+     "seller_discount": "2.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6826692847",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777264618,
+   "paid_time": 1777265158,
+   "update_time": 1777455418,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "16.00"
+   },
+   "line_items": [
+    {
+     "id": "GL6826692847-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "16.00",
+     "original_price": "20.00",
+     "seller_discount": "4.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL9083072623",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777268961,
+   "paid_time": 1777269681,
+   "update_time": 1777978161,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "24.00"
+   },
+   "line_items": [
+    {
+     "id": "GL9083072623-1",
+     "product_id": "P_GLO_2",
+     "sku_id": "SKU_GLO_2",
+     "sale_price": "24.00",
+     "original_price": "24.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL3665839033",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777313139,
+   "paid_time": 1777313319,
+   "update_time": 1778195139,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "65.10"
+   },
+   "line_items": [
+    {
+     "id": "GL3665839033-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "31.50",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "2.10",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL3665839033-2",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "33.60",
+     "original_price": "42.00",
+     "seller_discount": "8.40",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL4534711166",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777319452,
+   "paid_time": 1777319512,
+   "update_time": 1777506652,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "20.00"
+   },
+   "line_items": [
+    {
+     "id": "GL4534711166-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL7301347899",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777339164,
+   "paid_time": 1777339284,
+   "update_time": 1777789164,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "28.80"
+   },
+   "line_items": [
+    {
+     "id": "GL7301347899-1",
+     "product_id": "P_GLO_1",
+     "sku_id": "SKU_GLO_1",
+     "sale_price": "28.80",
+     "original_price": "36.00",
+     "seller_discount": "7.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1371228046",
+   "shop_id": "shop_glowhaus",
+   "status": "DELIVERED",
+   "create_time": 1777348152,
+   "paid_time": 1777348812,
+   "update_time": 1777607352,
+   "is_sample_order": true,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "0.00"
+   },
+   "line_items": [
+    {
+     "id": "GL1371228046-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "0.00",
+     "original_price": "0.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    },
+    {
+     "id": "GL1371228046-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "0.00",
+     "original_price": "0.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "DELIVERED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2626642009",
+   "shop_id": "shop_glowhaus",
+   "status": "CANCELLED",
+   "create_time": 1777355380,
+   "paid_time": null,
+   "update_time": 1777546180,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "57.00"
+   },
+   "line_items": [
+    {
+     "id": "GL2626642009-1",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "GL2626642009-2",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "20.00",
+     "original_price": "20.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "CANCELLED"
+    },
+    {
+     "id": "GL2626642009-3",
+     "product_id": "P_GLO_5",
+     "sku_id": "SKU_GLO_5",
+     "sale_price": "17.00",
+     "original_price": "20.00",
+     "seller_discount": "2.00",
+     "platform_discount": "1.00",
+     "display_status": "CANCELLED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL2517194590",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777399721,
+   "paid_time": 1777400201,
+   "update_time": 1778004521,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "58.90"
+   },
+   "line_items": [
+    {
+     "id": "GL2517194590-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "27.90",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL2517194590-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6205142235",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777416084,
+   "paid_time": 1777416324,
+   "update_time": 1777599684,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "55.80"
+   },
+   "line_items": [
+    {
+     "id": "GL6205142235-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL6205142235-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "24.80",
+     "original_price": "31.00",
+     "seller_discount": "6.20",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL6429527463",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777427761,
+   "paid_time": 1777427941,
+   "update_time": 1778295361,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "18.70"
+   },
+   "line_items": [
+    {
+     "id": "GL6429527463-1",
+     "product_id": "P_GLO_4",
+     "sku_id": "SKU_GLO_4",
+     "sale_price": "18.70",
+     "original_price": "22.00",
+     "seller_discount": "2.20",
+     "platform_discount": "1.10",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1453619888",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777474901,
+   "paid_time": 1777475141,
+   "update_time": 1777993301,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "26.35"
+   },
+   "line_items": [
+    {
+     "id": "GL1453619888-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "26.35",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "1.55",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL1749904361",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777504936,
+   "paid_time": 1777505416,
+   "update_time": 1778286136,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "58.90"
+   },
+   "line_items": [
+    {
+     "id": "GL1749904361-1",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "31.00",
+     "original_price": "31.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    },
+    {
+     "id": "GL1749904361-2",
+     "product_id": "P_GLO_3",
+     "sku_id": "SKU_GLO_3",
+     "sale_price": "27.90",
+     "original_price": "31.00",
+     "seller_discount": "3.10",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  },
+  {
+   "order_id": "GL5894259361",
+   "shop_id": "shop_glowhaus",
+   "status": "COMPLETED",
+   "create_time": 1777520101,
+   "paid_time": 1777520821,
+   "update_time": 1778225701,
+   "is_sample_order": false,
+   "payment": {
+    "currency": "USD",
+    "sub_total": "42.00"
+   },
+   "line_items": [
+    {
+     "id": "GL5894259361-1",
+     "product_id": "P_GLO_6",
+     "sku_id": "SKU_GLO_6",
+     "sale_price": "42.00",
+     "original_price": "42.00",
+     "seller_discount": "0.00",
+     "platform_discount": "0.00",
+     "display_status": "COMPLETED"
+    }
+   ]
+  }
+ ]
+}

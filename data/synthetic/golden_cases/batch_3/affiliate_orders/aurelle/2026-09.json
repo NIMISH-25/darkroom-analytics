@@ -1,0 +1,30 @@
+{
+ "records": [
+  {
+   "affiliate_record_id": "AR_A3",
+   "order_id": "O_A3",
+   "line_item_id": "L_A3_1",
+   "creator_user_id": "cr_0001",
+   "creator_handle": "@golden.mia.new",
+   "content_id": null,
+   "content_type": "showcase",
+   "commission_rate": "0.12",
+   "commission_amount": "7.20",
+   "commission_status": "settled",
+   "update_time": 1788537600
+  },
+  {
+   "affiliate_record_id": "AR_A4",
+   "order_id": "O_A4",
+   "line_item_id": "L_A4_1",
+   "creator_user_id": "u_9001",
+   "creator_handle": "@golden.m1a",
+   "content_id": null,
+   "content_type": "showcase",
+   "commission_rate": "0.12",
+   "commission_amount": "6.00",
+   "commission_status": "settled",
+   "update_time": 1789315200
+  }
+ ]
+}

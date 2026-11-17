@@ -1,0 +1,136 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-CRU-0033",
+   "order_id": "CR3499664771",
+   "line_item_id": "CR3499664771-1",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1781747106,
+   "completed_time": null,
+   "update_time": 1783151106
+  },
+  {
+   "return_id": "RET-CRU-0039",
+   "order_id": "CR9866344377",
+   "line_item_id": "CR9866344377-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1783278553,
+   "completed_time": null,
+   "update_time": 1783278553
+  },
+  {
+   "return_id": "RET-CRU-0034",
+   "order_id": "CR9684968526",
+   "line_item_id": "CR9684968526-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "19.20",
+   "refund_tax": "0.00",
+   "create_time": 1781591189,
+   "completed_time": 1783520789,
+   "update_time": 1783520789
+  },
+  {
+   "return_id": "RET-CRU-0038",
+   "order_id": "CR2531470665",
+   "line_item_id": "CR2531470665-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "6.53",
+   "refund_tax": "0.00",
+   "create_time": 1782788044,
+   "completed_time": 1783569244,
+   "update_time": 1783569244
+  },
+  {
+   "return_id": "RET-CRU-0037",
+   "order_id": "CR9734710653",
+   "line_item_id": "CR9734710653-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "19.00",
+   "refund_tax": "0.00",
+   "create_time": 1782370705,
+   "completed_time": 1783594705,
+   "update_time": 1783594705
+  },
+  {
+   "return_id": "RET-CRU-0040",
+   "order_id": "CR1880355953",
+   "line_item_id": "CR1880355953-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1783801661,
+   "completed_time": null,
+   "update_time": 1783801661
+  },
+  {
+   "return_id": "RET-CRU-0042",
+   "order_id": "CR2752108215",
+   "line_item_id": "CR2752108215-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1784022854,
+   "completed_time": null,
+   "update_time": 1784022854
+  },
+  {
+   "return_id": "RET-CRU-0040",
+   "order_id": "CR1880355953",
+   "line_item_id": "CR1880355953-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "14.40",
+   "refund_tax": "0.00",
+   "create_time": 1783801661,
+   "completed_time": 1784334461,
+   "update_time": 1784334461
+  },
+  {
+   "return_id": "RET-CRU-0039",
+   "order_id": "CR9866344377",
+   "line_item_id": "CR9866344377-2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "6.40",
+   "refund_tax": "0.00",
+   "create_time": 1783278553,
+   "completed_time": 1784340553,
+   "update_time": 1784340553
+  },
+  {
+   "return_id": "RET-CRU-0041",
+   "order_id": "CR7376423715",
+   "line_item_id": "CR7376423715-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1784350568,
+   "completed_time": null,
+   "update_time": 1784350568
+  },
+  {
+   "return_id": "RET-CRU-0043",
+   "order_id": "CR5302083863",
+   "line_item_id": "CR5302083863-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1784618276,
+   "completed_time": null,
+   "update_time": 1784618276
+  },
+  {
+   "return_id": "RET-CRU-0041",
+   "order_id": "CR7376423715",
+   "line_item_id": "CR7376423715-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "6.00",
+   "refund_tax": "0.00",
+   "create_time": 1784350568,
+   "completed_time": 1784966168,
+   "update_time": 1784966168
+  }
+ ]
+}

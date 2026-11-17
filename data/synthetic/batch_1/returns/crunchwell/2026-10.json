@@ -1,0 +1,81 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-CRU-0070",
+   "order_id": "CR5613620771",
+   "line_item_id": "CR5613620771-1",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1790573993,
+   "completed_time": null,
+   "update_time": 1791103193
+  },
+  {
+   "return_id": "RET-CRU-0072",
+   "order_id": "CR5902892492",
+   "line_item_id": "CR5902892492-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1791244318,
+   "completed_time": null,
+   "update_time": 1791244318
+  },
+  {
+   "return_id": "RET-CRU-0066",
+   "order_id": "CR1289561626",
+   "line_item_id": "CR1289561626-3",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "21.00",
+   "refund_tax": "0.00",
+   "create_time": 1789529119,
+   "completed_time": 1791361519,
+   "update_time": 1791361519
+  },
+  {
+   "return_id": "RET-CRU-0074",
+   "order_id": "CR2569644195",
+   "line_item_id": "CR2569644195-3",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1791528786,
+   "completed_time": null,
+   "update_time": 1791528786
+  },
+  {
+   "return_id": "RET-CRU-0073",
+   "order_id": "CR1296980149",
+   "line_item_id": "CR1296980149-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1791581333,
+   "completed_time": null,
+   "update_time": 1791581333
+  },
+  {
+   "return_id": "RET-CRU-0067",
+   "order_id": "CR6285503959",
+   "line_item_id": "CR6285503959-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "27.55",
+   "refund_tax": "0.00",
+   "create_time": 1790323695,
+   "completed_time": 1791641295,
+   "update_time": 1791641295
+  },
+  {
+   "return_id": "RET-CRU-0065",
+   "order_id": "CR1289561626",
+   "line_item_id": "CR1289561626-2",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1790216719,
+   "completed_time": null,
+   "update_time": 1791710719
+  }
+ ]
+}

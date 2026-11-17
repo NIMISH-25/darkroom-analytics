@@ -1,0 +1,7 @@
+﻿shop_id,product_id,sku_id,product_name,list_price,unit_cost,update_time
+shop_verdant,P_VER_1,SKU_VER_1,Vitamin C Serum,38.00,14.30,1760900000
+shop_verdant,P_VER_2,SKU_VER_2,Hydra Gel Cream,32.00,11.20,1760900000
+shop_verdant,P_VER_3,SKU_VER_3,Gentle Cleanser,18.00,6.30,1760900000
+shop_verdant,P_VER_4,SKU_VER_4,SPF 50 Fluid,26.00,9.10,1760900000
+shop_verdant,P_VER_5,SKU_VER_5,Retinol Night Oil,44.00,15.40,1760900000
+shop_verdant,P_VER_6,SKU_VER_6,Clay Mask,22.00,7.70,1760900000

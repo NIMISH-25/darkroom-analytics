@@ -1,0 +1,3 @@
+shop_id,product_id,sku_id,product_name,list_price,unit_cost,update_time
+shop_threadline,P_T1,S_T1,Linen Shirt,60.00,20.00,1760500000
+shop_threadline,P_T2,S_T2,Denim Jacket,90.00,30.00,1760500000

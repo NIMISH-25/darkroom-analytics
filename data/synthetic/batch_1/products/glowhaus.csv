@@ -1,0 +1,7 @@
+shop_id,product_id,sku_id,product_name,list_price,unit_cost,update_time
+shop_glowhaus,P_GLO_1,SKU_GLO_1,Glow Palette,36.00,12.60,1759300000
+shop_glowhaus,P_GLO_2,SKU_GLO_2,Dewy Tint,24.00,8.40,1759300000
+shop_glowhaus,P_GLO_3,SKU_GLO_3,Lash Serum,31.00,10.85,1759300000
+shop_glowhaus,P_GLO_4,SKU_GLO_4,Lip Oil Duo,22.00,7.70,1759300000
+shop_glowhaus,P_GLO_5,SKU_GLO_5,Setting Spray,20.00,7.00,1759300000
+shop_glowhaus,P_GLO_6,SKU_GLO_6,Brush Set,42.00,14.70,1759300000

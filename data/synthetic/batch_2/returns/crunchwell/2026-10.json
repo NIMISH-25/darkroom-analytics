@@ -1,0 +1,92 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-CRU-0076",
+   "order_id": "CR5682713472",
+   "line_item_id": "CR5682713472-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792141841,
+   "completed_time": null,
+   "update_time": 1792141841
+  },
+  {
+   "return_id": "RET-CRU-0075",
+   "order_id": "CR9895732527",
+   "line_item_id": "CR9895732527-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792169656,
+   "completed_time": null,
+   "update_time": 1792169656
+  },
+  {
+   "return_id": "RET-CRU-0077",
+   "order_id": "CR6424974763",
+   "line_item_id": "CR6424974763-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792183527,
+   "completed_time": null,
+   "update_time": 1792183527
+  },
+  {
+   "return_id": "RET-CRU-0068",
+   "order_id": "CR7827610808",
+   "line_item_id": "CR7827610808-1",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1790369411,
+   "completed_time": null,
+   "update_time": 1792187411
+  },
+  {
+   "return_id": "RET-CRU-0073",
+   "order_id": "CR1296980149",
+   "line_item_id": "CR1296980149-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "12.80",
+   "refund_tax": "0.00",
+   "create_time": 1791581333,
+   "completed_time": 1792376933,
+   "update_time": 1792376933
+  },
+  {
+   "return_id": "RET-CRU-0072",
+   "order_id": "CR5902892492",
+   "line_item_id": "CR5902892492-1",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1791244318,
+   "completed_time": null,
+   "update_time": 1792396318
+  },
+  {
+   "return_id": "RET-CRU-0080",
+   "order_id": "CR6863712940",
+   "line_item_id": "CR6863712940-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792441909,
+   "completed_time": null,
+   "update_time": 1792441909
+  },
+  {
+   "return_id": "RET-CRU-0078",
+   "order_id": "CR6713029995",
+   "line_item_id": "CR6713029995-3",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1792617207,
+   "completed_time": null,
+   "update_time": 1792617207
+  }
+ ]
+}

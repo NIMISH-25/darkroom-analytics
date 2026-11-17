@@ -1,0 +1,81 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-VER-0023",
+   "order_id": "VE9056379216",
+   "line_item_id": "VE9056379216-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785865488,
+   "completed_time": null,
+   "update_time": 1785865488
+  },
+  {
+   "return_id": "RET-VER-0019",
+   "order_id": "VE1534915447",
+   "line_item_id": "VE1534915447-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "39.60",
+   "refund_tax": "0.00",
+   "create_time": 1784614796,
+   "completed_time": 1786173596,
+   "update_time": 1786173596
+  },
+  {
+   "return_id": "RET-VER-0022",
+   "order_id": "VE4104582842",
+   "line_item_id": "VE4104582842-3",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "35.20",
+   "refund_tax": "0.00",
+   "create_time": 1785178840,
+   "completed_time": 1786215640,
+   "update_time": 1786215640
+  },
+  {
+   "return_id": "RET-VER-0023",
+   "order_id": "VE9056379216",
+   "line_item_id": "VE9056379216-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "3.60",
+   "refund_tax": "0.00",
+   "create_time": 1785865488,
+   "completed_time": 1787089488,
+   "update_time": 1787089488
+  },
+  {
+   "return_id": "RET-VER-0024",
+   "order_id": "VE6060705217",
+   "line_item_id": "VE6060705217-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1787199740,
+   "completed_time": null,
+   "update_time": 1787199740
+  },
+  {
+   "return_id": "RET-VER-0025",
+   "order_id": "VE3570946777",
+   "line_item_id": "VE3570946777-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1787721905,
+   "completed_time": null,
+   "update_time": 1787721905
+  },
+  {
+   "return_id": "RET-VER-0024",
+   "order_id": "VE6060705217",
+   "line_item_id": "VE6060705217-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "14.40",
+   "refund_tax": "0.00",
+   "create_time": 1787199740,
+   "completed_time": 1788085340,
+   "update_time": 1788085340
+  }
+ ]
+}

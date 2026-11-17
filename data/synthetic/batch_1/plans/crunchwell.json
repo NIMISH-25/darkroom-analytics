@@ -1,0 +1,27 @@
+{
+ "brand_id": "crunchwell",
+ "month": "2026-10",
+ "goals": [
+  {
+   "metric_key": "gmv",
+   "scope": "creator_attributed",
+   "basis": "net",
+   "definition": "Creator-attributed GMV net of completed refunds",
+   "target": 16000
+  },
+  {
+   "metric_key": "videos",
+   "scope": "creator_attributed",
+   "basis": "gross",
+   "definition": "Qualifying videos published in the month",
+   "target": 30
+  },
+  {
+   "metric_key": "active_creators",
+   "scope": "creator_attributed",
+   "basis": "gross",
+   "definition": "Creators with at least one qualifying video in the month",
+   "target": 9
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-VER-0017",
+   "order_id": "VE5342813122",
+   "line_item_id": "VE5342813122-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "39.60",
+   "refund_tax": "0.00",
+   "create_time": 1782102189,
+   "completed_time": 1783142589,
+   "update_time": 1783142589
+  },
+  {
+   "return_id": "RET-VER-0018",
+   "order_id": "VE9171142004",
+   "line_item_id": "VE9171142004-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "16.20",
+   "refund_tax": "0.00",
+   "create_time": 1782704405,
+   "completed_time": 1784536805,
+   "update_time": 1784536805
+  },
+  {
+   "return_id": "RET-VER-0019",
+   "order_id": "VE1534915447",
+   "line_item_id": "VE1534915447-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1784614796,
+   "completed_time": null,
+   "update_time": 1784614796
+  },
+  {
+   "return_id": "RET-VER-0022",
+   "order_id": "VE4104582842",
+   "line_item_id": "VE4104582842-3",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785178840,
+   "completed_time": null,
+   "update_time": 1785178840
+  },
+  {
+   "return_id": "RET-VER-0020",
+   "order_id": "VE6757515705",
+   "line_item_id": "VE6757515705-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785308140,
+   "completed_time": null,
+   "update_time": 1785308140
+  },
+  {
+   "return_id": "RET-VER-0021",
+   "order_id": "VE7537388383",
+   "line_item_id": "VE7537388383-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785365045,
+   "completed_time": null,
+   "update_time": 1785365045
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "returns": [
+  {
+   "return_id": "RET-THR-0046",
+   "order_id": "TH1193224748",
+   "line_item_id": "TH1193224748-2",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785103937,
+   "completed_time": null,
+   "update_time": 1785640337
+  },
+  {
+   "return_id": "RET-THR-0048",
+   "order_id": "TH8394860285",
+   "line_item_id": "TH8394860285-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785693609,
+   "completed_time": null,
+   "update_time": 1785693609
+  },
+  {
+   "return_id": "RET-THR-0043",
+   "order_id": "TH9847628139",
+   "line_item_id": "TH9847628139-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "34.20",
+   "refund_tax": "0.00",
+   "create_time": 1783718239,
+   "completed_time": 1785716239,
+   "update_time": 1785716239
+  },
+  {
+   "return_id": "RET-THR-0050",
+   "order_id": "TH8064313990",
+   "line_item_id": "TH8064313990-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785924486,
+   "completed_time": null,
+   "update_time": 1785924486
+  },
+  {
+   "return_id": "RET-THR-0044",
+   "order_id": "TH1802730895",
+   "line_item_id": "TH1802730895-2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "22.33",
+   "refund_tax": "0.00",
+   "create_time": 1784250128,
+   "completed_time": 1786176128,
+   "update_time": 1786176128
+  },
+  {
+   "return_id": "RET-THR-0050",
+   "order_id": "TH8064313990",
+   "line_item_id": "TH8064313990-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785924486,
+   "completed_time": 1786198086,
+   "update_time": 1786198086
+  },
+  {
+   "return_id": "RET-THR-0051",
+   "order_id": "TH4565298689",
+   "line_item_id": "TH4565298689-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1786244676,
+   "completed_time": null,
+   "update_time": 1786244676
+  },
+  {
+   "return_id": "RET-THR-0049",
+   "order_id": "TH6269234353",
+   "line_item_id": "TH6269234353-2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "89.30",
+   "refund_tax": "0.00",
+   "create_time": 1785308148,
+   "completed_time": 1786625748,
+   "update_time": 1786625748
+  },
+  {
+   "return_id": "RET-THR-0051",
+   "order_id": "TH4565298689",
+   "line_item_id": "TH4565298689-1",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "56.05",
+   "refund_tax": "0.00",
+   "create_time": 1786244676,
+   "completed_time": 1786705476,
+   "update_time": 1786705476
+  },
+  {
+   "return_id": "RET-THR-0052",
+   "order_id": "TH3848399125",
+   "line_item_id": "TH3848399125-2",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1786874712,
+   "completed_time": null,
+   "update_time": 1786874712
+  },
+  {
+   "return_id": "RET-THR-0053",
+   "order_id": "TH1886541147",
+   "line_item_id": "TH1886541147-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1787485188,
+   "completed_time": null,
+   "update_time": 1787485188
+  },
+  {
+   "return_id": "RET-THR-0052",
+   "order_id": "TH3848399125",
+   "line_item_id": "TH3848399125-2",
+   "return_status": "COMPLETED",
+   "refund_subtotal": "12.50",
+   "refund_tax": "0.00",
+   "create_time": 1786874712,
+   "completed_time": 1787742312,
+   "update_time": 1787742312
+  },
+  {
+   "return_id": "RET-THR-0054",
+   "order_id": "TH1089647465",
+   "line_item_id": "TH1089647465-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1787786475,
+   "completed_time": null,
+   "update_time": 1787786475
+  },
+  {
+   "return_id": "RET-THR-0055",
+   "order_id": "TH1569757296",
+   "line_item_id": "TH1569757296-1",
+   "return_status": "REQUESTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1787797251,
+   "completed_time": null,
+   "update_time": 1787797251
+  },
+  {
+   "return_id": "RET-THR-0048",
+   "order_id": "TH8394860285",
+   "line_item_id": "TH8394860285-1",
+   "return_status": "REJECTED",
+   "refund_subtotal": null,
+   "refund_tax": null,
+   "create_time": 1785693609,
+   "completed_time": null,
+   "update_time": 1787875209
+  }
+ ]
+}
