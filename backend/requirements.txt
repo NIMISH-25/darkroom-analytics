@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+psycopg[binary]
+psycopg_pool
+pydantic-settings
+pyjwt
+python-multipart
+tzdata
+pytest
+httpx
+openpyxl
+pyyaml
