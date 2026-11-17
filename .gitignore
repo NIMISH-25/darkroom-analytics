@@ -1,0 +1,23 @@
+# Private working notes (plans, AI comparisons) - not part of the submission
+notes/
+
+# Local verification logs and caches
+verification-output/
+
+# Dependencies, build output and caches
+.venv/
+venv/
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# Local environment files (use the .env.example files instead)
+.env
+.env.local
+frontend/.env.local
+backend/.env
