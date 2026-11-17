@@ -1,0 +1,45 @@
+# Header aliases per source type. Keys are canonical column names; values are accepted raw headers.
+# Raw headers are normalized (lowercase, BOM stripped, non-alphanumerics collapsed to "_") before matching,
+# so "Video ID", "Video Id" and "video_id" are the same alias.
+# A header that is not a canonical name or alias is "unknown": if a required column is then missing the file
+# is quarantined (renamed header); if all required columns are present the extra column is kept in bronze only.
+videos_weekly:
+  video_id: [video_id, content_id]
+  creator_id: [creator_id, creator_user_id, author_id]
+  creator_handle: [creator_handle, handle, creator_name]
+  post_time: [post_time, published_at, publish_time, post_date]
+  product_id: [product_id, sku_product_id]
+  views: [views, video_views, view_count, total_views]
+  gmv: [gmv, gross_merchandise_value, video_gmv, sales_gmv]
+  items_sold: [items_sold, units_sold, item_sold, items]
+products:
+  shop_id: [shop_id]
+  product_id: [product_id]
+  sku_id: [sku_id, sku]
+  product_name: [product_name, name, title]
+  list_price: [list_price, price]
+  unit_cost: [unit_cost, cost, cogs]
+  update_time: [update_time, updated_at, last_updated]
+roster:
+  brand_id: [brand_id, brand]
+  creator_id: [creator_id, creator_user_id]
+  handle: [handle, creator_handle]
+  contract_type: [contract_type, contract, type]
+  monthly_retainer: [monthly_retainer, retainer, retainer_amount]
+  posts_per_month: [posts_per_month, posts_required, monthly_posts]
+  effective_from: [effective_from, start_date, contract_start]
+  effective_to: [effective_to, end_date, contract_end]
+  status: [status, creator_status]
+  allocation_share: [allocation_share, share, brand_share]
+samples:
+  shipment_id: [shipment_id, shipment]
+  brand_id: [brand_id, brand]
+  creator_id: [creator_id, creator_user_id]
+  creator_handle: [creator_handle, handle]
+  product_id: [product_id]
+  qty: [qty, quantity]
+  shipped_date: [shipped_date, ship_date, sent_date]
+  delivered_date: [delivered_date, delivery_date]
+  status_text: [status_text, status]
+  shipping_cost: [shipping_cost, ship_cost, postage]
+  linked_video_id: [linked_video_id, video_id]
