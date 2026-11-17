@@ -1,0 +1,37 @@
+{
+  "default_month": "2026-10",
+  "default_cutoff": "2026-10-15",
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "brands": [
+    {
+      "brand_id": "aurelle",
+      "name": "Aurelle Jewelry",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "brand_id": "verdant",
+      "name": "Verdant Skincare",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "brand_id": "crunchwell",
+      "name": "Crunchwell Snacks",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "brand_id": "threadline",
+      "name": "Threadline Apparel",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "brand_id": "glowhaus",
+      "name": "Glowhaus Beauty",
+      "timezone": "America/Los_Angeles"
+    }
+  ],
+  "data_revision": 1
+}

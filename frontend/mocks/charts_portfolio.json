@@ -1,0 +1,1516 @@
+{
+  "pacing_trajectory": {
+    "series": "pacing_trajectory",
+    "brand_id": null,
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "actual": "USD",
+      "projection": "USD",
+      "required": "USD"
+    },
+    "meta": {
+      "basis": "net",
+      "target": {
+        "metric_key": "goal_target",
+        "value": "300000.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "projection": {
+        "metric_key": "goal_projection",
+        "value": "279000.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "required_pace": {
+        "metric_key": "goal_required_pace",
+        "value": "1800.00",
+        "unit": "USD_per_day",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      }
+    },
+    "points": [
+      {
+        "x": "2026-10-01",
+        "actual": "9000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-02",
+        "actual": "18000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-03",
+        "actual": "27000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-04",
+        "actual": "36000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-05",
+        "actual": "45000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-06",
+        "actual": "54000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-07",
+        "actual": "63000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-08",
+        "actual": "72000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-09",
+        "actual": "81000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-10",
+        "actual": "90000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-11",
+        "actual": "99000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-12",
+        "actual": "108000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-13",
+        "actual": "117000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-14",
+        "actual": "126000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-15",
+        "actual": "135000.00",
+        "projection": "135000.00",
+        "required": "135000.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-16",
+        "actual": null,
+        "projection": "144000.00",
+        "required": "145313.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-17",
+        "actual": null,
+        "projection": "153000.00",
+        "required": "155625.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-18",
+        "actual": null,
+        "projection": "162000.00",
+        "required": "165938.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-19",
+        "actual": null,
+        "projection": "171000.00",
+        "required": "176250.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-20",
+        "actual": null,
+        "projection": "180000.00",
+        "required": "186563.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-21",
+        "actual": null,
+        "projection": "189000.00",
+        "required": "196875.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-22",
+        "actual": null,
+        "projection": "198000.00",
+        "required": "207188.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-23",
+        "actual": null,
+        "projection": "207000.00",
+        "required": "217500.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-24",
+        "actual": null,
+        "projection": "216000.00",
+        "required": "227813.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-25",
+        "actual": null,
+        "projection": "225000.00",
+        "required": "238125.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-26",
+        "actual": null,
+        "projection": "234000.00",
+        "required": "248438.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-27",
+        "actual": null,
+        "projection": "243000.00",
+        "required": "258750.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-28",
+        "actual": null,
+        "projection": "252000.00",
+        "required": "269063.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-29",
+        "actual": null,
+        "projection": "261000.00",
+        "required": "279375.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-30",
+        "actual": null,
+        "projection": "270000.00",
+        "required": "289688.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-31",
+        "actual": null,
+        "projection": "279000.00",
+        "required": "300000.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "daily_gmv_refunds": {
+    "series": "daily_gmv_refunds",
+    "brand_id": null,
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "gmv": "USD",
+      "creator_attributed_gmv": "USD",
+      "attributed_refunds_cohort": "USD",
+      "attributed_refunds_processed": "USD",
+      "net_attributed_sales": "USD"
+    },
+    "meta": {},
+    "points": [
+      {
+        "x": "2026-10-01",
+        "gmv": "9450.00",
+        "creator_attributed_gmv": "5859.00",
+        "attributed_refunds_cohort": "378.00",
+        "attributed_refunds_processed": "284.00",
+        "net_attributed_sales": "5481.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-02",
+        "gmv": "9900.00",
+        "creator_attributed_gmv": "6138.00",
+        "attributed_refunds_cohort": "396.00",
+        "attributed_refunds_processed": "297.00",
+        "net_attributed_sales": "5742.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-03",
+        "gmv": "10350.00",
+        "creator_attributed_gmv": "6417.00",
+        "attributed_refunds_cohort": "414.00",
+        "attributed_refunds_processed": "311.00",
+        "net_attributed_sales": "6003.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-04",
+        "gmv": "10800.00",
+        "creator_attributed_gmv": "6696.00",
+        "attributed_refunds_cohort": "432.00",
+        "attributed_refunds_processed": "324.00",
+        "net_attributed_sales": "6264.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-05",
+        "gmv": "9000.00",
+        "creator_attributed_gmv": "5580.00",
+        "attributed_refunds_cohort": "360.00",
+        "attributed_refunds_processed": "270.00",
+        "net_attributed_sales": "5220.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-06",
+        "gmv": "9450.00",
+        "creator_attributed_gmv": "5859.00",
+        "attributed_refunds_cohort": "378.00",
+        "attributed_refunds_processed": "284.00",
+        "net_attributed_sales": "5481.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-07",
+        "gmv": "9900.00",
+        "creator_attributed_gmv": "6138.00",
+        "attributed_refunds_cohort": "396.00",
+        "attributed_refunds_processed": "297.00",
+        "net_attributed_sales": "5742.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-08",
+        "gmv": "10350.00",
+        "creator_attributed_gmv": "6417.00",
+        "attributed_refunds_cohort": "414.00",
+        "attributed_refunds_processed": "311.00",
+        "net_attributed_sales": "6003.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-09",
+        "gmv": "10800.00",
+        "creator_attributed_gmv": "6696.00",
+        "attributed_refunds_cohort": "432.00",
+        "attributed_refunds_processed": "324.00",
+        "net_attributed_sales": "6264.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-10",
+        "gmv": "9000.00",
+        "creator_attributed_gmv": "5580.00",
+        "attributed_refunds_cohort": "360.00",
+        "attributed_refunds_processed": "270.00",
+        "net_attributed_sales": "5220.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-11",
+        "gmv": "9450.00",
+        "creator_attributed_gmv": "5859.00",
+        "attributed_refunds_cohort": "378.00",
+        "attributed_refunds_processed": "284.00",
+        "net_attributed_sales": "5481.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-12",
+        "gmv": "9900.00",
+        "creator_attributed_gmv": "6138.00",
+        "attributed_refunds_cohort": "396.00",
+        "attributed_refunds_processed": "297.00",
+        "net_attributed_sales": "5742.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-13",
+        "gmv": "10350.00",
+        "creator_attributed_gmv": "6417.00",
+        "attributed_refunds_cohort": "414.00",
+        "attributed_refunds_processed": "311.00",
+        "net_attributed_sales": "6003.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-14",
+        "gmv": "10800.00",
+        "creator_attributed_gmv": "6696.00",
+        "attributed_refunds_cohort": "432.00",
+        "attributed_refunds_processed": "324.00",
+        "net_attributed_sales": "6264.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-15",
+        "gmv": "9000.00",
+        "creator_attributed_gmv": "5580.00",
+        "attributed_refunds_cohort": "360.00",
+        "attributed_refunds_processed": "270.00",
+        "net_attributed_sales": "5220.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-16",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-17",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-18",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-19",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-20",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-21",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-22",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-23",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-24",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-25",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-26",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-27",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-28",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-29",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-30",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-31",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "attribution_reconciliation": {
+    "series": "attribution_reconciliation",
+    "brand_id": null,
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "amount": "USD",
+      "order_items": "count",
+      "pct": "ratio"
+    },
+    "meta": {},
+    "points": [
+      {
+        "x": "resolved",
+        "amount": "127720.00",
+        "order_items": 1488,
+        "pct": "0.62",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?bucket=resolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?bucket=resolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?bucket=resolved&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "creator_unresolved",
+        "amount": "37080.00",
+        "order_items": 432,
+        "pct": "0.18",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?bucket=creator_unresolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?bucket=creator_unresolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?bucket=creator_unresolved&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "none",
+        "amount": "30900.00",
+        "order_items": 360,
+        "pct": "0.15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?bucket=none&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?bucket=none&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?bucket=none&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "conflict",
+        "amount": "10300.00",
+        "order_items": 120,
+        "pct": "0.05",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?bucket=conflict&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?bucket=conflict&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?bucket=conflict&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "sample_funnel_lag": {
+    "series": "sample_funnel_lag",
+    "brand_id": null,
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "count": "count"
+    },
+    "meta": {},
+    "points": [
+      {
+        "group": "stage",
+        "x": "sent",
+        "count": 30,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=sent&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "100.0"
+      },
+      {
+        "group": "stage",
+        "x": "delivered",
+        "count": 25,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=delivered&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "83.3"
+      },
+      {
+        "group": "stage",
+        "x": "mature",
+        "count": 15,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=mature&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "50.0"
+      },
+      {
+        "group": "stage",
+        "x": "in_transit",
+        "count": 5,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=in_transit&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "stage",
+        "x": "pending",
+        "count": 5,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=pending&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "stage",
+        "x": "converted",
+        "count": 10,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=converted&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "33.3"
+      },
+      {
+        "group": "stage",
+        "x": "no_video_mature",
+        "count": 5,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=no_video_mature&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "stage",
+        "x": "unknown",
+        "count": 5,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?stage=unknown&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "lag",
+        "x": "0-7",
+        "count": 5,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?bucket=0-7&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "50.0"
+      },
+      {
+        "group": "lag",
+        "x": "8-14",
+        "count": 5,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?bucket=8-14&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "50.0"
+      },
+      {
+        "group": "lag",
+        "x": "15-21",
+        "count": 0,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?bucket=15-21&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "0.0"
+      },
+      {
+        "group": "lag",
+        "x": "22-30",
+        "count": 0,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?bucket=22-30&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "0.0"
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "creator_concentration": {
+    "series": "creator_concentration",
+    "brand_id": null,
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "gmv": "USD",
+      "share": "ratio",
+      "cum_creator_pct": "ratio",
+      "cum_gmv_pct": "ratio"
+    },
+    "meta": {
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "37000.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "top10_gmv_share": "34.0",
+      "top20_gmv_share": "55.0"
+    },
+    "points": [
+      {
+        "x": 1,
+        "brand_id": "aurelle",
+        "creator_id": "portfolio-c1",
+        "handle": "@portfolio_1",
+        "gmv": "44200.00",
+        "share": "0.34",
+        "cum_creator_pct": "0.17",
+        "cum_gmv_pct": "0.34",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?creator_id=portfolio-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 2,
+        "brand_id": "verdant",
+        "creator_id": "portfolio-c2",
+        "handle": "@portfolio_2",
+        "gmv": "27300.00",
+        "share": "0.21",
+        "cum_creator_pct": "0.33",
+        "cum_gmv_pct": "0.55",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?creator_id=portfolio-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 3,
+        "brand_id": "crunchwell",
+        "creator_id": "portfolio-c3",
+        "handle": "@portfolio_3",
+        "gmv": "19500.00",
+        "share": "0.15",
+        "cum_creator_pct": "0.50",
+        "cum_gmv_pct": "0.70",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?creator_id=portfolio-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 4,
+        "brand_id": "threadline",
+        "creator_id": "portfolio-c4",
+        "handle": "@portfolio_4",
+        "gmv": "15600.00",
+        "share": "0.12",
+        "cum_creator_pct": "0.67",
+        "cum_gmv_pct": "0.82",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?creator_id=portfolio-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 5,
+        "brand_id": "glowhaus",
+        "creator_id": "portfolio-c5",
+        "handle": "@portfolio_5",
+        "gmv": "13000.00",
+        "share": "0.10",
+        "cum_creator_pct": "0.83",
+        "cum_gmv_pct": "0.92",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?creator_id=portfolio-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 6,
+        "brand_id": "aurelle",
+        "creator_id": "portfolio-c6",
+        "handle": "@portfolio_6",
+        "gmv": "10400.00",
+        "share": "0.08",
+        "cum_creator_pct": "1.00",
+        "cum_gmv_pct": "1.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?creator_id=portfolio-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "retainer_cadence": {
+    "series": "retainer_cadence",
+    "brand_id": null,
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-09-30",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "expected_posts": "count",
+      "posts": "count",
+      "attainment_pct": "ratio"
+    },
+    "meta": {},
+    "points": [
+      {
+        "x": "2026-07",
+        "brand_id": "verdant",
+        "creator_id": "portfolio-c1",
+        "handle": "@portfolio_1",
+        "expected_posts": "8.0",
+        "posts": 3,
+        "attainment_pct": "0.35",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c1&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-07",
+        "brand_id": "crunchwell",
+        "creator_id": "portfolio-c2",
+        "handle": "@portfolio_2",
+        "expected_posts": "8.0",
+        "posts": 4,
+        "attainment_pct": "0.45",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c2&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-07",
+        "brand_id": "threadline",
+        "creator_id": "portfolio-c3",
+        "handle": "@portfolio_3",
+        "expected_posts": "8.0",
+        "posts": 5,
+        "attainment_pct": "0.55",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c3&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-08",
+        "brand_id": "verdant",
+        "creator_id": "portfolio-c1",
+        "handle": "@portfolio_1",
+        "expected_posts": "8.0",
+        "posts": 4,
+        "attainment_pct": "0.40",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c1&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-08",
+        "brand_id": "crunchwell",
+        "creator_id": "portfolio-c2",
+        "handle": "@portfolio_2",
+        "expected_posts": "8.0",
+        "posts": 5,
+        "attainment_pct": "0.50",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c2&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-08",
+        "brand_id": "threadline",
+        "creator_id": "portfolio-c3",
+        "handle": "@portfolio_3",
+        "expected_posts": "8.0",
+        "posts": 6,
+        "attainment_pct": "0.60",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c3&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-09",
+        "brand_id": "verdant",
+        "creator_id": "portfolio-c1",
+        "handle": "@portfolio_1",
+        "expected_posts": "8.0",
+        "posts": 5,
+        "attainment_pct": "0.45",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c1&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-09",
+        "brand_id": "crunchwell",
+        "creator_id": "portfolio-c2",
+        "handle": "@portfolio_2",
+        "expected_posts": "8.0",
+        "posts": 6,
+        "attainment_pct": "0.55",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c2&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-09",
+        "brand_id": "threadline",
+        "creator_id": "portfolio-c3",
+        "handle": "@portfolio_3",
+        "expected_posts": "8.0",
+        "posts": 7,
+        "attainment_pct": "0.65",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?creator_id=portfolio-c3&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  }
+}

@@ -1,0 +1,875 @@
+{
+  "data_revision": 1,
+  "brands": [
+    {
+      "brand_id": "aurelle",
+      "name": "Aurelle Jewelry",
+      "goals": [
+        {
+          "goal_id": "aurelle-gmv",
+          "label": "Creator-attributed GMV",
+          "definition": "Creator-attributed GMV for the month vs target",
+          "scope": "brand",
+          "basis": "gross",
+          "target": {
+            "metric_key": "goal_target",
+            "value": "50000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "creator_attributed_gmv",
+            "value": "21000.50",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=aurelle&month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": "48000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": "1800.00",
+            "unit": "USD_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "on_track",
+          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4200",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "aurelle-videos",
+          "label": "Videos posted",
+          "definition": "Distinct videos posted in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 40,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "videos",
+            "value": 18,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 38,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": 1.5,
+            "unit": "count_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "on_track",
+          "reasoning": "Pace is on target based on posts to date.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4500",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "aurelle-active",
+          "label": "Active creators",
+          "definition": "Creators with at least one video in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 12,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "active_creators",
+            "value": 7,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 10,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": null,
+          "pace_status": "on_track",
+          "reasoning": "Active creators count is stable.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.5833",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        }
+      ]
+    },
+    {
+      "brand_id": "verdant",
+      "name": "Verdant Skincare",
+      "goals": [
+        {
+          "goal_id": "verdant-gmv",
+          "label": "Creator-attributed GMV",
+          "definition": "Creator-attributed GMV for the month vs target",
+          "scope": "brand",
+          "basis": "net",
+          "target": {
+            "metric_key": "goal_target",
+            "value": "60000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "creator_attributed_gmv",
+            "value": "25100.50",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": "57000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": "1800.00",
+            "unit": "USD_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "at_risk",
+          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4183",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "verdant-videos",
+          "label": "Videos posted",
+          "definition": "Distinct videos posted in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 45,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "videos",
+            "value": 21,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 42,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": 1.5,
+            "unit": "count_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "on_track",
+          "reasoning": "Pace is on target based on posts to date.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4667",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "verdant-active",
+          "label": "Active creators",
+          "definition": "Creators with at least one video in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 12,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "active_creators",
+            "value": 8,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 11,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": null,
+          "pace_status": "on_track",
+          "reasoning": "Active creators count is stable.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.6667",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        }
+      ]
+    },
+    {
+      "brand_id": "crunchwell",
+      "name": "Crunchwell Snacks",
+      "goals": [
+        {
+          "goal_id": "crunchwell-gmv",
+          "label": "Creator-attributed GMV",
+          "definition": "Creator-attributed GMV for the month vs target",
+          "scope": "brand",
+          "basis": "gross",
+          "target": {
+            "metric_key": "goal_target",
+            "value": "70000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "creator_attributed_gmv",
+            "value": "29200.50",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=crunchwell&month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": "66000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": "1800.00",
+            "unit": "USD_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "off_track",
+          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4172",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "crunchwell-videos",
+          "label": "Videos posted",
+          "definition": "Distinct videos posted in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 50,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "videos",
+            "value": 24,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 46,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": 1.5,
+            "unit": "count_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "on_track",
+          "reasoning": "Pace is on target based on posts to date.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4800",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "crunchwell-active",
+          "label": "Active creators",
+          "definition": "Creators with at least one video in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 12,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "active_creators",
+            "value": 9,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 12,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": null,
+          "pace_status": "on_track",
+          "reasoning": "Active creators count is stable.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.7500",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        }
+      ]
+    },
+    {
+      "brand_id": "threadline",
+      "name": "Threadline Apparel",
+      "goals": [
+        {
+          "goal_id": "threadline-gmv",
+          "label": "Creator-attributed GMV",
+          "definition": "Creator-attributed GMV for the month vs target",
+          "scope": "brand",
+          "basis": "net",
+          "target": {
+            "metric_key": "goal_target",
+            "value": "80000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "creator_attributed_gmv",
+            "value": "19300.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-12",
+            "status": "stale",
+            "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+            "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": "75000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "stale",
+            "status_reason": "Based on stale actuals.",
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": "1800.00",
+            "unit": "USD_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "on_track",
+          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.2412",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "stale",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "threadline-videos",
+          "label": "Videos posted",
+          "definition": "Distinct videos posted in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 55,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "videos",
+            "value": 27,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 50,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": 1.5,
+            "unit": "count_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "on_track",
+          "reasoning": "Pace is on target based on posts to date.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4909",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "threadline-active",
+          "label": "Active creators",
+          "definition": "Creators with at least one video in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 12,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "active_creators",
+            "value": 10,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 13,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": null,
+          "pace_status": "on_track",
+          "reasoning": "Active creators count is stable.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.8333",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        }
+      ]
+    },
+    {
+      "brand_id": "glowhaus",
+      "name": "Glowhaus Beauty",
+      "goals": [
+        {
+          "goal_id": "glowhaus-gmv",
+          "label": "Creator-attributed GMV",
+          "definition": "Creator-attributed GMV for the month vs target",
+          "scope": "brand",
+          "basis": "gross",
+          "target": {
+            "metric_key": "goal_target",
+            "value": "90000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "creator_attributed_gmv",
+            "value": "37400.50",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": "84000.00",
+            "unit": "USD",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": "1800.00",
+            "unit": "USD_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "at_risk",
+          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": "0.4156",
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "glowhaus-videos",
+          "label": "Videos posted",
+          "definition": "Distinct videos posted in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 60,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "videos",
+            "value": null,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": null,
+            "status": "unavailable",
+            "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+            "evidence_url": "/api/v1/metrics/videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": null,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": null,
+            "status": "unavailable",
+            "status_reason": "Projection requires video actuals.",
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": {
+            "metric_key": "goal_required_pace",
+            "value": 1.5,
+            "unit": "count_per_day",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "pace_status": "unknown",
+          "reasoning": "Cannot assess pace: video coverage has a gap.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": null,
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": null,
+            "status": "unavailable",
+            "status_reason": "Actual is unknown, so progress cannot be computed.",
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        },
+        {
+          "goal_id": "glowhaus-active",
+          "label": "Active creators",
+          "definition": "Creators with at least one video in month",
+          "scope": "brand",
+          "basis": "count",
+          "target": {
+            "metric_key": "goal_target",
+            "value": 12,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "actual": {
+            "metric_key": "active_creators",
+            "value": null,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-08",
+            "status": "partial",
+            "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+            "evidence_url": "/api/v1/metrics/active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "projection": {
+            "metric_key": "goal_projection",
+            "value": 14,
+            "unit": "count",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": "2026-10-15",
+            "status": "current",
+            "status_reason": null,
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          },
+          "required_pace": null,
+          "pace_status": "on_track",
+          "reasoning": "Active creators count is stable.",
+          "progress": {
+            "metric_key": "goal_progress",
+            "value": null,
+            "unit": "ratio",
+            "as_of": "2026-10-15T23:59:59-07:00",
+            "coverage_through": null,
+            "status": "unavailable",
+            "status_reason": "Actual is unknown, so progress cannot be computed.",
+            "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+          }
+        }
+      ]
+    }
+  ]
+}

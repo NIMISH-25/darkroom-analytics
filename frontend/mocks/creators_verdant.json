@@ -1,0 +1,628 @@
+{
+  "data_revision": 1,
+  "contract_types": [
+    "retainer",
+    "commission",
+    "retainer_commission"
+  ],
+  "items": [
+    {
+      "creator_id": "verdant-c1",
+      "handle": "@verdant_1",
+      "contract_type": "retainer",
+      "last_post_date": "2026-10-08",
+      "coverage_status": "current",
+      "videos": {
+        "metric_key": "creator_videos",
+        "value": 3,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "gmv": {
+        "metric_key": "creator_attributed_gmv",
+        "value": "2000.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "refunds": {
+        "metric_key": "refunds",
+        "value": "50.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "net_sales": {
+        "metric_key": "creator_net_sales",
+        "value": "1900.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "retainer_cost": {
+        "metric_key": "retainer_cost",
+        "value": "500.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "commission_cost": {
+        "metric_key": "commission_cost",
+        "value": "100.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sample_cost": {
+        "metric_key": "sample_cost",
+        "value": "30.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sales_after_costs": {
+        "metric_key": "creator_sales_after_costs",
+        "value": "1200.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "suggested_action": {
+        "action": "review",
+        "rule": "A needed input is unknown",
+        "status": "current",
+        "status_reason": null
+      }
+    },
+    {
+      "creator_id": "verdant-c2",
+      "handle": "@verdant_2",
+      "contract_type": "commission",
+      "last_post_date": "2026-10-09",
+      "coverage_status": "current",
+      "videos": {
+        "metric_key": "creator_videos",
+        "value": 4,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "gmv": {
+        "metric_key": "creator_attributed_gmv",
+        "value": "2750.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "refunds": {
+        "metric_key": "refunds",
+        "value": "60.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "net_sales": {
+        "metric_key": "creator_net_sales",
+        "value": "2600.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "retainer_cost": {
+        "metric_key": "retainer_cost",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "commission_cost": {
+        "metric_key": "commission_cost",
+        "value": "120.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sample_cost": {
+        "metric_key": "sample_cost",
+        "value": "31.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sales_after_costs": {
+        "metric_key": "creator_sales_after_costs",
+        "value": "1800.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "suggested_action": {
+        "action": "nudge",
+        "rule": "Retainer creator quiet 7+ days",
+        "status": "current",
+        "status_reason": null
+      }
+    },
+    {
+      "creator_id": "verdant-c3",
+      "handle": "@verdant_3",
+      "contract_type": "retainer_commission",
+      "last_post_date": "2026-10-10",
+      "coverage_status": "current",
+      "videos": {
+        "metric_key": "creator_videos",
+        "value": 5,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "gmv": {
+        "metric_key": "creator_attributed_gmv",
+        "value": "3500.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "refunds": {
+        "metric_key": "refunds",
+        "value": "70.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "net_sales": {
+        "metric_key": "creator_net_sales",
+        "value": "3300.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "retainer_cost": {
+        "metric_key": "retainer_cost",
+        "value": "500.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "commission_cost": {
+        "metric_key": "commission_cost",
+        "value": "140.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sample_cost": {
+        "metric_key": "sample_cost",
+        "value": "32.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sales_after_costs": {
+        "metric_key": "creator_sales_after_costs",
+        "value": "2400.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "suggested_action": {
+        "action": "upgrade",
+        "rule": "Commission creator in top GMV quartile",
+        "status": "current",
+        "status_reason": null
+      }
+    },
+    {
+      "creator_id": "verdant-c4",
+      "handle": "@verdant_4",
+      "contract_type": "retainer",
+      "last_post_date": "2026-10-11",
+      "coverage_status": "unavailable",
+      "videos": {
+        "metric_key": "creator_videos",
+        "value": 6,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "gmv": {
+        "metric_key": "creator_attributed_gmv",
+        "value": null,
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "refunds": {
+        "metric_key": "refunds",
+        "value": null,
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "net_sales": {
+        "metric_key": "creator_net_sales",
+        "value": null,
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "retainer_cost": {
+        "metric_key": "retainer_cost",
+        "value": "500.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "commission_cost": {
+        "metric_key": "commission_cost",
+        "value": "160.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sample_cost": {
+        "metric_key": "sample_cost",
+        "value": "33.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sales_after_costs": {
+        "metric_key": "creator_sales_after_costs",
+        "value": null,
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "No order rows matched this creator.",
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "suggested_action": {
+        "action": "review",
+        "rule": "A needed input is unknown",
+        "status": "unavailable",
+        "status_reason": "Needed input is unknown"
+      }
+    },
+    {
+      "creator_id": "verdant-c5",
+      "handle": "@verdant_5",
+      "contract_type": "commission",
+      "last_post_date": "2026-10-12",
+      "coverage_status": "current",
+      "videos": {
+        "metric_key": "creator_videos",
+        "value": 7,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "gmv": {
+        "metric_key": "creator_attributed_gmv",
+        "value": "5000.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "refunds": {
+        "metric_key": "refunds",
+        "value": "90.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "net_sales": {
+        "metric_key": "creator_net_sales",
+        "value": "4700.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "retainer_cost": {
+        "metric_key": "retainer_cost",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "commission_cost": {
+        "metric_key": "commission_cost",
+        "value": "180.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sample_cost": {
+        "metric_key": "sample_cost",
+        "value": "34.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sales_after_costs": {
+        "metric_key": "creator_sales_after_costs",
+        "value": "3600.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "suggested_action": {
+        "action": "watch",
+        "rule": "No rule matched",
+        "status": "current",
+        "status_reason": null
+      }
+    },
+    {
+      "creator_id": "verdant-c6",
+      "handle": "@verdant_6",
+      "contract_type": "retainer_commission",
+      "last_post_date": null,
+      "coverage_status": "current",
+      "videos": {
+        "metric_key": "creator_videos",
+        "value": 8,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "gmv": {
+        "metric_key": "creator_attributed_gmv",
+        "value": "5750.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "refunds": {
+        "metric_key": "refunds",
+        "value": "100.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "net_sales": {
+        "metric_key": "creator_net_sales",
+        "value": "5400.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "retainer_cost": {
+        "metric_key": "retainer_cost",
+        "value": "500.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "commission_cost": {
+        "metric_key": "commission_cost",
+        "value": "200.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sample_cost": {
+        "metric_key": "sample_cost",
+        "value": "35.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "sales_after_costs": {
+        "metric_key": "creator_sales_after_costs",
+        "value": "4200.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "0.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "suggested_action": {
+        "action": "watch",
+        "rule": "No rule matched",
+        "status": "current",
+        "status_reason": null
+      }
+    }
+  ]
+}

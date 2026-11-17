@@ -1,0 +1,57 @@
+{
+  "data_revision": 1,
+  "items": [
+    {
+      "item_id": "a1",
+      "kind": "missing_source",
+      "brand_id": "glowhaus",
+      "title": "Video source has a gap for Glowhaus Beauty (Oct 9-15)",
+      "rule": "Source with no data through cutoff",
+      "period_start": "2026-10-09",
+      "period_end": "2026-10-15",
+      "evidence_url": "/api/v1/metrics/videos/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
+      "rank": 1,
+      "impact_score": "9400.00",
+      "impact_basis": "GMV target x blind-day share"
+    },
+    {
+      "item_id": "a2",
+      "kind": "quiet_retainer",
+      "brand_id": "aurelle",
+      "title": "Retainer creator @aurelle_2 has not posted in 10 days",
+      "rule": "Retainer creators with no post in the last 7 days",
+      "period_start": "2026-10-01",
+      "period_end": "2026-10-15",
+      "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=aurelle&creator_id=aurelle-c2&month=2026-10&cutoff=2026-10-15&revision=1",
+      "rank": 2,
+      "impact_score": "1250.00",
+      "impact_basis": "Retainer fee x quiet-day share"
+    },
+    {
+      "item_id": "a3",
+      "kind": "sample_no_video",
+      "brand_id": "threadline",
+      "title": "2 delivered samples without a video after 14 days",
+      "rule": "Delivered samples with no matched video after followup_days",
+      "period_start": "2026-09-01",
+      "period_end": "2026-10-15",
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+      "rank": 3,
+      "impact_score": "86.00",
+      "impact_basis": "Sample cost"
+    },
+    {
+      "item_id": "a4",
+      "kind": "quiet_retainer",
+      "brand_id": "verdant",
+      "title": "Retainer creator @verdant_4 quiet since Oct 1",
+      "rule": "Retainer creators with no post in the last 7 days",
+      "period_start": "2026-10-01",
+      "period_end": "2026-10-15",
+      "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1",
+      "rank": 4,
+      "impact_score": null,
+      "impact_basis": "Retainer fee unknown (contract not ingested)"
+    }
+  ]
+}

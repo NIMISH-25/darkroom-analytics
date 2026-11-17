@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98.4%; /* #FBFBFB */
+    --foreground: 0 0% 7%;
+    --card: 0 0% 98.4%;
+    --card-foreground: 0 0% 7%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 347 77% 50%;
+    --border: 0 0% 87%;
+    --ring: 0 0% 40%;
+    --chart-actual: #2563EB; --chart-projection: #C2410C; --chart-target: #71717A;
+    --chart-gross-gmv: #0072B2; --chart-attributed-gmv: #009E73; --chart-refunds: #B5578F; --chart-net-sales: #8B5CF6;
+    --chart-expected-posts: #C2410C; --chart-ok: #15803D; --chart-warn: #A16207; --chart-error: #DC2626; --chart-unknown: #71717A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 0 0% 4.7%; /* #0C0C0C */
+      --foreground: 0 0% 93%;
+      --card: 0 0% 4.7%;
+      --card-foreground: 0 0% 93%;
+      --primary: 0 0% 93%;
+      --primary-foreground: 0 0% 9%;
+      --secondary: 0 0% 10%;
+      --secondary-foreground: 0 0% 93%;
+      --muted: 0 0% 10%;
+      --muted-foreground: 0 0% 60%;
+      --accent: 0 0% 12%;
+      --accent-foreground: 0 0% 93%;
+      --destructive: 347 77% 55%;
+      --border: 0 0% 16%;
+      --ring: 0 0% 60%;
+    }
+  }
+  * { @apply border-border; }
+  html, body { @apply bg-background text-foreground font-sans antialiased; font-size: 14px; }
+  .num { @apply font-mono tabular-nums tracking-tight; }
+}

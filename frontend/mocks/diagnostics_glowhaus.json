@@ -1,0 +1,71 @@
+{
+  "periods": {
+    "baseline": {
+      "start": "2026-09-01",
+      "end": "2026-09-15"
+    },
+    "current": {
+      "start": "2026-10-01",
+      "end": "2026-10-15"
+    }
+  },
+  "method": "shapley",
+  "status": "partial",
+  "disclaimer": "This is a decomposition with context, not proof of cause.",
+  "total": {
+    "baseline": "14800.00",
+    "current": null,
+    "delta": null
+  },
+  "factors": [
+    {
+      "key": "A",
+      "baseline": "8",
+      "current": null,
+      "effect": null
+    },
+    {
+      "key": "V",
+      "baseline": "2.5",
+      "current": null,
+      "effect": null
+    },
+    {
+      "key": "G",
+      "baseline": "740.00",
+      "current": null,
+      "effect": null
+    }
+  ],
+  "unlinked_older_gmv": {
+    "baseline": "1200.00",
+    "current": null,
+    "delta": null
+  },
+  "products": [
+    {
+      "product_id": "glowhaus-p1",
+      "name": "Product 1",
+      "gmv_baseline": "3400.00",
+      "gmv_current": null,
+      "delta": null,
+      "observation": "Current period incomplete (video gap)."
+    },
+    {
+      "product_id": "glowhaus-p2",
+      "name": "Product 2",
+      "gmv_baseline": "2800.00",
+      "gmv_current": null,
+      "delta": null,
+      "observation": "Current period incomplete (video gap)."
+    },
+    {
+      "product_id": "glowhaus-p3",
+      "name": "Product 3",
+      "gmv_baseline": "2200.00",
+      "gmv_current": null,
+      "delta": null,
+      "observation": "Current period incomplete (video gap)."
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "data_revision": 1,
+  "kpis": [
+    {
+      "metric_key": "gmv",
+      "value": {
+        "metric_key": "portfolio_gmv",
+        "value": "412350.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "Mixes gross and net goal bases across brands.",
+        "evidence_url": "/api/v1/metrics/portfolio_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "baseline": {
+        "metric_key": "portfolio_gmv",
+        "value": "391800.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta": {
+        "metric_key": "portfolio_gmv_delta",
+        "value": "20550.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_gmv_delta/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta_pct": {
+        "metric_key": "portfolio_gmv_delta_pct",
+        "value": "0.052",
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_gmv_delta_pct/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "brands_covered": 5,
+      "brands_total": 5,
+      "progress": {
+        "metric_key": "goal_progress",
+        "value": "0.5812",
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      }
+    },
+    {
+      "metric_key": "creator_attributed_gmv",
+      "value": {
+        "metric_key": "portfolio_creator_attributed_gmv",
+        "value": "268120.50",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "Mixes gross and net goal bases across brands.",
+        "evidence_url": "/api/v1/metrics/portfolio_creator_attributed_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "baseline": {
+        "metric_key": "portfolio_creator_attributed_gmv",
+        "value": "251400.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_creator_attributed_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta": {
+        "metric_key": "portfolio_creator_attributed_gmv_delta",
+        "value": "20550.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_creator_attributed_gmv_delta/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta_pct": {
+        "metric_key": "portfolio_creator_attributed_gmv_delta_pct",
+        "value": "0.052",
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_creator_attributed_gmv_delta_pct/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "brands_covered": 5,
+      "brands_total": 5,
+      "progress": {
+        "metric_key": "goal_progress",
+        "value": "0.4930",
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      }
+    },
+    {
+      "metric_key": "net_attributed_sales",
+      "value": {
+        "metric_key": "portfolio_net_attributed_sales",
+        "value": "241700.25",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": "Net of cohort refunds.",
+        "evidence_url": "/api/v1/metrics/portfolio_net_attributed_sales/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "baseline": {
+        "metric_key": "portfolio_net_attributed_sales",
+        "value": "228950.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_net_attributed_sales/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta": {
+        "metric_key": "portfolio_net_attributed_sales_delta",
+        "value": "20550.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_net_attributed_sales_delta/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta_pct": {
+        "metric_key": "portfolio_net_attributed_sales_delta_pct",
+        "value": "0.052",
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_net_attributed_sales_delta_pct/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "brands_covered": 5,
+      "brands_total": 5
+    },
+    {
+      "metric_key": "videos",
+      "value": {
+        "metric_key": "portfolio_videos",
+        "value": null,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "Glowhaus has a video coverage gap; guarded sum is unavailable.",
+        "evidence_url": "/api/v1/metrics/portfolio_videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "baseline": {
+        "metric_key": "portfolio_videos",
+        "value": "412",
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta": {
+        "metric_key": "portfolio_videos_delta",
+        "value": null,
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "Glowhaus has a video coverage gap; guarded sum is unavailable.",
+        "evidence_url": "/api/v1/metrics/portfolio_videos_delta/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta_pct": {
+        "metric_key": "portfolio_videos_delta_pct",
+        "value": null,
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "Glowhaus has a video coverage gap; guarded sum is unavailable.",
+        "evidence_url": "/api/v1/metrics/portfolio_videos_delta_pct/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "brands_covered": 4,
+      "brands_total": 5,
+      "progress": {
+        "metric_key": "goal_progress",
+        "value": null,
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": null,
+        "status": "unavailable",
+        "status_reason": "Videos total is unavailable (Glowhaus gap).",
+        "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      }
+    },
+    {
+      "metric_key": "active_creators",
+      "value": {
+        "metric_key": "portfolio_active_creators",
+        "value": "31",
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "baseline": {
+        "metric_key": "portfolio_active_creators",
+        "value": "29",
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta": {
+        "metric_key": "portfolio_active_creators_delta",
+        "value": "2",
+        "unit": "count",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_active_creators_delta/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "delta_pct": {
+        "metric_key": "portfolio_active_creators_delta_pct",
+        "value": "0.052",
+        "unit": "ratio",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/portfolio_active_creators_delta_pct/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "brands_covered": 5,
+      "brands_total": 5
+    }
+  ],
+  "pace_counts": {
+    "on_track": 6,
+    "at_risk": 3,
+    "off_track": 2,
+    "unknown": 4
+  }
+}

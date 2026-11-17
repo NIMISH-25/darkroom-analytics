@@ -1,0 +1,47 @@
+{
+  "data_revision": 1,
+  "series": [
+    {
+      "series_id": "pacing_trajectory",
+      "status": "available",
+      "reason": null,
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "point_count": 31
+    },
+    {
+      "series_id": "daily_gmv_refunds",
+      "status": "available",
+      "reason": null,
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "point_count": 31
+    },
+    {
+      "series_id": "attribution_reconciliation",
+      "status": "available",
+      "reason": null,
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "point_count": 4
+    },
+    {
+      "series_id": "sample_funnel_lag",
+      "status": "available",
+      "reason": null,
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "point_count": 12
+    },
+    {
+      "series_id": "creator_concentration",
+      "status": "available",
+      "reason": null,
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "point_count": 6
+    },
+    {
+      "series_id": "retainer_cadence",
+      "status": "unknown",
+      "reason": "Every value is unknown (video coverage gap).",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "point_count": 9
+    }
+  ]
+}

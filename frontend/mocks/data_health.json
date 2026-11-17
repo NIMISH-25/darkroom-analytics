@@ -1,0 +1,260 @@
+{
+  "data_revision": 1,
+  "sources": [
+    {
+      "brand_id": "aurelle",
+      "source": "orders",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "aurelle",
+      "source": "videos",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "aurelle",
+      "source": "samples",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "aurelle",
+      "source": "contracts",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "verdant",
+      "source": "orders",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "verdant",
+      "source": "videos",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "verdant",
+      "source": "samples",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "verdant",
+      "source": "contracts",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "crunchwell",
+      "source": "orders",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "crunchwell",
+      "source": "videos",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "crunchwell",
+      "source": "samples",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "crunchwell",
+      "source": "contracts",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "threadline",
+      "source": "orders",
+      "status": "stale",
+      "coverage_through": "2026-10-12",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": "Latest file ends 2026-10-12",
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "threadline",
+      "source": "videos",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "threadline",
+      "source": "samples",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "threadline",
+      "source": "contracts",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "glowhaus",
+      "source": "orders",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "glowhaus",
+      "source": "videos",
+      "status": "partial",
+      "coverage_through": "2026-10-08",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": "Gap 2026-10-09 to 2026-10-15",
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "glowhaus",
+      "source": "samples",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": "glowhaus",
+      "source": "contracts",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "scope": "brand",
+      "source_label": null
+    },
+    {
+      "brand_id": null,
+      "scope": "shared",
+      "source": "roster",
+      "status": "current",
+      "coverage_through": "2026-10-15",
+      "last_ingested_at": "2026-10-16T00:10:00-07:00",
+      "message": null,
+      "source_label": "Shared Cross-Brand Source"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "run-2",
+      "started_at": "2026-10-16T00:05:00-07:00",
+      "status": "partial",
+      "files_failed": 1
+    },
+    {
+      "run_id": "run-1",
+      "started_at": "2026-10-15T00:05:00-07:00",
+      "status": "success",
+      "files_failed": 0
+    }
+  ],
+  "failed_files": [
+    {
+      "run_id": "run-2",
+      "file_name": "verdant_orders_2026-10.csv",
+      "error": "Rejected: missing required column Order Total",
+      "scope": "brand",
+      "brand_id": "verdant",
+      "source_label": null
+    },
+    {
+      "run_id": "run-2",
+      "file_name": "threadline_weekly_videos_2026-10-12.csv",
+      "error": "Quarantined: duplicate Video ID rows",
+      "scope": "brand",
+      "brand_id": "threadline",
+      "source_label": null
+    }
+  ],
+  "unresolved_identities": [
+    {
+      "brand_id": "crunchwell",
+      "source": "orders",
+      "raw_identifier": "@unknown_handle",
+      "occurrences": 3
+    }
+  ],
+  "counts": {
+    "brand_failed": 2,
+    "shared_failed": 0,
+    "open_issues": 1
+  }
+}

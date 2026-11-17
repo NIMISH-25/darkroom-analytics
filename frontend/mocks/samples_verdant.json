@@ -1,0 +1,149 @@
+{
+  "data_revision": 1,
+  "counts": {
+    "sent": {
+      "metric_key": "samples_sent",
+      "value": 6,
+      "unit": "count",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "coverage_through": "2026-10-15",
+      "status": "current",
+      "status_reason": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    "delivered": {
+      "metric_key": "samples_delivered",
+      "value": 5,
+      "unit": "count",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "coverage_through": "2026-10-15",
+      "status": "current",
+      "status_reason": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    "matched": {
+      "metric_key": "samples_matched",
+      "value": 2,
+      "unit": "count",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "coverage_through": "2026-10-15",
+      "status": "current",
+      "status_reason": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    "pending": {
+      "metric_key": "samples_pending",
+      "value": 1,
+      "unit": "count",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "coverage_through": "2026-10-15",
+      "status": "current",
+      "status_reason": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    "no_video": {
+      "metric_key": "samples_no_video",
+      "value": 1,
+      "unit": "count",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "coverage_through": "2026-10-15",
+      "status": "current",
+      "status_reason": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    "unknown": {
+      "metric_key": "samples_unknown",
+      "value": 1,
+      "unit": "count",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "coverage_through": "2026-10-15",
+      "status": "partial",
+      "status_reason": "Delivery status missing for one sample.",
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    "conversion_rate": {
+      "metric_key": "sample_conversion_rate",
+      "value": "0.4",
+      "unit": "ratio",
+      "as_of": "2026-10-15T23:59:59-07:00",
+      "coverage_through": "2026-10-15",
+      "status": "current",
+      "status_reason": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
+    }
+  },
+  "items": [
+    {
+      "sample_id": "verdant-s1",
+      "creator_id": "verdant-c1",
+      "handle": "@verdant_1",
+      "product_sku": "SKU-100",
+      "sent_date": "2026-09-10",
+      "delivered_date": "2026-09-14",
+      "status": "matched",
+      "video_id": "vid-0",
+      "delivery_to_video_days": 4,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&creator_id=verdant-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    {
+      "sample_id": "verdant-s2",
+      "creator_id": "verdant-c2",
+      "handle": "@verdant_2",
+      "product_sku": "SKU-101",
+      "sent_date": "2026-09-11",
+      "delivered_date": "2026-09-15",
+      "status": "pending",
+      "video_id": null,
+      "delivery_to_video_days": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&creator_id=verdant-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    {
+      "sample_id": "verdant-s3",
+      "creator_id": "verdant-c3",
+      "handle": "@verdant_3",
+      "product_sku": "SKU-102",
+      "sent_date": "2026-09-12",
+      "delivered_date": "2026-09-16",
+      "status": "no_video",
+      "video_id": null,
+      "delivery_to_video_days": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&creator_id=verdant-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    {
+      "sample_id": "verdant-s4",
+      "creator_id": "verdant-c4",
+      "handle": "@verdant_4",
+      "product_sku": "SKU-103",
+      "sent_date": "2026-09-13",
+      "delivered_date": null,
+      "status": "in_transit",
+      "video_id": null,
+      "delivery_to_video_days": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    {
+      "sample_id": "verdant-s5",
+      "creator_id": "verdant-c5",
+      "handle": "@verdant_5",
+      "product_sku": "SKU-104",
+      "sent_date": "2026-09-14",
+      "delivered_date": "2026-09-18",
+      "status": "unknown",
+      "video_id": null,
+      "delivery_to_video_days": null,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&creator_id=verdant-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+    },
+    {
+      "sample_id": "verdant-s6",
+      "creator_id": "verdant-c6",
+      "handle": "@verdant_6",
+      "product_sku": "SKU-105",
+      "sent_date": "2026-09-15",
+      "delivered_date": "2026-09-19",
+      "status": "matched",
+      "video_id": "vid-5",
+      "delivery_to_video_days": 9,
+      "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&creator_id=verdant-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+    }
+  ]
+}

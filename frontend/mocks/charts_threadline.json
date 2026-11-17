@@ -1,0 +1,1501 @@
+{
+  "pacing_trajectory": {
+    "series": "pacing_trajectory",
+    "brand_id": "threadline",
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-12",
+    "status": "stale",
+    "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+    "units": {
+      "actual": "USD",
+      "projection": "USD",
+      "required": "USD"
+    },
+    "meta": {
+      "basis": "net",
+      "target": {
+        "metric_key": "goal_target",
+        "value": "80000.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_target/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "projection": {
+        "metric_key": "goal_projection",
+        "value": "74400.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "required_pace": {
+        "metric_key": "goal_required_pace",
+        "value": "1800.00",
+        "unit": "USD_per_day",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      }
+    },
+    "points": [
+      {
+        "x": "2026-10-01",
+        "actual": "2400.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-02",
+        "actual": "4800.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-03",
+        "actual": "7200.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-04",
+        "actual": "9600.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-05",
+        "actual": "12000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-06",
+        "actual": "14400.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-07",
+        "actual": "16800.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-08",
+        "actual": "19200.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-09",
+        "actual": "21600.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-10",
+        "actual": "24000.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-11",
+        "actual": "26400.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-12",
+        "actual": "28800.00",
+        "projection": null,
+        "required": null,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-13",
+        "actual": null,
+        "projection": null,
+        "required": null,
+        "status": "stale",
+        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-14",
+        "actual": null,
+        "projection": null,
+        "required": null,
+        "status": "stale",
+        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-15",
+        "actual": null,
+        "projection": "36000.00",
+        "required": "36000.00",
+        "status": "stale",
+        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-16",
+        "actual": null,
+        "projection": "38400.00",
+        "required": "38750.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-17",
+        "actual": null,
+        "projection": "40800.00",
+        "required": "41500.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-18",
+        "actual": null,
+        "projection": "43200.00",
+        "required": "44250.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-19",
+        "actual": null,
+        "projection": "45600.00",
+        "required": "47000.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-20",
+        "actual": null,
+        "projection": "48000.00",
+        "required": "49750.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-21",
+        "actual": null,
+        "projection": "50400.00",
+        "required": "52500.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-22",
+        "actual": null,
+        "projection": "52800.00",
+        "required": "55250.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-23",
+        "actual": null,
+        "projection": "55200.00",
+        "required": "58000.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-24",
+        "actual": null,
+        "projection": "57600.00",
+        "required": "60750.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-25",
+        "actual": null,
+        "projection": "60000.00",
+        "required": "63500.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-26",
+        "actual": null,
+        "projection": "62400.00",
+        "required": "66250.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-27",
+        "actual": null,
+        "projection": "64800.00",
+        "required": "69000.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-28",
+        "actual": null,
+        "projection": "67200.00",
+        "required": "71750.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-29",
+        "actual": null,
+        "projection": "69600.00",
+        "required": "74500.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-30",
+        "actual": null,
+        "projection": "72000.00",
+        "required": "77250.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-31",
+        "actual": null,
+        "projection": "74400.00",
+        "required": "80000.00",
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
+          "required": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "stale",
+      "reason": "Order source freshness is breached."
+    }
+  },
+  "daily_gmv_refunds": {
+    "series": "daily_gmv_refunds",
+    "brand_id": "threadline",
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-12",
+    "status": "stale",
+    "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+    "units": {
+      "gmv": "USD",
+      "creator_attributed_gmv": "USD",
+      "attributed_refunds_cohort": "USD",
+      "attributed_refunds_processed": "USD",
+      "net_attributed_sales": "USD"
+    },
+    "meta": {},
+    "points": [
+      {
+        "x": "2026-10-01",
+        "gmv": "2490.00",
+        "creator_attributed_gmv": "1544.00",
+        "attributed_refunds_cohort": "100.00",
+        "attributed_refunds_processed": "75.00",
+        "net_attributed_sales": "1444.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-01&date_to=2026-10-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-02",
+        "gmv": "2580.00",
+        "creator_attributed_gmv": "1600.00",
+        "attributed_refunds_cohort": "103.00",
+        "attributed_refunds_processed": "77.00",
+        "net_attributed_sales": "1496.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-02&date_to=2026-10-02&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-03",
+        "gmv": "2670.00",
+        "creator_attributed_gmv": "1655.00",
+        "attributed_refunds_cohort": "107.00",
+        "attributed_refunds_processed": "80.00",
+        "net_attributed_sales": "1549.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-03&date_to=2026-10-03&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-04",
+        "gmv": "2760.00",
+        "creator_attributed_gmv": "1711.00",
+        "attributed_refunds_cohort": "110.00",
+        "attributed_refunds_processed": "83.00",
+        "net_attributed_sales": "1601.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-04&date_to=2026-10-04&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-05",
+        "gmv": "2400.00",
+        "creator_attributed_gmv": "1488.00",
+        "attributed_refunds_cohort": "96.00",
+        "attributed_refunds_processed": "72.00",
+        "net_attributed_sales": "1392.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-05&date_to=2026-10-05&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-06",
+        "gmv": "2490.00",
+        "creator_attributed_gmv": "1544.00",
+        "attributed_refunds_cohort": "100.00",
+        "attributed_refunds_processed": "75.00",
+        "net_attributed_sales": "1444.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-06&date_to=2026-10-06&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-07",
+        "gmv": "2580.00",
+        "creator_attributed_gmv": "1600.00",
+        "attributed_refunds_cohort": "103.00",
+        "attributed_refunds_processed": "77.00",
+        "net_attributed_sales": "1496.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-07&date_to=2026-10-07&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-08",
+        "gmv": "2670.00",
+        "creator_attributed_gmv": "1655.00",
+        "attributed_refunds_cohort": "107.00",
+        "attributed_refunds_processed": "80.00",
+        "net_attributed_sales": "1549.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-08&date_to=2026-10-08&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-09",
+        "gmv": "2760.00",
+        "creator_attributed_gmv": "1711.00",
+        "attributed_refunds_cohort": "110.00",
+        "attributed_refunds_processed": "83.00",
+        "net_attributed_sales": "1601.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-10",
+        "gmv": "2400.00",
+        "creator_attributed_gmv": "1488.00",
+        "attributed_refunds_cohort": "96.00",
+        "attributed_refunds_processed": "72.00",
+        "net_attributed_sales": "1392.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-11",
+        "gmv": "2490.00",
+        "creator_attributed_gmv": "1544.00",
+        "attributed_refunds_cohort": "100.00",
+        "attributed_refunds_processed": "75.00",
+        "net_attributed_sales": "1444.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-12",
+        "gmv": "2580.00",
+        "creator_attributed_gmv": "1600.00",
+        "attributed_refunds_cohort": "103.00",
+        "attributed_refunds_processed": "77.00",
+        "net_attributed_sales": "1496.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-13",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "stale",
+        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-14",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "stale",
+        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-15",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "stale",
+        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-16",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-16&date_to=2026-10-16&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-17",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-17&date_to=2026-10-17&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-18",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-18&date_to=2026-10-18&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-19",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-19&date_to=2026-10-19&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-20",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-20&date_to=2026-10-20&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-21",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-21&date_to=2026-10-21&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-22",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-22&date_to=2026-10-22&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-23",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-23&date_to=2026-10-23&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-24",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-24&date_to=2026-10-24&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-25",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-25&date_to=2026-10-25&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-26",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-26&date_to=2026-10-26&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-27",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-27&date_to=2026-10-27&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-28",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-28&date_to=2026-10-28&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-29",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-29&date_to=2026-10-29&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-30",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-30&date_to=2026-10-30&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-10-31",
+        "gmv": null,
+        "creator_attributed_gmv": null,
+        "attributed_refunds_cohort": null,
+        "attributed_refunds_processed": null,
+        "net_attributed_sales": null,
+        "status": "forecast",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_cohort": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "attributed_refunds_processed": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1",
+          "net_attributed_sales": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-31&date_to=2026-10-31&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "attribution_reconciliation": {
+    "series": "attribution_reconciliation",
+    "brand_id": "threadline",
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "amount": "USD",
+      "order_items": "count",
+      "pct": "ratio"
+    },
+    "meta": {},
+    "points": [
+      {
+        "x": "resolved",
+        "amount": "25544.00",
+        "order_items": 298,
+        "pct": "0.62",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=resolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=resolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=resolved&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "creator_unresolved",
+        "amount": "7416.00",
+        "order_items": 86,
+        "pct": "0.18",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=creator_unresolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=creator_unresolved&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=creator_unresolved&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "none",
+        "amount": "6180.00",
+        "order_items": 72,
+        "pct": "0.15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=none&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=none&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=none&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "conflict",
+        "amount": "2060.00",
+        "order_items": 24,
+        "pct": "0.05",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "amount": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=conflict&month=2026-10&cutoff=2026-10-15&revision=1",
+          "order_items": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=conflict&month=2026-10&cutoff=2026-10-15&revision=1",
+          "pct": "/api/v1/metrics/gmv/evidence?brand_id=threadline&bucket=conflict&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "sample_funnel_lag": {
+    "series": "sample_funnel_lag",
+    "brand_id": "threadline",
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "count": "count"
+    },
+    "meta": {},
+    "points": [
+      {
+        "group": "stage",
+        "x": "sent",
+        "count": 6,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=sent&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "100.0"
+      },
+      {
+        "group": "stage",
+        "x": "delivered",
+        "count": 5,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=delivered&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "83.3"
+      },
+      {
+        "group": "stage",
+        "x": "mature",
+        "count": 3,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=mature&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "50.0"
+      },
+      {
+        "group": "stage",
+        "x": "in_transit",
+        "count": 1,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=in_transit&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "stage",
+        "x": "pending",
+        "count": 1,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=pending&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "stage",
+        "x": "converted",
+        "count": 2,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=converted&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "33.3"
+      },
+      {
+        "group": "stage",
+        "x": "no_video_mature",
+        "count": 1,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=no_video_mature&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "stage",
+        "x": "unknown",
+        "count": 1,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&stage=unknown&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_sent": "16.7"
+      },
+      {
+        "group": "lag",
+        "x": "0-7",
+        "count": 1,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&bucket=0-7&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "50.0"
+      },
+      {
+        "group": "lag",
+        "x": "8-14",
+        "count": 1,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&bucket=8-14&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "50.0"
+      },
+      {
+        "group": "lag",
+        "x": "15-21",
+        "count": 0,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&bucket=15-21&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "0.0"
+      },
+      {
+        "group": "lag",
+        "x": "22-30",
+        "count": 0,
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "count": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=threadline&bucket=22-30&month=2026-10&cutoff=2026-10-15&revision=1"
+        },
+        "pct_of_converted": "0.0"
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "creator_concentration": {
+    "series": "creator_concentration",
+    "brand_id": "threadline",
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "gmv": "USD",
+      "share": "ratio",
+      "cum_creator_pct": "ratio",
+      "cum_gmv_pct": "ratio"
+    },
+    "meta": {
+      "unresolved_gmv": {
+        "metric_key": "unresolved_gmv",
+        "value": "7400.00",
+        "unit": "USD",
+        "as_of": "2026-10-15T23:59:59-07:00",
+        "coverage_through": "2026-10-15",
+        "status": "current",
+        "status_reason": null,
+        "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+      },
+      "top10_gmv_share": "34.0",
+      "top20_gmv_share": "55.0"
+    },
+    "points": [
+      {
+        "x": 1,
+        "creator_id": "threadline-c1",
+        "handle": "@threadline_1",
+        "gmv": "8840.00",
+        "share": "0.34",
+        "cum_creator_pct": "0.17",
+        "cum_gmv_pct": "0.34",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&creator_id=threadline-c1&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 2,
+        "creator_id": "threadline-c2",
+        "handle": "@threadline_2",
+        "gmv": "5460.00",
+        "share": "0.21",
+        "cum_creator_pct": "0.33",
+        "cum_gmv_pct": "0.55",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&creator_id=threadline-c2&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 3,
+        "creator_id": "threadline-c3",
+        "handle": "@threadline_3",
+        "gmv": "3900.00",
+        "share": "0.15",
+        "cum_creator_pct": "0.50",
+        "cum_gmv_pct": "0.70",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&creator_id=threadline-c3&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 4,
+        "creator_id": "threadline-c4",
+        "handle": "@threadline_4",
+        "gmv": "3120.00",
+        "share": "0.12",
+        "cum_creator_pct": "0.67",
+        "cum_gmv_pct": "0.82",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&creator_id=threadline-c4&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 5,
+        "creator_id": "threadline-c5",
+        "handle": "@threadline_5",
+        "gmv": "2600.00",
+        "share": "0.10",
+        "cum_creator_pct": "0.83",
+        "cum_gmv_pct": "0.92",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&creator_id=threadline-c5&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": 6,
+        "creator_id": "threadline-c6",
+        "handle": "@threadline_6",
+        "gmv": "2080.00",
+        "share": "0.08",
+        "cum_creator_pct": "1.00",
+        "cum_gmv_pct": "1.00",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&creator_id=threadline-c6&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  },
+  "retainer_cadence": {
+    "series": "retainer_cadence",
+    "brand_id": "threadline",
+    "month": "2026-10",
+    "cutoff": "2026-10-15",
+    "data_revision": 1,
+    "definition_version": "v2",
+    "coverage_through": "2026-09-30",
+    "status": "current",
+    "status_reason": null,
+    "units": {
+      "expected_posts": "count",
+      "posts": "count",
+      "attainment_pct": "ratio"
+    },
+    "meta": {},
+    "points": [
+      {
+        "x": "2026-07",
+        "creator_id": "threadline-c1",
+        "handle": "@threadline_1",
+        "expected_posts": "8.0",
+        "posts": 3,
+        "attainment_pct": "0.35",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c1&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-07",
+        "creator_id": "threadline-c2",
+        "handle": "@threadline_2",
+        "expected_posts": "8.0",
+        "posts": 4,
+        "attainment_pct": "0.45",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c2&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-07",
+        "creator_id": "threadline-c3",
+        "handle": "@threadline_3",
+        "expected_posts": "8.0",
+        "posts": 5,
+        "attainment_pct": "0.55",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c3&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-08",
+        "creator_id": "threadline-c1",
+        "handle": "@threadline_1",
+        "expected_posts": "8.0",
+        "posts": 4,
+        "attainment_pct": "0.40",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c1&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-08",
+        "creator_id": "threadline-c2",
+        "handle": "@threadline_2",
+        "expected_posts": "8.0",
+        "posts": 5,
+        "attainment_pct": "0.50",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c2&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-08",
+        "creator_id": "threadline-c3",
+        "handle": "@threadline_3",
+        "expected_posts": "8.0",
+        "posts": 6,
+        "attainment_pct": "0.60",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c3&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-09",
+        "creator_id": "threadline-c1",
+        "handle": "@threadline_1",
+        "expected_posts": "8.0",
+        "posts": 5,
+        "attainment_pct": "0.45",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c1&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-09",
+        "creator_id": "threadline-c2",
+        "handle": "@threadline_2",
+        "expected_posts": "8.0",
+        "posts": 6,
+        "attainment_pct": "0.55",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c2&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      },
+      {
+        "x": "2026-09",
+        "creator_id": "threadline-c3",
+        "handle": "@threadline_3",
+        "expected_posts": "8.0",
+        "posts": 7,
+        "attainment_pct": "0.65",
+        "status": "current",
+        "status_reason": null,
+        "evidence_urls": {
+          "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=threadline&creator_id=threadline-c3&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
+        }
+      }
+    ],
+    "availability": {
+      "status": "available",
+      "reason": null
+    }
+  }
+}

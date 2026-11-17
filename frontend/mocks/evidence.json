@@ -1,0 +1,1467 @@
+{
+  "label": "Metric evidence",
+  "definition": "Sum of attributed order amounts for the period, excluding refunded and unresolved orders.",
+  "definition_version": "v2",
+  "period_start": "2026-10-01",
+  "period_end": "2026-10-15",
+  "timezone": "America/Los_Angeles",
+  "result": {
+    "metric_key": "creator_attributed_gmv",
+    "value": "21000.50",
+    "unit": "USD",
+    "as_of": "2026-10-15T23:59:59-07:00",
+    "coverage_through": "2026-10-15",
+    "status": "current",
+    "status_reason": null,
+    "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
+  },
+  "calculation": {
+    "kind": "sum",
+    "formula": "SUM(order_amount) WHERE creator resolved AND date in period",
+    "inputs": [
+      {
+        "label": "Included orders",
+        "value": "131",
+        "unit": "count"
+      },
+      {
+        "label": "Gross amount",
+        "value": "21800.50",
+        "unit": "USD"
+      },
+      {
+        "label": "Excluded amount",
+        "value": "800.00",
+        "unit": "USD"
+      }
+    ]
+  },
+  "exclusions": [
+    {
+      "reason": "Unresolved creator identity",
+      "count": 9,
+      "amount": "800.00"
+    }
+  ],
+  "warnings": [
+    "Orders from 2026-10-14 onward may still be settling."
+  ],
+  "columns": [
+    "order_id",
+    "amount",
+    "date"
+  ],
+  "records": [
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 2",
+      "included": true,
+      "values": {
+        "order_id": "O-1001",
+        "amount": "80.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 3",
+      "included": true,
+      "values": {
+        "order_id": "O-1002",
+        "amount": "91.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 4",
+      "included": true,
+      "values": {
+        "order_id": "O-1003",
+        "amount": "102.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 5",
+      "included": true,
+      "values": {
+        "order_id": "O-1004",
+        "amount": "113.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 6",
+      "included": true,
+      "values": {
+        "order_id": "O-1005",
+        "amount": "124.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 7",
+      "included": true,
+      "values": {
+        "order_id": "O-1006",
+        "amount": "135.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 8",
+      "included": true,
+      "values": {
+        "order_id": "O-1007",
+        "amount": "146.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 9",
+      "included": true,
+      "values": {
+        "order_id": "O-1008",
+        "amount": "157.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 10",
+      "included": true,
+      "values": {
+        "order_id": "O-1009",
+        "amount": "168.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 11",
+      "included": true,
+      "values": {
+        "order_id": "O-1010",
+        "amount": "80.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 12",
+      "included": true,
+      "values": {
+        "order_id": "O-1011",
+        "amount": "91.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 13",
+      "included": true,
+      "values": {
+        "order_id": "O-1012",
+        "amount": "102.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 14",
+      "included": true,
+      "values": {
+        "order_id": "O-1013",
+        "amount": "113.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 15",
+      "included": true,
+      "values": {
+        "order_id": "O-1014",
+        "amount": "124.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 16",
+      "included": true,
+      "values": {
+        "order_id": "O-1015",
+        "amount": "135.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 17",
+      "included": true,
+      "values": {
+        "order_id": "O-1016",
+        "amount": "146.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 18",
+      "included": false,
+      "values": {
+        "order_id": "O-1017",
+        "amount": "157.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 19",
+      "included": true,
+      "values": {
+        "order_id": "O-1018",
+        "amount": "168.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 20",
+      "included": true,
+      "values": {
+        "order_id": "O-1019",
+        "amount": "80.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 21",
+      "included": true,
+      "values": {
+        "order_id": "O-1020",
+        "amount": "91.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 22",
+      "included": true,
+      "values": {
+        "order_id": "O-1021",
+        "amount": "102.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 23",
+      "included": true,
+      "values": {
+        "order_id": "O-1022",
+        "amount": "113.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 24",
+      "included": true,
+      "values": {
+        "order_id": "O-1023",
+        "amount": "124.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 25",
+      "included": true,
+      "values": {
+        "order_id": "O-1024",
+        "amount": "135.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 26",
+      "included": true,
+      "values": {
+        "order_id": "O-1025",
+        "amount": "146.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 27",
+      "included": true,
+      "values": {
+        "order_id": "O-1026",
+        "amount": "157.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 28",
+      "included": true,
+      "values": {
+        "order_id": "O-1027",
+        "amount": "168.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 29",
+      "included": true,
+      "values": {
+        "order_id": "O-1028",
+        "amount": "80.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 30",
+      "included": true,
+      "values": {
+        "order_id": "O-1029",
+        "amount": "91.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 31",
+      "included": true,
+      "values": {
+        "order_id": "O-1030",
+        "amount": "102.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 32",
+      "included": true,
+      "values": {
+        "order_id": "O-1031",
+        "amount": "113.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 33",
+      "included": true,
+      "values": {
+        "order_id": "O-1032",
+        "amount": "124.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 34",
+      "included": true,
+      "values": {
+        "order_id": "O-1033",
+        "amount": "135.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 35",
+      "included": false,
+      "values": {
+        "order_id": "O-1034",
+        "amount": "146.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 36",
+      "included": true,
+      "values": {
+        "order_id": "O-1035",
+        "amount": "157.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 37",
+      "included": true,
+      "values": {
+        "order_id": "O-1036",
+        "amount": "168.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 38",
+      "included": true,
+      "values": {
+        "order_id": "O-1037",
+        "amount": "80.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 39",
+      "included": true,
+      "values": {
+        "order_id": "O-1038",
+        "amount": "91.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 40",
+      "included": true,
+      "values": {
+        "order_id": "O-1039",
+        "amount": "102.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 41",
+      "included": true,
+      "values": {
+        "order_id": "O-1040",
+        "amount": "113.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 42",
+      "included": true,
+      "values": {
+        "order_id": "O-1041",
+        "amount": "124.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 43",
+      "included": true,
+      "values": {
+        "order_id": "O-1042",
+        "amount": "135.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 44",
+      "included": true,
+      "values": {
+        "order_id": "O-1043",
+        "amount": "146.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 45",
+      "included": true,
+      "values": {
+        "order_id": "O-1044",
+        "amount": "157.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 46",
+      "included": true,
+      "values": {
+        "order_id": "O-1045",
+        "amount": "168.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 47",
+      "included": true,
+      "values": {
+        "order_id": "O-1046",
+        "amount": "80.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 48",
+      "included": true,
+      "values": {
+        "order_id": "O-1047",
+        "amount": "91.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 49",
+      "included": true,
+      "values": {
+        "order_id": "O-1048",
+        "amount": "102.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 50",
+      "included": true,
+      "values": {
+        "order_id": "O-1049",
+        "amount": "113.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 51",
+      "included": true,
+      "values": {
+        "order_id": "O-1050",
+        "amount": "124.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 52",
+      "included": false,
+      "values": {
+        "order_id": "O-1051",
+        "amount": "135.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 53",
+      "included": true,
+      "values": {
+        "order_id": "O-1052",
+        "amount": "146.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 54",
+      "included": true,
+      "values": {
+        "order_id": "O-1053",
+        "amount": "157.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 55",
+      "included": true,
+      "values": {
+        "order_id": "O-1054",
+        "amount": "168.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 56",
+      "included": true,
+      "values": {
+        "order_id": "O-1055",
+        "amount": "80.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 57",
+      "included": true,
+      "values": {
+        "order_id": "O-1056",
+        "amount": "91.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 58",
+      "included": true,
+      "values": {
+        "order_id": "O-1057",
+        "amount": "102.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 59",
+      "included": true,
+      "values": {
+        "order_id": "O-1058",
+        "amount": "113.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 60",
+      "included": true,
+      "values": {
+        "order_id": "O-1059",
+        "amount": "124.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 61",
+      "included": true,
+      "values": {
+        "order_id": "O-1060",
+        "amount": "135.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 62",
+      "included": true,
+      "values": {
+        "order_id": "O-1061",
+        "amount": "146.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 63",
+      "included": true,
+      "values": {
+        "order_id": "O-1062",
+        "amount": "157.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 64",
+      "included": true,
+      "values": {
+        "order_id": "O-1063",
+        "amount": "168.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 65",
+      "included": true,
+      "values": {
+        "order_id": "O-1064",
+        "amount": "80.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 66",
+      "included": true,
+      "values": {
+        "order_id": "O-1065",
+        "amount": "91.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 67",
+      "included": true,
+      "values": {
+        "order_id": "O-1066",
+        "amount": "102.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 68",
+      "included": true,
+      "values": {
+        "order_id": "O-1067",
+        "amount": "113.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 69",
+      "included": false,
+      "values": {
+        "order_id": "O-1068",
+        "amount": "124.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 70",
+      "included": true,
+      "values": {
+        "order_id": "O-1069",
+        "amount": "135.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 71",
+      "included": true,
+      "values": {
+        "order_id": "O-1070",
+        "amount": "146.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 72",
+      "included": true,
+      "values": {
+        "order_id": "O-1071",
+        "amount": "157.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 73",
+      "included": true,
+      "values": {
+        "order_id": "O-1072",
+        "amount": "168.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 74",
+      "included": true,
+      "values": {
+        "order_id": "O-1073",
+        "amount": "80.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 75",
+      "included": true,
+      "values": {
+        "order_id": "O-1074",
+        "amount": "91.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 76",
+      "included": true,
+      "values": {
+        "order_id": "O-1075",
+        "amount": "102.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 77",
+      "included": true,
+      "values": {
+        "order_id": "O-1076",
+        "amount": "113.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 78",
+      "included": true,
+      "values": {
+        "order_id": "O-1077",
+        "amount": "124.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 79",
+      "included": true,
+      "values": {
+        "order_id": "O-1078",
+        "amount": "135.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 80",
+      "included": true,
+      "values": {
+        "order_id": "O-1079",
+        "amount": "146.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 81",
+      "included": true,
+      "values": {
+        "order_id": "O-1080",
+        "amount": "157.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 82",
+      "included": true,
+      "values": {
+        "order_id": "O-1081",
+        "amount": "168.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 83",
+      "included": true,
+      "values": {
+        "order_id": "O-1082",
+        "amount": "80.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 84",
+      "included": true,
+      "values": {
+        "order_id": "O-1083",
+        "amount": "91.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 85",
+      "included": true,
+      "values": {
+        "order_id": "O-1084",
+        "amount": "102.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 86",
+      "included": false,
+      "values": {
+        "order_id": "O-1085",
+        "amount": "113.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 87",
+      "included": true,
+      "values": {
+        "order_id": "O-1086",
+        "amount": "124.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 88",
+      "included": true,
+      "values": {
+        "order_id": "O-1087",
+        "amount": "135.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 89",
+      "included": true,
+      "values": {
+        "order_id": "O-1088",
+        "amount": "146.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 90",
+      "included": true,
+      "values": {
+        "order_id": "O-1089",
+        "amount": "157.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 91",
+      "included": true,
+      "values": {
+        "order_id": "O-1090",
+        "amount": "168.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 92",
+      "included": true,
+      "values": {
+        "order_id": "O-1091",
+        "amount": "80.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 93",
+      "included": true,
+      "values": {
+        "order_id": "O-1092",
+        "amount": "91.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 94",
+      "included": true,
+      "values": {
+        "order_id": "O-1093",
+        "amount": "102.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 95",
+      "included": true,
+      "values": {
+        "order_id": "O-1094",
+        "amount": "113.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 96",
+      "included": true,
+      "values": {
+        "order_id": "O-1095",
+        "amount": "124.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 97",
+      "included": true,
+      "values": {
+        "order_id": "O-1096",
+        "amount": "135.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 98",
+      "included": true,
+      "values": {
+        "order_id": "O-1097",
+        "amount": "146.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 99",
+      "included": true,
+      "values": {
+        "order_id": "O-1098",
+        "amount": "157.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 100",
+      "included": true,
+      "values": {
+        "order_id": "O-1099",
+        "amount": "168.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 101",
+      "included": true,
+      "values": {
+        "order_id": "O-1100",
+        "amount": "80.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 102",
+      "included": true,
+      "values": {
+        "order_id": "O-1101",
+        "amount": "91.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 103",
+      "included": false,
+      "values": {
+        "order_id": "O-1102",
+        "amount": "102.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 104",
+      "included": true,
+      "values": {
+        "order_id": "O-1103",
+        "amount": "113.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 105",
+      "included": true,
+      "values": {
+        "order_id": "O-1104",
+        "amount": "124.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 106",
+      "included": true,
+      "values": {
+        "order_id": "O-1105",
+        "amount": "135.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 107",
+      "included": true,
+      "values": {
+        "order_id": "O-1106",
+        "amount": "146.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 108",
+      "included": true,
+      "values": {
+        "order_id": "O-1107",
+        "amount": "157.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 109",
+      "included": true,
+      "values": {
+        "order_id": "O-1108",
+        "amount": "168.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 110",
+      "included": true,
+      "values": {
+        "order_id": "O-1109",
+        "amount": "80.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 111",
+      "included": true,
+      "values": {
+        "order_id": "O-1110",
+        "amount": "91.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 112",
+      "included": true,
+      "values": {
+        "order_id": "O-1111",
+        "amount": "102.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 113",
+      "included": true,
+      "values": {
+        "order_id": "O-1112",
+        "amount": "113.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 114",
+      "included": true,
+      "values": {
+        "order_id": "O-1113",
+        "amount": "124.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 115",
+      "included": true,
+      "values": {
+        "order_id": "O-1114",
+        "amount": "135.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 116",
+      "included": true,
+      "values": {
+        "order_id": "O-1115",
+        "amount": "146.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 117",
+      "included": true,
+      "values": {
+        "order_id": "O-1116",
+        "amount": "157.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 118",
+      "included": true,
+      "values": {
+        "order_id": "O-1117",
+        "amount": "168.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 119",
+      "included": true,
+      "values": {
+        "order_id": "O-1118",
+        "amount": "80.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 120",
+      "included": false,
+      "values": {
+        "order_id": "O-1119",
+        "amount": "91.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 121",
+      "included": true,
+      "values": {
+        "order_id": "O-1120",
+        "amount": "102.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 122",
+      "included": true,
+      "values": {
+        "order_id": "O-1121",
+        "amount": "113.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 123",
+      "included": true,
+      "values": {
+        "order_id": "O-1122",
+        "amount": "124.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 124",
+      "included": true,
+      "values": {
+        "order_id": "O-1123",
+        "amount": "135.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 125",
+      "included": true,
+      "values": {
+        "order_id": "O-1124",
+        "amount": "146.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 126",
+      "included": true,
+      "values": {
+        "order_id": "O-1125",
+        "amount": "157.50",
+        "date": "2026-10-05"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 127",
+      "included": true,
+      "values": {
+        "order_id": "O-1126",
+        "amount": "168.50",
+        "date": "2026-10-06"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 128",
+      "included": true,
+      "values": {
+        "order_id": "O-1127",
+        "amount": "80.50",
+        "date": "2026-10-07"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 129",
+      "included": true,
+      "values": {
+        "order_id": "O-1128",
+        "amount": "91.50",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 130",
+      "included": true,
+      "values": {
+        "order_id": "O-1129",
+        "amount": "102.50",
+        "date": "2026-10-09"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 131",
+      "included": true,
+      "values": {
+        "order_id": "O-1130",
+        "amount": "113.50",
+        "date": "2026-10-10"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 132",
+      "included": true,
+      "values": {
+        "order_id": "O-1131",
+        "amount": "124.50",
+        "date": "2026-10-11"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 133",
+      "included": true,
+      "values": {
+        "order_id": "O-1132",
+        "amount": "135.50",
+        "date": "2026-10-12"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 134",
+      "included": true,
+      "values": {
+        "order_id": "O-1133",
+        "amount": "146.50",
+        "date": "2026-10-13"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 135",
+      "included": true,
+      "values": {
+        "order_id": "O-1134",
+        "amount": "157.50",
+        "date": "2026-10-14"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 136",
+      "included": true,
+      "values": {
+        "order_id": "O-1135",
+        "amount": "168.50",
+        "date": "2026-10-15"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 137",
+      "included": false,
+      "values": {
+        "order_id": "O-1136",
+        "amount": "80.50",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 138",
+      "included": true,
+      "values": {
+        "order_id": "O-1137",
+        "amount": "91.50",
+        "date": "2026-10-02"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 139",
+      "included": true,
+      "values": {
+        "order_id": "O-1138",
+        "amount": "102.50",
+        "date": "2026-10-03"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 140",
+      "included": true,
+      "values": {
+        "order_id": "O-1139",
+        "amount": "113.50",
+        "date": "2026-10-04"
+      }
+    },
+    {
+      "source_file": "orders_2026-10.csv",
+      "source_locator": "row 141",
+      "included": true,
+      "values": {
+        "order_id": "O-1140",
+        "amount": "124.50",
+        "date": "2026-10-05"
+      }
+    }
+  ],
+  "records_truncated": false,
+  "total_count": 140,
+  "limit": 100,
+  "offset": 0,
+  "next_offset": 100,
+  "explainer": {
+    "what_it_means": "This is the total value of orders we could tie to a creator video between Oct 1 and Oct 15.",
+    "why_it_matters": "It shows how much sales the creator program is actually driving, which sets budget and retainer decisions.",
+    "how_calculated": "We add up every order amount that matched a resolved creator. 9 orders with an unresolved creator ($800.00) were left out.",
+    "what_rows_prove": "Each row below is one order from the source file; rows struck through were excluded."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "periods": {
+    "baseline": {
+      "start": "2026-09-01",
+      "end": "2026-09-15"
+    },
+    "current": {
+      "start": "2026-10-01",
+      "end": "2026-10-15"
+    }
+  },
+  "method": "shapley",
+  "status": "current",
+  "disclaimer": "This is a decomposition with context, not proof of cause.",
+  "total": {
+    "baseline": "14800.00",
+    "current": "17250.50",
+    "delta": "2450.50"
+  },
+  "factors": [
+    {
+      "key": "A",
+      "baseline": "8",
+      "current": "9",
+      "effect": "1520.00"
+    },
+    {
+      "key": "V",
+      "baseline": "2.5",
+      "current": "2.2",
+      "effect": "-640.00"
+    },
+    {
+      "key": "G",
+      "baseline": "740.00",
+      "current": "792.00",
+      "effect": "1380.50"
+    }
+  ],
+  "unlinked_older_gmv": {
+    "baseline": "1200.00",
+    "current": "1190.00",
+    "delta": "-10.00"
+  },
+  "products": [
+    {
+      "product_id": "aurelle-p1",
+      "name": "Product 1",
+      "gmv_baseline": "3400.00",
+      "gmv_current": "3700.00",
+      "delta": "300.00",
+      "observation": "Largest contributor to the change."
+    },
+    {
+      "product_id": "aurelle-p2",
+      "name": "Product 2",
+      "gmv_baseline": "2800.00",
+      "gmv_current": "3200.00",
+      "delta": "400.00",
+      "observation": "No notable change."
+    },
+    {
+      "product_id": "aurelle-p3",
+      "name": "Product 3",
+      "gmv_baseline": "2200.00",
+      "gmv_current": "2700.00",
+      "delta": "500.00",
+      "observation": "No notable change."
+    }
+  ]
+}
