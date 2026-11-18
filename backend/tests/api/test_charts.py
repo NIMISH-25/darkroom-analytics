@@ -275,7 +275,7 @@ def test_kpis_mixed_bases_only_null_comparisons(c, monkeypatch):
     k = next(x for x in j["kpis"] if x["metric_key"] == "creator_attributed_gmv")
     assert k["value"]["value"] == "300.00" and k["brands_covered"] == 2
     for f in ("baseline", "delta", "delta_pct", "progress"):
-        assert k[f]["value"] is None and "bases differ" in k[f]["status_reason"]
+        assert k[f]["value"] is None and "different ways" in k[f]["status_reason"]
 
 
 # ---- Shapley
@@ -297,14 +297,22 @@ def test_shapley_exact_and_safe_with_zeros():
 
 def test_diagnostics_endpoint(c):
     j = c.get("/api/v1/brands/aur/diagnostics", params={"month": "2026-10", "cutoff": "2026-10-15"}).json()
-    assert j["total"] == {"baseline": "3100.00", "current": "2650.51", "delta": "-449.49"}
-    assert j["unlinked_older_gmv"]["delta"] == "50.50"
-    assert sum(D(f["effect"]) for f in j["factors"]) + D(j["unlinked_older_gmv"]["delta"]) == D(j["total"]["delta"])
+    sides = {k: v for k, v in j["total"].items() if k != "label"}
+    assert {k: v["value"] for k, v in sides.items()} == {"baseline": "3100.00", "current": "2650.51", "delta": "-449.49"}
+    assert all(v["unavailable_reason"] is None for v in sides.values())
+    assert j["total"]["label"] == "Total sales from linked videos" and j["unlinked_older_gmv"]["label"] == "Sales from older or unlinked videos"
+    assert [f["label"] for f in j["factors"]] == ["Active creators", "Videos per active creator", "Sales per video with a link to a creator"]
+    assert all(p["label"] == p["name"] for p in j["products"]) and "cause" in j["disclaimer"]
+    import re
+    for text in [j["total"]["label"], *[f["label"] for f in j["factors"]], *j["notes"], j["disclaimer"], j["method"]]:
+        assert not re.search(r"_?[a-z]+_[a-z_]+", text), text  # no key-like words in operator text
+    assert j["unlinked_older_gmv"]["delta"]["value"] == "50.50"
+    assert sum(D(f["effect"]["value"]) for f in j["factors"]) + D(j["unlinked_older_gmv"]["delta"]["value"]) == D(j["total"]["delta"]["value"])
     assert [f["key"] for f in j["factors"]] == ["active_creators", "videos_per_creator", "gmv_per_video"]
-    assert "not proof of cause" in j["disclaimer"]
+    assert "does not prove the cause" in j["disclaimer"]
     assert j["periods"]["baseline"]["to"] == "2026-09-15"
     assert {p["product_id"] for p in j["products"]} == {"p1", "p2", "p3"}
-    assert sum(D(p["delta"]) for p in j["products"]) == D(j["total"]["delta"]) - D("50.50") - D("0.00") + D("0") or True
+    assert j["notes"] and all(isinstance(n, str) for n in j["notes"])
 
 
 def test_diagnostics_nulls():
@@ -312,11 +320,15 @@ def test_diagnostics_nulls():
     zero = [dict(r, active_creators=0) if r["period"] == "current" else r for r in s.diag("aur")]
     s.diag = lambda b: zero
     j = diagnostics.build_diagnostics(s, "aur", "2026-10", "2026-10-15")
-    assert all(f["effect"] is None for f in j["factors"]) and j["total"]["delta"] is not None and j["status"] == "partial"
+    assert all(f["effect"]["value"] is None and f["effect"]["unavailable_reason"] for f in j["factors"])
+    assert j["total"]["delta"]["value"] is not None and j["status"] == "partial"
+    assert any("no active creators" in f["effect"]["unavailable_reason"] for f in j["factors"])
     nul = [dict(r, linked_gmv=None) if r["period"] == "baseline" else r for r in Stub().diag("aur")]
     s.diag = lambda b: nul
     j = diagnostics.build_diagnostics(s, "aur", "2026-10", "2026-10-15")
-    assert j["total"]["baseline"] is None and j["total"]["delta"] is None and all(f["effect"] is None for f in j["factors"])
+    assert j["total"]["baseline"]["value"] is None and j["total"]["baseline"]["unavailable_reason"]
+    assert j["total"]["delta"]["value"] is None and all(f["effect"]["value"] is None for f in j["factors"])
+    assert all(not (f["baseline"]["value"] is None and f["current"]["value"] is None) for f in j["factors"])  # no empty rows
 
 
 @pytest.fixture(autouse=True)
@@ -373,3 +385,44 @@ def test_concentration_share_ratio_and_zero_only_under_full_coverage(c, monkeypa
     cache.clear()
     p = {x["creator_id"]: x for x in chart(c, "creator_concentration")["points"]}
     assert p["c2"]["gmv"] is None and p["c3"]["gmv"] is None and p["c1"]["gmv"] == "50.00"
+
+
+def test_kpis_brand_pace(c, monkeypatch):
+    monkeypatch.setattr(charts, "_actuals_service", lambda repo: FakeActuals())
+    j = c.get("/api/v1/portfolio/kpis", params={"month": "2026-10", "cutoff": "2026-10-15"}).json()
+    assert j["brand_pace_counts"] == {"on_track": 0, "behind": 2, "unknown": 0, "total": 2}
+    bp = {b["brand_slug"]: b for b in j["brand_pace"]}
+    assert bp["aur"]["brand_name"] == "Aur" and bp["aur"]["status_label"] == "Behind pace"
+    g = bp["aur"]["goals"][0]
+    assert g["goal_name"] == "Total sales" and g["actual_label"] == "$100.00" and g["target_label"] == "$10,000.00"
+    assert j["pace_counts"]["at_risk"] == 2  # goal-level counts are kept
+
+
+def test_brand_pace_unknown_beats_on_track_and_no_target_ignored(c, monkeypatch):
+    monkeypatch.setattr(charts, "_actuals_service", lambda repo: FakeActuals())
+
+    def goals(self, brand_id, month):
+        base = dict(scope="shop", basis="gross", projection=D("1"), required_pace=D("1"), status="current", status_reason=None,
+                    coverage_through=date(2026, 10, 15))
+        return [dict(base, brand_id="aur", metric_key="gmv", target_value=D("10"), pace_status="on_track"),
+                dict(base, brand_id="aur", metric_key="videos", scope="creator_attributed", target_value=D("10"), pace_status=None),
+                dict(base, brand_id="glow", metric_key="gmv", target_value=D("10"), pace_status="on_track"),
+                dict(base, brand_id="glow", metric_key="videos", scope="creator_attributed", target_value=None, pace_status="off_track")]
+    monkeypatch.setattr(Stub, "goals", goals)
+    j = c.get("/api/v1/portfolio/kpis", params={"month": "2026-10", "cutoff": "2026-10-15"}).json()
+    bp = {b["brand_slug"]: b["status_label"] for b in j["brand_pace"]}
+    assert bp == {"aur": "Not enough data", "glow": "On pace"}  # unknown beats on pace; goal without a target ignored
+    assert j["brand_pace_counts"] == {"on_track": 1, "behind": 0, "unknown": 1, "total": 2}
+
+
+def test_brand_pace_goals_always_have_plain_labels(c, monkeypatch):
+    class Unknown:
+        def compute(self, key, f):
+            return {"value": None, "status": "partial", "reason": "source coverage is partial"}
+    monkeypatch.setattr(charts, "_actuals_service", lambda repo: Unknown())
+    j = c.get("/api/v1/portfolio/kpis", params={"month": "2026-10", "cutoff": "2026-10-15"}).json()
+    for b in j["brand_pace"]:
+        assert b["status_label"] in ("On pace", "Behind pace", "Not enough data")
+        for g in b["goals"]:
+            assert g["actual_label"] == "No data yet" and g["target_label"] and g["status_label"] and g["goal_name"]
+            assert g["incomplete_reason"]

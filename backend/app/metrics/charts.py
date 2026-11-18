@@ -14,7 +14,8 @@ from datetime import date, timedelta
 from decimal import ROUND_FLOOR, Decimal
 
 from app.metrics.service import (
-    as_of_for, build_explainer,
+    goal_id as goal_id_,
+    as_of_for,
     exclusion_items,
     actual_key,
     DEFINITION_VERSION, STATE_TO_STATUS, Filters, MetricService, evidence_url, progress_ratio, jsonable, money, mv_dict,
@@ -61,6 +62,13 @@ class ChartsRepo:
     @staticmethod
     def _b(brand_id, col="brand_id"):
         return f"AND {col} = %(brand)s" if brand_id else ""
+
+    def creator_handles(self) -> dict:
+        return {r["creator_id"]: r["handle"] for r in self._q("SELECT creator_id, handle FROM silver.creator")}
+
+    def excluded_notes(self):
+        from app.metrics.repo import PgRepo
+        return PgRepo(self.conn).excluded_notes()
 
     def revision(self) -> int:
         r = self._q("SELECT max(revision_id) AS r FROM meta.dataset_revision")[0]["r"]
@@ -811,10 +819,50 @@ def build_kpis(repo, month: str, cutoff: str) -> dict:
     counts = {"on_track": 0, "at_risk": 0, "off_track": 0, "unknown": 0}
     for g in repo.goals(None, month):
         counts[g.get("pace_status") if g.get("pace_status") in counts else "unknown"] += 1
-    return {"data_revision": rev, "kpis": kpis, "pace_counts": counts}
+    bp_counts, bp = _brand_pace(repo, psvc, all_goals, month, cutoff)
+    return {"data_revision": rev, "kpis": kpis, "pace_counts": counts, "brand_pace_counts": bp_counts, "brand_pace": bp}
+
+
+def _brand_pace(repo, psvc, all_goals, month, cutoff):
+    """Per brand: its worst goal pace (behind > unknown > on pace); goals without a target are ignored."""
+    from app.metrics.service import goal_state
+    from app.presentation.humanize import count_label, data_note_for, goal_name, money_label, plain_text
+    rank = {"behind": 2, "unknown": 1, "on_track": 0}
+    label = {"on_track": "On pace", "behind": "Behind pace", "unknown": "Not enough data"}
+    out, counts = [], {"on_track": 0, "behind": 0, "unknown": 0}
+    for b in repo.brands():
+        bid, bname = b["brand_id"], b["name"]
+        goals = []
+        worst_ = None
+        for g in [g for g in all_goals if g["brand_id"] == bid and g.get("target_value") is not None]:
+            a = psvc.compute(actual_key(g), Filters(brand_id=bid, month=month, cutoff=cutoff, goal_id=goal_id_(g)))
+            ps = goal_state(g, a)["pace_status"]
+            st = "behind" if ps in ("at_risk", "off_track") else ("on_track" if ps == "on_track" else "unknown")
+            fmt = money_label if g["metric_key"] == "gmv" else count_label
+            goals.append({"goal_name": goal_name(g["metric_key"], g.get("scope"), g.get("basis")), "status_label": label[st],
+                          "actual_label": fmt(a["value"]) if a["value"] is not None else "No data yet",
+                          "target_label": fmt(g["target_value"]) if g.get("target_value") is not None else "No target set",
+                          "incomplete_reason": plain_text(a["reason"], {"brand": bname}) if st == "unknown" or a["status"] != "current" else None})
+            if worst_ is None or rank[st] > rank[worst_]:
+                worst_ = st
+        worst_ = worst_ or "unknown"
+        counts[worst_] += 1
+        out.append({"brand_slug": bid, "brand_name": bname, "status_label": label[worst_],
+                    "data_note": data_note_for(repo, bid, None), "goals": goals})
+    counts["total"] = len(out)
+    return counts, out
 
 
 # ------------------------------------------------------------------ evidence hooks
+def _plain_chart_evidence(repo, metric_key, part, label, brand_id, creator_id, sources, excl, recs_out, status, reason, cols):
+    from app.presentation import evidence_text
+    from app.presentation.humanize import data_note_for, names_for
+    ctx = names_for(repo, brand_id, creator_id)
+    return evidence_text.build(metric_key, part, label, ctx["brand"], ctx["creator"], exclusion_items(excl),
+                               sum(1 for r in recs_out if r.get("included")), len(recs_out), status, reason,
+                               data_note_for(repo, brand_id, sources), cols, ctx)
+
+
 def is_chart_evidence(metric_key: str, params: dict) -> bool:
     return metric_key in CHART_EVIDENCE_KEYS or any(params.get(p) for p in CHART_EVIDENCE_PARAMS) \
         or params.get("part") in ("refunds_cohort", "refunds_processed", "basis")
@@ -942,8 +990,8 @@ def chart_evidence(metric_key: str, params: dict, repo) -> dict:
         formula = "count(sample items) where stage = " + (stage or "sent")
         inputs = [{"label": "Sample items", "value": len(rows), "unit": "count"}]
     elif metric_key == "retainer_cadence":
-        mm = date.fromisoformat(month + "-01")
-        rows = [r for r in repo.retainer(brand_id, [mm]) if not creator_id or r["creator_id"] == creator_id]
+        mms = [date.fromisoformat(m + "-01") for m in trailing_months(month)]  # same three complete months the chart plots
+        rows = [r for r in repo.retainer(brand_id, mms) if not creator_id or r["creator_id"] == creator_id]
         recs = [(dict(r), True) for r in rows]
         unit, kind, sources = "count", "ratio", ["videos_weekly", "roster"]
         label, definition = "Retainer cadence", "Posts delivered against the prorated contracted posts for the month."
@@ -960,9 +1008,9 @@ def chart_evidence(metric_key: str, params: dict, repo) -> dict:
         formula = "linked GMV = A x V x G; Shapley effects + change in unlinked older GMV = change in total"
         from app.metrics.diagnostics import build_diagnostics
         d = build_diagnostics(repo, brand_id, month, cutoff)
-        value = d["total"]["delta"]
-        inputs = [{"label": "Baseline total", "value": d["total"]["baseline"], "unit": "USD"},
-                  {"label": "Current total", "value": d["total"]["current"], "unit": "USD"}]
+        value = d["total"]["delta"]["value"]
+        inputs = [{"label": "Baseline total", "value": d["total"]["baseline"]["value"], "unit": "USD"},
+                  {"label": "Current total", "value": d["total"]["current"]["value"], "unit": "USD"}]
     elif metric_key == "portfolio_pacing" and part == "progress":
         kp = next(k for k in build_kpis(repo, month, cutoff)["kpis"] if k["metric_key"] == (params.get("metric") or "gmv"))
         value, unit, kind, label = (kp["progress"] or {}).get("value"), "ratio", "goal", "Portfolio progress"
@@ -1005,6 +1053,5 @@ def chart_evidence(metric_key: str, params: dict, repo) -> dict:
         "total_count": len(recs_out), "limit": limit, "offset": offset,
         "next_offset": offset + limit if offset + limit < len(recs_out) else None,
         "records_truncated": offset + limit < len(recs_out),
-        "explainer": build_explainer(metric_key, part, label, definition, formula, inputs, exclusion_items(excl),
-                                     sum(1 for r in recs_out if r.get("included")), len(recs_out), warnings),
+        **_plain_chart_evidence(repo, metric_key, part, label, brand_id, creator_id, sources, excl, recs_out, status, reason, cols),
     }

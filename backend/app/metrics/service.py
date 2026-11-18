@@ -8,6 +8,9 @@ from decimal import Decimal
 from urllib.parse import urlencode
 from zoneinfo import ZoneInfo
 
+from app.presentation import evidence_text
+from app.presentation.humanize import data_note_for, freshness_reason, names_for
+
 DEFAULT_MONTH = "2026-10"
 DEFAULT_CUTOFF = "2026-10-15"
 DEFINITION_VERSION = "v1"
@@ -93,7 +96,8 @@ def exclusion_items(excl: dict) -> list[dict]:
     out = []
     for e in excl.values():
         amt = str(e["_a"]) if e["_ok"] else None
-        item = {"reason": e["reason"], "count": e["count"], "amount": amt}
+        item = {"reason": e["reason"], "count": e["count"], "amount": amt,
+                "plain_reason": evidence_text._excl_sentence({**e, "amount_label": None}, "the brand")}
         if e.get("currency"):
             item["currency"] = e["currency"]
             item["amount_label"] = None if amt is None else f"{e['currency']} {amt} in original currency, not converted to USD"
@@ -158,12 +162,16 @@ class MetricService:
         fresh = self.repo.freshness(brand_id)
         worst, cov, reason = "current", None, None
         brands = {brand_id} if brand_id else {r["brand_id"] for r in fresh}
+        bn = names_for(self.repo)["brand_names"]
         for b in brands:
             for s in sources:
                 row = next((r for r in fresh if r["brand_id"] == b and r["source_type"] == s), None)
                 state = row["state"] if row else "missing"
                 if SEVERITY.index(state) > SEVERITY.index(worst):
-                    worst, reason = state, (row or {}).get("message") or f"{s} is {state} for {b}"
+                    r_ = row or {}
+                    worst, reason = state, freshness_reason(
+                        bn.get(b) or b, s, state, r_.get("n_gaps") or 0, r_.get("n_quarantined") or 0,
+                        r_.get("n_rejected") or 0, r_.get("coverage_through"), r_.get("expected_through"))
                 if row and row.get("coverage_through") is not None:
                     c = str(row["coverage_through"])
                     cov = c if cov is None or c < cov else cov
@@ -437,7 +445,7 @@ class MetricService:
     def _evidence_dict(self, r, f, revision, kind=None, formula=None, extra_inputs=None, url_extra=None):
         recs = r["_records"]
         limit, offset = getattr(self, "_page", (DEFAULT_LIMIT, 0))
-        cols = sorted({k for rec, _ in recs for k in rec if k not in ("source_file", "source_locator")})
+        cols = sorted({k for rec, _ in recs for k in rec if k not in ("source_file", "source_locator")})             or list(evidence_text.DEFAULT_COLUMNS.get(r["key"], []))
         # stable provenance order: (source_file, row_num); synthetic component rows have no row_num
         ordered = sorted(recs, key=lambda x: (str(x[0].get("source_file") or ""), (x[0].get("row_num") is None, x[0].get("row_num") if x[0].get("row_num") is not None else 0),
                                               str(x[0].get("source_locator") or "")))
@@ -460,10 +468,14 @@ class MetricService:
             "exclusions": r["exclusions"], "warnings": r["warnings"], "columns": cols,
             "records": out, "records_truncated": next_off is not None,
             "total_count": total, "limit": limit, "offset": offset, "next_offset": next_off,
-            "explainer": build_explainer(r["key"], (url_extra or {}).get("part"), r["label"], r["definition"],
-                                         formula or r["formula"], (extra_inputs or []) + r["inputs"], r["exclusions"],
-                                         sum(1 for _, i in recs if i), total, r["warnings"]),
+            **self._plain_evidence(r, f, cols, total, sum(1 for _, i in recs if i), url_extra),
         }
+
+    def _plain_evidence(self, r, f, cols, total, n_included, url_extra) -> dict:
+        ctx = names_for(self.repo, f.brand_id, f.creator_id)
+        note = data_note_for(self.repo, f.brand_id, SOURCES.get(r["key"]) or ["orders", "affiliate_orders", "videos_weekly"])
+        return evidence_text.build(r["key"], (url_extra or {}).get("part"), r["label"], ctx["brand"], ctx["creator"],
+                                   r["exclusions"], n_included, total, r["status"], r["reason"], note, cols, ctx)
 
     def find_goal(self, f: Filters):
         for g in self.repo.goals(f.brand_id, f.month):
@@ -632,6 +644,23 @@ def attention_impact(r: dict, month: str, cutoff: str, repo) -> tuple[str | None
         return None, basis + "; no GMV target"
     target = max(Decimal(str(g["target_value"])) for g in goals)
     return _q(target * min(blind, dim) / dim), basis
+
+
+PROGRESS_CAP = Decimal("1.5")
+
+
+def progress_ratio(actual, target, actual_status: str = "current", actual_reason: str | None = None):
+    """actual / target capped at 1.5 -> (value|None, status, reason). Unknown or stale input -> null with status."""
+    if target is None:
+        return None, "unavailable", "no target in plan"
+    if actual is None or actual_status in ("stale", "unavailable"):
+        st = actual_status if actual_status != "current" else "unavailable"
+        return None, st, "actual is unknown or stale" + (": " + actual_reason if actual_reason else "")
+    t = Decimal(str(target))
+    if t == 0:
+        return None, "unavailable", "target is zero"
+    r = min(Decimal(str(actual)) / t, PROGRESS_CAP).quantize(Decimal("0.0001"))
+    return str(r), actual_status, actual_reason if actual_status != "current" else None
 
 
 PROGRESS_CAP = Decimal("1.5")

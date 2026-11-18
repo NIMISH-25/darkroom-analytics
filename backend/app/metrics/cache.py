@@ -61,7 +61,8 @@ def respond(request: Request, repo, build: Callable[[], dict], extra=None) -> Re
     with _lock:
         hit = _responses.get(key)
     if hit is None:
-        body = _dumps(build())
+        from app.presentation.humanize import apply as _plain
+        body = _dumps(_plain(build(), repo))
         hit = ('"' + hashlib.sha1(body).hexdigest() + '"', body)
         with _lock:
             if rk == _rk:

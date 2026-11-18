@@ -21,6 +21,10 @@ from app.metrics.service import (
     DEFAULT_CUTOFF, DEFAULT_MONTH, META, Filters, MetricService, actual_key, attention_impact, evidence_url,
     goal_id, goal_state, jsonable, mv_dict, progress_ratio, suggested_action,
 )
+from app.presentation.humanize import (
+    attention_text, count_label, data_note_for, exclusion_file_reason, failed_file_reason, goal_name, money_label,
+    names_for, plain_text, SOURCE_NOUN,
+)
 
 _gid = goal_id
 router = APIRouter()
@@ -36,7 +40,7 @@ def get_repo():
 
 def _month(month: str = Query(DEFAULT_MONTH)) -> str:
     if not re.fullmatch(r"\d{4}-(0[1-9]|1[0-2])", month):
-        raise HTTPException(422, "month must be YYYY-MM")
+        raise HTTPException(422, "Choose a month like 2026-10.")
     return month
 
 
@@ -44,7 +48,7 @@ def _cutoff(cutoff: str = Query(DEFAULT_CUTOFF)) -> str:
     try:
         date.fromisoformat(cutoff)
     except ValueError:
-        raise HTTPException(422, "cutoff must be YYYY-MM-DD")
+        raise HTTPException(422, "Choose a cutoff date like 2026-10-15.")
     return cutoff
 
 
@@ -82,11 +86,24 @@ def _goal_item(svc, repo, g, b, month, cutoff, rev):
     actual = svc.compute(actual_key(g), f)
     gs = goal_state(g, actual)
     tgt = g.get("target_value")
+    name = goal_name(g["metric_key"], g.get("scope"), g.get("basis"))
+    fmt = money_label if g["metric_key"] == "gmv" else count_label
+    applicable = g["metric_key"] != "active_creators" and tgt is not None
+    pace_reason = None if not applicable or gs["required_pace"] is not None else (
+        gs["reason"] or "There is not enough data yet to work out a daily pace.")
+    if not applicable:
+        pace_reason = "A daily pace does not apply to a count of different creators." if g["metric_key"] == "active_creators" else "No target has been set."
+    bname = b["name"]
+    reasoning = (f"At the current pace {bname} is on course for {fmt(gs['projection'])} by the end of the month, against a target of {fmt(tgt)}."
+                 if gs["projection"] is not None and tgt is not None else
+                 f"No projection for {bname} yet: " + (plain_text(gs["reason"], {"brand": bname}) or "there is not enough data") )
+    if not reasoning.endswith("."):
+        reasoning += "."
     cov = g.get("coverage_through") or actual["coverage"]
     pv, pst, prs = progress_ratio(actual["value"], tgt, actual["status"], actual["reason"])
     return {
-        "goal_id": goal_id(g), "label": g.get("label") or f"{g['metric_key']} ({g['scope']})",
-        "definition": g.get("definition") or "", "scope": g["scope"], "basis": g.get("basis"),
+        "goal_id": goal_id(g), "label": name,
+        "definition": plain_text(g.get("definition") or "", {"brand": bname}) or "", "scope": g["scope"], "basis": g.get("basis"),
         "target": mv_dict("goal_projection", None if tgt is None else str(tgt), unit, f,
                           "current" if tgt is not None else "unavailable",
                           None if tgt is not None else "no target in plan", None, rev, part="target"),
@@ -96,7 +113,10 @@ def _goal_item(svc, repo, g, b, month, cutoff, rev):
                                  rev, part="required_pace"),
         "progress": mv_dict("goal_projection", pv, "ratio", f, pst, prs, actual["coverage"], rev, part="progress"),
         "pace_status": gs["pace_status"],
-        "reasoning": g.get("reasoning") or "",
+        "required_pace_applicable": applicable, "required_pace_reason": pace_reason,
+        "pace_label": {"on_track": "On pace", "at_risk": "Behind pace", "off_track": "Behind pace"}.get(gs["pace_status"], "Not enough data"),
+        "scope_label": "Shop-wide" if g["scope"] == "shop" else "Creator-driven",
+        "reasoning": reasoning,
     }
 
 
@@ -145,9 +165,9 @@ def creators(request: Request, brand_id: str, q: str | None = None, contract_typ
              status: str | None = None, sort: str = "handle", order: str = "asc", month: str = Depends(_month),
              cutoff: str = Depends(_cutoff), repo=Depends(get_repo)):
     if sort not in SORTS or order not in ("asc", "desc"):
-        raise HTTPException(422, "invalid sort/order")
+        raise HTTPException(422, "Choose a valid column to sort by and an order (ascending or descending).")
     if brand_id not in {b["brand_id"] for b in repo.brands()}:
-        raise HTTPException(404, "unknown brand")
+        raise HTTPException(404, "That brand was not found.")
 
     def build():
         rev = repo.revision()
@@ -237,7 +257,7 @@ def evidence(request: Request, metric_key: str, brand_id: str | None = None, cre
               "metric": metric, "limit": limit, "offset": offset}
     is_chart = charts.is_chart_evidence(metric_key, params)
     if not is_chart and metric_key not in META:
-        raise HTTPException(404, "unknown metric_key")
+        raise HTTPException(404, "That figure is not available.")
     current = repo.revision()
     if revision is not None and revision != current:
         return JSONResponse(status_code=409, headers={"Cache-Control": "no-store"},
@@ -246,21 +266,25 @@ def evidence(request: Request, metric_key: str, brand_id: str | None = None, cre
         return respond(request, repo, lambda: charts.chart_evidence(
             metric_key, params, charts.ChartsRepo(getattr(repo, "conn", None))))
     if metric_key == "creator_sales_after_costs" and not (brand_id and creator_id):
-        raise HTTPException(422, "brand_id and creator_id are required")
+        raise HTTPException(422, "Choose a brand and a creator to explain.")
     if metric_key == "goal_projection":
-        if not goal_id:
-            raise HTTPException(422, "goal_id is required")
+        if not goal_id:  # pick the brand's main sales goal, else ask which goal to explain
+            gl = [g for g in repo.goals(brand_id, month) if g["metric_key"] == "gmv"] if brand_id else []
+            main = next((g for g in gl if g["scope"] == "shop"), gl[0] if gl else None)
+            if main is None:
+                raise HTTPException(422, "Choose which goal to explain.")
+            goal_id = _gid(main)
         if not brand_id:  # locate the brand owning this goal
             brand_id = next((g["brand_id"] for g in repo.goals(None, month) if _gid(g) == goal_id), None)
             if not brand_id:
-                raise HTTPException(404, "goal not found")
+                raise HTTPException(404, "That goal was not found.")
     f = Filters(brand_id=brand_id, creator_id=creator_id, month=month, cutoff=cutoff, goal_id=goal_id)
 
     def build():
         try:
             return MetricService(repo).evidence(metric_key, f, part, limit, offset)
         except KeyError:
-            raise HTTPException(404, "goal not found")
+            raise HTTPException(404, "That goal was not found.")
     return respond(request, repo, build)
 
 
@@ -270,7 +294,7 @@ SHARED_LABEL = "Shared Cross-Brand Source"
 @api.get("/data-health", dependencies=secured)
 def data_health(request: Request, brand_id: str | None = None, repo=Depends(get_repo)):
     if brand_id is not None and brand_id not in {b["brand_id"] for b in repo.brands()}:
-        raise HTTPException(404, "unknown brand")
+        raise HTTPException(404, "That brand was not found.")
 
     def build():
         shared = repo.shared_types()
@@ -282,25 +306,38 @@ def data_health(request: Request, brand_id: str | None = None, repo=Depends(get_
                     continue
                 seen_shared.add(r["source_type"])
             sources.append({"brand_id": None if is_shared else r["brand_id"], "source": r["source_type"],
+                            "source_name": SOURCE_NOUN.get(r["source_type"], "data"),
+                            "brand_name": None if is_shared else names_for(repo, r["brand_id"])["brand"],
                             "status": r["state"], "coverage_through": r.get("coverage_through"),
                             "last_ingested_at": r.get("last_ingested_at"), "message": r.get("message"),
                             "scope": "shared" if is_shared else "brand",
                             "source_label": SHARED_LABEL if is_shared else None})
+        bn = {b_["brand_id"]: b_["name"] for b_ in repo.brands()}
         failed = []
-        for r in repo.failed_files(brand_id):
-            is_shared = r["scope_key"] == "all" or r["source_type"] in shared
-            failed.append({"run_id": str(r["run_id"]), "file_name": r["file_name"], "error": r.get("error"),
-                           "scope": "shared" if is_shared else "brand",
-                           "brand_id": None if is_shared else r["scope_key"],
-                           "source_label": SHARED_LABEL if is_shared else None})
+        for r_ in repo.failed_files(brand_id):
+            is_shared = r_["scope_key"] == "all" or r_["source_type"] in shared
+            bid = None if is_shared else r_["scope_key"]
+            reason = failed_file_reason(r_.get("status"), r_["source_type"], r_.get("error"), bn.get(bid))
+            failed.append({"run_id": str(r_["run_id"]), "file_name": r_["file_name"], "error": reason, "plain_reason": reason,
+                           "scope": "shared" if is_shared else "brand", "brand_id": bid,
+                           "brand_name": bn.get(bid) if bid else None, "source_label": SHARED_LABEL if is_shared else None})
+        excluded = []
+        for r_ in repo.files_with_exclusions(brand_id):
+            is_shared = r_["scope_key"] == "all" or r_["source_type"] in shared
+            bid = None if is_shared else r_["scope_key"]
+            excluded.append({"run_id": str(r_["run_id"]), "file_name": r_["file_name"], "rows_excluded": int(r_["rows_excluded"]),
+                             "plain_reason": exclusion_file_reason(r_["rows_excluded"], r_["source_type"], bn.get(bid)),
+                             "scope": "shared" if is_shared else "brand", "brand_id": bid,
+                             "brand_name": bn.get(bid) if bid else None, "source_label": SHARED_LABEL if is_shared else None})
         counts = {"brand_failed": sum(1 for f in failed if f["scope"] == "brand"),
                   "shared_failed": sum(1 for f in failed if f["scope"] == "shared"),
-                  "open_issues": repo.open_issue_count(brand_id)}
+                  "open_issues": repo.open_issue_count(brand_id),
+                  "rows_excluded": sum(e["rows_excluded"] for e in excluded)}
         return jsonable({
             "data_revision": repo.revision(), "counts": counts, "sources": sources,
             "runs": [{"run_id": str(r["run_id"]), "started_at": r["started_at"], "status": r["status"],
                       "files_failed": r["files_failed"]} for r in repo.runs(brand_id)],
-            "failed_files": failed,
+            "failed_files": failed, "files_with_exclusions": excluded,
             "unresolved_identities": [{"brand_id": r["brand_id"], "source": r["source"],
                                        "raw_identifier": r["raw_identifier"], "occurrences": r["occurrences"]}
                                       for r in repo.unresolved_identities(brand_id)],
@@ -314,7 +351,6 @@ def attention(request: Request, brand_id: str | None = None, kind: str | None = 
               repo=Depends(get_repo)):
     def build():
         rev = repo.revision()
-        handles = repo.creator_handles()
         items = []
         for r in repo.attention(brand_id):
             if kind and r["kind"] != kind:
@@ -326,15 +362,21 @@ def attention(request: Request, brand_id: str | None = None, kind: str | None = 
             key = {"quiet_retainer": "creator_videos", "sample_no_video": "sample_conversion_rate"}.get(r["kind"], "videos")
             if key == "creator_videos" and not r.get("creator_id"):
                 key = "videos"
-            title = r.get("title") or r["reason"]
-            if r.get("creator_id"):
-                handle = handles.get(r["creator_id"])
-                if handle and r["creator_id"] in title:
-                    title = title.replace(r["creator_id"], f"{handle} ({r['creator_id']})")
             score, basis = attention_impact(r, month, cutoff, repo)
+            nm = names_for(repo, r["brand_id"], r.get("creator_id"))
+            src = "videos_weekly" if r["kind"] != "missing_source" else r["entity_ref"]
+            st_, rs_, _ = MetricService(repo).status_for([src], r["brand_id"])
+            fr = next((x for x in repo.freshness(r["brand_id"]) if x["source_type"] == src), None)
+            title, rule, why, todo = attention_text(
+                r["kind"], nm["brand"] or "The brand", nm["creator"], r.get("days_waiting"), None,
+                src if r["kind"] == "missing_source" else None, fr["state"] if fr else None,
+                rs_ if r["kind"] == "missing_source" else None)
             items.append({
                 "item_id": f"{r['kind']}:{r['brand_id']}:{r['entity_ref']}", "kind": r["kind"],
-                "brand_id": r["brand_id"], "title": title, "rule": r["reason"],
+                "brand_id": r["brand_id"], "brand_name": nm["brand"], "creator_name": nm["creator"],
+                "title": title, "rule": rule, "why_needs_attention": why, "what_to_do": todo,
+                "incomplete_reason": rs_ if st_ != "current" else None,
+                "data_note": data_note_for(repo, r["brand_id"], [src]),
                 "period_start": jsonable(r.get("period_start")), "period_end": jsonable(r.get("period_end")),
                 "impact_score": score, "impact_basis": basis,
                 "evidence_url": evidence_url(key, f, rev),
@@ -364,9 +406,9 @@ class NoteIn(BaseModel):
 
 def _check_creator(repo, brand_id, creator_id):
     if brand_id not in {b["brand_id"] for b in repo.brands()}:
-        raise HTTPException(404, "unknown brand")
+        raise HTTPException(404, "That brand was not found.")
     if creator_id not in repo.creator_handles():
-        raise HTTPException(404, "unknown creator")
+        raise HTTPException(404, "That creator was not found.")
 
 
 def _note(r: dict) -> dict:
@@ -380,7 +422,7 @@ def list_notes(brand_id: str, creator_id: str, repo=Depends(get_repo)):
     try:
         rows = repo.notes(brand_id, creator_id)
     except psycopg.errors.UndefinedTable:
-        raise HTTPException(503, "notes table is not migrated yet")
+        raise HTTPException(503, "Notes are not available yet.")
     return JSONResponse({"items": [_note(r) for r in rows], "total_count": len(rows)},
                         headers={"Cache-Control": "no-store"})
 
@@ -396,7 +438,7 @@ def add_note(brand_id: str, creator_id: str, payload: NoteIn, user: str = Depend
                 "RETURNING note_id, brand_id, creator_id, author, body, created_at",
                 (brand_id, creator_id, payload.body, user)).fetchone()
     except psycopg.errors.UndefinedTable:
-        raise HTTPException(503, "notes table is not migrated yet")
+        raise HTTPException(503, "Notes are not available yet.")
     return JSONResponse(_note(row), status_code=201, headers={"Cache-Control": "no-store"})
 
 

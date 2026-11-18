@@ -64,6 +64,8 @@ class FakeRepo:
     def runs(self, brand_id=None): return [dict(run_id=1, started_at=date(2026, 10, 1), status="succeeded", files_failed=0)]
     def shared_types(self): return {"roster", "samples"}
     def last_run_id(self): return 1
+    def files_with_exclusions(self, brand_id=None): return []
+    def excluded_notes(self): return []
     def open_issue_count(self, brand_id=None): return 2
     FAILED = [dict(run_id=2, file_name="orders/aurelle/2026-10.json", error="bad", scope_key="aurelle", source_type="orders", status="rejected"),
               dict(run_id=2, file_name="roster/roster.xlsx", error="x", scope_key="all", source_type="roster", status="quarantined")]
@@ -391,7 +393,7 @@ def test_non_usd_exclusion_in_evidence(c, repo):
 
 def test_data_health_is_brand_scoped_with_shared_trackers(c):
     h = c.get("/api/v1/data-health?brand_id=aurelle").json()
-    assert h["counts"] == {"brand_failed": 1, "shared_failed": 1, "open_issues": 2}
+    assert h["counts"] == {"brand_failed": 1, "shared_failed": 1, "open_issues": 2, "rows_excluded": 0}
     by = {f["file_name"]: f for f in h["failed_files"]}
     assert by["orders/aurelle/2026-10.json"]["scope"] == "brand" and by["orders/aurelle/2026-10.json"]["brand_id"] == "aurelle"
     sh = by["roster/roster.xlsx"]
@@ -416,8 +418,117 @@ def test_evidence_explainer(c):
     ev = c.get("/api/v1/metrics/gmv/evidence?brand_id=aurelle").json()
     ex = ev["explainer"]
     assert set(ex) == {"what_it_means", "why_it_matters", "how_calculated", "what_rows_prove"} and all(ex.values())
-    assert "cancelled, unpaid or sample" in ex["how_calculated"] and "4 row(s)" in ex["what_rows_prove"]
+    assert "cancelled, unpaid or a free sample" in ex["how_calculated"] and "real record" in ex["what_rows_prove"]
+    for k in ("what_this_means", "why_it_matters", "what_to_watch", "data_note", "incomplete_reason"):
+        assert k in ev
+    assert ev["what_this_means"] == ex["what_it_means"] and "Aurelle Jewelry" in ev["what_this_means"]
+    assert {c["key"] for c in ev["columns_plain"]} == set(ev["columns"]) and all(c["label"] for c in ev["columns_plain"])
+    assert {"key": "order_id", "label": "Order number"} in ev["columns_plain"]
     for key in ("videos", "active_creators", "sample_conversion_rate", "creator_attributed_gmv", "net_attributed_sales"):
         assert c.get(f"/api/v1/metrics/{key}/evidence?brand_id=aurelle").json()["explainer"]["what_it_means"]
     net = c.get("/api/v1/metrics/net_attributed_sales/evidence?brand_id=aurelle").json()["explainer"]
-    assert "late refund" in net["how_calculated"]
+    assert "late" in ev_watch(c, "net_attributed_sales") or "Refunds that finish after" in ev_watch(c, "net_attributed_sales")
+
+
+def ev_watch(c, key):
+    return c.get(f"/api/v1/metrics/{key}/evidence?brand_id=aurelle").json()["what_to_watch"]
+
+
+BANNED = [r"\w+\[\d+\]", r"\b_?[a-z]+_[a-z_]+\b", r"\b(count|sum|avg)\s*\(", r"\bdistinct\b", r"UNAVAILABLE", r"\bnull\b",
+          r"\bNone\b", r"\bNaN\b", r"\bundefined\b", r"is required", r"[{}]"]
+TEXT_KEYS = {"status_reason", "incomplete_reason", "data_note", "plain_reason", "unavailable_reason", "why_needs_attention",
+             "what_to_do", "what_this_means", "why_it_matters", "what_to_watch", "required_pace_reason", "reasoning", "title",
+             "what_it_means", "how_calculated", "what_rows_prove", "observation", "message", "error"}
+
+
+def crawl(o, found, path=""):
+    import re
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if isinstance(v, str) and k in TEXT_KEYS:
+                for pat in BANNED:
+                    if re.search(pat, v):
+                        found.append((path + "." + k, v, pat))
+            else:
+                crawl(v, found, path + "." + k)
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            crawl(v, found, f"{path}[{i}]")
+
+
+def test_no_developer_language_in_any_response(c, repo):
+    repo.fresh_state = "incomplete"
+    urls = ["/api/v1/overview", "/api/v1/brands/aurelle/creators", "/api/v1/brands/aurelle/samples", "/api/v1/attention",
+            "/api/v1/data-health?brand_id=aurelle", "/api/v1/metrics/gmv/evidence?brand_id=aurelle",
+            "/api/v1/metrics/net_attributed_sales/evidence?brand_id=aurelle", "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=aurelle",
+            "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=aurelle&creator_id=cr_1"]
+    found = []
+    for u in urls:
+        r = c.get(u)
+        assert r.status_code == 200, u
+        crawl(r.json(), found, u)
+    assert found == []
+
+
+def test_plain_422_and_goal_evidence_without_goal(c):
+    r = c.get("/api/v1/metrics/goal_projection/evidence")
+    assert r.status_code == 422 and r.json()["detail"] == "Choose which goal to explain."
+    assert c.get("/api/v1/metrics/gmv/evidence?limit=0").json()["detail"] == "Choose a page size between 1 and 500."
+    assert c.get("/api/v1/overview?month=2026-13").json()["detail"] == "Choose a month like 2026-10."
+    ok = c.get("/api/v1/metrics/goal_projection/evidence?brand_id=aurelle")  # picks the brand's main sales goal
+    assert ok.status_code == 200 and ok.json()["result"]["metric_key"] == "goal_projection"
+
+
+def test_humanize_maps_and_unknown_codes(caplog):
+    from app.presentation.humanize import GENERIC, humanize, plain_text
+    assert humanize("order_id") == "order number" and humanize("videos_weekly") == "weekly video reports"
+    assert humanize("zz_unknown_code") == GENERIC and "unknown code" in caplog.text
+    t = plain_text("orders: 1 coverage gap(s), 0 quarantined, 1 rejected file(s); last error: orders[1] missing required field order_id", {"brand": "Verdant"})
+    assert t.startswith("Verdant") and "[" not in t and "(s)" not in t and "order_id" not in t
+    assert plain_text("totally unexpected thing_with_code count(distinct video_id)") and "_" not in plain_text("a thing_with_code")
+
+
+def test_mv_data_note_from_excluded_rows(c, repo):
+    repo.excluded_notes = lambda: [dict(brand_id="aurelle", source_type="orders", message=None, n=1)]
+    cr = c.get("/api/v1/brands/aurelle/creators").json()["items"][0]
+    note = cr["gmv"]["data_note"]
+    assert note and "Aurelle Jewelry" in note and "higher than shown" in note
+    assert c.get("/api/v1/overview").json()["brands"][0]["goals"][0]["actual"]["data_note"]
+    ev = c.get("/api/v1/metrics/gmv/evidence?brand_id=aurelle").json()
+    assert ev["data_note"] and ev["data_note"] in ev["what_to_watch"]
+
+
+def test_goal_fields_required_pace_applicability(c, repo):
+    base = dict(brand_id="aurelle", scope="creator_attributed", basis="gross", definition="d", projection=Decimal("50.00"),
+                required_pace=None, pace_status="on_track", reasoning="x", status="current", status_reason=None, coverage_through=date(2026, 10, 14))
+    repo.goals = lambda b, m: [dict(base, metric_key="active_creators", target_value=Decimal("5")),
+                               dict(base, metric_key="videos", target_value=None),
+                               dict(base, metric_key="gmv", scope="shop", target_value=Decimal("100"), required_pace=Decimal("2.00"))]
+    gs = {g["goal_id"]: g for g in c.get("/api/v1/overview").json()["brands"][0]["goals"]}
+    ac, vd, gm = gs["active_creators:creator_attributed"], gs["videos:creator_attributed"], gs["gmv:shop"]
+    assert ac["required_pace_applicable"] is False and ac["required_pace_reason"]
+    assert vd["required_pace_applicable"] is False and "target" in vd["required_pace_reason"]
+    assert gm["required_pace_applicable"] is True and gm["required_pace_reason"] is None
+    assert gm["label"] == "Total sales" and "on course" in gm["reasoning"]
+
+
+def test_attention_plain_fields(c):
+    items = c.get("/api/v1/attention").json()["items"]
+    for i in items:
+        assert i["brand_name"] == "Aurelle Jewelry" and i["why_needs_attention"] and i["what_to_do"]
+        assert {"incomplete_reason", "data_note", "creator_name"} <= set(i)
+    q = next(i for i in items if i["kind"] == "quiet_retainer")
+    assert "has gone quiet" in q["title"]
+
+
+def test_data_health_plain_reasons_and_exclusions(c, repo):
+    repo.FAILED = [dict(run_id=2, file_name="orders/verdant/x.json", error="orders[1] missing required field 'order_id'",
+                        scope_key="aurelle", source_type="orders", status="rejected")]
+    repo.files_with_exclusions = lambda b=None: [dict(run_id=3, file_name="orders/aurelle/ok.json", scope_key="aurelle",
+                                                      source_type="orders", rows_excluded=2)]
+    h = c.get("/api/v1/data-health?brand_id=aurelle").json()
+    f = h["failed_files"][0]
+    assert f["brand_name"] == "Aurelle Jewelry" and "order number" in f["plain_reason"] and "[" not in f["error"]
+    e = h["files_with_exclusions"][0]
+    assert e["rows_excluded"] == 2 and "left out" in e["plain_reason"] and e["brand_name"] == "Aurelle Jewelry"
+    assert h["counts"]["rows_excluded"] == 2

@@ -164,6 +164,39 @@ class PgRepo:
             return self._q(sql + " ORDER BY f.ingested_at DESC, f.source_file_id DESC LIMIT 100", p)
         return self._rev("failed", (brand_id, self.last_run_id()), go)
 
+    def _cols(self, schema, table) -> set:
+        return self._rev("cols", (schema, table), lambda: {r["column_name"] for r in self._q(
+            "SELECT column_name FROM information_schema.columns WHERE table_schema = %s AND table_name = %s", (schema, table))})
+
+    def excluded_notes(self) -> list[dict]:
+        """Rows left out of loaded files, per brand and source (migration 018); empty until it exists."""
+        def go():
+            out = []
+            cols = self._cols("meta", "quality_issue")
+            if "brand_id" in cols and "code" in cols:
+                out = self._q("SELECT brand_id, source_type, max(message) AS message, count(*)::int AS n FROM meta.quality_issue "
+                              "WHERE code = 'rows_excluded' AND state = 'open' AND brand_id IS NOT NULL "
+                              "GROUP BY brand_id, source_type")
+            if not out and self._q("SELECT to_regclass('gold.excluded_rows_by_brand') AS t")[0]["t"]:
+                for r in self._q("SELECT * FROM gold.excluded_rows_by_brand"):
+                    n = next((r[k] for k in ("excluded_rows", "rows_excluded", "n_excluded", "n", "count") if k in r and r[k] is not None), None)
+                    if n:
+                        out.append({"brand_id": r.get("brand_id"), "source_type": r.get("source_type"), "message": None, "n": int(n)})
+            return out
+        return self._rev("excluded_notes", (self.last_run_id(),), go)
+
+    def files_with_exclusions(self, brand_id=None) -> list[dict]:
+        def go():
+            if "excluded_rows" not in self._cols("bronze", "source_file"):
+                return []
+            sql = ("SELECT f.run_id, f.path AS file_name, f.scope_key, f.source_type, f.excluded_rows AS rows_excluded "
+                   "FROM bronze.source_file f WHERE f.excluded_rows > 0 AND f.status = 'accepted'")
+            p: tuple = ()
+            if brand_id:
+                sql, p = sql + " AND f.scope_key IN (%s, 'all')", (brand_id,)
+            return self._q(sql + " ORDER BY f.ingested_at DESC, f.source_file_id DESC LIMIT 100", p)
+        return self._rev("files_excl", (brand_id, self.last_run_id()), go)
+
     def open_issue_count(self, brand_id=None) -> int:
         """Open quality issues of the brand plus shared ones (brand_id null); defensive if brand_id is absent."""
         def go():

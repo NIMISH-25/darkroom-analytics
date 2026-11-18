@@ -2,6 +2,8 @@ import threading
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
@@ -42,6 +44,27 @@ class CutoffMiddleware:
 
 app = FastAPI(title="Darkroom Analytics API", lifespan=lifespan)
 app.add_middleware(CutoffMiddleware)
+
+PLAIN_422 = {
+    "goal_id": "Choose which goal to explain.", "month": "Choose a month like 2026-10.",
+    "cutoff": "Choose a cutoff date like 2026-10-15.", "limit": "Choose a page size between 1 and 500.",
+    "offset": "The starting position cannot be negative.", "series": "Choose which chart to show.",
+    "metric": "Choose sales, videos or active creators.", "body": "Write a note of 1 to 2000 characters.",
+    "brand_id": "Choose a brand.", "creator_id": "Choose a creator.", "revision": "The version number must be a whole number.",
+    "username": "Enter the demo account name.", "password": "Enter the demo account password.",
+}
+
+
+@app.exception_handler(RequestValidationError)
+async def plain_validation_error(_request, exc: RequestValidationError):
+    """422 details are one plain sentence, never a field name or a validator message."""
+    text = "Some of the information sent could not be used. Please check it and try again."
+    for e in exc.errors():
+        name = next((x for x in reversed(e.get("loc", ())) if isinstance(x, str)), None)
+        if name in PLAIN_422:
+            text = PLAIN_422[name]
+            break
+    return JSONResponse(status_code=422, content={"detail": text})
 app.add_middleware(GZipMiddleware, minimum_size=1024)
 app.add_middleware(
     CORSMiddleware,
