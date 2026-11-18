@@ -68,7 +68,7 @@ The full numbered list of assumed customer answers is in [decisions.md](decision
 **Built since the first draft:** goal-miss diagnostics (Oct 1-15 against Sep 1-15, on `/diagnostics` and the brand Diagnostics tab); `suggested_action` on creator rows with its rule; creator notes (API and a form in the creator sheet); the ranked Needs-attention queue (`/attention`); charts with info popovers; brand-scoped Data Health; one-click demo login. Non-USD orders are excluded from USD GMV, and unknown creator ids stay in an unresolved bucket.
 
 **Not built:**
-- Live deployment (a plan exists in `docs/DEPLOYMENT_PLAN.md`).
+- Always-on hosting (the live demo runs on free Render and Neon tiers and sleeps when idle; see `docs/DEPLOYMENT_PLAN.md`).
 - Real TikTok API sync (files are loaded by a command).
 - Authentication beyond the single demo login.
 - Alerting (for example a message when a retainer creator goes quiet).

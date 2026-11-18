@@ -2,7 +2,14 @@
 
 A creator-analytics tool for "Northlight", a fictional agency that runs TikTok Shop creator programs for five fictional brands.
 No dataset was supplied, so **all data is simulated** by a deterministic script (seed 20261015). File formats are modelled on TikTok Shop field names, not a verified TikTok schema.
-The simulated "today" is **2026-10-15, end of day, US Pacific, USD**.
+
+## Live demo
+
+- **App:** https://darkroom-web.onrender.com
+- **API (health check):** https://darkroom-analytics.onrender.com/healthz
+- **Login:** `demo` / `darkroom-demo` (shown on the login page)
+
+The demo runs on Render's free tier with the database on Neon. A free service sleeps when idle, so the **first request can take up to a minute**; open the API health link once, wait for `{"status":"ok"}`, then use the app. The data is the same synthetic dataset described below.
 
 ## Where to start reading
 
@@ -14,7 +21,7 @@ The simulated "today" is **2026-10-15, end of day, US Pacific, USD**.
 | [docs/data-quality.md](docs/data-quality.md) | Planted data problems and how ingestion handles each |
 | [docs/decisions.md](docs/decisions.md) | Nine assumed customer answers (no customer was available) |
 | [docs/PROJECT_EXPLAINER.md](docs/PROJECT_EXPLAINER.md) | Plain-English guide, glossary and field dictionary |
-| [docs/DEPLOYMENT_PLAN.md](docs/DEPLOYMENT_PLAN.md) | Plan for hosting (not executed) |
+| [docs/DEPLOYMENT_PLAN.md](docs/DEPLOYMENT_PLAN.md) | Hosting plan and the steps used for the live demo (Render and Neon) |
 | [data/README.md](data/README.md) | Guide to the generated synthetic datasets (what each file is, its fields and planted issues) |
 | [docs/Project_Context_and_Overview.docx](docs/Project_Context_and_Overview.docx) | Project purpose, architecture and the end-to-end pipeline |
 | [docs/Schema_Ingestion_and_Data_Quality.docx](docs/Schema_Ingestion_and_Data_Quality.docx) | Schema diagram, how ingestion works, and data-quality rules |
@@ -109,13 +116,10 @@ npm run dev
 
 **9. Open http://localhost:3000.** The login page has Username and Password fields and a **Sign In** button. The demo credentials (`demo` / `darkroom-demo`) are shown below the fields. A **Logout** button sits in the sidebar footer and the top bar.
 
-On the Overview page the portfolio "Projected" value is plain text, and the progress bar only shows when a real progress value exists. The Videos posted and Active creators charts add up only the brands with complete video data and say which brands are left out.
-
-Keep-alive: while the app is open in a browser tab, the frontend sends a silent request to the backend's `/healthz` every 14 minutes, and the backend pings its own `/healthz` every 14 minutes. On Render's free tier a service still sleeps after about 15 minutes without outside traffic (the self-ping does not count), so use a free external uptime monitor on `https://<backend>.onrender.com/healthz` every 10 to 14 minutes if it must stay awake.
 
 ### Tests
 
-- Backend unit tests: `cd backend; python -m pytest tests` (parsers, bulk load, API, charts). Run the three suites below; results of the last verification are in [docs/ai-usage.md](docs/ai-usage.md).
+- Backend unit tests: `cd backend; python -m pytest tests` (parsers, bulk load, API, charts). Results of the last verification are in the Verified section below.
 - Blackbox suite (the 14 essential tests and scenarios S1-S20, HTTP and CLI only, run against a golden fixture with hand-written answers in `tests/golden/expected.yaml`): from the repo root run `.\tests\run_blackbox.ps1`. It **drops and recreates the DB schemas**, ingests the golden batches and starts its own API on port 8000, so stop your API first and do not point it at data you want to keep.
 - UI test (`tests/blackbox/test_ui_playwright.py`): needs Playwright installed (the backend venv has it) and a running API and frontend (`FRONTEND_URL`); skipped otherwise.
 - Data checks: `python scripts/verify_synthetic.py`. Regenerate data: `python scripts/generate_synthetic_data.py`.
@@ -164,20 +168,21 @@ Results of the last full verification (2026-11-18, clean database reset before e
 | TypeScript check and production build | clean |
 | Tests collected in the root `tests/` suite (with the Playwright-capable Python) | 304 |
 
+**Not re-verified:** the username and password login form, the 14-minute keep-alive and the Overview fixes (projected value, progress bar, Videos posted and Active creators charts) were made after this verification and have not been covered by a test run since.
+
 After the verification the database was left on the clean synthetic data: 280 files, 3,991 orders, 2 revisions. The Verdant extra orders file now loads with its one faulty record left out; the only failed file is the quarantined Threadline weekly video file.
 
 ## Done and not done
 
-Done: simulated data with planted problems; Bronze/Silver/Gold ingestion with replay, quarantine and rejection; API with login, evidence, freshness, notes and charts; the screens above; golden fixture and blackbox suite.
+Done: live demo on Render with the database on Neon; simulated data with planted problems; Bronze/Silver/Gold ingestion with replay, quarantine and rejection; API with login, evidence, freshness, notes and charts; the screens above; golden fixture and blackbox suite.
 
 Not done:
-- Live deployment (plan only in [docs/DEPLOYMENT_PLAN.md](docs/DEPLOYMENT_PLAN.md); Neon and Render paths not run).
 - Real users, roles or password reset (one demo account).
 - Real TikTok data and scheduled file pickup (ingestion is a manual command).
 
 ## What I would do next
 
-- Deploy: Render for the UI and the API, Neon for the database.
+- Move off free hosting tiers so the demo never sleeps, and add a monitor for the health check.
 - Sync real TikTok Shop data instead of file drops.
 - Load Silver incrementally instead of rebuilding it on every publish.
 - Add real authentication with users and roles.
