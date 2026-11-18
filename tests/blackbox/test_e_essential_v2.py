@@ -191,7 +191,12 @@ def test_e12_incomplete_coverage_gives_null_projection(client):
     assert g["projection"]["status_reason"]
 
 
-@pytest.mark.parametrize("case", E["e12"]["mid_month"], ids=lambda c: f"{c['brand_id']}-{c['word']}")
+def _mid_month_marks(case):
+    return [pytest.mark.golden_bad] if "data_note_contains" in case else []
+
+
+@pytest.mark.parametrize("case", [pytest.param(c, id=f"{c['brand_id']}-{c['word']}", marks=_mid_month_marks(c))
+                                  for c in E["e12"]["mid_month"]])
 def test_e12_mid_month_projection_uses_elapsed_complete_days(client, case):
     ov = get_json(client, f"{API}/overview", month="2026-10", cutoff="2026-10-15")
     g = find_goal(ov, case["brand_id"], case["word"])
@@ -199,6 +204,10 @@ def test_e12_mid_month_projection_uses_elapsed_complete_days(client, case):
     assert g["projection"]["value"] is not None, g["projection"]["status_reason"]
     assert abs(dec(g["projection"]["value"]) - dec(case["projection"])) < dec("0.01"), \
         f"actual / 15 * 31 expected {case['projection']}, got {g['projection']['value']}"
+    if "data_note_contains" in case:
+        # verdant: rows without an order number were left out of a loaded file -> a floor with a plain note, not null
+        note = (g["projection"].get("data_note") or g["actual"].get("data_note") or "").lower()
+        assert case["data_note_contains"] in note, f"projection must carry the left-out-rows note, got {note!r}"
 
 
 def test_e05_creator_unresolved_lines_carry_the_raw_creator_id(client):
@@ -211,13 +220,11 @@ def test_e05_creator_unresolved_lines_carry_the_raw_creator_id(client):
     assert dec(ev["result"]["value"]) == dec(e["unresolved_gmv"])
 
 
-@pytest.mark.golden_bad     # only valid once golden batch_bad (verdant rejected orders file) is loaded
-@pytest.mark.parametrize("case", E["e12"]["unavailable"], ids=lambda c: f"{c['brand_id']}-{c['word']}")
-def test_e12_rejected_file_makes_projection_unavailable(client, case):
-    """Rejected file => incomplete coverage => projection null with a reason (expected.yaml: e12.unavailable)."""
-    ov = get_json(client, f"{API}/overview", month="2026-10", cutoff="2026-10-15")
-    p = find_goal(ov, case["brand_id"], case["word"])["projection"]
-    assert p["value"] is None, f"projection must be unavailable, got {p['value']}"
-    assert p["status"] != "current"
-    reason = (p["status_reason"] or "").lower()
-    assert any(w in reason for w in case["reason_any"]), f"reason does not explain the gap: {p['status_reason']!r}"
+def test_e05_creator_unresolved_lines_carry_the_raw_creator_id(client):
+    e = E["e05"]
+    ev = evidence(client, "gmv", {"brand_id": e["brand_id"], "month": e["month"], "cutoff": "2026-10-15",
+                                  "bucket": "creator_unresolved"})
+    included = [r for r in ev["records"] if r.get("included", True)]
+    assert included, "creator_unresolved bucket must list its lines"
+    assert any("u_9001" in str(r["values"]) for r in included), "raw creator id must be visible on the line"
+    assert dec(ev["result"]["value"]) == dec(e["unresolved_gmv"])

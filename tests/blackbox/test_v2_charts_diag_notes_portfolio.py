@@ -6,7 +6,7 @@ import httpx
 import pytest
 
 from conftest import BASE_URL
-from helpers import API, V2, assert_mv, chart, dec, find_goal, get_json, points_by_x
+from helpers import API, V2, assert_mv, chart, dec, find_goal, get_json, points_by_x, sv
 
 pytestmark = [pytest.mark.v2, pytest.mark.after_b3]
 BRANDS = ["aurelle", "verdant", "crunchwell", "threadline", "glowhaus"]
@@ -156,31 +156,33 @@ def test_s14_shapley_hand_derived_values(client):
     body = get_json(client, f"{API}/brands/{e['brand_id']}/diagnostics", month=e["month"], cutoff=e["cutoff"])
     for k in ("periods", "method", "status", "disclaimer", "total", "factors", "unlinked_older_gmv", "products"):
         assert k in body, k
-    assert "cause" in body["disclaimer"].lower() or "proof" in body["disclaimer"].lower()
+    d = body["disclaimer"].lower()
+    assert any(w in d for w in ("cause", "why", "prove", "proof")), f"disclaimer must say this does not prove why: {d!r}"
     for k in ("baseline", "current", "delta"):
-        assert dec(body["total"][k]) == dec(e["total"][k]), f"total.{k}"
-        assert dec(body["unlinked_older_gmv"][k]) == dec(e["unlinked_older_gmv"][k]), f"unlinked.{k}"
+        assert dec(sv(body["total"][k])) == dec(e["total"][k]), f"total.{k}"
+        assert dec(sv(body["unlinked_older_gmv"][k])) == dec(e["unlinked_older_gmv"][k]), f"unlinked.{k}"
     assert len(body["factors"]) == 3
     for want, got in zip(e["factors"], body["factors"]):
-        assert abs(dec(got["baseline"]) - dec(want["baseline"])) < dec("0.01")
-        assert abs(dec(got["current"]) - dec(want["current"])) < dec("0.01")
-        assert abs(dec(got["effect"]) - dec(want["effect"])) < dec("0.01"), got
+        assert abs(dec(sv(got["baseline"])) - dec(want["baseline"])) < dec("0.01")
+        assert abs(dec(sv(got["current"])) - dec(want["current"])) < dec("0.01")
+        assert abs(dec(sv(got["effect"])) - dec(want["effect"])) < dec("0.01"), got
 
 
 def test_s14_effects_plus_unlinked_change_equal_total_change(client):
     for brand in BRANDS:
         body = get_json(client, f"{API}/brands/{brand}/diagnostics", month="2026-10", cutoff="2026-10-15")
-        effects = [f["effect"] for f in body["factors"]]
-        if any(x is None for x in effects) or body["unlinked_older_gmv"]["delta"] is None \
-                or body["total"]["delta"] is None:
+        effects = [sv(f["effect"]) for f in body["factors"]]   # each side is {value, unavailable_reason}; None = unavailable
+        unlinked, total = sv(body["unlinked_older_gmv"]["delta"]), sv(body["total"]["delta"])
+        if any(x is None for x in effects) or unlinked is None or total is None:
             continue
-        assert sum(dec(x) for x in effects) + dec(body["unlinked_older_gmv"]["delta"]) == dec(body["total"]["delta"]), brand
+        # exact to the cent: sum of effects + change in unlinked GMV = change in total
+        assert sum(dec(x) for x in effects) + dec(unlinked) == dec(total), brand
 
 
 def test_s14_incomplete_coverage_gives_null_effects(client):
     body = get_json(client, f"{API}/brands/{V2['s14']['null_brand']}/diagnostics", month="2026-10", cutoff="2026-10-15")
     assert body["status"] != "current"
-    assert all(f["effect"] is None for f in body["factors"]), "null (not 0) when coverage is incomplete"
+    assert all(sv(f["effect"]) is None for f in body["factors"]), "null (not 0) when coverage is incomplete"
 
 
 # ------------------------------------------------------------------ S15

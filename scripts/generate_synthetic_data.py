@@ -603,12 +603,16 @@ def write_batches(creators, slots, videos, samples, orders, affs, returns):
     m2.add(rel, "videos_weekly", "threadline", wk41.isoformat(), (wk41 + timedelta(days=6)).isoformat(),
            "increment", "2026-10-19T03:00:00Z")
 
-    # batch 2: orders file missing a required field (order_id) for verdant -> rejected, others accepted
-    bad = [make_order("X", SHOP["verdant"], "DELIVERED", D(2026, 10, 16, 10, 0), D(2026, 10, 16, 10, 5),
-                      D(2026, 10, 17, 9, 0), [make_line("X-1", PRODUCTS["verdant"][0][1] and PRODUCTS["verdant"][0][0],
-                                                        PRODUCTS["verdant"][0][1], "38.00", "38.00")])]
-    del bad[0]["order_id"]
-    write_json(os.path.join(b2, "orders/verdant/2026-10-extra.json"), {"orders": bad})
+    # batch 2: orders file for verdant with 4 orders, ONE without order_id: that row is left out, the file loads (amendment 4)
+    pv = PRODUCTS["verdant"][0]
+    extra = [make_order(f"VX-{i}", SHOP["verdant"], "DELIVERED", D(2026, 10, 16 + i, 10, 0), D(2026, 10, 16 + i, 10, 5),
+                        D(2026, 10, 18 + i, 9, 0), [make_line(f"VX-{i}-1", pv[0], pv[1], amt, amt)])
+             for i, amt in ((0, "38.00"), (1, "22.50"), (2, "41.00"))]
+    bad = make_order("X", SHOP["verdant"], "DELIVERED", D(2026, 10, 16, 10, 0), D(2026, 10, 16, 10, 5),
+                     D(2026, 10, 17, 9, 0), [make_line("X-1", pv[0], pv[1], "38.00", "38.00")])
+    del bad["order_id"]
+    extra.insert(1, bad)
+    write_json(os.path.join(b2, "orders/verdant/2026-10-extra.json"), {"orders": extra})
     m2.add("orders/verdant/2026-10-extra.json", "orders", "verdant", "2026-10-15", "2026-10-21", "increment",
            "2026-10-22T07:00:00Z")
 

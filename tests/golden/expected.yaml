@@ -116,8 +116,20 @@ samples:
 # ---- S4 / S5 / S11 ingest facts
 ingest:
   batch_older_expected_crunchwell_gmv: "45.00"       # still 45.00 after the older $20.00 file is ingested
-  batch_bad_rejected_file: "orders/verdant/2026-10-extra.json"   # lacks order_id; the $999.00 order must never appear
+  # Amendment 4 (faulty rows are left out alone). batch_bad verdant orders/verdant/2026-10-extra.json holds 5 orders:
+  #   O_BAD1 ($999.00, paid Oct 8) and O_BAD2 ($500.00, paid Oct 9) have NO order_id -> 2 rows left out (N = 2 of 5);
+  #   O_VX1 $10.00, O_VX2 $20.00, O_VX3 $5.00 (paid Oct 20) load normally. File status accepted, ingest exit code 0,
+  #   no failed file, brand stays current, totals are floors with a plain note naming Verdant.
+  #   verdant shop GMV at cutoff 2026-10-15 = 50.00 (O_B1 only; leaked rows would make 50 + 999 + 500 = 1549.00);
+  #   at cutoff 2026-11-02 = 50.00 + 10.00 + 20.00 + 5.00 = 85.00.
+  batch_bad_excluded_file: "orders/verdant/2026-10-extra.json"
+  # The notes are checked by meaning (brand name, the true count, 'left out'), not by an exact sentence.
+  rows_excluded: {brand_id: verdant, bad: 2, total: 5}
   verdant_gmv_after_bad_batch: "50.00"
+  verdant_gmv_after_bad_batch_1102: "85.00"
+  # S11b: batch_allbad crunchwell orders/crunchwell/2026-10-allbad.json: 2 orders, both without order_id -> no usable
+  # rows -> REJECTED (exit 1, brand incomplete, goal projection null, plain note naming Crunchwell).
+  batch_allbad: {brand_id: crunchwell, file: "orders/crunchwell/2026-10-allbad.json", bad: 2, total: 2}
   headers_alias_file: "videos/aurelle/2026-W42.xlsx"   # uses Video Id / Video Views / Gross Merchandise Value
   bom_file: "products/crunchwell.csv"                  # UTF-8 BOM
 
@@ -224,11 +236,19 @@ v2:
       mid_month:
         - {brand_id: aurelle, word: gmv, actual: "100.00", projection: "206.67"}
         - {brand_id: aurelle, word: video, actual: "1", projection: "2.0667"}
-      # verdant: batch_bad rejected orders/verdant/2026-10-extra.json -> rejected file => incomplete coverage =>
-      # projection unavailable (db-contract rule 6: incomplete beats current; a metric takes the worst source state).
-      # 50.00 / 15 * 31 would be 103.33, but the value must be null with a reason naming the rejected file / gap.
+        # verdant (amendment 4): the extra orders file loads with 2 of 5 rows left out (no order number). Independent
+        # derivation from the raw files: verdant goal = net attributed GMV (plan), actual through the cutoff = O_B1 50.00
+        # (attributed by AR_B1, no refunds); the two rows without an order number ($999 + $500) are left out and the three
+        # good rows are paid Oct 20 (after the cutoff), so actual stays 50.00; 50.00 / 15 * 31 = 103.33. The value is a
+        # floor and carries a data note.
+        - {brand_id: verdant, word: gmv, actual: "50.00", projection: "103.33", data_note_contains: "left out"}
+        - {brand_id: crunchwell, word: gmv, actual: "45.00", projection: "93.00"}
+      # crunchwell is complete in every stage before batch_allbad: net attributed GMV goal, actual = O_C1 45.00 (attributed to
+      # V_C5 by AR_C1 in batch_3, no refunds): 45.00 / 15 * 31 = 93.00 (a value, NOT unavailable, until batch_allbad).
+      # After batch_allbad (late stage only, tests/blackbox/test_zz_allbad.py) crunchwell's orders are incomplete -> projection null with a plain reason
+      # naming Crunchwell (db-contract rule 6: incomplete beats current).
       unavailable:
-        - {brand_id: verdant, word: gmv, reason_any: ["reject", "gap", "quarantin", "incomplete", "coverage"]}
+        - {brand_id: crunchwell, word: gmv, reason_any: ["crunchwell"]}
       aurelle_gmv_month_end: {cutoff: "2026-10-31", actual: "100.00", projection: "100.00"}
       active_creators_actual: "1"
 
@@ -361,20 +381,26 @@ w3:
   # returns/2026-10.json (valid: one REJECTED return, accepted) and verdant orders/2026-10-extra.json (every order lacks
   # order_id -> rejected). So brand_failed: verdant 1; aurelle, crunchwell, threadline, glowhaus 0. batch_overlap
   # (aurelle W41 quarantine) is only ingested in the late stage, after these checks.
-  golden_failed_after_bad: {verdant: 1, aurelle: 0, crunchwell: 0, threadline: 0, glowhaus: 0}
+  # Amendment 4: batch_bad no longer fails a file: verdant's extra file loads with 2 of 5 rows left out, so every brand
+  # has 0 failed files; verdant counts.rows_excluded = 2 and files_with_exclusions lists the file once.
+  golden_failed_after_bad: {verdant: 0, aurelle: 0, crunchwell: 0, threadline: 0, glowhaus: 0}
+  golden_rows_excluded_after_bad: {verdant: 2, aurelle: 0, crunchwell: 0, threadline: 0, glowhaus: 0}
   # Shared-tracker row issue: samples.xlsx is ONE file for all brands (a shared tracker). Its row GS4 has
   # brand_id threadline and creator cr_9999, which is on no roster -> an unresolved identity for threadline only.
   # Aurelle's own unresolved id (u_9001, affiliate source, batch_3) must not appear for threadline either.
   shared_row_issue: {raw_identifier: "cr_9999", brand_id: threadline, source: samples}
   # Seeded FULL synthetic data (marker synth): batch_2 holds orders/verdant/2026-10-extra.json without order_id
   # (rejected) and a threadline W41 weekly resend with changed numbers (quarantined) -> verdant 1, threadline 1, others 0.
-  synthetic_failed: {verdant: 1, threadline: 1, aurelle: 0, crunchwell: 0, glowhaus: 0}
+  # Amendment 4: the verdant extra file now holds 4 orders, 1 without order_id -> loaded with 1 of 4 left out (0 failed
+  # files, rows_excluded 1); threadline's quarantined weekly file is still a failure.
+  synthetic_failed: {verdant: 0, threadline: 1, aurelle: 0, crunchwell: 0, glowhaus: 0}
+  synthetic_rows_excluded: {verdant: 1, threadline: 0, aurelle: 0, crunchwell: 0, glowhaus: 0}
   # Open quality issues per brand on the FULL synthetic data (rules: backend/app/ingestion/silver.py). One
   # creator_not_on_roster issue per (brand, raw creator id) from affiliate_orders (ruling 1) plus one per sample shipment whose
-  # creator is not on the brand roster; file_rejected / file_quarantined rows come from batch.py. Derived by reading the raw
+  # creator is not on the brand roster; rows_excluded / file_quarantined rows come from batch.py. Derived by reading the raw
   # files (batch_1 roster vs batch_1+batch_2 affiliate records and the batch_2 samples snapshot):
   #   aurelle    affiliate ids u_90001, u_90005, u_90015                             = 3
-  #   verdant    affiliate ids u_90011, u_90025 = 2, + file_rejected (orders-extra, no order_id) 1       = 3
+  #   verdant    affiliate ids u_90011, u_90025 = 2, + rows_excluded (orders-extra: 1 row without order_id) 1 = 3
   #   crunchwell affiliate ids u_90006, u_90009, u_90014, u_90022, u_90026           = 5
   #   threadline affiliate ids u_90002, u_90003, u_90021, u_90024 = 4, sample SHP-THR-027 (cr_0999) = 1,
   #              + file_quarantined (W41 overlap resend) 1                           = 6

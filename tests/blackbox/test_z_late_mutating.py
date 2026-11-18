@@ -54,8 +54,8 @@ def test_e06_overlapping_weekly_resend_is_quarantined_and_changes_nothing(client
 
 def test_w3_overlap_quarantine_counts_for_aurelle_only(client):
     """Hand-derived: batch_overlap quarantines aurelle's W41 weekly file -> aurelle brand_failed 1 (weekly videos);
-    verdant keeps its 1 (batch_bad orders); crunchwell, threadline, glowhaus stay 0 on golden data."""
-    want = {"aurelle": 1, "verdant": 1, "crunchwell": 0, "threadline": 0, "glowhaus": 0}
+    verdant has 0 failed files (its bad rows were only left out); crunchwell, threadline, glowhaus stay 0."""
+    want = {"aurelle": 1, "verdant": 0, "crunchwell": 0, "threadline": 0, "glowhaus": 0}
     for brand, n in want.items():
         h = get_json(client, f"{API}/data-health", brand_id=brand)
         assert h["counts"]["brand_failed"] == n, (brand, h["failed_files"])

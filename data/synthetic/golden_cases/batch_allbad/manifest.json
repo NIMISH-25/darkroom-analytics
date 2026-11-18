@@ -1,0 +1,16 @@
+{
+ "batch_id": "batch_allbad",
+ "simulated_received_at": "2026-11-03T23:59:59-08:00",
+ "as_of": "2026-11-02",
+ "files": [
+  {
+   "path": "orders/crunchwell/2026-10-allbad.json",
+   "source_type": "orders",
+   "brand_id": "crunchwell",
+   "period_start": "2026-10-15",
+   "period_end": "2026-11-01",
+   "kind": "increment",
+   "src_updated_at": "2026-11-03T20:00:00Z"
+  }
+ ]
+}

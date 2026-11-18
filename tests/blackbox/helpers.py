@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import os
+import re
 from decimal import Decimal
 from pathlib import Path
 from urllib.parse import parse_qsl, urlsplit, urlunsplit
@@ -120,3 +121,45 @@ def money_ok(v):
     """Money strings carry cent precision: no float noise such as 20.290000000000003."""
     d = dec(v)
     return d == d.quantize(Decimal("0.01"))
+
+
+# ---------------------------------------------------------------- amendment 4: plain-language ban list
+import json as _json
+import re as _re
+
+BAN = _json.loads((REPO / "tests" / "banned_phrases.json").read_text(encoding="utf-8"))
+_STRIP = [_re.compile(r) for r in BAN["strip"]["regex"]]
+_NAMES = sorted(BAN["strip"]["brand_names"], key=len, reverse=True)
+_BAN = [(b["id"], _re.compile(b["regex"])) for b in BAN["ban"]]
+_ALLOW = _re.compile(r"\b(?:" + "|".join(_re.escape(a) for a in BAN["allow"]) + r")\b")
+
+
+def strip_entities(text: str, extra_names=()) -> str:
+    """Remove creator handles, ids, brand names and the allowed badge words before matching the ban list."""
+    for r in _STRIP:
+        text = r.sub(" ", text)
+    for n in sorted(list(_NAMES) + list(extra_names), key=len, reverse=True):
+        text = _re.sub(_re.escape(n), " ", text, flags=_re.I)
+    return _ALLOW.sub(" ", text)
+
+
+def violations(text, extra_names=()):
+    """[(ban_id, matched_text)] for operator-visible text; empty list means plain English."""
+    if not isinstance(text, str):
+        return []
+    clean = strip_entities(text, extra_names)
+    return [(bid, m.group(0)) for bid, rx in _BAN for m in rx.finditer(clean)]
+
+
+def sv(x):
+    """Value of a diagnostics side: amendment 4 sends {value, unavailable_reason}; older shape was a bare value."""
+    return x["value"] if isinstance(x, dict) and "value" in x else x
+
+
+def assert_left_out_note(text, bad, brand_word=None, brand_name=None):
+    """A plain note about rows left out: carries the true count and 'left out', and names the brand (in the text or brand_name)."""
+    t = text or ""
+    assert re.search(r"left\s+out", t, re.I), f"note must say rows were left out: {t!r}"
+    assert re.search(rf"\b{bad}\b", t), f"note must carry the true count {bad}: {t!r}"
+    if brand_word:
+        assert brand_word.lower() in (t + " " + (brand_name or "")).lower(), f"note must name the brand: {t!r} / {brand_name!r}"

@@ -65,7 +65,8 @@ def test_s7_unknown_is_shown_never_zero_dollars(page, frontend_url):
     page.wait_for_selector("table tbody tr", timeout=15000)
     page.wait_for_load_state("networkidle")
     body = page.inner_text("body")
-    assert re.search("unavailable|incomplete|partial|stale|unknown", body, re.I),         "glowhaus video metrics must show an UNAVAILABLE / INCOMPLETE / PARTIAL / STALE badge"
+    assert "UNAVAILABLE" not in body, "the bare word UNAVAILABLE must never appear"
+    assert re.search("no data yet|incomplete|partial|stale|unknown", body, re.I),         "glowhaus video metrics must show an UNAVAILABLE / INCOMPLETE / PARTIAL / STALE badge"
     # A genuine API zero (status current) legitimately renders as $0.00. The rule is that a NULL API value never
     # renders as $0: the number of "$0.00" in the UI must equal the number of API values that are exactly "0.00".
     raw = page.evaluate("localStorage.getItem('darkroom_auth')")
@@ -103,11 +104,11 @@ def test_s7_unknown_is_shown_never_zero_dollars(page, frontend_url):
         for i, field in cols.items():
             v = it[field]["value"]
             if v is None:
-                assert re.search("unavailable", cells[i], re.I), f"{cells[0]}.{field}: API null shown as {cells[i]!r}"
+                assert re.search("no data yet", cells[i], re.I), f"{cells[0]}.{field}: API null shown as {cells[i]!r} (expected the plain phrase No data yet)"
                 assert "$0" not in cells[i]
                 checked_null += 1
             else:
-                assert not re.search("unavailable", cells[i], re.I), f"{cells[0]}.{field}: value {v!r} shown as {cells[i]!r}"
+                assert not re.search("no data yet|unavailable", cells[i], re.I), f"{cells[0]}.{field}: value {v!r} shown as {cells[i]!r}"
     assert checked_null == nulls, f"checked {checked_null} unknown cells but the API has {nulls}"
 
 
@@ -136,13 +137,13 @@ def test_s12_drawer_refreshes_on_409_instead_of_mismatch(page, frontend_url):
     trigger = page.locator(EVIDENCE_BTN).first
     trigger.wait_for(state="visible", timeout=20000)  # count() right after goto raced the client render
     trigger.click()
-    page.get_by_role("dialog").get_by_text(re.compile("definition", re.I)).first.wait_for(timeout=15000)
+    page.get_by_role("dialog").get_by_text(re.compile("what this number means", re.I)).first.wait_for(timeout=15000)
     page.wait_for_load_state("networkidle")
     SHOTS.mkdir(parents=True, exist_ok=True)
     page.screenshot(path=str(SHOTS / "evidence_drawer.png"), full_page=True)
     body = page.inner_text("body")
     assert state["n"] == 1 and not re.search("mismatch", body, re.I), "drawer must refetch, not show a mismatch"
-    assert re.search("definition|formula|inputs", body, re.I), "drawer must show refreshed evidence"
+    assert re.search("what this number means|why it matters", body, re.I), "drawer must show refreshed evidence"
 
 
 def test_s12_real_ingest_batch2_while_drawer_page_open(page, frontend_url):
@@ -157,7 +158,7 @@ def test_s12_real_ingest_batch2_while_drawer_page_open(page, frontend_url):
     res = run_cli("ingest", GOLDEN_DATA / "batch_2")
     assert res.returncode == 0, res.stdout + res.stderr
     page.locator(EVIDENCE_BTN).first.click()  # no reload: URL still carries the old revision
-    page.get_by_role("dialog").get_by_text(re.compile("definition", re.I)).first.wait_for(timeout=15000)
+    page.get_by_role("dialog").get_by_text(re.compile("what this number means", re.I)).first.wait_for(timeout=15000)
     SHOTS.mkdir(parents=True, exist_ok=True)
     page.screenshot(path=str(SHOTS / "evidence_drawer_after_ingest.png"), full_page=True)
     codes = [c for c, _ in seen]
@@ -167,7 +168,7 @@ def test_s12_real_ingest_batch2_while_drawer_page_open(page, frontend_url):
 
 # ---------------------------------------------------------------- S20 (amendment 2)
 # Selectors follow frontend/src/components/midday: numbers are button[title='Show evidence'] (EVIDENCE_BTN), the evidence sheet is a
-# radix dialog (headings Definition / Formula), tabs are role=tab, sidebar entries are links. Routes and tabs come from docs/api-contract-amendment-2.md.
+# radix dialog (sections What this number means / Why it matters / What to watch), tabs are role=tab, sidebar entries are links. Routes and tabs come from docs/api-contract-amendment-2.md.
 SIDEBAR = [("/overview", "overview"), ("/attention", "attention"), ("/creators", "creators"),
            ("/samples", "samples"), ("/diagnostics", "diagnostics"), ("/health", "health")]
 TABS = [("overview", r"overview"), ("creators", r"creators"), ("samples", r"samples"),
@@ -210,8 +211,8 @@ def test_s20_kpi_value_opens_evidence_sheet_pinned_to_revision(page, frontend_ur
     kpi.click()
     sheet = page.get_by_role("dialog").first
     sheet.wait_for(state="visible", timeout=10000)
-    sheet.get_by_text(re.compile("definition", re.I)).first.wait_for(timeout=15000)   # evidence has loaded
-    assert re.search("definition|formula|inputs", sheet.inner_text(), re.I)
+    sheet.get_by_text(re.compile("what this number means", re.I)).first.wait_for(timeout=15000)   # evidence has loaded
+    assert re.search("what this number means", sheet.inner_text(), re.I)
     assert any("revision=" in u for u in seen), "evidence request must be pinned to a data_revision"
 
 
@@ -250,11 +251,11 @@ def test_s20_no_dollar_zero_for_unknown_values(page, frontend_url):
                 continue
             txt = cells[i].strip()
             assert not re.fullmatch(r"\$?\s?0(\.00)?", txt), f"video-dependent cell '{heads[i]}' shows {txt!r} under a coverage gap"
-            saw_unknown = saw_unknown or bool(re.search("unknown|unavailable|stale|—|-", txt, re.I))
+            saw_unknown = saw_unknown or bool(re.search("no data yet|unknown|stale|—|-", txt, re.I))
     assert saw_unknown, "video-dependent cells must say Unknown/unavailable while coverage is incomplete"
     page.goto(frontend_url + "/brands/glowhaus?tab=diagnostics")
     page.wait_for_load_state("networkidle")
-    assert re.search("unknown|stale|incomplete|unavailable", page.inner_text("body"), re.I)
+    assert re.search("no data yet|unknown|stale|incomplete", page.inner_text("body"), re.I)
 
 
 # ---------------------------------------------------------------- wave 3 (docs/api-contract-amendment-3.md sections 5 and 7)
@@ -311,10 +312,142 @@ def test_w3_evidence_sheet_has_what_this_number_means_card(page, frontend_url):
     kpi.click()
     sheet = page.get_by_role("dialog").first
     sheet.wait_for(state="visible", timeout=10000)
-    # wait for the evidence payload (card + definition) before reading the text
+    # wait for the evidence payload before reading the text (sections: What this number means / Why it matters / What to watch)
     sheet.get_by_text(re.compile("what this number means", re.I)).first.wait_for(timeout=15000)
-    sheet.get_by_text(re.compile("definition", re.I)).first.wait_for(timeout=15000)
+    sheet.get_by_text(re.compile("why it matters", re.I)).first.wait_for(timeout=15000)
     text = sheet.inner_text()
     assert re.search("what this number means", text, re.I), "explainer card missing from the evidence sheet"
-    for part in ("why it matters", "how it is calculated", "what the rows prove"):
+    for part in ("why it matters", "what to watch"):
         assert re.search(part, text, re.I), f"explainer part '{part}' missing"
+    assert re.search("supporting records", text, re.I)
+
+
+# ---------------------------------------------------------------- S21 (amendment 4: plain-English operator interface)
+from helpers import BAN, violations  # noqa: E402
+
+SIX_PAGES = ["/overview", "/brands/verdant", "/attention", "/creators", "/samples", "/diagnostics"]
+BRAND_RE = re.compile("aurelle|verdant|crunchwell|threadline|glowhaus", re.I)
+
+
+def settle(page):
+    page.wait_for_load_state("networkidle")
+    try:
+        page.wait_for_selector("main", timeout=15000)
+    except Exception:
+        pass
+    page.wait_for_load_state("networkidle")
+
+
+@pytest.mark.parametrize("route", SIX_PAGES)
+def test_s21_page_text_is_plain_english(page, frontend_url, route):
+    login(page, frontend_url)
+    page.goto(frontend_url + route)
+    settle(page)
+    text = page.inner_text("body")
+    assert re.search("darkroom analytics", page.locator("header").first.inner_text(), re.I), \
+        "the top bar must read 'Darkroom analytics'"
+    for bad in BAN["ui_extra_forbidden_substrings"]:
+        assert bad not in text, f"{route}: operator text contains {bad!r}"
+    found = violations(text)
+    assert not found, f"{route}: developer language on screen: {found[:6]}"
+
+
+def test_s21_pace_widget_reads_brands_on_pace_and_statuses_open_brand_panels(page, frontend_url):
+    login(page, frontend_url)
+    page.goto(frontend_url + "/overview")
+    settle(page)
+    widget = page.get_by_text(re.compile(r"brands on pace", re.I)).first
+    widget.wait_for(state="visible", timeout=20000)
+    assert re.search(r"brands on pace:?\s*\d+ of \d+", page.inner_text("body"), re.I), "expected 'Brands on pace: N of M'"
+    buttons = page.get_by_role("button", name=re.compile(r"on track|behind|unknown", re.I))
+    assert buttons.count() >= 1, "each pace status must be clickable"
+    opened = 0
+    for i in range(buttons.count()):
+        b = buttons.nth(i)
+        label = b.inner_text()
+        n = re.search(r"\d+", label)
+        b.click()
+        dialog = page.get_by_role("dialog").first
+        dialog.wait_for(state="visible", timeout=10000)
+        if n and int(n.group(0)) > 0:
+            assert BRAND_RE.search(dialog.inner_text()), f"panel for {label!r} must list its brands"
+            opened += 1
+        page.keyboard.press("Escape")
+        dialog.wait_for(state="hidden", timeout=10000)
+    assert opened >= 1
+
+
+def test_s21_clicking_a_needs_attention_row_opens_what_to_do(page, frontend_url):
+    login(page, frontend_url)
+    page.goto(frontend_url + "/attention")
+    settle(page)
+    row = page.locator("main table tbody tr").first
+    row.wait_for(state="visible", timeout=20000)
+    row.locator("td").first.click()            # anywhere on the row, not a View button
+    dialog = page.get_by_role("dialog").first
+    dialog.wait_for(state="visible", timeout=10000)
+    assert re.search("what to do", dialog.inner_text(), re.I), "the panel must say what to do"
+    assert re.search("why", dialog.inner_text(), re.I)
+    assert not violations(dialog.inner_text())
+
+
+@pytest.mark.parametrize("width", [1280, 1440])
+def test_s21_samples_page_has_no_overflow_or_overlapping_badges(page, frontend_url, width):
+    login(page, frontend_url)
+    page.set_viewport_size({"width": width, "height": 900})
+    page.goto(frontend_url + "/samples")
+    settle(page)
+    dims = page.evaluate("({sw: document.documentElement.scrollWidth, cw: document.documentElement.clientWidth})")
+    assert dims["sw"] <= dims["cw"], f"horizontal overflow at {width}px: {dims}"
+    overlaps = page.evaluate("""() => {
+      const out = [];
+      document.querySelectorAll('section').forEach(sec => {
+        const cells = [...sec.querySelectorAll('.grid > div')];
+        const r = (e) => e.getBoundingClientRect();
+        sec.querySelectorAll('span.inline-flex.uppercase').forEach(b => {
+          const cell = cells.find(c => c.contains(b));
+          const bb = r(b);
+          if (cell) {
+            const cb = r(cell);
+            if (bb.right > cb.right + 1 || bb.left < cb.left - 1 || bb.bottom > cb.bottom + 1) out.push('badge leaves its cell: ' + b.innerText);
+          }
+          cells.filter(c => c !== cell).forEach(c => {
+            const cb = r(c);
+            if (bb.left < cb.right - 1 && bb.right > cb.left + 1 && bb.top < cb.bottom - 1 && bb.bottom > cb.top + 1) out.push('badge overlaps another cell: ' + b.innerText);
+          });
+        });
+        if (sec.scrollWidth > sec.clientWidth + 1) out.push('card overflows horizontally');
+      });
+      return out;
+    }""")
+    assert not overlaps, f"{width}px: {overlaps[:5]}"
+
+
+def test_s21_incomplete_badges_expose_a_plain_tooltip(page, frontend_url):
+    login(page, frontend_url)
+    page.goto(frontend_url + "/brands/glowhaus?tab=creators")
+    settle(page)
+    badge = page.locator("span[tabindex='0']").filter(has_text=re.compile("incomplete|stale", re.I)).first
+    badge.wait_for(state="visible", timeout=20000)
+    badge.focus()
+    tip = page.get_by_role("tooltip").first
+    tip.wait_for(state="visible", timeout=10000)
+    text = tip.inner_text().strip()
+    assert len(text) >= 15, f"tooltip text too short: {text!r}"
+    assert not violations(text, ["Glowhaus"]), f"developer language in the tooltip: {text!r}"
+
+
+def test_s21_creators_chart_uses_vivid_fills(page, frontend_url):
+    login(page, frontend_url)
+    page.goto(frontend_url + "/creators")
+    settle(page)
+    page.wait_for_selector(".recharts-bar-rectangle path, .recharts-rectangle", timeout=20000)
+    fills = page.evaluate("""() => [...document.querySelectorAll('.recharts-bar-rectangle path, .recharts-bar-rectangle rect')]
+        .map(e => getComputedStyle(e).fill).filter(f => f && f.startsWith('rgb'))""")
+    assert len(fills) >= 3, f"too few bars found: {fills}"
+    distinct = set(fills)
+    assert len(distinct) >= 2, f"all bars share one fill: {distinct}"
+    for f in distinct:
+        r, g, b = [int(float(x)) for x in re.findall(r"[\d.]+", f)[:3]]
+        mx, mn = max(r, g, b), min(r, g, b)
+        assert mx > 0 and (mx - mn) / mx >= 0.35, f"near-gray fill {f}: the chart must use vivid colors"

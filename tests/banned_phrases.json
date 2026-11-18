@@ -1,0 +1,23 @@
+{
+  "_comment": "Shared ban list for operator-visible text (docs/api-contract-amendment-4.md section 4). Used by the API crawl test and the Playwright S21 test. Matching rule: (1) remove every entity name listed under 'strip' (creator handles, brand names, ids such as cr_0001 or u_90001, which are entity references, not developer words), (2) then none of the 'ban' regular expressions may match. Words listed under 'allow' are badge labels and are always fine (they match no ban pattern; the list documents the intent and is also removed before matching, so a future pattern cannot flag them).",
+  "allow": ["Incomplete", "Stale", "Complete", "incomplete", "stale", "complete"],
+  "strip": {
+    "_comment": "Entity-name stripper. 'regex' entries are removed as-is; 'brand_names' are added at run time from /api/v1/meta (brand name and brand id, case-insensitive). Creator handles look like @golden.mia or @snack.shack.sam; creator and raw ids look like cr_0001, u_90001, cr_9999.",
+    "regex": ["@[A-Za-z0-9_.]+", "\\b(?:cr|u)_\\d+\\b", "\\bSHP-[A-Z]{3}-\\d+\\b"],
+    "brand_names": ["Aurelle Jewelry", "Verdant Skincare", "Crunchwell Snacks", "Threadline Apparel", "Glowhaus Beauty", "Aurelle", "Verdant", "Crunchwell", "Threadline", "Glowhaus", "aurelle", "verdant", "crunchwell", "threadline", "glowhaus"]
+  },
+  "ban": [
+    {"id": "array_position", "regex": "\\w+\\[\\d+\\]", "why": "developer array positions such as orders[1]"},
+    {"id": "snake_case_field", "regex": "\\b_?[a-z]+_[a-z_]+\\b", "why": "field or column names such as order_id, goal_id, source_file, _scale"},
+    {"id": "function_syntax", "regex": "\\b(?:count|sum|avg)\\s*\\(", "why": "query text such as count(distinct video_id)"},
+    {"id": "word_distinct", "regex": "\\bdistinct\\b", "why": "SQL vocabulary"},
+    {"id": "placeholder_unavailable", "regex": "\\bUNAVAILABLE\\b", "why": "the bare placeholder word"},
+    {"id": "null_literal", "regex": "\\bnull\\b", "why": "JSON null"},
+    {"id": "none_literal", "regex": "\\bNone\\b", "why": "Python None"},
+    {"id": "nan_literal", "regex": "\\bNaN\\b", "why": "not-a-number"},
+    {"id": "undefined_literal", "regex": "\\bundefined\\b", "why": "JavaScript undefined"},
+    {"id": "is_required", "regex": "is required", "why": "framework validation text such as 'goal_id is required'"},
+    {"id": "braces", "regex": "[{}]", "why": "object or template braces"}
+  ],
+  "ui_extra_forbidden_substrings": ["as of 2026", "rev 2", "UNAVAILABLE", "orders[", "goal_id"]
+}

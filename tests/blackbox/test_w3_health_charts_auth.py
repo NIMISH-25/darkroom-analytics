@@ -2,11 +2,13 @@
 Most tests are data-agnostic invariants (any ingested data). Tests marked `synth` assert the seeded FULL synthetic data
 (run `pytest -m synth` against a DB holding generated batch_1 + batch_2); `golden_bad` tests assume the golden stage order
 of run_blackbox.ps1 (batch_bad ingested in stage 2, before stage 3)."""
+import re
+
 import httpx
 import pytest
 
 from conftest import BASE_URL
-from helpers import API, V2, EXPECTED, dec, get_json
+from helpers import API, V2, EXPECTED, assert_left_out_note, dec, get_json
 
 pytestmark = pytest.mark.v2
 BRANDS = ["aurelle", "verdant", "crunchwell", "threadline", "glowhaus"]
@@ -72,7 +74,7 @@ def test_w3_portfolio_lists_each_shared_tracker_once(client):
 
 # ------------------------------------------------------------------ (1) seeded synthetic data
 @pytest.mark.synth
-@pytest.mark.parametrize("brand,want", [("verdant", 1), ("threadline", 1), ("aurelle", 0), ("crunchwell", 0),
+@pytest.mark.parametrize("brand,want", [("verdant", 0), ("threadline", 1), ("aurelle", 0), ("crunchwell", 0),
                                          ("glowhaus", 0)])
 def test_w3_synthetic_brand_failure_counts(client, brand, want):
     h = health(client, brand)
@@ -82,25 +84,42 @@ def test_w3_synthetic_brand_failure_counts(client, brand, want):
 
 @pytest.mark.synth
 def test_w3_synthetic_failure_kinds(client):
-    v = brand_files(health(client, "verdant")["failed_files"], "verdant")[0]
-    assert "order" in v["file_name"].lower() and "order_id" in (v["error"] or "")        # orders file rejected
     t = brand_files(health(client, "threadline")["failed_files"], "threadline")[0]
-    text = f"{t['file_name']} {t['error']}".lower()
-    assert "video" in text and ("quarantine" in text or "overlap" in text)               # weekly videos quarantined
+    text = f"{t['file_name']} {t.get('plain_reason') or t.get('error')}".lower()
+    assert "video" in text and ("quarantine" in text or "overlap" in text or "already" in text)   # weekly videos set aside
+
+
+@pytest.mark.synth
+@pytest.mark.parametrize("brand,want", sorted(W3["synthetic_rows_excluded"].items()))
+def test_w3_synthetic_rows_excluded_are_not_failures(client, brand, want):
+    """Amendment 4: verdant's extra orders file loads with 1 of 4 rows left out; it is listed as loaded with exclusions."""
+    h = health(client, brand)
+    assert h["counts"]["rows_excluded"] == want, h["counts"]
+    ex = h["files_with_exclusions"]
+    assert (len(ex) == 1) == (want > 0), ex
+    if want:
+        assert_left_out_note(ex[0]["plain_reason"], 1, "verdant", brand_name=ex[0]["brand_name"])
+        assert ex[0]["brand_name"].lower().startswith("verdant")
+        assert not [f for f in h["failed_files"] if "order" in f["file_name"].lower()], "left-out rows must not fail the file"
 
 
 # ------------------------------------------------------------------ (1) golden fixture
 @pytest.mark.golden_bad
 @pytest.mark.after_b3
-def test_w3_golden_bad_batch_counts_only_for_verdant(client):
-    """After golden batch_bad (stage 2): hand-derived, verdant orders-extra is the only brand failure."""
+def test_w3_golden_bad_batch_leaves_rows_out_without_failing_a_file(client):
+    """After golden batch_bad (amendment 4, hand-derived in expected.yaml): verdant's extra file loads with 2 of 5 rows
+    left out, so no brand has a failed file and only verdant has excluded rows."""
     for brand, want in W3["golden_failed_after_bad"].items():
         h = health(client, brand)
         assert h["counts"]["brand_failed"] == want, (brand, h["failed_files"])
-    v = health(client, "verdant")["failed_files"]
-    a = health(client, "aurelle")["failed_files"]
-    assert any("order" in f["file_name"].lower() for f in v)
-    assert not any("order" in f["file_name"].lower() and f["scope"] == "brand" for f in a)
+    for brand, want in W3["golden_rows_excluded_after_bad"].items():
+        h = health(client, brand)
+        assert h["counts"]["rows_excluded"] == want, (brand, h["counts"])
+        assert len(h["files_with_exclusions"]) == (1 if want else 0)
+    f = health(client, "verdant")["files_with_exclusions"][0]
+    assert_left_out_note(f["plain_reason"], EXPECTED["ingest"]["rows_excluded"]["bad"], "verdant", brand_name=f["brand_name"])
+    assert f["brand_name"].lower().startswith("verdant")
+    assert not health(client, "aurelle")["files_with_exclusions"], "verdant exclusions leaked into aurelle health"
 
 
 @pytest.mark.after_b3

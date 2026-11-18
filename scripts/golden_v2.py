@@ -179,3 +179,17 @@ def build_v2(gc: str) -> None:
     mo.add(rel, "videos_weekly", "aurelle", w41.isoformat(), (w41 + timedelta(days=6)).isoformat(), "increment",
            "2026-11-03T20:00:00Z")
     mo.write(bo)
+
+
+    # ---- batch_allbad: a crunchwell orders file whose rows ALL lack order_id -> no usable rows -> rejected (S11b)
+    ba = os.path.join(gc, "batch_allbad")
+    mba = Manifest("batch_allbad", "2026-11-03T23:59:59-08:00", "2026-11-02")
+    rows = []
+    for i, amt in ((1, "12.00"), (2, "8.00")):
+        o = _ord("crunchwell", f"O_ALLBAD{i}", D(2026, 10, 9 + i, 10, 0), [_line(f"L_ALLBAD{i}_1", "P_C1", "S_C1", amt)])
+        del o["order_id"]
+        rows.append(o)
+    write_json(os.path.join(ba, "orders/crunchwell/2026-10-allbad.json"), {"orders": rows})
+    mba.add("orders/crunchwell/2026-10-allbad.json", "orders", "crunchwell", "2026-10-15", "2026-11-01", "increment",
+            "2026-11-03T20:00:00Z")
+    mba.write(ba)

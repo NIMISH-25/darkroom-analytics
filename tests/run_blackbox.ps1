@@ -1,6 +1,7 @@
 # Reset DB, ingest golden batches, start the API, run the blackbox suite in stages.
-# GOLDEN LOAD ORDER (data/synthetic/golden_cases): batch_1 -> batch_2 -> batch_bad -> batch_3 (-> late: batch_4_revision, batch_overlap).
-#   batch_bad (verdant orders file missing order_id, rejected; CLI exit != 0 is expected) is first loaded by the S11 test in stage 2
+# GOLDEN LOAD ORDER (data/synthetic/golden_cases): batch_1 -> batch_2 -> batch_bad -> batch_3 (-> late: batch_4_revision, batch_overlap, batch_allbad).
+#   The late stage (pytest -m late) ingests batch_4_revision, batch_overlap and batch_allbad itself, in that order (S17, #6, S11b: all rows bad => rejected, exit 1).
+#   batch_bad (verdant orders file with 2 of 5 rows missing order_id: those rows are left out, the file loads, exit 0) is first loaded by the S11 test in stage 2
 #   and re-asserted explicitly before batch_3 below. Tests marked `golden_bad` (verdant projection unavailable, health failure
 #   counts) are valid only after batch_bad and are never run against data without it (e.g. the full synthetic set: add
 #   `-m "not golden_bad"` there).
@@ -64,7 +65,7 @@ try {
     & $Python -m pytest blackbox -m "not b1_only and not after_b3 and not v2 and not perf and not late and not ui" -q
     $s2 = $LASTEXITCODE
 
-    Write-Host "== ensure golden batch_bad is loaded (replay is a no-op; non-zero exit is expected: it holds a rejected file) =="
+    Write-Host "== ensure golden batch_bad is loaded (replay is a no-op; exit 0: its bad rows are only left out) =="
     Invoke-Cli @("ingest", (Join-Path $Golden "batch_bad")) | Out-Null
 
     Write-Host "== ingest golden batch_3 (amendment 2: September data, new creators) =="

@@ -146,9 +146,9 @@ def main():
     with open(os.path.join(ROOT, "batch_2/products/verdant.csv"), "rb") as fh:
         check(fh.read(3) == b"\xef\xbb\xbf", "batch 2 products CSV has BOM")
     # golden
-    for b in ("batch_1", "batch_2", "batch_3", "batch_4_revision", "batch_overlap", "batch_older", "batch_bad"):
+    for b in ("batch_1", "batch_2", "batch_3", "batch_4_revision", "batch_overlap", "batch_allbad", "batch_older", "batch_bad"):
         verify_batch(os.path.join(ROOT, "golden_cases", b),
-                     expect_bad=("orders/verdant/2026-10-extra.json",) if b == "batch_bad" else ())
+                     expect_bad=("orders/verdant/2026-10-extra.json", "orders/crunchwell/2026-10-allbad.json") if b in ("batch_bad", "batch_allbad") else ())
     print("total files under data/synthetic:", total, "| batch_1+batch_2:", synth)
     print("FAILURES:", len(fails))
     sys.exit(1 if fails else 0)

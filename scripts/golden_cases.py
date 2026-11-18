@@ -241,9 +241,16 @@ def build(root: str) -> None:
     rej = make_return("R_C_REJ", "O_C1", "L_C1_1", "REJECTED", None, D(2026, 10, 17, 9, 0), None,
                       D(2026, 10, 18, 9, 0))
     inc(mb, bb, "returns/crunchwell/2026-10.json", "returns", "crunchwell", P2, {"returns": [rej]}, SRC2)
-    bad = _order("verdant", "O_BAD", D(2026, 10, 8, 9, 0), "999.00", D(2026, 10, 9, 9, 0))
-    del bad["order_id"]  # required field missing
-    inc(mb, bb, "orders/verdant/2026-10-extra.json", "orders", "verdant", P2, {"orders": [bad]}, SRC2)
+    # Faulty rows are left out on their own (amendment 4): 5 orders, 2 without order_id (left out), 3 good orders.
+    # The good orders are paid Oct 20 (after the 10-15 cutoff) so verdant Oct 1-15 totals stay unchanged:
+    # verdant GMV at cutoff 2026-11-02 = 50.00 + 10.00 + 20.00 + 5.00 = 85.00.
+    bad1 = _order("verdant", "O_BAD1", D(2026, 10, 8, 9, 0), "999.00", D(2026, 10, 9, 9, 0))
+    bad2 = _order("verdant", "O_BAD2", D(2026, 10, 9, 9, 0), "500.00", D(2026, 10, 10, 9, 0))
+    del bad1["order_id"]  # required field missing
+    del bad2["order_id"]
+    good = [_order("verdant", f"O_VX{i}", D(2026, 10, 20, 9 + i, 0), amt, D(2026, 10, 21, 9, 0))
+            for i, amt in ((1, "10.00"), (2, "20.00"), (3, "5.00"))]
+    inc(mb, bb, "orders/verdant/2026-10-extra.json", "orders", "verdant", P2, {"orders": [bad1, good[0], good[1], bad2, good[2]]}, SRC2)
     mb.write(bb)
 
     from golden_v2 import build_v2
