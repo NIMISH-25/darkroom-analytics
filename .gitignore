@@ -24,3 +24,4 @@ backend/.env
 
 # TypeScript incremental build info
 *.tsbuildinfo
+.neon
