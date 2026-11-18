@@ -41,7 +41,7 @@ source_types and `kind`: `orders`(increment), `affiliate_orders`(increment), `re
 Plus: a duplicated order across two pages; creator handle changes mid-year with the same creator id; the Oct 31 23:30 PT timezone boundary order (in a September-to-October golden case only if dates allow; otherwise in the golden fixture).
 
 ## Batch 2 (must NOT silently match batch 1)
-A changed order (newer `update_time`), a late refund completing after batch 1, a renamed header, a missing required field in one file (must be rejected/reported, others accepted), and an overlapping weekly file (quarantined).
+A changed order (newer `update_time`), a late refund completing after batch 1, a renamed header, faulty rows in one file (a row without its required identifier is left out on its own; the rest of that file and the other files load), and an overlapping weekly file (quarantined).
 
 ---
 
@@ -219,3 +219,6 @@ Batch 1 has 148 rows, batch 2 has 150.
 | `goals[].basis` | text | `gross` or `net` | `gross` |
 | `goals[].definition` | text | plain-text definition | `Shop-wide paid-item GMV for the month` |
 | `goals[].target` | number | target | `14000` |
+
+## Faulty rows (amendment 4)
+A row missing a required identifier (for example an order without `order_id`) is excluded **on its own**: the file stays loaded (`accepted`), the brand stays `current`, totals are shown as floors with a plain note naming the brand ("Verdant: 1 of 4 orders in a file was left out because it had no order number, so the real totals may be higher than shown."), and the CLI exits 0. All bad rows are counted, not only the first. They are stored in `bronze.excluded_row(source_file_id, row_num, reason_code, detail)` (developers only; `bronze.source_file.excluded_rows` holds the count) and raise quality issue `rows_excluded`. Only a file that cannot be read, or that has no usable rows at all, is rejected (exit 1, brand `incomplete`, projections unavailable). Overlapping weekly files are still quarantined. Fixtures: `orders/verdant/2026-10-extra.json` (1 of 4 rows left out), golden `batch_bad` (2 of 5), golden `batch_allbad` (every row bad, rejected).
