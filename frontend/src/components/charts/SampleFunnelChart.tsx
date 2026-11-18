@@ -4,10 +4,9 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } f
 import { useEvidenceSheet } from "@/components/midday/EvidenceSheet";
 import { MetricValue } from "@/components/midday/MetricValue";
 import { HATCH_FILL, POINT_STATUS_LABEL } from "@/lib/chart-theme";
-import { formatCount } from "@/lib/format";
 import { useApiQuery, useChartSeries } from "@/lib/hooks";
 import type { FunnelLagPoint, Samples } from "@/lib/types";
-import { ChartFrame, T, num, type ChartProps } from "./_shared";
+import { formatCount, ChartFrame, T, num, type ChartProps } from "./_shared";
 
 const LAGS = ["0-7", "8-14", "15-21", "22-30"];
 const config: ChartConfig = { count: { label: "Samples", color: T.statusOk } };
@@ -72,7 +71,7 @@ export function SampleFunnelChart({ brandId, month, cutoff }: ChartProps) {
         const lagRows: Row[] = LAGS.map((k) => ({ label: `${k} d`, color: T.statusOk, count: num(lag.get(k)?.count), _p: lag.get(k) }));
         const pick = (p?: FunnelLagPoint) => {
           const url = p?.evidence_urls?.count;
-          if (url) open(url, `Samples: ${p?.x}`);
+          if (url) open(url, `Days from delivery to video: ${p?.x}`);
         };
         return (
           <>

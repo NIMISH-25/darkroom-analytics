@@ -3,6 +3,8 @@ import { KpiStrip, type KpiItem } from "@/components/midday/KpiStrip";
 import { useChartSeries, useOverview, usePortfolioKpis } from "@/lib/hooks";
 import type { Goal, MV, PortfolioKpi } from "@/lib/types";
 import { QueryState } from "./common";
+import type { PortfolioKpisExt } from "./ext";
+import { BrandPaceWidget } from "./pace";
 
 const LABELS: Record<string, string> = {
   gmv: "GMV", creator_attributed_gmv: "Creator-attributed GMV", net_attributed_sales: "Net attributed sales",
@@ -23,6 +25,7 @@ export function PortfolioKpiStrip() {
   const kpis = usePortfolioKpis();
   const pacing = useChartSeries(null, "pacing_trajectory");
   const meta = pacing.data?.meta;
+  const ext = (kpis.data ?? {}) as PortfolioKpisExt;
   return (
     <QueryState q={kpis}>
       {kpis.data && (
@@ -41,13 +44,7 @@ export function PortfolioKpiStrip() {
               };
             })}
           />
-          <div className="flex flex-wrap items-center gap-4 border border-border bg-card px-4 py-2 text-sm text-muted-foreground" aria-label="Pace counts">
-            <span>Pace across brands</span>
-            <span className="text-emerald-600 dark:text-emerald-400">on track <span className="font-mono tabular-nums">{kpis.data.pace_counts.on_track}</span></span>
-            <span className="text-amber-600 dark:text-amber-400">at risk <span className="font-mono tabular-nums">{kpis.data.pace_counts.at_risk}</span></span>
-            <span className="text-rose-600 dark:text-rose-400">off track <span className="font-mono tabular-nums">{kpis.data.pace_counts.off_track}</span></span>
-            <span>unknown <span className="font-mono tabular-nums">{kpis.data.pace_counts.unknown}</span></span>
-          </div>
+          {ext.brand_pace_counts && <BrandPaceWidget counts={ext.brand_pace_counts} brands={ext.brand_pace ?? []} />}
         </div>
       )}
     </QueryState>
@@ -69,7 +66,7 @@ export function BrandKpiStrip({ brandId }: { brandId: string }) {
     <QueryState q={ov}>
       {brand
         ? <KpiStrip items={brand.goals.map(goalItem)} />
-        : <p className="text-sm text-muted-foreground">UNAVAILABLE: no goals returned for this brand.</p>}
+        : <p className="text-sm text-muted-foreground">No goals have been set for this brand yet.</p>}
     </QueryState>
   );
 }

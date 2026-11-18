@@ -38,13 +38,13 @@
   },
   "exclusions": [
     {
-      "reason": "Unresolved creator identity",
+      "reason": "Orders that could not be linked to a creator",
       "count": 9,
       "amount": "800.00"
     }
   ],
   "warnings": [
-    "Orders from 2026-10-14 onward may still be settling."
+    "Orders from Oct 14 onward may still change."
   ],
   "columns": [
     "order_id",
@@ -1459,9 +1459,28 @@
   "offset": 0,
   "next_offset": 100,
   "explainer": {
-    "what_it_means": "This is the total value of orders we could tie to a creator video between Oct 1 and Oct 15.",
-    "why_it_matters": "It shows how much sales the creator program is actually driving, which sets budget and retainer decisions.",
-    "how_calculated": "We add up every order amount that matched a resolved creator. 9 orders with an unresolved creator ($800.00) were left out.",
-    "what_rows_prove": "Each row below is one order from the source file; rows struck through were excluded."
-  }
+    "what_it_means": "This is the total value of orders linked to a creator video between Oct 1 and Oct 15 for this brand.",
+    "why_it_matters": "It shows how much of the brand sales the creator program is really driving, which guides retainer and sample budgets.",
+    "how_calculated": "All matched orders were added up.",
+    "what_rows_prove": "9 orders worth $800.00 could not be linked to a creator and are not counted. Orders from the last two days may still change."
+  },
+  "what_this_means": "This is the total value of orders linked to a creator video between Oct 1 and Oct 15 for this brand.",
+  "why_it_matters": "It shows how much of the brand sales the creator program is really driving, which guides retainer and sample budgets.",
+  "what_to_watch": "9 orders worth $800.00 could not be linked to a creator and are not counted. Orders from the last two days may still change.",
+  "incomplete_reason": null,
+  "data_note": "1 of 24 orders in one file was left out because it had no order number, so the real total may be higher than shown.",
+  "columns_plain": [
+    {
+      "key": "order_id",
+      "label": "Order number"
+    },
+    {
+      "key": "amount",
+      "label": "Order value"
+    },
+    {
+      "key": "date",
+      "label": "Order date"
+    }
+  ]
 }

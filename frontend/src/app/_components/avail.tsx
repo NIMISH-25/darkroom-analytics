@@ -15,7 +15,7 @@ export function Gated({ brandId, series, children }: { brandId: string; series: 
   if (s.status === "zero" || s.status === "unknown") {
     return (
       <p className="border border-border bg-card px-4 py-3 text-sm text-muted-foreground">
-        {series.replace(/_/g, " ")}: {s.reason ?? (s.status === "zero" ? "All values are zero for this period." : "Values are unknown for this period.")}
+        {s.reason ?? (s.status === "zero" ? "Nothing to show for this period: every value is zero." : "Nothing to show yet: the figures for this period are not known.")}
       </p>
     );
   }

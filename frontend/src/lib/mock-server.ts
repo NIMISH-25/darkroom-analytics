@@ -41,7 +41,8 @@ async function mockGet(path: string): Promise<unknown> {
     if (!bid) return d;
     const ff = d.failed_files.filter((f: any) => f.scope === "shared" || f.brand_id === bid);
     return { ...d, sources: d.sources.filter((s: any) => s.scope === "shared" || s.brand_id === bid), failed_files: ff,
-      counts: { brand_failed: ff.filter((f: any) => f.scope === "brand").length, shared_failed: 0, open_issues: d.counts.open_issues },
+      files_with_exclusions: d.files_with_exclusions.filter((f: any) => f.brand_id === bid),
+      counts: { brand_failed: ff.filter((f: any) => f.scope === "brand").length, shared_failed: 0, open_issues: d.counts.open_issues, rows_excluded: d.files_with_exclusions.filter((f: any) => f.brand_id === bid).reduce((n: number, f: any) => n + (f.rows_excluded ?? 0), 0) },
       unresolved_identities: d.unresolved_identities.filter((s: any) => s.brand_id === bid) };
   }
   if (p === "/portfolio/charts") {

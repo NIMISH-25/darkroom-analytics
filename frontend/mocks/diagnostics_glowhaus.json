@@ -13,59 +13,138 @@
   "status": "partial",
   "disclaimer": "This is a decomposition with context, not proof of cause.",
   "total": {
-    "baseline": "14800.00",
-    "current": null,
-    "delta": null
+    "baseline": {
+      "value": "14800.00",
+      "unavailable_reason": null
+    },
+    "current": {
+      "value": null,
+      "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+    },
+    "delta": {
+      "value": null,
+      "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+    }
   },
   "factors": [
     {
       "key": "A",
-      "baseline": "8",
-      "current": null,
-      "effect": null
+      "baseline": {
+        "value": "8",
+        "unavailable_reason": null
+      },
+      "current": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "effect": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "label": "Active creators"
     },
     {
       "key": "V",
-      "baseline": "2.5",
-      "current": null,
-      "effect": null
+      "baseline": {
+        "value": "2.5",
+        "unavailable_reason": null
+      },
+      "current": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "effect": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "label": "Videos per creator"
     },
     {
       "key": "G",
-      "baseline": "740.00",
-      "current": null,
-      "effect": null
+      "baseline": {
+        "value": "740.00",
+        "unavailable_reason": null
+      },
+      "current": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "effect": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "label": "Sales per video"
     }
   ],
   "unlinked_older_gmv": {
-    "baseline": "1200.00",
-    "current": null,
-    "delta": null
+    "baseline": {
+      "value": "1200.00",
+      "unavailable_reason": null
+    },
+    "current": {
+      "value": null,
+      "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+    },
+    "delta": {
+      "value": null,
+      "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+    }
   },
   "products": [
     {
       "product_id": "glowhaus-p1",
       "name": "Product 1",
-      "gmv_baseline": "3400.00",
-      "gmv_current": null,
-      "delta": null,
-      "observation": "Current period incomplete (video gap)."
+      "gmv_baseline": {
+        "value": "3400.00",
+        "unavailable_reason": null
+      },
+      "gmv_current": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "delta": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "observation": "This period is incomplete because video data is missing."
     },
     {
       "product_id": "glowhaus-p2",
       "name": "Product 2",
-      "gmv_baseline": "2800.00",
-      "gmv_current": null,
-      "delta": null,
-      "observation": "Current period incomplete (video gap)."
+      "gmv_baseline": {
+        "value": "2800.00",
+        "unavailable_reason": null
+      },
+      "gmv_current": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "delta": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "observation": "This period is incomplete because video data is missing."
     },
     {
       "product_id": "glowhaus-p3",
       "name": "Product 3",
-      "gmv_baseline": "2200.00",
-      "gmv_current": null,
-      "delta": null,
-      "observation": "Current period incomplete (video gap)."
+      "gmv_baseline": {
+        "value": "2200.00",
+        "unavailable_reason": null
+      },
+      "gmv_current": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "delta": {
+        "value": null,
+        "unavailable_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet."
+      },
+      "observation": "This period is incomplete because video data is missing."
     }
+  ],
+  "notes": [
+    "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so this month cannot be compared yet.",
+    "Last month is complete; figures for this month will appear once the missing video data is received."
   ]
 }

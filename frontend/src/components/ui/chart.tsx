@@ -53,7 +53,7 @@ export function ChartTooltipContent({
   label?: any;
   className?: string;
   labelFormatter?: (label: any, payload: any[]) => React.ReactNode;
-  /** Format a series value for display; must render null as UNAVAILABLE (never 0). */
+  /** Format a series value for display; must render null as "No data yet" (never 0). */
   valueFormatter?: (value: any, name: string, item: any) => React.ReactNode;
   /** Optional explicit status line (point status / reason) shown under the values. */
   statusFor?: (payload: any[]) => React.ReactNode;
@@ -76,7 +76,7 @@ export function ChartTooltipContent({
                 {cfg?.label ?? item.name ?? key}
               </span>
               <span className="font-mono tabular-nums tracking-tight font-medium">
-                {valueFormatter ? valueFormatter(raw, key, item) : raw === null || raw === undefined ? "UNAVAILABLE" : String(raw)}
+                {valueFormatter ? valueFormatter(raw, key, item) : raw === null || raw === undefined ? "No data yet" : String(raw)}
               </span>
             </div>
           );

@@ -3,7 +3,7 @@ import { formatMV, UNAVAILABLE } from "@/lib/format";
 import type { MV } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { useEvidenceSheet } from "./EvidenceSheet";
-import { StatusBadge } from "./StatusBadge";
+import { StatusBadge, reasonText } from "./StatusBadge";
 
 export interface MetricValueProps {
   mv: MV | null | undefined;
@@ -11,17 +11,18 @@ export interface MetricValueProps {
   label?: string;
   /** Show the freshness badge (default: only when status is not current). */
   showBadge?: "always" | "auto" | "never";
-  /** Show status_reason under a null value (default true). */
+  /** Deprecated: reasons now live in the badge tooltip. */
   showReason?: boolean;
   className?: string;
 }
 
-/** Any MetricValue in a table/cell: mono value (UNAVAILABLE when null, never 0), freshness badge, click opens EvidenceSheet. */
-export function MetricValue({ mv, label, showBadge = "auto", showReason = true, className }: MetricValueProps) {
+/** Any MetricValue in a table/cell: mono value ("No data yet" when null, never 0), freshness badge, click opens EvidenceSheet. */
+export function MetricValue({ mv, label, showBadge = "auto", className }: MetricValueProps) {
   const { open } = useEvidenceSheet();
   if (!mv) return <span className="font-mono text-muted-foreground">{UNAVAILABLE}</span>;
   const unknown = mv.value === null;
-  const badge = showBadge === "always" || (showBadge === "auto" && mv.status !== "current");
+  const badge = showBadge === "always" || (showBadge === "auto" && (mv.status !== "current" || unknown));
+  const reason = reasonText(mv.status_reason, mv.data_note);
   return (
     <span className={cn("inline-flex flex-col items-start gap-0.5", className)}>
       <span className="inline-flex items-center gap-1.5">
@@ -33,9 +34,8 @@ export function MetricValue({ mv, label, showBadge = "auto", showReason = true, 
         >
           {formatMV(mv)}
         </button>
-        {badge && <StatusBadge status={mv.status} title={mv.coverage_through ? `coverage through ${mv.coverage_through}` : undefined} />}
+        {badge && <StatusBadge status={mv.status} reason={reason} />}
       </span>
-      {unknown && showReason && mv.status_reason && <span className="max-w-[28ch] text-xs leading-tight text-muted-foreground">{mv.status_reason}</span>}
     </span>
   );
 }

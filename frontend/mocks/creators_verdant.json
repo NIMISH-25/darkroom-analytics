@@ -104,7 +104,7 @@
       },
       "suggested_action": {
         "action": "review",
-        "rule": "A needed input is unknown",
+        "rule": "Some figures for this creator are not available yet",
         "status": "current",
         "status_reason": null
       }
@@ -207,7 +207,7 @@
       },
       "suggested_action": {
         "action": "nudge",
-        "rule": "Retainer creator quiet 7+ days",
+        "rule": "Retainer creator with no posts for 7 or more days",
         "status": "current",
         "status_reason": null
       }
@@ -310,7 +310,7 @@
       },
       "suggested_action": {
         "action": "upgrade",
-        "rule": "Commission creator in top GMV quartile",
+        "rule": "Commission creator among the top sellers",
         "status": "current",
         "status_reason": null
       }
@@ -328,7 +328,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "gmv": {
@@ -338,7 +338,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "refunds": {
@@ -348,7 +348,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "net_sales": {
@@ -358,7 +358,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "retainer_cost": {
@@ -368,7 +368,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "commission_cost": {
@@ -378,7 +378,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sample_cost": {
@@ -388,7 +388,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sales_after_costs": {
@@ -398,7 +398,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "unresolved_gmv": {
@@ -408,14 +408,14 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=verdant&creator_id=verdant-c4&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "suggested_action": {
         "action": "review",
-        "rule": "A needed input is unknown",
+        "rule": "Some figures for this creator are not available yet",
         "status": "unavailable",
-        "status_reason": "Needed input is unknown"
+        "status_reason": "Some sales figures for this creator are not available yet."
       }
     },
     {
@@ -516,7 +516,7 @@
       },
       "suggested_action": {
         "action": "watch",
-        "rule": "No rule matched",
+        "rule": "Nothing needs action right now",
         "status": "current",
         "status_reason": null
       }
@@ -619,7 +619,7 @@
       },
       "suggested_action": {
         "action": "watch",
-        "rule": "No rule matched",
+        "rule": "Nothing needs action right now",
         "status": "current",
         "status_reason": null
       }

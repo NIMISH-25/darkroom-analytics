@@ -58,7 +58,7 @@
       "as_of": "2026-10-15T23:59:59-07:00",
       "coverage_through": "2026-10-15",
       "status": "partial",
-      "status_reason": "Delivery status missing for one sample.",
+      "status_reason": "One sample has no delivery update yet.",
       "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1"
     },
     "conversion_rate": {
@@ -68,7 +68,7 @@
       "as_of": "2026-10-15T23:59:59-07:00",
       "coverage_through": null,
       "status": "unavailable",
-      "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+      "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
       "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1"
     }
   },

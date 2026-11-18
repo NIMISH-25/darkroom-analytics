@@ -16,7 +16,6 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { UNAVAILABLE } from "@/lib/format";
 import { QueryState, Select, useUrlParams } from "./common";
 
 export type CreatorRow = CreatorItem & { brand_id: string; brand_name: string };
@@ -96,7 +95,7 @@ function buildColumns(showBrand: boolean): ColumnDef<CreatorRow>[] {
     mvCol("sample_cost", "Sample cost", (r) => r.sample_cost),
     mvCol("sales_after_costs", "Sales after costs", (r) => r.sales_after_costs),
     { id: "last_post", header: "Last post", accessorFn: (r) => r.last_post_date ?? undefined, sortUndefined: "last",
-      cell: ({ row }) => <span className="font-mono tabular-nums tracking-tight">{row.original.last_post_date ?? UNAVAILABLE}</span> } as ColumnDef<CreatorRow>,
+      cell: ({ row }) => <span className="font-mono tabular-nums tracking-tight">{row.original.last_post_date ?? "No post yet"}</span> } as ColumnDef<CreatorRow>,
     { id: "action", header: "Suggested action", accessorFn: (r) => r.suggested_action.action, cell: ({ row }) => <SuggestedActionBadge a={row.original.suggested_action} /> },
   ];
 }
@@ -236,7 +235,7 @@ export function CreatorSheet({ row, onClose }: { row: CreatorRow | null; onClose
               ))}
               <div className="flex justify-between gap-2 border-b border-border pb-1">
                 <dt className="text-muted-foreground">Last post</dt>
-                <dd className="font-mono tabular-nums tracking-tight">{row.last_post_date ?? UNAVAILABLE}</dd>
+                <dd className="font-mono tabular-nums tracking-tight">{row.last_post_date ?? "No post yet"}</dd>
               </div>
             </dl>
             <div className="space-y-1 border-t border-border pt-3 text-sm">

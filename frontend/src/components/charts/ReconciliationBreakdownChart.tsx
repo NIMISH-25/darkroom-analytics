@@ -5,10 +5,9 @@ import { useEvidenceSheet } from "@/components/midday/EvidenceSheet";
 import { StatusBadge } from "@/components/midday/StatusBadge";
 import { MetricValue } from "@/components/midday/MetricValue";
 import { HATCH_FILL, POINT_STATUS_LABEL } from "@/lib/chart-theme";
-import { formatCount, formatMoney, formatPercent } from "@/lib/format";
 import { useChartSeries } from "@/lib/hooks";
 import type { ReconciliationPoint } from "@/lib/types";
-import { ChartFrame, MONO, T, Swatch, num, type ChartProps } from "./_shared";
+import { formatCount, formatMoney, formatPercent, ChartFrame, MONO, T, Swatch, num, type ChartProps } from "./_shared";
 
 const BUCKETS: { key: ReconciliationPoint["x"]; label: string; color: string }[] = [
   { key: "resolved", label: "Resolved to creator", color: T.attributedGmv },
@@ -35,7 +34,7 @@ export function ReconciliationBreakdownChart({ brandId, month, cutoff }: ChartPr
         const openBucket = (k: string) => {
           const p = by.get(k as ReconciliationPoint["x"]);
           const url = p?.evidence_urls?.amount ?? Object.values(p?.evidence_urls ?? {})[0];
-          if (url) open(url, `Attribution: ${k}`);
+          if (url) open(url, `Attribution: ${BUCKETS.find((b) => b.key === k)?.label ?? "Other"}`);
         };
         return (
           <>

@@ -2,10 +2,10 @@
 import { StatusBadge } from "@/components/midday/StatusBadge";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { UNAVAILABLE } from "@/lib/format";
 import { useDataHealth, useMeta } from "@/lib/hooks";
 import type { DataHealth } from "@/lib/types";
 import { QueryState, Section } from "./common";
+import type { PlainFile } from "./ext";
 
 const mono = "font-mono tabular-nums tracking-tight";
 const SHARED_LABEL = "Shared Cross-Brand Source";
@@ -14,7 +14,7 @@ const SHARED_LABEL = "Shared Cross-Brand Source";
 type Scoped = { scope?: "brand" | "shared"; brand_id?: string | null; source_label?: string | null };
 type Source = DataHealth["sources"][number] & Scoped;
 type Failed = DataHealth["failed_files"][number] & Scoped;
-type Counts = { brand_failed: number; shared_failed: number; open_issues: number };
+type Counts = { brand_failed: number; shared_failed: number; open_issues: number; rows_excluded?: number };
 const countsOf = (d: DataHealth) => (d as DataHealth & { counts?: Counts }).counts;
 
 function SharedBadge({ label }: { label?: string | null }) {
@@ -48,8 +48,8 @@ export function FreshnessGrid({ data, brands }: { data: DataHealth; brands: { br
                   {c ? (
                     <div className="space-y-1">
                       <StatusBadge status={c.status} />
-                      <div className={`${mono} text-xs text-muted-foreground`}>through {c.coverage_through ?? UNAVAILABLE}</div>
-                      <div className={`${mono} text-xs text-muted-foreground`}>ingested {c.last_ingested_at ?? UNAVAILABLE}</div>
+                      <div className={`${mono} text-xs text-muted-foreground`}>through {c.coverage_through ?? "no data yet"}</div>
+                      <div className={`${mono} text-xs text-muted-foreground`}>ingested {c.last_ingested_at ?? "not yet"}</div>
                       {c.message && <div className="max-w-[28ch] text-xs text-muted-foreground">{c.message}</div>}
                     </div>
                   ) : <span className="text-muted-foreground">-</span>}
@@ -84,18 +84,16 @@ function Runs({ data }: { data: DataHealth }) {
 
 function FailedFiles({ data, brandId, brandName }: { data: DataHealth; brandId?: string; brandName: (id: string) => string }) {
   // Never show another brand's failure: in brand view keep this brand's files and shared ones only.
-  const files = (data.failed_files as Failed[]).filter((f) => !brandId || f.scope === "shared" || !f.brand_id || f.brand_id === brandId);
-  if (files.length === 0) return <p className="p-4 text-sm text-muted-foreground">No failed files.</p>;
+  const files = (data.failed_files as (Failed & PlainFile)[]).filter((f) => !brandId || f.scope === "shared" || !f.brand_id || f.brand_id === brandId);
+  if (files.length === 0) return <p className="p-4 text-sm text-muted-foreground">No files failed to load.</p>;
   return (
     <Table>
-      <TableHeader><TableRow><TableHead>Scope</TableHead><TableHead>Run</TableHead><TableHead>File</TableHead><TableHead>Error</TableHead></TableRow></TableHeader>
+      <TableHeader><TableRow><TableHead>Brand</TableHead><TableHead>What happened</TableHead></TableRow></TableHeader>
       <TableBody>
         {files.map((f, i) => (
           <TableRow key={i}>
-            <TableCell>{f.scope === "shared" ? <SharedBadge label={f.source_label} /> : f.brand_id ? brandName(f.brand_id) : UNAVAILABLE}</TableCell>
-            <TableCell className={mono}>{f.run_id}</TableCell>
-            <TableCell className={mono}>{f.file_name}</TableCell>
-            <TableCell className="text-rose-600 dark:text-rose-400">{f.error}</TableCell>
+            <TableCell>{f.scope === "shared" ? <SharedBadge label={f.source_label} /> : f.brand_name ?? (f.brand_id ? brandName(f.brand_id) : "")}</TableCell>
+            <TableCell className="text-rose-600 dark:text-rose-400">{f.plain_reason ?? "This file could not be loaded."}</TableCell>
           </TableRow>
         ))}
       </TableBody>
@@ -103,7 +101,30 @@ function FailedFiles({ data, brandId, brandName }: { data: DataHealth; brandId?:
   );
 }
 
-function Unresolved({ data, brandId }: { data: DataHealth; brandId?: string }) {
+function LeftOut({ data, brandId }: { data: DataHealth; brandId?: string }) {
+  const all = ((data.files_with_exclusions ?? []) as unknown as PlainFile[])
+    .filter((f) => !brandId || f.scope === "shared" || !f.brand_id || f.brand_id === brandId);
+  if (all.length === 0) return <p className="p-4 text-sm text-muted-foreground">No records were left out.</p>;
+  return (
+    <ul className="divide-y divide-border">
+      {all.map((f, i) => {
+        const n = f.excluded_rows ?? f.rows_excluded ?? f.count;
+        const label = f.plain_file_label ?? f.file_label ?? f.source_label ?? "a file";
+        return (
+          <li key={i} className="space-y-1 px-4 py-3 text-sm">
+            <div>
+              {f.brand_name && <span className="font-medium">{f.brand_name}: </span>}
+              <span className="font-mono tabular-nums tracking-tight">{n ?? ""}</span> records left out of {label}
+            </div>
+            {f.plain_reason && <p className="text-muted-foreground">{f.plain_reason}</p>}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function Unresolved({ data, brandId, brandName }: { data: DataHealth; brandId?: string; brandName: (id: string) => string }) {
   const items = data.unresolved_identities.filter((u) => !brandId || !u.brand_id || u.brand_id === brandId);
   if (items.length === 0) return <p className="p-4 text-sm text-muted-foreground">No unresolved identities.</p>;
   return (
@@ -111,7 +132,7 @@ function Unresolved({ data, brandId }: { data: DataHealth; brandId?: string }) {
       <TableHeader><TableRow><TableHead>Brand</TableHead><TableHead>Source</TableHead><TableHead>Raw identifier</TableHead><TableHead className="text-right">Occurrences</TableHead></TableRow></TableHeader>
       <TableBody>
         {items.map((u, i) => (
-          <TableRow key={i}><TableCell>{u.brand_id ?? SHARED_LABEL}</TableCell><TableCell>{u.source}</TableCell><TableCell className={mono}>{u.raw_identifier}</TableCell><TableCell className={`${mono} text-right`}>{u.occurrences}</TableCell></TableRow>
+          <TableRow key={i}><TableCell>{u.brand_id ? brandName(u.brand_id) : SHARED_LABEL}</TableCell><TableCell>{u.source}</TableCell><TableCell className={mono}>{u.raw_identifier}</TableCell><TableCell className={`${mono} text-right`}>{u.occurrences}</TableCell></TableRow>
         ))}
       </TableBody>
     </Table>
@@ -124,6 +145,7 @@ function CountsLine({ c }: { c: Counts }) {
       <span>Brand failures <span className={`${mono} text-foreground`}>{c.brand_failed}</span></span>
       <span>Shared failures <span className={`${mono} text-foreground`}>{c.shared_failed}</span></span>
       <span>Open issues <span className={`${mono} text-foreground`}>{c.open_issues}</span></span>
+      {c.rows_excluded !== undefined && <span>Records left out <span className={`${mono} text-foreground`}>{c.rows_excluded}</span></span>}
     </div>
   );
 }
@@ -144,8 +166,9 @@ export function HealthSections({ brandId }: { brandId?: string }) {
             <FreshnessGrid data={health.data} brands={brands} />
           </Section>
           {!brandId && <Section title="Ingest runs"><Runs data={health.data} /></Section>}
-          <Section title="Failed files"><FailedFiles data={health.data} brandId={brandId} brandName={brandName} /></Section>
-          <Section title="Unresolved identities"><Unresolved data={health.data} brandId={brandId} /></Section>
+          <Section title="Files that failed to load"><FailedFiles data={health.data} brandId={brandId} brandName={brandName} /></Section>
+          <Section title="Records left out"><LeftOut data={health.data} brandId={brandId} /></Section>
+          <Section title="Unresolved identities"><Unresolved data={health.data} brandId={brandId} brandName={brandName} /></Section>
         </div>
       )}
     </QueryState>

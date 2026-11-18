@@ -52,7 +52,7 @@
             "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "pace_status": "on_track",
-          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "reasoning": "The forecast carries the current daily pace through the rest of the month.",
           "progress": {
             "metric_key": "goal_progress",
             "value": "0.4200",
@@ -62,7 +62,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "aurelle-videos",
@@ -121,7 +123,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "aurelle-active",
@@ -171,7 +175,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": false,
+          "required_pace_reason": null
         }
       ]
     },
@@ -226,7 +232,7 @@
             "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "pace_status": "at_risk",
-          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "reasoning": "The forecast carries the current daily pace through the rest of the month.",
           "progress": {
             "metric_key": "goal_progress",
             "value": "0.4183",
@@ -236,7 +242,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "verdant-videos",
@@ -295,7 +303,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "verdant-active",
@@ -345,7 +355,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": false,
+          "required_pace_reason": null
         }
       ]
     },
@@ -400,7 +412,7 @@
             "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "pace_status": "off_track",
-          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "reasoning": "The forecast carries the current daily pace through the rest of the month.",
           "progress": {
             "metric_key": "goal_progress",
             "value": "0.4172",
@@ -410,7 +422,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "crunchwell-videos",
@@ -469,7 +483,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "crunchwell-active",
@@ -519,7 +535,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": false,
+          "required_pace_reason": null
         }
       ]
     },
@@ -550,7 +568,7 @@
             "as_of": "2026-10-15T23:59:59-07:00",
             "coverage_through": "2026-10-12",
             "status": "stale",
-            "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+            "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
             "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "projection": {
@@ -560,7 +578,7 @@
             "as_of": "2026-10-15T23:59:59-07:00",
             "coverage_through": "2026-10-15",
             "status": "stale",
-            "status_reason": "Based on stale actuals.",
+            "status_reason": "Based on older sales data.",
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "required_pace": {
@@ -574,7 +592,7 @@
             "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "pace_status": "on_track",
-          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "reasoning": "The forecast carries the current daily pace through the rest of the month.",
           "progress": {
             "metric_key": "goal_progress",
             "value": "0.2412",
@@ -584,7 +602,9 @@
             "status": "stale",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "threadline-videos",
@@ -643,7 +663,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "threadline-active",
@@ -693,7 +715,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": false,
+          "required_pace_reason": null
         }
       ]
     },
@@ -748,7 +772,7 @@
             "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "pace_status": "at_risk",
-          "reasoning": "Projection extrapolates the current daily pace across the remaining days of the month.",
+          "reasoning": "The forecast carries the current daily pace through the rest of the month.",
           "progress": {
             "metric_key": "goal_progress",
             "value": "0.4156",
@@ -758,7 +782,9 @@
             "status": "current",
             "status_reason": null,
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": null
         },
         {
           "goal_id": "glowhaus-videos",
@@ -783,7 +809,7 @@
             "as_of": "2026-10-15T23:59:59-07:00",
             "coverage_through": null,
             "status": "unavailable",
-            "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+            "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
             "evidence_url": "/api/v1/metrics/videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "projection": {
@@ -793,21 +819,21 @@
             "as_of": "2026-10-15T23:59:59-07:00",
             "coverage_through": null,
             "status": "unavailable",
-            "status_reason": "Projection requires video actuals.",
+            "status_reason": "The forecast needs video counts to date, which are not available yet.",
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "required_pace": {
             "metric_key": "goal_required_pace",
-            "value": 1.5,
+            "value": null,
             "unit": "count_per_day",
             "as_of": "2026-10-15T23:59:59-07:00",
-            "coverage_through": "2026-10-15",
-            "status": "current",
-            "status_reason": null,
+            "coverage_through": null,
+            "status": "unavailable",
+            "status_reason": "Required pace cannot be shown while video data is missing.",
             "evidence_url": "/api/v1/metrics/goal_required_pace/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "pace_status": "unknown",
-          "reasoning": "Cannot assess pace: video coverage has a gap.",
+          "reasoning": "Pace cannot be judged because video data is missing for part of the month.",
           "progress": {
             "metric_key": "goal_progress",
             "value": null,
@@ -815,9 +841,11 @@
             "as_of": "2026-10-15T23:59:59-07:00",
             "coverage_through": null,
             "status": "unavailable",
-            "status_reason": "Actual is unknown, so progress cannot be computed.",
+            "status_reason": "Progress cannot be shown because sales to date are not available yet.",
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": true,
+          "required_pace_reason": "Required pace cannot be shown while video data is missing."
         },
         {
           "goal_id": "glowhaus-active",
@@ -842,7 +870,7 @@
             "as_of": "2026-10-15T23:59:59-07:00",
             "coverage_through": "2026-10-08",
             "status": "partial",
-            "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+            "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
             "evidence_url": "/api/v1/metrics/active_creators/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
           },
           "projection": {
@@ -865,9 +893,11 @@
             "as_of": "2026-10-15T23:59:59-07:00",
             "coverage_through": null,
             "status": "unavailable",
-            "status_reason": "Actual is unknown, so progress cannot be computed.",
+            "status_reason": "Progress cannot be shown because sales to date are not available yet.",
             "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
-          }
+          },
+          "required_pace_applicable": false,
+          "required_pace_reason": null
         }
       ]
     }

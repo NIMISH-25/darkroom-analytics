@@ -13,59 +13,137 @@
   "status": "current",
   "disclaimer": "This is a decomposition with context, not proof of cause.",
   "total": {
-    "baseline": "14800.00",
-    "current": "17250.50",
-    "delta": "2450.50"
+    "baseline": {
+      "value": "14800.00",
+      "unavailable_reason": null
+    },
+    "current": {
+      "value": "17250.50",
+      "unavailable_reason": null
+    },
+    "delta": {
+      "value": "2450.50",
+      "unavailable_reason": null
+    }
   },
   "factors": [
     {
       "key": "A",
-      "baseline": "8",
-      "current": "9",
-      "effect": "1520.00"
+      "baseline": {
+        "value": "8",
+        "unavailable_reason": null
+      },
+      "current": {
+        "value": "9",
+        "unavailable_reason": null
+      },
+      "effect": {
+        "value": "1520.00",
+        "unavailable_reason": null
+      },
+      "label": "Active creators"
     },
     {
       "key": "V",
-      "baseline": "2.5",
-      "current": "2.2",
-      "effect": "-640.00"
+      "baseline": {
+        "value": "2.5",
+        "unavailable_reason": null
+      },
+      "current": {
+        "value": "2.2",
+        "unavailable_reason": null
+      },
+      "effect": {
+        "value": "-640.00",
+        "unavailable_reason": null
+      },
+      "label": "Videos per creator"
     },
     {
       "key": "G",
-      "baseline": "740.00",
-      "current": "792.00",
-      "effect": "1380.50"
+      "baseline": {
+        "value": "740.00",
+        "unavailable_reason": null
+      },
+      "current": {
+        "value": "792.00",
+        "unavailable_reason": null
+      },
+      "effect": {
+        "value": "1380.50",
+        "unavailable_reason": null
+      },
+      "label": "Sales per video"
     }
   ],
   "unlinked_older_gmv": {
-    "baseline": "1200.00",
-    "current": "1190.00",
-    "delta": "-10.00"
+    "baseline": {
+      "value": "1200.00",
+      "unavailable_reason": null
+    },
+    "current": {
+      "value": "1190.00",
+      "unavailable_reason": null
+    },
+    "delta": {
+      "value": "-10.00",
+      "unavailable_reason": null
+    }
   },
   "products": [
     {
       "product_id": "crunchwell-p1",
       "name": "Product 1",
-      "gmv_baseline": "3400.00",
-      "gmv_current": "3700.00",
-      "delta": "300.00",
-      "observation": "Largest contributor to the change."
+      "gmv_baseline": {
+        "value": "3400.00",
+        "unavailable_reason": null
+      },
+      "gmv_current": {
+        "value": "3700.00",
+        "unavailable_reason": null
+      },
+      "delta": {
+        "value": "300.00",
+        "unavailable_reason": null
+      },
+      "observation": "Biggest reason sales changed."
     },
     {
       "product_id": "crunchwell-p2",
       "name": "Product 2",
-      "gmv_baseline": "2800.00",
-      "gmv_current": "3200.00",
-      "delta": "400.00",
+      "gmv_baseline": {
+        "value": "2800.00",
+        "unavailable_reason": null
+      },
+      "gmv_current": {
+        "value": "3200.00",
+        "unavailable_reason": null
+      },
+      "delta": {
+        "value": "400.00",
+        "unavailable_reason": null
+      },
       "observation": "No notable change."
     },
     {
       "product_id": "crunchwell-p3",
       "name": "Product 3",
-      "gmv_baseline": "2200.00",
-      "gmv_current": "2700.00",
-      "delta": "500.00",
+      "gmv_baseline": {
+        "value": "2200.00",
+        "unavailable_reason": null
+      },
+      "gmv_current": {
+        "value": "2700.00",
+        "unavailable_reason": null
+      },
+      "delta": {
+        "value": "500.00",
+        "unavailable_reason": null
+      },
       "observation": "No notable change."
     }
+  ],
+  "notes": [
+    "Sales changed mainly because more creators were active."
   ]
 }

@@ -8,7 +8,7 @@
     "definition_version": "v2",
     "coverage_through": "2026-10-08",
     "status": "partial",
-    "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+    "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
     "units": {
       "actual": "USD",
       "projection": "USD",
@@ -33,7 +33,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "required_pace": {
@@ -158,7 +158,7 @@
         "projection": null,
         "required": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -171,7 +171,7 @@
         "projection": null,
         "required": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -184,7 +184,7 @@
         "projection": null,
         "required": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -197,7 +197,7 @@
         "projection": null,
         "required": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -210,7 +210,7 @@
         "projection": null,
         "required": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -223,7 +223,7 @@
         "projection": null,
         "required": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -236,7 +236,7 @@
         "projection": null,
         "required": "40500.00",
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=glowhaus&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -466,7 +466,7 @@
     "definition_version": "v2",
     "coverage_through": "2026-10-08",
     "status": "partial",
-    "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+    "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
     "units": {
       "gmv": "USD",
       "creator_attributed_gmv": "USD",
@@ -620,7 +620,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=glowhaus&date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_from=2026-10-09&date_to=2026-10-09&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -637,7 +637,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=glowhaus&date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_from=2026-10-10&date_to=2026-10-10&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -654,7 +654,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=glowhaus&date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_from=2026-10-11&date_to=2026-10-11&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -671,7 +671,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=glowhaus&date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_from=2026-10-12&date_to=2026-10-12&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -688,7 +688,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=glowhaus&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -705,7 +705,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=glowhaus&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -722,7 +722,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=glowhaus&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -1246,7 +1246,7 @@
     "definition_version": "v2",
     "coverage_through": "2026-10-15",
     "status": "partial",
-    "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+    "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
     "units": {
       "gmv": "USD",
       "share": "ratio",
@@ -1367,7 +1367,7 @@
     "definition_version": "v2",
     "coverage_through": null,
     "status": "unavailable",
-    "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+    "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
     "units": {
       "expected_posts": "count",
       "posts": "count",
@@ -1383,7 +1383,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1396,7 +1396,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1409,7 +1409,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&date_from=2026-07-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1422,7 +1422,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1435,7 +1435,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1448,7 +1448,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&date_from=2026-08-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1461,7 +1461,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1474,7 +1474,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1487,7 +1487,7 @@
         "posts": null,
         "attainment_pct": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_urls": {
           "posts": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&date_from=2026-09-01&month=2026-10&cutoff=2026-10-15&revision=1"
         }
@@ -1495,7 +1495,7 @@
     ],
     "availability": {
       "status": "unknown",
-      "reason": "Every value is unknown (video coverage gap)."
+      "reason": "No figures can be shown because video data is missing."
     }
   }
 }

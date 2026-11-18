@@ -17,6 +17,7 @@ export interface ChartCardProps {
   status?: string | null;
   statusReason?: string | null;
   coverageThrough?: string | null;
+  /** Deprecated and ignored: revision numbers are not shown to operators. */
   dataRevision?: number | null;
   className?: string;
   children: ReactNode;
@@ -42,7 +43,7 @@ function InfoButton({ info, title }: { info: ChartInfo; title: string }) {
 }
 
 /** Hairline chart container: header (title, description, legend, (i) info) / body / footer (status, coverage, revision). */
-export function ChartCard({ title, description, legend, info, status, statusReason, coverageThrough, dataRevision, className, children }: ChartCardProps) {
+export function ChartCard({ title, description, legend, info, status, statusReason, coverageThrough, className, children }: ChartCardProps) {
   return (
     <section className={cn("flex flex-col border border-border bg-card", className)}>
       <header className="flex items-start justify-between gap-4 border-b border-border px-4 py-3">
@@ -57,12 +58,10 @@ export function ChartCard({ title, description, legend, info, status, statusReas
       </header>
       <div className="flex-1 p-4">{children}</div>
       <footer className="flex flex-wrap items-center gap-3 border-t border-border px-4 py-2 text-xs text-muted-foreground">
-        {status && <StatusBadge status={status} />}
-        {statusReason && <span>{statusReason}</span>}
-        <span className="ml-auto flex items-center gap-3 font-mono tabular-nums tracking-tight">
-          {coverageThrough !== undefined && <span>coverage through {coverageThrough ?? "UNAVAILABLE"}</span>}
-          {dataRevision !== undefined && dataRevision !== null && <span>rev {dataRevision}</span>}
-        </span>
+        {status && <StatusBadge status={status} reason={statusReason} />}
+        {coverageThrough !== undefined && (
+          <span className="ml-auto font-mono tabular-nums tracking-tight">data through {coverageThrough ?? "no data yet"}</span>
+        )}
       </footer>
     </section>
   );

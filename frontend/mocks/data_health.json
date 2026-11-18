@@ -127,7 +127,7 @@
       "status": "stale",
       "coverage_through": "2026-10-12",
       "last_ingested_at": "2026-10-16T00:10:00-07:00",
-      "message": "Latest file ends 2026-10-12",
+      "message": "The latest file ends on Oct 12",
       "scope": "brand",
       "source_label": null
     },
@@ -177,7 +177,7 @@
       "status": "partial",
       "coverage_through": "2026-10-08",
       "last_ingested_at": "2026-10-16T00:10:00-07:00",
-      "message": "Gap 2026-10-09 to 2026-10-15",
+      "message": "No data for Oct 9 to Oct 15",
       "scope": "brand",
       "source_label": null
     },
@@ -216,32 +216,26 @@
     {
       "run_id": "run-2",
       "started_at": "2026-10-16T00:05:00-07:00",
-      "status": "partial",
+      "status": "Finished with a problem",
       "files_failed": 1
     },
     {
       "run_id": "run-1",
       "started_at": "2026-10-15T00:05:00-07:00",
-      "status": "success",
+      "status": "Finished",
       "files_failed": 0
     }
   ],
   "failed_files": [
     {
       "run_id": "run-2",
-      "file_name": "verdant_orders_2026-10.csv",
-      "error": "Rejected: missing required column Order Total",
-      "scope": "brand",
-      "brand_id": "verdant",
-      "source_label": null
-    },
-    {
-      "run_id": "run-2",
       "file_name": "threadline_weekly_videos_2026-10-12.csv",
-      "error": "Quarantined: duplicate Video ID rows",
+      "error": "",
       "scope": "brand",
       "brand_id": "threadline",
-      "source_label": null
+      "brand_name": "Threadline Apparel",
+      "source_label": null,
+      "plain_reason": "This file overlaps one that was already loaded, so it was set aside."
     }
   ],
   "unresolved_identities": [
@@ -253,8 +247,19 @@
     }
   ],
   "counts": {
-    "brand_failed": 2,
+    "brand_failed": 1,
     "shared_failed": 0,
-    "open_issues": 1
-  }
+    "open_issues": 1,
+    "rows_excluded": 1
+  },
+  "files_with_exclusions": [
+    {
+      "run_id": "run-2",
+      "file_name": "verdant_orders_2026-10.csv",
+      "brand_id": "verdant",
+      "brand_name": "Verdant Skincare",
+      "plain_reason": "Verdant Skincare: 1 of 24 orders in this file was left out because it had no order number, so the real totals may be higher than shown.",
+      "rows_excluded": 1
+    }
+  ]
 }

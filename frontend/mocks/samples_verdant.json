@@ -58,7 +58,7 @@
       "as_of": "2026-10-15T23:59:59-07:00",
       "coverage_through": "2026-10-15",
       "status": "partial",
-      "status_reason": "Delivery status missing for one sample.",
+      "status_reason": "One sample has no delivery update yet.",
       "evidence_url": "/api/v1/metrics/sample_conversion_rate/evidence?brand_id=verdant&month=2026-10&cutoff=2026-10-15&revision=1"
     },
     "conversion_rate": {

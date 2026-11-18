@@ -4,7 +4,7 @@
     {
       "series_id": "pacing_trajectory",
       "status": "stale",
-      "reason": "Order source freshness is breached.",
+      "reason": "Order data is older than expected.",
       "as_of": "2026-10-15T23:59:59-07:00",
       "point_count": 31
     },

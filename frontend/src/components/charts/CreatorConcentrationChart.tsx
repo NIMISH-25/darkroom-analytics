@@ -4,14 +4,13 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } f
 import { MetricValue } from "@/components/midday/MetricValue";
 import { useEvidenceSheet } from "@/components/midday/EvidenceSheet";
 import { POINT_STATUS_LABEL, SERIES_COLORS } from "@/lib/chart-theme";
-import { formatMoney } from "@/lib/format";
 import { useChartSeries } from "@/lib/hooks";
 import type { ConcentrationPoint } from "@/lib/types";
-import { ChartFrame, LegendItem, T, MONO, num, type ChartProps } from "./_shared";
+import { formatMoney, ChartFrame, LegendItem, T, MONO, num, type ChartProps } from "./_shared";
 
 type Row = { x: number; y: number; _p: ConcentrationPoint };
 
-const pctText = (v: unknown): string => (v === null || v === undefined ? "UNAVAILABLE" : String(v).endsWith("%") ? String(v) : `${v}%`);
+const pctText = (v: unknown): string => (v === null || v === undefined ? "No data yet" : String(v).endsWith("%") ? String(v) : `${v}%`);
 const pctNum = (v: unknown): number | null => {
   const n = v === null || v === undefined ? null : Number(String(v).replace("%", ""));
   return n === null || !Number.isFinite(n) ? null : n;
@@ -99,7 +98,7 @@ export function CreatorConcentrationChart({ brandId, month, cutoff }: ChartProps
               {marks.map((k) => (
                 <span key={k.label} className={MONO}>{k.label}: {pctText(k.raw)} of GMV</span>
               ))}
-              {someUnavailable && <span>Some points are UNAVAILABLE (not plotted).</span>}
+              {someUnavailable && <span>Some creators have no data yet and are not shown.</span>}
               {d.meta.unresolved_gmv && <span>Unresolved GMV (not in any creator): <MetricValue mv={d.meta.unresolved_gmv} /></span>}
             </div>
           </>

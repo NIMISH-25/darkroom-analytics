@@ -3,7 +3,8 @@ import { formatMV } from "@/lib/format";
 import type { MV, PaceStatus } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { useEvidenceSheet } from "./EvidenceSheet";
-import { GoalBasisBadge, StatusBadge } from "./StatusBadge";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { GoalBasisBadge, StatusBadge, reasonText } from "./StatusBadge";
 
 export interface KpiItem {
   key: string;
@@ -15,6 +16,10 @@ export interface KpiItem {
   progress?: MV | null;
   projection?: MV | null;
   requiredPace?: MV | null;
+  /** From the goal's required_pace_applicable. false (or no value) hides the Required daily pace row. */
+  requiredPaceApplicable?: boolean;
+  /** Goal's required_pace_reason: tooltip text when applicable but the value is null. */
+  requiredPaceReason?: string | null;
   /** e.g. "gross" | "net". */
   basis?: string | null;
   paceStatus?: PaceStatus;
@@ -38,12 +43,22 @@ function barColor(item: KpiItem): string {
   return "bg-zinc-500";
 }
 
+function NoData({ reason }: { reason?: string }) {
+  if (!reason) return <span className="text-muted-foreground">No data yet</span>;
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild><span tabIndex={0} className="cursor-help text-muted-foreground underline decoration-dotted">No data yet</span></TooltipTrigger>
+      <TooltipContent className="max-w-xs text-sm">{reason}</TooltipContent>
+    </Tooltip>
+  );
+}
+
 function NumButton({ mv, label, className }: { mv: MV | null | undefined; label: string; className?: string }) {
   const { open } = useEvidenceSheet();
-  if (!mv) return <span className="font-mono text-muted-foreground">UNAVAILABLE</span>;
+  if (!mv || mv.value === null) return <NoData reason={reasonText(mv?.status_reason, mv?.data_note)} />;
   return (
     <button type="button" title="Show evidence" onClick={() => open(mv.evidence_url, label)}
-      className={cn("font-mono tabular-nums tracking-tight hover:underline", mv.value === null && "text-muted-foreground", className)}>
+      className={cn("font-mono tabular-nums tracking-tight hover:underline", className)}>
       {formatMV(mv)}
     </button>
   );
@@ -53,44 +68,51 @@ function Cell({ item }: { item: KpiItem }) {
   const v = item.value;
   const unknown = !v || v.value === null;
   const w = barWidth(item.progress);
+  const reason = reasonText(v?.status_reason, v?.data_note);
+  const showPace = item.requiredPaceApplicable !== false && item.requiredPace !== undefined && item.requiredPace !== null;
+  const paceNull = showPace && item.requiredPace!.value === null;
   return (
     <div className="flex min-w-[220px] flex-1 flex-col gap-2 p-4">
       <div className="flex items-center justify-between gap-2">
-        <span className="text-xs text-muted-foreground">{item.label}</span>
+        <span className="text-sm text-muted-foreground">{item.label}</span>
         <GoalBasisBadge basis={item.basis} />
       </div>
       {unknown ? (
-        <div className="flex flex-col items-start gap-1">
-          <StatusBadge
-            status={v && (v.status === "partial" || v.status === "stale") ? "incomplete" : "missing"}
-            label={v && (v.status === "partial" || v.status === "stale") ? "INCOMPLETE" : "UNAVAILABLE"}
-          />
-          {v?.status_reason && <span className="text-xs leading-tight text-muted-foreground">{v.status_reason}</span>}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xl text-muted-foreground">No data yet</span>
+          <StatusBadge status={v && v.status === "stale" ? "stale" : "partial"} reason={reason ?? "There is not enough data yet to show this figure."} />
         </div>
       ) : (
-        <div className="flex items-baseline gap-2">
+        <div className="flex flex-wrap items-baseline gap-2">
           <NumButton mv={v} label={item.label} className="text-3xl" />
-          {v!.status !== "current" && <StatusBadge status={v!.status} />}
+          {v!.status !== "current" && <StatusBadge status={v!.status} reason={reason} />}
         </div>
       )}
       {(item.target !== undefined || item.progress !== undefined) && (
         <div className="space-y-1">
           <div className="h-1.5 w-full bg-muted">
             {w !== null ? <div className={cn("h-full max-w-full", barColor(item))} style={{ width: w }} /> : (
-              <svg width="100%" height="6" aria-label="progress unavailable"><rect width="100%" height="6" fill="url(#missing-data-hatch)" /></svg>
+              <svg width="100%" height="6" aria-label="no progress data yet"><rect width="100%" height="6" fill="url(#missing-data-hatch)" /></svg>
             )}
           </div>
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{w === null ? "progress UNAVAILABLE" : "target"}</span>
+          <div className="flex justify-between gap-2 text-sm text-muted-foreground">
+            <span>{w === null ? "Progress: no data yet" : "Target"}</span>
             <NumButton mv={item.target} label={`${item.label} target`} />
           </div>
         </div>
       )}
-      <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5 text-xs text-muted-foreground">
+      <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm text-muted-foreground">
         {item.projection !== undefined && (<><dt>Projected</dt><dd className="text-right text-foreground"><NumButton mv={item.projection} label={`${item.label} projected`} /></dd></>)}
-        {item.requiredPace !== undefined && (<><dt>Required daily pace</dt><dd className="text-right text-foreground"><NumButton mv={item.requiredPace} label={`${item.label} required pace`} /></dd></>)}
-        <dt>Coverage through</dt>
-        <dd className="text-right font-mono tabular-nums tracking-tight text-foreground">{v?.coverage_through ?? "UNAVAILABLE"}</dd>
+        {showPace && (
+          <>
+            <dt>Required daily pace</dt>
+            <dd className="text-right text-foreground">
+              {paceNull ? <NoData reason={item.requiredPaceReason ?? reasonText(item.requiredPace!.status_reason)} /> : <NumButton mv={item.requiredPace} label={`${item.label} required pace`} />}
+            </dd>
+          </>
+        )}
+        <dt>Data through</dt>
+        <dd className="text-right font-mono tabular-nums tracking-tight text-foreground">{v?.coverage_through ?? "No data yet"}</dd>
       </dl>
     </div>
   );

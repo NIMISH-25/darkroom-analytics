@@ -10,7 +10,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "Mixes gross and net goal bases across brands.",
+        "status_reason": "Brands measure their sales goals differently (some before refunds, some after), so this total mixes both.",
         "evidence_url": "/api/v1/metrics/portfolio_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "baseline": {
@@ -65,7 +65,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "Mixes gross and net goal bases across brands.",
+        "status_reason": "Brands measure their sales goals differently (some before refunds, some after), so this total mixes both.",
         "evidence_url": "/api/v1/metrics/portfolio_creator_attributed_gmv/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "baseline": {
@@ -120,7 +120,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "current",
-        "status_reason": "Net of cohort refunds.",
+        "status_reason": "After refunds are taken off.",
         "evidence_url": "/api/v1/metrics/portfolio_net_attributed_sales/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "baseline": {
@@ -165,7 +165,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Glowhaus has a video coverage gap; guarded sum is unavailable.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so the total number of videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/portfolio_videos/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "baseline": {
@@ -185,7 +185,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Glowhaus has a video coverage gap; guarded sum is unavailable.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so the total number of videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/portfolio_videos_delta/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "delta_pct": {
@@ -195,7 +195,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Glowhaus has a video coverage gap; guarded sum is unavailable.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so the total number of videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/portfolio_videos_delta_pct/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "brands_covered": 4,
@@ -207,7 +207,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Videos total is unavailable (Glowhaus gap).",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15.",
         "evidence_url": "/api/v1/metrics/goal_projection/evidence?month=2026-10&cutoff=2026-10-15&revision=1"
       }
     },
@@ -262,5 +262,158 @@
     "at_risk": 3,
     "off_track": 2,
     "unknown": 4
-  }
+  },
+  "brand_pace_counts": {
+    "on_track": 2,
+    "behind": 2,
+    "unknown": 1,
+    "total": 5
+  },
+  "brand_pace": [
+    {
+      "brand_slug": "aurelle",
+      "brand_name": "Aurelle Jewelry",
+      "status_label": "On pace",
+      "data_note": null,
+      "goals": [
+        {
+          "goal_name": "Creator-attributed GMV",
+          "status_label": "On pace",
+          "actual_label": "21000.50",
+          "target_label": "50000.00",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Videos posted",
+          "status_label": "On pace",
+          "actual_label": "18",
+          "target_label": "40",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Active creators",
+          "status_label": "On pace",
+          "actual_label": "7",
+          "target_label": "12",
+          "incomplete_reason": null
+        }
+      ]
+    },
+    {
+      "brand_slug": "verdant",
+      "brand_name": "Verdant Skincare",
+      "status_label": "Behind",
+      "data_note": "Verdant Skincare: 1 of 24 orders in a file was left out because it had no order number, so the real totals may be higher than shown.",
+      "goals": [
+        {
+          "goal_name": "Creator-attributed GMV",
+          "status_label": "Behind",
+          "actual_label": "25100.50",
+          "target_label": "60000.00",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Videos posted",
+          "status_label": "On pace",
+          "actual_label": "21",
+          "target_label": "45",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Active creators",
+          "status_label": "On pace",
+          "actual_label": "8",
+          "target_label": "12",
+          "incomplete_reason": null
+        }
+      ]
+    },
+    {
+      "brand_slug": "crunchwell",
+      "brand_name": "Crunchwell Snacks",
+      "status_label": "On pace",
+      "data_note": null,
+      "goals": [
+        {
+          "goal_name": "Creator-attributed GMV",
+          "status_label": "Behind",
+          "actual_label": "29200.50",
+          "target_label": "70000.00",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Videos posted",
+          "status_label": "On pace",
+          "actual_label": "24",
+          "target_label": "50",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Active creators",
+          "status_label": "On pace",
+          "actual_label": "9",
+          "target_label": "12",
+          "incomplete_reason": null
+        }
+      ]
+    },
+    {
+      "brand_slug": "threadline",
+      "brand_name": "Threadline Apparel",
+      "status_label": "Behind",
+      "data_note": null,
+      "goals": [
+        {
+          "goal_name": "Creator-attributed GMV",
+          "status_label": "On pace",
+          "actual_label": "19300.00",
+          "target_label": "80000.00",
+          "incomplete_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date."
+        },
+        {
+          "goal_name": "Videos posted",
+          "status_label": "On pace",
+          "actual_label": "27",
+          "target_label": "55",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Active creators",
+          "status_label": "On pace",
+          "actual_label": "10",
+          "target_label": "12",
+          "incomplete_reason": null
+        }
+      ]
+    },
+    {
+      "brand_slug": "glowhaus",
+      "brand_name": "Glowhaus Beauty",
+      "status_label": "Not enough data",
+      "data_note": null,
+      "goals": [
+        {
+          "goal_name": "Creator-attributed GMV",
+          "status_label": "Behind",
+          "actual_label": "37400.50",
+          "target_label": "90000.00",
+          "incomplete_reason": null
+        },
+        {
+          "goal_name": "Videos posted",
+          "status_label": "Not enough data",
+          "actual_label": null,
+          "target_label": "60",
+          "incomplete_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown."
+        },
+        {
+          "goal_name": "Active creators",
+          "status_label": "On pace",
+          "actual_label": null,
+          "target_label": "12",
+          "incomplete_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown."
+        }
+      ]
+    }
+  ]
 }

@@ -5,6 +5,8 @@ export type PointStatus = Status | "forecast";
 export type Unit = "USD" | "count" | "ratio" | "days" | "USD_per_day" | "count_per_day";
 
 export interface MV {
+  /** Plain note when figures are floors because rows were left out; else null. */
+  data_note?: string | null;
   metric_key: string;
   value: string | number | null;
   unit: Unit;
@@ -38,6 +40,10 @@ export interface Goal {
   required_pace: MV | null;
   /** actual/target ratio computed by the API (capped 1.5); null value when unknown. */
   progress?: MV | null;
+  /** false -> hide the required-pace row entirely (distinct-count goals, goals without a target). */
+  required_pace_applicable?: boolean;
+  /** Plain reason when applicable but the value is null. */
+  required_pace_reason?: string | null;
   pace_status: PaceStatus;
   reasoning: string;
 }
@@ -112,13 +118,14 @@ export interface Samples {
 export type HealthScope = "brand" | "shared";
 export interface DataHealth {
   data_revision: number;
-  counts?: { brand_failed: number; shared_failed: number; open_issues: number };
+  counts?: { brand_failed: number; shared_failed: number; open_issues: number; rows_excluded?: number };
+  files_with_exclusions?: { run_id?: string; file_name: string; brand_id?: string | null; brand_name?: string | null; plain_reason: string; rows_excluded?: number }[];
   sources: {
     brand_id: string | null; scope?: HealthScope; source_label?: string | null; source: string; status: Status;
     coverage_through: string | null; last_ingested_at: string | null; message: string | null;
   }[];
   runs: { run_id: string; started_at: string; status: string; files_failed: number }[];
-  failed_files: { run_id: string; file_name: string; error: string; scope?: HealthScope; brand_id?: string | null; source_label?: string | null }[];
+  failed_files: { run_id: string; file_name: string; error: string; scope?: HealthScope; brand_id?: string | null; source_label?: string | null; brand_name?: string | null; plain_reason?: string | null }[];
   unresolved_identities: { brand_id: string; source: string; raw_identifier: string; occurrences: number }[];
 }
 
@@ -134,6 +141,12 @@ export interface AttentionItem {
   rank: number;
   impact_score: string | null; // USD exposure, null last
   impact_basis: string;
+  why_needs_attention?: string;
+  what_to_do?: string;
+  incomplete_reason?: string | null;
+  data_note?: string | null;
+  brand_name?: string;
+  creator_name?: string | null;
 }
 export interface Attention {
   data_revision: number;
@@ -166,6 +179,13 @@ export interface Evidence {
   records: { source_file: string; source_locator: string; included: boolean; values: Record<string, unknown> }[];
   records_truncated: boolean;
   explainer?: Explainer | null;
+  what_this_means?: string;
+  why_it_matters?: string;
+  what_to_watch?: string;
+  incomplete_reason?: string | null;
+  data_note?: string | null;
+  /** Plain column labels; records are rendered only through these. */
+  columns_plain?: { key: string; label: string }[];
   total_count: number;
   limit: number;
   offset: number;
@@ -278,21 +298,29 @@ export interface PortfolioKpi {
   brands_covered: number;
   brands_total: number;
 }
+export interface BrandPaceGoal { goal_name: string; status_label: string; actual_label: string | null; target_label: string | null; incomplete_reason: string | null }
+export interface BrandPace { brand_slug: string; brand_name: string; status_label: string; data_note: string | null; goals: BrandPaceGoal[] }
 export interface PortfolioKpis {
   data_revision: number;
+  /** "Brands on pace: N of M" (on_track of total). */
+  brand_pace_counts?: { on_track: number; behind: number; unknown: number; total: number };
+  brand_pace?: BrandPace[];
   kpis: PortfolioKpi[];
   pace_counts: { on_track: number; at_risk: number; off_track: number; unknown: number };
 }
 
 /* ---------- Diagnostics ---------- */
-export interface DiagnosticsDelta { baseline: Val; current: Val; delta: Val }
+/** One side of a comparison with its own plain reason when empty. */
+export interface DiagSide { value: Val; unavailable_reason: string | null }
+export interface DiagnosticsDelta { baseline: Val | DiagSide; current: Val | DiagSide; delta: Val | DiagSide }
 export interface Diagnostics {
   periods: Record<string, unknown>;
   method: string;
   status: Status;
   disclaimer: string;
   total: DiagnosticsDelta;
-  factors: { key: "A" | "V" | "G" | string; baseline: Val; current: Val; effect: Val }[];
+  factors: { key: "A" | "V" | "G" | string; label?: string; baseline: Val | DiagSide; current: Val | DiagSide; effect: Val | DiagSide }[];
+  notes?: string[];
   unlinked_older_gmv: DiagnosticsDelta;
   products: { product_id: string; name: string; gmv_baseline: Val; gmv_current: Val; delta: Val; observation: string }[];
 }

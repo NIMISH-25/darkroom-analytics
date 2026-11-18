@@ -39,7 +39,7 @@
     {
       "series_id": "retainer_cadence",
       "status": "not_applicable",
-      "reason": "Brand has no retainer creators.",
+      "reason": "This brand has no creators on retainer.",
       "as_of": "2026-10-15T23:59:59-07:00",
       "point_count": 9
     }

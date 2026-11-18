@@ -19,7 +19,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "gmv": {
@@ -29,7 +29,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "refunds": {
@@ -39,7 +39,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "net_sales": {
@@ -49,7 +49,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "retainer_cost": {
@@ -59,7 +59,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "commission_cost": {
@@ -69,7 +69,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sample_cost": {
@@ -79,7 +79,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sales_after_costs": {
@@ -89,7 +89,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "unresolved_gmv": {
@@ -99,14 +99,14 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=glowhaus&creator_id=glowhaus-c1&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "suggested_action": {
         "action": "review",
-        "rule": "A needed input is unknown",
+        "rule": "Some figures for this creator are not available yet",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed."
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown."
       }
     },
     {
@@ -122,7 +122,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "gmv": {
@@ -132,7 +132,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "refunds": {
@@ -142,7 +142,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "net_sales": {
@@ -152,7 +152,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "retainer_cost": {
@@ -162,7 +162,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "commission_cost": {
@@ -172,7 +172,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sample_cost": {
@@ -182,7 +182,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sales_after_costs": {
@@ -192,7 +192,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "unresolved_gmv": {
@@ -202,14 +202,14 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "No order rows matched this creator.",
+        "status_reason": "No orders have been linked to this creator yet.",
         "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=glowhaus&creator_id=glowhaus-c2&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "suggested_action": {
         "action": "review",
-        "rule": "A needed input is unknown",
+        "rule": "Some figures for this creator are not available yet",
         "status": "unavailable",
-        "status_reason": "Needed input is unknown"
+        "status_reason": "Some sales figures for this creator are not available yet."
       }
     },
     {
@@ -225,7 +225,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": null,
         "status": "unavailable",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_videos/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "gmv": {
@@ -235,7 +235,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "refunds": {
@@ -245,7 +245,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/refunds/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "net_sales": {
@@ -255,7 +255,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_net_sales/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "retainer_cost": {
@@ -265,7 +265,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/retainer_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "commission_cost": {
@@ -275,7 +275,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/commission_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sample_cost": {
@@ -285,7 +285,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/sample_cost/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "sales_after_costs": {
@@ -295,7 +295,7 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/creator_sales_after_costs/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "unresolved_gmv": {
@@ -305,14 +305,14 @@
         "as_of": "2026-10-15T23:59:59-07:00",
         "coverage_through": "2026-10-15",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed.",
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown.",
         "evidence_url": "/api/v1/metrics/unresolved_gmv/evidence?brand_id=glowhaus&creator_id=glowhaus-c3&month=2026-10&cutoff=2026-10-15&revision=1"
       },
       "suggested_action": {
         "action": "upgrade",
-        "rule": "Commission creator in top GMV quartile",
+        "rule": "Commission creator among the top sellers",
         "status": "partial",
-        "status_reason": "Video feed has no data for 2026-10-09 to 2026-10-15; linked GMV cannot be computed."
+        "status_reason": "Glowhaus Beauty is missing video data for Oct 9 to Oct 15, so sales linked to videos cannot be shown."
       }
     },
     {
@@ -413,7 +413,7 @@
       },
       "suggested_action": {
         "action": "rebook",
-        "rule": "Strong sales after costs and contract ending",
+        "rule": "Strong sales after costs and the contract is ending",
         "status": "current",
         "status_reason": null
       }
@@ -516,7 +516,7 @@
       },
       "suggested_action": {
         "action": "watch",
-        "rule": "No rule matched",
+        "rule": "Nothing needs action right now",
         "status": "current",
         "status_reason": null
       }
@@ -619,7 +619,7 @@
       },
       "suggested_action": {
         "action": "watch",
-        "rule": "No rule matched",
+        "rule": "Nothing needs action right now",
         "status": "current",
         "status_reason": null
       }

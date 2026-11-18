@@ -8,7 +8,7 @@
     "definition_version": "v2",
     "coverage_through": "2026-10-12",
     "status": "stale",
-    "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+    "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
     "units": {
       "actual": "USD",
       "projection": "USD",
@@ -210,7 +210,7 @@
         "projection": null,
         "required": null,
         "status": "stale",
-        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -223,7 +223,7 @@
         "projection": null,
         "required": null,
         "status": "stale",
-        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -236,7 +236,7 @@
         "projection": "36000.00",
         "required": "36000.00",
         "status": "stale",
-        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
         "evidence_urls": {
           "actual": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
           "projection": "/api/v1/metrics/goal_projection/evidence?brand_id=threadline&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -454,7 +454,7 @@
     ],
     "availability": {
       "status": "stale",
-      "reason": "Order source freshness is breached."
+      "reason": "Order data is older than expected."
     }
   },
   "daily_gmv_refunds": {
@@ -466,7 +466,7 @@
     "definition_version": "v2",
     "coverage_through": "2026-10-12",
     "status": "stale",
-    "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+    "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
     "units": {
       "gmv": "USD",
       "creator_attributed_gmv": "USD",
@@ -688,7 +688,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "stale",
-        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-13&date_to=2026-10-13&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -705,7 +705,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "stale",
-        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-14&date_to=2026-10-14&month=2026-10&cutoff=2026-10-15&revision=1",
@@ -722,7 +722,7 @@
         "attributed_refunds_processed": null,
         "net_attributed_sales": null,
         "status": "stale",
-        "status_reason": "Latest order data is from 2026-10-12 (3 days behind cutoff).",
+        "status_reason": "Threadline Apparel orders were last updated on Oct 12, three days before the reporting date.",
         "evidence_urls": {
           "gmv": "/api/v1/metrics/gmv/evidence?brand_id=threadline&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",
           "creator_attributed_gmv": "/api/v1/metrics/creator_attributed_gmv/evidence?brand_id=threadline&date_from=2026-10-15&date_to=2026-10-15&month=2026-10&cutoff=2026-10-15&revision=1",

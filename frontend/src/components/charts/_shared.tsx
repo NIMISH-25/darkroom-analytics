@@ -1,15 +1,28 @@
 "use client";
 /* Shared helpers for chart components. No metric is computed here: only plotting conversions and layout. */
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { ReferenceArea } from "recharts";
 import { HATCH_FILL } from "@/lib/chart-theme";
 import { ChartCard } from "@/components/midday/ChartCard";
 import { StatusBadge } from "@/components/midday/StatusBadge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CHART_TOKENS } from "@/lib/chart-theme";
+import * as fmt from "@/lib/format";
+import type { MV, Val } from "@/lib/types";
 import type { ChartAvailability } from "@/lib/types";
 
 export const T = CHART_TOKENS;
+
+/** Operator wording: the bare placeholder never reaches the screen. */
+export const NO_DATA = "No data yet";
+const nd = (t: string) => (t === fmt.UNAVAILABLE ? NO_DATA : t);
+export const UNAVAILABLE = NO_DATA;
+export const formatMoney = (v: string | number | null | undefined) => nd(fmt.formatMoney(v));
+export const formatCount = (v: string | number | null | undefined) => nd(fmt.formatCount(v));
+export const formatPercent = (v: string | number | null | undefined) => nd(fmt.formatPercent(v));
+export const formatValue = (v: string | number | null | undefined, unit?: string) => nd(fmt.formatValue(v, unit));
+export const formatMV = (mv: MV | null | undefined) => nd(fmt.formatMV(mv));
+export const formatVal = (v: Val | undefined, unit?: string) => nd(fmt.formatVal(v, unit));
 export interface Info { what: string; how: string; decision: string }
 
 export interface ChartProps {
@@ -96,12 +109,12 @@ export function ChartFrame<E extends { availability?: ChartAvailability; status:
       <div className="space-y-3">
         {d.status !== "current" && d.status !== "forecast" && (
           <div className="flex items-center gap-2 border border-border bg-muted/40 px-2 py-1.5 text-xs">
-            <StatusBadge status={d.status} />
-            <span className="text-muted-foreground">{d.status_reason ?? "Some of this data is stale or missing. Hatched regions are unknown, not zero."}</span>
+            <StatusBadge status={d.status} title={d.status_reason ?? "Some of this data is late or missing."} />
+            <span className="text-muted-foreground">{d.status_reason ?? "Some of this data is late or missing. Hatched regions have no data, which is not the same as zero."}</span>
           </div>
         )}
         {d.availability?.status === "unknown" && (
-          <p className="text-xs text-muted-foreground">Values for this period are unknown. {d.availability.reason ?? ""} Hatched areas are missing data, not zero.</p>
+          <p className="text-xs text-muted-foreground">No data yet for this period. {d.availability.reason ?? ""} Hatched areas have no data, which is not the same as zero.</p>
         )}
         {children(d)}
       </div>
@@ -162,4 +175,39 @@ export function hatchAreas<P extends { x: string | number; status: string }>(poi
       )) as never}
     />
   ));
+}
+
+/** Hatched stand-in plot for a series with no values at all (no scale can be drawn). Axes ends and a hatch region cover the whole range. */
+export function AllMissingPlot({ xs, height = 288, note }: { xs: string[]; height?: number; note?: string }) {
+  const first = xs[0], last = xs[xs.length - 1];
+  return (
+    <div className="w-full" role="img" aria-label={`Missing data: ${first} to ${last}`}>
+      <div className="flex" style={{ height }}>
+        <span className="w-10 shrink-0 self-end pr-2 text-right font-mono text-xs text-muted-foreground">0</span>
+        <div
+          data-testid="missing-hatch"
+          aria-label={`Missing data: ${first} to ${last}`}
+          className="relative flex-1 border-b border-l border-border"
+          style={{ background: "repeating-linear-gradient(45deg, hsl(var(--muted-foreground) / 0.45) 0 2px, transparent 2px 6px)" }}
+        >
+          {note && <span className="absolute left-2 top-2 bg-background px-1.5 py-0.5 text-xs text-muted-foreground">{note}</span>}
+        </div>
+      </div>
+      <div className="flex justify-between pl-10 pt-1 font-mono text-xs text-muted-foreground"><span>{first?.slice(5)}</span><span>{last?.slice(5)}</span></div>
+    </div>
+  );
+}
+
+/** True while the document uses the dark theme. */
+export function useIsDark(): boolean {
+  const [dark, setDark] = useState(false);
+  useEffect(() => {
+    const el = document.documentElement;
+    const update = () => setDark(el.classList.contains("dark"));
+    update();
+    const mo = new MutationObserver(update);
+    mo.observe(el, { attributes: true, attributeFilter: ["class"] });
+    return () => mo.disconnect();
+  }, []);
+  return dark;
 }

@@ -6,13 +6,13 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } f
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEvidenceSheet } from "@/components/midday/EvidenceSheet";
 import { CHART_MARGIN, HATCH_FILL, POINT_STATUS_LABEL } from "@/lib/chart-theme";
-import { formatMoney } from "@/lib/format";
 import { useChartSeries } from "@/lib/hooks";
 import type { DailyGmvPoint } from "@/lib/types";
-import { ChartFrame, LegendItem, T, compactTick, hatchAreas, safeDomain, num, type ChartProps } from "./_shared";
+import { formatMoney, ChartFrame, AllMissingPlot, LegendItem, T, compactTick, hatchAreas, num, type ChartProps } from "./_shared";
 
+const FIELD_LABEL: Record<string, string> = { gmv: "Gross shop sales", creator_attributed_gmv: "Creator-attributed sales", attributed_refunds_cohort: "Refunds (by order date)", attributed_refunds_processed: "Refunds (by refund date)", net_attributed_sales: "Net attributed sales" };
 type Basis = "cohort" | "processed";
-type Row = { x: string; _scale: number; shop: number | null; gross: number | null; refunds: number | null; net: number | null; _p: DailyGmvPoint };
+type Row = { x: string; shop: number | null; gross: number | null; refunds: number | null; net: number | null; _p: DailyGmvPoint };
 type Field = "gmv" | "creator_attributed_gmv" | "attributed_refunds_cohort" | "attributed_refunds_processed" | "net_attributed_sales";
 
 export function DailyGmvRefundsChart({ brandId, month, cutoff }: ChartProps) {
@@ -58,18 +58,20 @@ export function DailyGmvRefundsChart({ brandId, month, cutoff }: ChartProps) {
     >
       {(d) => {
         const rows: Row[] = d.points.map((p) => ({
-          x: p.x, _scale: 0, shop: num(p.gmv), gross: num(p.creator_attributed_gmv), refunds: num(p[refundField]), net: num(p.net_attributed_sales), _p: p,
+          x: p.x, shop: num(p.gmv), gross: num(p.creator_attributed_gmv), refunds: num(p[refundField]), net: num(p.net_attributed_sales), _p: p,
         }));
         const openField = (row: Row | undefined, field: Field) => {
           const url = row?._p.evidence_urls?.[field];
-          if (url) open(url, `${field.replace(/_/g, " ")} · ${row?._p.x}`);
+          if (url) open(url, `${FIELD_LABEL[field]} · ${row?._p.x}`);
         };
+        const hasValues = rows.some((r) => r.gross !== null || r.shop !== null || r.refunds !== null || r.net !== null);
+        if (!hasValues) return <AllMissingPlot xs={rows.map((r) => r.x)} note="No data yet for this period" />;
         return (
           <ChartContainer config={config} className="aspect-auto h-72 w-full">
             <ComposedChart data={rows} margin={CHART_MARGIN}>
               <CartesianGrid vertical={false} />
               <XAxis dataKey="x" tickLine={false} axisLine={false} tickFormatter={(v: string) => v.slice(5)} minTickGap={16} />
-              <YAxis tickLine={false} axisLine={false} width={48} tickFormatter={compactTick} domain={safeDomain as never} />
+              <YAxis tickLine={false} axisLine={false} width={48} tickFormatter={compactTick} domain={[0, "auto"]} />
               <ChartTooltip
                 content={
                   <ChartTooltipContent
@@ -83,7 +85,6 @@ export function DailyGmvRefundsChart({ brandId, month, cutoff }: ChartProps) {
               />
               <defs><HatchPattern /></defs>
               {hatchAreas(rows.map((r) => ({ x: r.x, status: r._p.status === "current" && r.gross === null && r.shop === null && r.net === null ? "unavailable" : r._p.status })))}
-              <Line dataKey="_scale" stroke="none" dot={false} activeDot={false} legendType="none" tooltipType="none" isAnimationActive={false} />
               <Bar dataKey="shop" fill="var(--color-shop)" isAnimationActive={false} cursor="pointer" onClick={(e: { payload?: Row }) => openField(e?.payload, "gmv")} />
               <Bar dataKey="gross" fill="var(--color-gross)" isAnimationActive={false} cursor="pointer" onClick={(e: { payload?: Row }) => openField(e?.payload, "creator_attributed_gmv")} />
               <Bar dataKey="refunds" fill="var(--color-refunds)" isAnimationActive={false} cursor="pointer" onClick={(e: { payload?: Row }) => openField(e?.payload, refundField)} />

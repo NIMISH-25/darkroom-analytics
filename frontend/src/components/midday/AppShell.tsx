@@ -40,7 +40,6 @@ function Sidebar({ path }: { path: string }) {
         ))}
       </nav>
       <div className="space-y-2 border-t border-border p-3 text-xs text-muted-foreground">
-        <div className="font-mono tabular-nums tracking-tight">rev {meta?.data_revision ?? "UNAVAILABLE"}</div>
         {USE_MOCKS && <div className="font-mono uppercase text-amber-500">mock data</div>}
         <Button variant="outline" size="sm" className="w-full" onClick={() => { clearToken(); router.replace("/login"); }}>
           <LogOut className="h-4 w-4" />Logout
@@ -52,12 +51,9 @@ function Sidebar({ path }: { path: string }) {
 
 function TopBar() {
   const router = useRouter();
-  const { data: meta } = useMeta();
   return (
     <header className="flex h-14 items-center justify-between border-b border-border px-8 text-sm">
-      <span className="font-mono tabular-nums tracking-tight text-muted-foreground">
-        as of {meta?.default_cutoff ?? "UNAVAILABLE"} · rev {meta?.data_revision ?? "UNAVAILABLE"}
-      </span>
+      <span className="font-medium tracking-tight">Darkroom analytics</span>
       <Button variant="outline" onClick={() => { clearToken(); router.replace("/login"); }}>
         <LogOut className="h-4 w-4" />Logout
       </Button>

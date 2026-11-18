@@ -6,27 +6,42 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { ChartCard } from "@/components/midday/ChartCard";
 import { StatusBadge } from "@/components/midday/StatusBadge";
 import { useEvidenceSheet } from "@/components/midday/EvidenceSheet";
-import { HATCH_FILL } from "@/lib/chart-theme";
-import { UNAVAILABLE, formatVal, isMV } from "@/lib/format";
+import { isMV } from "@/lib/format";
 import { useApiQuery } from "@/lib/hooks";
-import type { Diagnostics, Val } from "@/lib/types";
-import { MONO, T, compactTick, num, type ChartProps } from "./_shared";
+import type { Diagnostics } from "@/lib/types";
+import { NO_DATA, formatValue, MONO, T, compactTick, num, type ChartProps } from "./_shared";
 
 const FACTOR_LABEL: Record<string, { label: string; unit: string }> = {
+  active_creators: { label: "Active creators", unit: "count" },
+  videos_per_creator: { label: "Videos per active creator", unit: "count" },
+  gmv_per_video: { label: "Sales per video linked to a creator", unit: "USD" },
+  unlinked_older_gmv: { label: "Sales from older or unlinked videos", unit: "USD" },
   A: { label: "Active creators", unit: "count" },
   V: { label: "Videos per active creator", unit: "count" },
-  G: { label: "GMV per linked video", unit: "USD" },
+  G: { label: "Sales per video linked to a creator", unit: "USD" },
 };
 
-const raw = (v: Val | undefined) => (v === undefined || v === null ? null : isMV(v) ? v.value : v);
-const evUrl = (v: Val | undefined) => (isMV(v) ? v.evidence_url : null);
+/** One side of a comparison. Accepts {value, unavailable_reason}, a full MetricValue, or a bare value. */
+interface Side { value: string | number | null; reason: string | null; url: string | null }
+function side(v: unknown): Side {
+  if (v === undefined || v === null) return { value: null, reason: null, url: null };
+  if (typeof v === "object") {
+    const o = v as { value?: string | number | null; unavailable_reason?: string | null; status_reason?: string | null; evidence_url?: string };
+    return {
+      value: o.value ?? null,
+      reason: o.unavailable_reason ?? (isMV(v) ? v.status_reason : null) ?? null,
+      url: isMV(v) ? v.evidence_url : (o.evidence_url ?? null),
+    };
+  }
+  return { value: v as string | number, reason: null, url: null };
+}
 
 function periodText(p: unknown): string {
   const o = p as { start?: string; end?: string } | null | undefined;
-  return o?.start && o?.end ? `${o.start} to ${o.end}` : UNAVAILABLE;
+  return o?.start && o?.end ? `${o.start} to ${o.end}` : "this period";
 }
 
-type Row = { label: string; effect: number | null; shown: string; url: string | null };
+interface TRow { label: string; unit: string; baseline: Side; current: Side; effect: Side; bold?: boolean }
 
 export function DiagnosticsComparisonPanel({ brandId, month, cutoff }: ChartProps) {
   const qs = new URLSearchParams();
@@ -40,89 +55,96 @@ export function DiagnosticsComparisonPanel({ brandId, month, cutoff }: ChartProp
   let body;
   if (!brandId) body = <p className="py-10 text-center text-xs text-muted-foreground">Select a brand to see its diagnostics.</p>;
   else if (query.isLoading || (!d && !query.error)) body = <Skeleton className="h-64 w-full" />;
-  else if (query.error || !d) body = <p className="text-xs text-rose-500">Could not load diagnostics: {query.error instanceof Error ? query.error.message : String(query.error)}</p>;
+  else if (query.error || !d) body = <p className="text-xs text-rose-500">The comparison could not be loaded right now. Please try again.</p>;
   else {
     const periods = d.periods as Record<string, unknown>;
-    const rows: Row[] = [
-      ...d.factors.map((f) => ({ label: FACTOR_LABEL[f.key]?.label ?? f.key, effect: num(raw(f.effect)), shown: formatVal(f.effect, "USD"), url: evUrl(f.effect) })),
-      { label: "Unlinked / older GMV", effect: num(raw(d.unlinked_older_gmv.delta)), shown: formatVal(d.unlinked_older_gmv.delta, "USD"), url: evUrl(d.unlinked_older_gmv.delta) },
-      { label: "Total change", effect: num(raw(d.total.delta)), shown: formatVal(d.total.delta, "USD"), url: evUrl(d.total.delta) },
+    const notes = ((d as unknown as { notes?: string[] }).notes ?? []).filter(Boolean);
+    const all: TRow[] = [
+      ...d.factors.map((f) => ({ label: (f as { label?: string }).label ?? FACTOR_LABEL[f.key]?.label ?? "Other factor", unit: FACTOR_LABEL[f.key]?.unit ?? "count", baseline: side(f.baseline), current: side(f.current), effect: side(f.effect) })),
+      { label: (d.unlinked_older_gmv as { label?: string }).label ?? "Sales from older or unlinked videos", unit: "USD", baseline: side(d.unlinked_older_gmv.baseline), current: side(d.unlinked_older_gmv.current), effect: side(d.unlinked_older_gmv.delta) },
+      { label: (d.total as { label?: string }).label ?? "Total sales", unit: "USD", baseline: side(d.total.baseline), current: side(d.total.current), effect: side(d.total.delta), bold: true },
     ];
+    // Only rows that have a value on at least one side.
+    const rows = all.filter((r) => r.baseline.value !== null || r.current.value !== null || r.effect.value !== null);
+    const chartRows = rows.filter((r) => r.effect.value !== null).map((r) => ({ label: r.label, effect: num(r.effect.value), shown: formatValue(r.effect.value, "USD"), url: r.effect.url }));
     const config: ChartConfig = { effect: { label: "Effect on GMV", color: T.attributedGmv } };
     const incomplete = d.status !== "current";
-    const cell = (v: Val | undefined, unit: string, key: string) => {
-      const url = evUrl(v);
-      const text = formatVal(v, unit);
+
+    const cell = (s: Side, unit: string, key: string) => {
+      if (s.value === null) {
+        return (
+          <TableCell className="text-right text-muted-foreground" key={key}>
+            <span title={s.reason ?? "There is no data for this yet."} className="cursor-help underline decoration-dotted underline-offset-2">{NO_DATA}</span>
+          </TableCell>
+        );
+      }
+      const text = formatValue(s.value, unit);
       return (
-        <TableCell className={`text-right ${MONO} ${text === UNAVAILABLE ? "text-muted-foreground" : ""}`} key={key}>
-          {url ? <button type="button" className="underline decoration-dotted underline-offset-2 hover:decoration-solid" onClick={() => open(url, key)}>{text}</button> : text}
+        <TableCell className={`text-right ${MONO}`} key={key}>
+          {s.url ? <button type="button" className="underline decoration-dotted underline-offset-2 hover:decoration-solid" onClick={() => open(s.url as string, key)}>{text}</button> : text}
         </TableCell>
       );
     };
+
     body = (
       <div className="space-y-4">
-        <div className="border border-border bg-muted/40 px-3 py-2 text-xs font-medium">{d.disclaimer}</div>
+        <div className="border border-border bg-muted/40 px-3 py-2 text-sm font-medium">{d.disclaimer}</div>
         {incomplete && (
-          <div className="flex items-center gap-2 text-xs"><StatusBadge status={d.status} /><span className="text-muted-foreground">Inputs are incomplete. Effects that cannot be decomposed show UNAVAILABLE.</span></div>
+          <div className="flex items-center gap-2 text-xs">
+            <StatusBadge status={d.status} title="Some figures are missing, so rows without data are left out." />
+            <span className="text-muted-foreground">Some figures are missing, so rows without data are left out.</span>
+          </div>
+        )}
+        {notes.length > 0 && (
+          <ul className="list-disc space-y-1 pl-5 text-xs text-muted-foreground">{notes.map((n, i) => <li key={i}>{n}</li>)}</ul>
         )}
         <div className={`grid grid-cols-2 gap-px border border-border bg-border text-xs ${MONO}`}>
-          <div className="bg-card p-2"><div className="font-sans text-muted-foreground">Baseline</div>{periodText(periods?.baseline)}</div>
-          <div className="bg-card p-2"><div className="font-sans text-muted-foreground">Current</div>{periodText(periods?.current)}</div>
+          <div className="bg-card p-2"><div className="font-sans text-muted-foreground">Before</div>{periodText(periods?.baseline)}</div>
+          <div className="bg-card p-2"><div className="font-sans text-muted-foreground">Now</div>{periodText(periods?.current)}</div>
         </div>
-        <Table>
-          <TableHeader>
-            <TableRow><TableHead>Driver</TableHead><TableHead className="text-right">Baseline</TableHead><TableHead className="text-right">Current</TableHead><TableHead className="text-right">Effect on GMV</TableHead></TableRow>
-          </TableHeader>
-          <TableBody>
-            {d.factors.map((f) => {
-              const m = FACTOR_LABEL[f.key] ?? { label: f.key, unit: "count" };
-              return (
-                <TableRow key={f.key}>
-                  <TableCell>{m.label}</TableCell>
-                  {cell(f.baseline, m.unit, `${m.label} baseline`)}
-                  {cell(f.current, m.unit, `${m.label} current`)}
-                  {cell(f.effect, "USD", `${m.label} effect`)}
+        {rows.length === 0 ? (
+          <p className="text-xs text-muted-foreground">There is no data yet to compare these two periods.</p>
+        ) : (
+          <Table>
+            <TableHeader>
+              <TableRow><TableHead>Driver</TableHead><TableHead className="text-right">Before</TableHead><TableHead className="text-right">Now</TableHead><TableHead className="text-right">Effect on GMV</TableHead></TableRow>
+            </TableHeader>
+            <TableBody>
+              {rows.map((r) => (
+                <TableRow key={r.label} className={r.bold ? "font-medium" : undefined}>
+                  <TableCell>{r.label}</TableCell>
+                  {cell(r.baseline, r.unit, `${r.label} before`)}
+                  {cell(r.current, r.unit, `${r.label} now`)}
+                  {cell(r.effect, "USD", `${r.label} effect`)}
                 </TableRow>
-              );
-            })}
-            <TableRow>
-              <TableCell>Unlinked / older GMV</TableCell>
-              {cell(d.unlinked_older_gmv.baseline, "USD", "Unlinked baseline")}
-              {cell(d.unlinked_older_gmv.current, "USD", "Unlinked current")}
-              {cell(d.unlinked_older_gmv.delta, "USD", "Unlinked change")}
-            </TableRow>
-            <TableRow className="font-medium">
-              <TableCell>Total GMV</TableCell>
-              {cell(d.total.baseline, "USD", "Total baseline")}
-              {cell(d.total.current, "USD", "Total current")}
-              {cell(d.total.delta, "USD", "Total change")}
-            </TableRow>
-          </TableBody>
-        </Table>
-        <div>
-          <div className="mb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">Effects on GMV (method: {d.method})</div>
-          <ChartContainer config={config} className="aspect-auto w-full" style={{ height: 40 + rows.length * 38 } as React.CSSProperties}>
-            <BarChart data={rows.map((r) => ({ ...r, tick: r.effect === null ? `${r.label} (${UNAVAILABLE})` : r.label }))} layout="vertical" margin={{ top: 4, right: 16, bottom: 0, left: 0 }}>
-              <CartesianGrid horizontal={false} />
-              <XAxis type="number" tickLine={false} axisLine={false} tickFormatter={compactTick} />
-              <YAxis type="category" dataKey="tick" tickLine={false} axisLine={false} width={190} />
-              <ReferenceLine x={0} stroke={T.target} strokeWidth={2.5} strokeDasharray="2 4" />
-              <ChartTooltip content={<ChartTooltipContent hideLabel valueFormatter={(_v, _k, item) => item.payload.shown} statusFor={(pl) => <>{pl[0].payload.label}. Click for evidence.</>} />} />
-              <Bar dataKey="effect" isAnimationActive={false} cursor="pointer" minPointSize={0} onClick={(e: { payload?: Row }) => e?.payload?.url && open(e.payload.url, e.payload.label)}>
-                {rows.map((r, i) => (
-                  <Cell key={i} fill={r.effect === null ? HATCH_FILL : r.effect < 0 ? T.statusError : T.attributedGmv} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ChartContainer>
-        </div>
+              ))}
+            </TableBody>
+          </Table>
+        )}
+        {chartRows.length > 0 && (
+          <div>
+            <div className="mb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">What moved GMV</div>
+            <ChartContainer config={config} className="aspect-auto w-full" style={{ height: 40 + chartRows.length * 38 } as React.CSSProperties}>
+              <BarChart data={chartRows} layout="vertical" margin={{ top: 4, right: 16, bottom: 0, left: 0 }}>
+                <CartesianGrid horizontal={false} />
+                <XAxis type="number" tickLine={false} axisLine={false} tickFormatter={compactTick} tick={{ fontSize: 12 }} />
+                <YAxis type="category" dataKey="label" tickLine={false} axisLine={false} width={190} tick={{ fontSize: 12 }} />
+                <ReferenceLine x={0} stroke={T.target} strokeWidth={2.5} strokeDasharray="2 4" />
+                <ChartTooltip content={<ChartTooltipContent hideLabel valueFormatter={(_v, _k, item) => item.payload.shown} statusFor={(pl) => <>{pl[0].payload.label}. Click for evidence.</>} />} />
+                <Bar dataKey="effect" isAnimationActive={false} cursor="pointer" onClick={(e: { payload?: { label: string; url: string | null } }) => e?.payload?.url && open(e.payload.url, e.payload.label)}>
+                  {chartRows.map((r, i) => <Cell key={i} fill={(r.effect ?? 0) < 0 ? T.statusError : T.attributedGmv} />)}
+                </Bar>
+              </BarChart>
+            </ChartContainer>
+          </div>
+        )}
         <div>
           <div className="mb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">Product observations</div>
           <ul className="divide-y divide-border border border-border text-xs">
             {d.products.map((p) => (
               <li key={p.product_id} className="flex flex-wrap items-center gap-x-4 gap-y-1 px-2 py-1.5">
-                <span className="min-w-[8rem] font-medium">{p.name}</span>
-                <span className={`${MONO} text-muted-foreground`}>{formatVal(p.gmv_baseline)} to {formatVal(p.gmv_current)} ({formatVal(p.delta)})</span>
+                <span className="min-w-[8rem] font-medium">{(p as { label?: string }).label ?? p.name}</span>
+                <span className={`${MONO} text-muted-foreground`}>{formatValue(side(p.gmv_baseline).value, "USD")} to {formatValue(side(p.gmv_current).value, "USD")} ({formatValue(side(p.delta).value, "USD")})</span>
                 <span className="text-muted-foreground">{p.observation}</span>
               </li>
             ))}
@@ -136,11 +158,11 @@ export function DiagnosticsComparisonPanel({ brandId, month, cutoff }: ChartProp
   return (
     <ChartCard
       title="Where it broke: period comparison"
-      description={d ? `${periodText((d.periods as Record<string, unknown>)?.current)} vs ${periodText((d.periods as Record<string, unknown>)?.baseline)}` : "Current period vs the same days of the previous month."}
+      description={d ? `${periodText((d.periods as Record<string, unknown>)?.current)} compared with ${periodText((d.periods as Record<string, unknown>)?.baseline)}` : "The current period compared with the same days of the previous month."}
       status={d?.status ?? null}
       info={{
         what: "Compares this period with the same days last month and splits the GMV change into its drivers.",
-        how: "Bars to the right pushed GMV up and bars to the left pulled it down. A hatched bar means that driver could not be worked out from the data; it describes what changed, not proof of why.",
+        how: "Bars to the right pushed GMV up and bars to the left pulled it down. Drivers with no data yet are left out. It describes what changed, not proof of why.",
         decision: "Points you at whether to fix creator count, posting volume or sales per video first.",
       }}
     >

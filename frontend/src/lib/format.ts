@@ -1,6 +1,8 @@
-import type { MV, Val } from "./types";
+import type { DiagSide, MV, Val } from "./types";
 
-export const UNAVAILABLE = "UNAVAILABLE";
+/** Plain placeholder for genuinely missing values (never a bare code or 0). Kept under the old export name for existing imports. */
+export const NO_DATA = "No data yet";
+export const UNAVAILABLE = NO_DATA;
 
 /** Pure string formatting. Never converts through float, never turns null into 0. */
 function group(intPart: string): string {
@@ -55,7 +57,8 @@ export function formatMV(mv: MV | null | undefined): string {
   return mv ? formatValue(mv.value, mv.unit) : UNAVAILABLE;
 }
 /** For diagnostics-style fields that may be a bare value or an MV. USD assumed for bare values unless unit given. */
-export function formatVal(v: Val | undefined, unit: string = "USD"): string {
-  if (v === undefined || v === null) return UNAVAILABLE;
+export function formatVal(v: Val | DiagSide | undefined, unit: string = "USD"): string {
+  if (v === undefined || v === null) return NO_DATA;
+  if (typeof v === "object" && !isMV(v) && "unavailable_reason" in v) return formatVal((v as DiagSide).value, unit);
   return isMV(v) ? formatMV(v) : formatValue(v, unit);
 }

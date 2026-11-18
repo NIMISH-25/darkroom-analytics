@@ -6,10 +6,9 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } f
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEvidenceSheet } from "@/components/midday/EvidenceSheet";
 import { CHART_MARGIN, HATCH_FILL, POINT_STATUS_LABEL } from "@/lib/chart-theme";
-import { formatMV, formatValue, UNAVAILABLE } from "@/lib/format";
 import { useChartSeries } from "@/lib/hooks";
 import type { ChartMetric, PacingPoint } from "@/lib/types";
-import { ChartFrame, LegendItem, T, compactTick, hatchAreas, safeDomain, num, type ChartProps } from "./_shared";
+import { formatMV, formatValue, ChartFrame, AllMissingPlot, LegendItem, T, compactTick, hatchAreas, num, type ChartProps } from "./_shared";
 
 const METRICS: { key: ChartMetric; label: string }[] = [
   { key: "gmv", label: "Sales GMV" },
@@ -23,7 +22,7 @@ const config: ChartConfig = {
   required: { label: "Required pace", color: T.statusWarn },
 };
 
-type Row = { x: string; _scale: number; actual: number | null; projection: number | null; required: number | null; _p: PacingPoint };
+type Row = { x: string; actual: number | null; projection: number | null; required: number | null; _p: PacingPoint };
 type DotClick = (p: { payload?: Row }) => void;
 
 export function PacingTrajectoryChart({ brandId, month, cutoff }: ChartProps) {
@@ -60,7 +59,7 @@ export function PacingTrajectoryChart({ brandId, month, cutoff }: ChartProps) {
     >
       {(d) => {
         const unit = d.units?.actual ?? (metric === "gmv" ? "USD" : "count");
-        const rows: Row[] = d.points.map((p) => ({ x: p.x, _scale: 0, actual: num(p.actual), projection: num(p.projection), required: num(p.required), _p: p }));
+        const rows: Row[] = d.points.map((p) => ({ x: p.x, actual: num(p.actual), projection: num(p.projection), required: num(p.required), _p: p }));
         const target = d.meta.target ?? null;
         const targetNum = target ? num(target.value) : null;
         const openFor = (row: Row | undefined, field: "actual" | "projection" | "required") => {
@@ -68,13 +67,15 @@ export function PacingTrajectoryChart({ brandId, month, cutoff }: ChartProps) {
           if (url) open(url, `${METRICS.find((m) => m.key === metric)?.label} · ${row?._p.x}`);
         };
         const dot = (field: "actual" | "projection" | "required") => ({ r: 4, onClick: ((p: { payload?: Row }) => openFor(p?.payload, field)) as DotClick as never });
+        const hasValues = rows.some((r) => r.actual !== null || r.projection !== null || r.required !== null);
         return (
           <>
+            {!hasValues ? <AllMissingPlot xs={rows.map((r) => r.x)} note="No data yet for this period" /> : (
             <ChartContainer config={config} className="aspect-auto h-72 w-full">
               <ComposedChart data={rows} margin={CHART_MARGIN}>
                 <CartesianGrid vertical={false} />
                 <XAxis dataKey="x" tickLine={false} axisLine={false} tickFormatter={(v: string) => v.slice(5)} minTickGap={16} />
-                <YAxis tickLine={false} axisLine={false} width={48} tickFormatter={compactTick} domain={safeDomain as never} />
+                <YAxis tickLine={false} axisLine={false} width={48} tickFormatter={compactTick} domain={[0, "auto"]} />
                 <ChartTooltip
                   content={
                     <ChartTooltipContent
@@ -91,15 +92,14 @@ export function PacingTrajectoryChart({ brandId, month, cutoff }: ChartProps) {
                 {targetNum !== null && (
                   <ReferenceLine y={targetNum} stroke={T.target} strokeWidth={2.5} strokeDasharray="2 4" ifOverflow="visible" label={{ value: `Target ${formatMV(target)}`, position: "insideTopLeft", fontSize: 12 }} />
                 )}
-                {/* scale scaffold: keeps axes/overlays valid when every real value is null; never drawn, never a metric */}
-                <Line dataKey="_scale" stroke="none" dot={false} activeDot={false} legendType="none" tooltipType="none" isAnimationActive={false} />
                 <Area dataKey="actual" type="monotone" stroke="var(--color-actual)" fill="var(--color-actual)" fillOpacity={0.12} strokeWidth={2.5} connectNulls={false} isAnimationActive={false} dot={{ r: 3, fill: T.actual }} activeDot={dot("actual")} />
                 <Line dataKey="projection" type="monotone" stroke="var(--color-projection)" strokeWidth={2.5} strokeDasharray="6 4" dot={false} connectNulls={false} isAnimationActive={false} activeDot={dot("projection")} />
                 <Line dataKey="required" type="monotone" stroke="var(--color-required)" strokeWidth={2.5} strokeDasharray="1 4" dot={false} connectNulls={false} isAnimationActive={false} activeDot={dot("required")} />
               </ComposedChart>
             </ChartContainer>
+            )}
             <div className="flex flex-wrap gap-x-6 gap-y-1 border-t border-border pt-2 text-xs text-muted-foreground">
-              <span>basis: <span className="font-mono">{typeof d.meta.basis === "string" ? d.meta.basis : d.meta.basis ? formatMV(d.meta.basis) : UNAVAILABLE}</span></span>
+              {typeof d.meta.basis === "string" && <span>basis: <span className="font-mono">{d.meta.basis}</span></span>}
               <span>target: <span className="font-mono tabular-nums">{formatMV(target)}</span></span>
               <span>projection: <span className="font-mono tabular-nums">{formatMV(d.meta.projection ?? null)}</span></span>
               <span>required pace: <span className="font-mono tabular-nums">{formatMV(d.meta.required_pace ?? null)}</span></span>

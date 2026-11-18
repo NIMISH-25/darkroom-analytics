@@ -104,7 +104,7 @@
       },
       "suggested_action": {
         "action": "review",
-        "rule": "A needed input is unknown",
+        "rule": "Some figures for this creator are not available yet",
         "status": "current",
         "status_reason": null
       }
@@ -207,7 +207,7 @@
       },
       "suggested_action": {
         "action": "nudge",
-        "rule": "Retainer creator quiet 7+ days",
+        "rule": "Retainer creator with no posts for 7 or more days",
         "status": "current",
         "status_reason": null
       }
@@ -310,7 +310,7 @@
       },
       "suggested_action": {
         "action": "upgrade",
-        "rule": "Commission creator in top GMV quartile",
+        "rule": "Commission creator among the top sellers",
         "status": "current",
         "status_reason": null
       }
@@ -413,7 +413,7 @@
       },
       "suggested_action": {
         "action": "rebook",
-        "rule": "Strong sales after costs and contract ending",
+        "rule": "Strong sales after costs and the contract is ending",
         "status": "current",
         "status_reason": null
       }
@@ -516,7 +516,7 @@
       },
       "suggested_action": {
         "action": "watch",
-        "rule": "No rule matched",
+        "rule": "Nothing needs action right now",
         "status": "current",
         "status_reason": null
       }
@@ -619,7 +619,7 @@
       },
       "suggested_action": {
         "action": "watch",
-        "rule": "No rule matched",
+        "rule": "Nothing needs action right now",
         "status": "current",
         "status_reason": null
       }

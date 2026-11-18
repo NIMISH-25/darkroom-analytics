@@ -39,7 +39,7 @@
     {
       "series_id": "retainer_cadence",
       "status": "unknown",
-      "reason": "Every value is unknown (video coverage gap).",
+      "reason": "No figures can be shown because video data is missing.",
       "as_of": "2026-10-15T23:59:59-07:00",
       "point_count": 9
     }
