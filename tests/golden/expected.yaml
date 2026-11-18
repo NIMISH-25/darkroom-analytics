@@ -1,0 +1,383 @@
+# HAND-WRITTEN expected values for data/synthetic/golden_cases (never generated, never run through the backend).
+# Do not edit in the same change as backend/ code (REVIEW_CHECKLIST.md).
+#
+# Fixture facts (see data/README.md):
+#   aurelle   : order O_A1  $100.00 paid 2026-10-05 12:00 PT, attributed to cr_0001 / video V_A1. Same order + same
+#               affiliate record appear AGAIN on a "page 2" file (duplicate, counts once). Sample order O_ASAMPLE = 0.00.
+#               batch_2: refund R_A1 $20.00 merchandise, COMPLETED 2026-10-20 12:00 PT.
+#   verdant   : order O_B1 $50.00 paid 2026-10-07, attributed to the SAME creator cr_0001 / video V_V1.
+#   crunchwell: order O_C1 $30.00 (update Oct 9) in batch_1 -> corrected to $45.00 (update Oct 16) in batch_2.
+#               batch_older: O_C1 $20.00 with an OLDER update time (must lose to the newer versions).
+#   glowhaus  : O_G1 $40.00 paid 2026-10-03; batch_2: O_G2 $25.00 paid 2026-10-31 23:30 PT (= 2026-11-01 06:30 UTC).
+#               weekly video file for 2026-W41 (Oct 5-11) never delivered -> video metrics stale/incomplete.
+#   videos    : V_A1 (aurelle, cr_0001, posted 2026-10-01 09:00): week W40 views 100, week W41 views 40 (PER-WEEK values,
+#               not cumulative) -> total views 100 + 40 = 140. V_V1 (verdant, cr_0001, posted 2026-10-06): W41 views 80.
+#               Each weekly file has a "Total" row (e.g. aurelle W40 Total views 100) that must be skipped.
+#   REFUND RULE (docs/db-contract.md rule 4): a refund is subtracted only if completed_local_date <= cutoff.
+#   R_A1 completes 2026-10-20, so aurelle net = 100.00 at cutoffs 2026-10-15 and 2026-10-19, and 80.00 at 2026-10-20
+#   (100.00 - 20.00); cr_0001 refunds = 0.00 at 10-15, 20.00 at 10-20. Gross never changes.
+#   Month metrics use month=2026-10. "cutoff" is the as-of date of the query.
+
+stages: {any: "valid after batch_1 and after batch_2", b1_only: "valid only before batch_2 is ingested", after_b2: "valid only after batch_2 is ingested"}
+
+metrics:
+  # ---- S2: brand A gross = net = 100, brand B = 50 (cutoff 2026-10-15: the $20 refund completes Oct 20, after the cutoff)
+  - {id: S2_aurelle_gmv, stage: any, metric: gmv, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-15"}, value: "100.00"}
+  # 100.00 (O_A1); the page-2 duplicate adds 0 (counted once); O_ASAMPLE is a sample order (0.00, excluded).
+  - {id: S2_aurelle_attributed, stage: any, metric: creator_attributed_gmv, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-15"}, value: "100.00"}
+  - {id: S2_aurelle_net, stage: any, metric: net_attributed_sales, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-15"}, value: "100.00"}
+  # 100.00 - 0.00 refunds completed on or before 2026-10-15 = 100.00
+  - {id: S2_verdant_gmv, stage: any, metric: gmv, params: {brand_id: verdant, month: "2026-10", cutoff: "2026-10-15"}, value: "50.00"}
+  - {id: S2_verdant_attributed, stage: any, metric: creator_attributed_gmv, params: {brand_id: verdant, month: "2026-10", cutoff: "2026-10-15"}, value: "50.00"}
+  - {id: S2_verdant_net, stage: any, metric: net_attributed_sales, params: {brand_id: verdant, month: "2026-10", cutoff: "2026-10-15"}, value: "50.00"}
+  # videos: aurelle V_A1 only (the Total rows must not be counted as videos, V_A1 is in two files -> distinct 1)
+  - {id: S2_aurelle_videos, stage: any, metric: videos, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-15"}, value: "1"}
+  - {id: S2_verdant_videos, stage: any, metric: videos, params: {brand_id: verdant, month: "2026-10", cutoff: "2026-10-15"}, value: "1"}
+  - {id: S2_aurelle_active, stage: any, metric: active_creators, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-15"}, value: "1"}
+  - {id: S2_verdant_active, stage: any, metric: active_creators, params: {brand_id: verdant, month: "2026-10", cutoff: "2026-10-15"}, value: "1"}
+  - {id: S2_creator_videos, stage: any, metric: creator_videos, params: {brand_id: aurelle, creator_id: cr_0001, month: "2026-10", cutoff: "2026-10-15"}, value: "1"}
+  - {id: S2_crunchwell_gmv_b1, stage: b1_only, metric: gmv, params: {brand_id: crunchwell, month: "2026-10", cutoff: "2026-10-15"}, value: "30.00"}
+  # ---- S3 (after batch_2): late $20 refund completing 2026-10-20 restates the ORIGINAL order (cohort view)
+  - {id: S3_aurelle_gross_1020, stage: after_b2, metric: creator_attributed_gmv, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-20"}, value: "100.00"}
+  - {id: S3_aurelle_net_1020, stage: after_b2, metric: net_attributed_sales, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-20"}, value: "80.00"}
+  # 100.00 - 20.00 (completed 2026-10-20 12:00 PT <= end of cutoff day) = 80.00
+  - {id: S3_aurelle_net_1019, stage: after_b2, metric: net_attributed_sales, params: {brand_id: aurelle, month: "2026-10", cutoff: "2026-10-19"}, value: "100.00"}
+  # refund completes the day AFTER this cutoff -> not yet subtracted = 100.00
+  - {id: S3_creator_net_1020, stage: after_b2, metric: creator_net_sales, params: {brand_id: aurelle, creator_id: cr_0001, month: "2026-10", cutoff: "2026-10-20"}, value: "80.00"}
+  - {id: S3_verdant_net_1020, stage: after_b2, metric: net_attributed_sales, params: {brand_id: verdant, month: "2026-10", cutoff: "2026-10-20"}, value: "50.00"}
+  # unchanged: the refund belongs to aurelle only, brand B is independent
+  # ---- S5: newest version wins (O_C1): 45.00 (update Oct 16) beats 30.00 (Oct 9) and the older 20.00 file
+  - {id: S5_crunchwell_gmv_latest, stage: after_b2, metric: gmv, params: {brand_id: crunchwell, month: "2026-10", cutoff: "2026-10-15"}, value: "45.00"}
+  # ---- S6: 2026-10-31 23:30 PT counts in October (UTC would say November)
+  - {id: S6_glowhaus_oct_gmv, stage: after_b2, metric: gmv, params: {brand_id: glowhaus, month: "2026-10", cutoff: "2026-11-02"}, value: "65.00"}
+  # 40.00 (O_G1, Oct 3) + 25.00 (O_G2, Oct 31 23:30 PT) = 65.00
+  - {id: S6_glowhaus_gmv_before_boundary, stage: any, metric: gmv, params: {brand_id: glowhaus, month: "2026-10", cutoff: "2026-10-15"}, value: "40.00"}
+  # cutoff 2026-10-15: only O_G1 (O_G2 is paid 16 days later) = 40.00; orders are NOT affected by the video gap
+  # ---- S8: verified zero: aurelle retainer creator cr_0002 has no video, weekly coverage complete (W40, W41 through Oct 11)
+  - {id: S8_quiet_creator_videos, stage: any, metric: creator_videos, params: {brand_id: aurelle, creator_id: cr_0002, month: "2026-10", cutoff: "2026-10-15"}, value: "0", status: current}
+
+# ---- S7: glowhaus videos: coverage gap (W41 missing) -> unknown, never 0
+unknown_metrics:
+  - {id: S7_glowhaus_videos_1015, stage: any, metric: videos, params: {brand_id: glowhaus, month: "2026-10", cutoff: "2026-10-15"}, statuses: [stale, partial, unavailable]}
+  - {id: S7_glowhaus_active_1015, stage: any, metric: active_creators, params: {brand_id: glowhaus, month: "2026-10", cutoff: "2026-10-15"}, statuses: [stale, partial, unavailable]}
+
+# ---- creators table rows (GET /brands/{brand}/creators?month&cutoff), money as strings
+creator_rows:
+  - id: C_aurelle_cr0001_1015
+    stage: any
+    brand_id: aurelle
+    params: {month: "2026-10", cutoff: "2026-10-15"}
+    creator_id: cr_0001
+    expect: {videos: "1", gmv: "100.00", refunds: "0.00", net_sales: "100.00", commission_cost: "12.00"}
+    # commission 0.12 * 100.00 = 12.00 (record AR_A1; the page-2 duplicate counts once)
+  - id: C_aurelle_cr0001_1020
+    stage: after_b2
+    brand_id: aurelle
+    params: {month: "2026-10", cutoff: "2026-10-20"}
+    creator_id: cr_0001
+    expect: {videos: "1", gmv: "100.00", refunds: "20.00", net_sales: "80.00"}
+  - id: C_verdant_cr0001_1015
+    stage: any
+    brand_id: verdant
+    params: {month: "2026-10", cutoff: "2026-10-15"}
+    creator_id: cr_0001
+    expect: {videos: "1", gmv: "50.00", refunds: "0.00", net_sales: "50.00", commission_cost: "6.00"}
+    # commission 0.12 * 50.00 = 6.00
+  - id: C_aurelle_cr0002_1015
+    stage: any
+    brand_id: aurelle
+    params: {month: "2026-10", cutoff: "2026-10-15"}
+    creator_id: cr_0002
+    expect: {videos: "0"}
+    # retainer creator, no posts, full coverage -> verified zero
+
+# ---- S10 threadline samples. Re-derived by hand from the raw files; rules from docs/db-contract.md:
+#   matched = same brand+creator+product video published after delivery and < 30x24h; rate counts MATURE (>= 30 days
+#   since delivery) observable items only; recent = pending. Same result at as_of 2026-10-15 and 2026-11-02.
+#   Only video in threadline: V_T1 (cr_0003, P_T1, posted 2026-09-05 11:00), coverage W33..W41 (to Oct 11), W42-W43 later.
+#   GS1 cr_0003 P_T1 delivered 2026-08-20 -> V_T1 16 days later (< 30)                      -> matched, mature
+#   GS2 cr_0003 P_T2 delivered 2026-08-25 (Excel serial 46259); no P_T2 video by cr_0003; 51 days old -> no_video, mature
+#   GS3 cr_0003 P_T1 delivered 2026-10-08; 7 days old at Oct 15 (25 at Nov 2, still < 30)    -> pending (V_T1 predates delivery)
+#   GS4 cr_9999 P_T2 delivered 2026-08-24; unknown creator has no video; 52 days old         -> no_video, mature
+#       (an unresolved creator is NOT "ambiguous"; the earlier "unknown" expectation was wrong. Unresolved creators
+#        are reported in data-health unresolved_identities rather than as sample state.)
+#   GS5 cr_0003 P_T2 shipped 2026-10-12, never delivered                                     -> in_transit (item status)
+#   Counts: sent 5 (all shipments); delivered 4 (GS1-GS4); matched 1; no_video 2 (GS2, GS4); unknown 0;
+#           pending 2 = GS3 + GS5 (the count list has no in_transit key; in-transit items are not yet judged -> pending).
+#   conversion_rate = matched / mature observable = 1 / (GS1 + GS2 + GS4) = 1/3 = 0.3333 (GS3, GS5 excluded).
+samples:
+  brand_id: threadline
+  statuses: {GS1: matched, GS2: no_video, GS3: pending, GS4: no_video, GS5: in_transit}
+  matched_video: {GS1: V_T1}
+  delivery_to_video_days: {GS1: 16}   # 2026-08-20 -> 2026-09-05: 11 days to Aug 31 + 5 = 16
+  counts: {sent: 5, delivered: 4, matched: 1, pending: 2, no_video: 2, unknown: 0}
+  conversion_rate: "0.3333"           # compared with tolerance 0.0005
+
+# ---- S4 / S5 / S11 ingest facts
+ingest:
+  batch_older_expected_crunchwell_gmv: "45.00"       # still 45.00 after the older $20.00 file is ingested
+  batch_bad_rejected_file: "orders/verdant/2026-10-extra.json"   # lacks order_id; the $999.00 order must never appear
+  verdant_gmv_after_bad_batch: "50.00"
+  headers_alias_file: "videos/aurelle/2026-W42.xlsx"   # uses Video Id / Video Views / Gross Merchandise Value
+  bom_file: "products/crunchwell.csv"                  # UTF-8 BOM
+
+# ---- attention items (at least one of the kind for the brand)
+attention:
+  - {brand_id: aurelle, kind: quiet_retainer, contains: "@golden.quiet"}   # retainer cr_0002: last video V_A0 2026-09-20 (25 days before as-of); aurelle weekly coverage complete
+  - {brand_id: threadline, kind: sample_no_video}                          # GS2
+  - {brand_id: glowhaus, kind: missing_source, stage: after_b2}            # W41 missing between W40 and W42: a real gap only once batch_2 is in (in batch_1 alone it is just trailing staleness)
+
+# =====================================================================================================================
+# AMENDMENT 2 (essential tests #3 #4 #5 #6 #10 #12 and scenarios S13-S18). HAND-DERIVED from the raw golden files in
+# data/synthetic/golden_cases (batch_3 adds September data); never produced by the backend. Valid once batch_1, batch_2
+# AND batch_3 are ingested. batch_3 does not change any October value asserted above (checked: aurelle/verdant/
+# glowhaus/crunchwell October shop GMV 100/50/40/45; O_C1 only gains an attribution record).
+# =====================================================================================================================
+v2:
+  essential:
+    # ---- #3 partial refund + cancellation, aurelle, month 2026-09
+    # O_A3 paid 2026-09-03: L_A3_1 sale 60.00 (list 75.00 - seller 10.00 - platform 5.00); L_A3_2 40.00 CANCELLED line.
+    # O_A4 paid 09-12 sale 50.00; O_A5 paid 09-14 sale 30.00.  Eligible shop GMV = 60 + 50 + 30 = 140.00 (cancelled 40 out).
+    # Refunds on L_A3_1: R_A3a 15.00 (completed 09-20), R_A3b 10.00 (completed 09-25). R_A3c 40.00 sits on the CANCELLED
+    # line L_A3_2 (completed 09-26) and must NOT be deducted: nothing is subtracted twice.
+    # cr_0001 (AR_A3 attributes L_A3_1 only): gmv 60.00; refunds 15 + 10 = 25.00; net 60 - 25 = 35.00 (a double deduction
+    # would give 60 - 65 = -5.00).  At cutoff 2026-09-22 only R_A3a is complete: refunds 15.00, net 45.00.
+    # commission 0.12 * 60.00 = 7.20.
+    e03:
+      brand_id: aurelle
+      month: "2026-09"
+      shop_gmv: "140.00"
+      cutoff_1015: {creator_id: cr_0001, gmv: "60.00", refunds: "25.00", net_sales: "35.00", commission_cost: "7.20"}
+      cutoff_0922: {creator_id: cr_0001, gmv: "60.00", refunds: "15.00", net_sales: "45.00"}
+      cancelled_line_id: L_A3_2
+
+    # ---- #4 brand isolation and cross-brand allocation (month 2026-09 costs are for a FULL month: 30/30 days)
+    # cr_0010 retainer 3000.00, shares aurelle 0.6 / verdant 0.4: aurelle 3000.00 * 0.6 = 1800.00; verdant
+    # 3000.00 * 0.4 = 1200.00; 1800.00 + 1200.00 = 3000.00 (never 3000 in each brand).
+    # cr_0011 retainer 2000.00 in aurelle and verdant, NO allocation_share -> retainer_cost unknown (null) in both, and
+    # sales_after_costs null (a required cost is unknown); never the full 2000.00 and never 0.
+    # Roster membership by brand (batch_3 roster): aurelle {cr_0001, cr_0002, cr_0010, cr_0011}; verdant {cr_0001,
+    # cr_0010, cr_0011}; crunchwell {cr_0005, cr_0007}; threadline {cr_0003, cr_0012}; glowhaus {cr_0004}.
+    # October: cr_0001 gmv is 100.00 in aurelle and 50.00 in verdant, never 150.00.
+    e04:
+      month: "2026-09"
+      allocation:
+        - {brand_id: aurelle, creator_id: cr_0010, retainer_cost: "1800.00"}
+        - {brand_id: verdant, creator_id: cr_0010, retainer_cost: "1200.00"}
+        - {brand_id: aurelle, creator_id: cr_0011, retainer_cost: null, sales_after_costs: null}
+        - {brand_id: verdant, creator_id: cr_0011, retainer_cost: null, sales_after_costs: null}
+      roster:
+        aurelle: [cr_0001, cr_0002, cr_0010, cr_0011]
+        verdant: [cr_0001, cr_0010, cr_0011]
+        crunchwell: [cr_0005, cr_0007]
+        threadline: [cr_0003, cr_0012]
+        glowhaus: [cr_0004]
+      oct_cr0001: {aurelle: "100.00", verdant: "50.00"}
+
+    # ---- #5 identity ambiguity (aurelle, 2026-09)
+    # AR_A3: creator id cr_0001 with a NEW handle "@golden.mia.new" -> stable id wins: counted for cr_0001 (60.00).
+    # AR_A4: id u_9001, handle "@golden.m1a" (look-alike of "@golden.mia") -> NOT merged into cr_0001: cr_0001 stays 60.00
+    # (merging would give 60 + 50 = 110.00); the 50.00 sits in bucket creator_unresolved and u_9001 / @golden.m1a is
+    # listed in data-health unresolved_identities.
+    e05:
+      brand_id: aurelle
+      month: "2026-09"
+      cr0001_gmv: "60.00"
+      not_merged_gmv: "110.00"
+      unresolved_raw_contains: ["u_9001", "golden.m1a"]
+      unresolved_gmv: "50.00"
+
+    # ---- #6 video snapshots count once (crunchwell weekly files W35..W44, per-week values, never cumulative)
+    # V_C2 (cr_0005, posted 09-02) is in W36 (views 200) and W37 (views 50); V_C3 (cr_0005, 09-08) in W37 (views 80);
+    # V_C4 (cr_0007, 09-05) in W36 (views 90); V_C0 (cr_0007, posted 08-25: August) in W35 and W37.
+    # September: videos = V_C2, V_C3, V_C4 = 3 distinct (V_C2 counted once although in two files); active creators
+    # cr_0005 + cr_0007 = 2; cr_0005 videos 2 with views 200 + 50 + 80 = 330 (V_C2 = 250, not 200 and not 450).
+    # October (V_C5 posted 10-03, in W40 and W41): videos 1, active creators 1.
+    e06:
+      brand_id: crunchwell
+      sep: {videos: "3", active_creators: "2", cr_0005_videos: "2", cr_0005_views: 330, v_c2_views: 250}
+      oct: {videos: "1", active_creators: "1"}
+
+    # ---- #10 money, currency, discount (threadline, 2026-09)
+    # O_T1 line sale prices (after seller + platform discounts): 10.00 (list 20.00 - 5 - 5), 9.99 (12.49 - 2.50),
+    # 0.10, 0.20 -> 10.00 + 9.99 + 0.10 + 0.20 = 20.29 exactly (GMV is the buyer-paid amount, not list 42.69 nor 20.00 net of
+    # a double discount). O_T2 is a EUR order of 100.00: not USD GMV -> excluded (NOT 120.29). [contract gap: the contracts
+    # state USD for every brand but do not spell out the EUR rule; expected = excluded + a quality issue.]
+    # cr_0012 retainer 900.00 effective 2026-09-16: 15 effective days (Sep 16-30) / 30 * 900.00 = 450.00.
+    # Ruling 2: evidence exclusions list reason non_usd_currency with count 1 and amount 100.00 (original currency EUR).
+    e10:
+      exclusion: {reason: non_usd_currency, count: 1, amount: "100.00"}
+      threadline_sept_gmv: "20.29"
+      eur_order_amount: "100.00"
+      cr_0012_retainer_cost: "450.00"
+
+    # ---- #12 projection edge cases (aurelle, shop GMV goal; orders coverage runs to 2026-11-01)
+    # month end: cutoff 2026-10-31 -> elapsed = days in month, so projection = actual = 100.00 (O_A1 only; the sample
+    # order is 0.00 and excluded). Never below actual. Active-creator projection is null (no 3 prior complete months of
+    # history in the fixture) or >= actual (1). Glowhaus video goal (weekly gap) -> projection null.
+    # Zero denominator: cutoff 2026-10-01 must not error; a null projection carries a reason. (Exact projection numbers
+    # for mid-month cutoffs depend on the elapsed-day convention and are NOT asserted.)
+    # Ruling 6 (projection = actual / elapsed complete days * days in month; cutoff 2026-10-15 end of day = 15 elapsed days,
+    # October has 31): aurelle shop GMV 100.00 / 15 * 31 = 206.6667 -> 206.67; aurelle videos 1 / 15 * 31 = 2.0667;
+    # verdant net attributed GMV goal 50.00 / 15 * 31 = 103.3333 -> 103.33. Tolerance 0.01.
+    e12:
+      mid_month:
+        - {brand_id: aurelle, word: gmv, actual: "100.00", projection: "206.67"}
+        - {brand_id: aurelle, word: video, actual: "1", projection: "2.0667"}
+      # verdant: batch_bad rejected orders/verdant/2026-10-extra.json -> rejected file => incomplete coverage =>
+      # projection unavailable (db-contract rule 6: incomplete beats current; a metric takes the worst source state).
+      # 50.00 / 15 * 31 would be 103.33, but the value must be null with a reason naming the rejected file / gap.
+      unavailable:
+        - {brand_id: verdant, word: gmv, reason_any: ["reject", "gap", "quarantin", "incomplete", "coverage"]}
+      aurelle_gmv_month_end: {cutoff: "2026-10-31", actual: "100.00", projection: "100.00"}
+      active_creators_actual: "1"
+
+  # ---- S13 chart series (golden; envelope + values)
+  s13:
+    # daily_gmv_refunds, aurelle, 2026-10, cutoff 2026-10-20: day 2026-10-05 gmv 100.00 (O_A1), attributed 100.00;
+    # cohort refund (restated to the order day) 20.00; net 100.00 - 20.00 = 80.00; processed refund shows on 10-20 (20.00).
+    # Sum of gmv over days <= cutoff 2026-10-15 = 100.00 = the overview actual of the aurelle shop-GMV goal.
+    daily:
+      brand_id: aurelle
+      month: "2026-10"
+      cutoff: "2026-10-20"
+      day_0105: {x: "2026-10-05", gmv: "100.00", creator_attributed_gmv: "100.00", attributed_refunds_cohort: "20.00", net_attributed_sales: "80.00"}
+      day_1020: {x: "2026-10-20", attributed_refunds_processed: "20.00"}
+      # ruling 7: cohort refund on the ORIGINAL order day (Oct 5), processed refund on its completion day (Oct 20):
+      # cohort on Oct 20 = 0.00 (no order that day), processed on Oct 5 = 0.00 (nothing completed that day);
+      # net on Oct 20 = 0.00 attributed - 0.00 cohort refunds = 0.00.
+      cross_check: {cohort_on_completion_day: "0.00", processed_on_order_day: "0.00", net_on_completion_day: "0.00"}
+      sum_gmv_to_1015: "100.00"
+    # attribution_reconciliation, aurelle, 2026-09: resolved 60.00 (1 item: L_A3_1), creator_unresolved 50.00 (1: L_A4_1),
+    # none 30.00 (1: L_A5_1), conflict 0.00 (0). Sum 60 + 50 + 30 + 0 = 140.00 = eligible shop GMV (cancelled L_A3_2 out).
+    # pct = 60/140 = 0.4286, 50/140 = 0.3571, 30/140 = 0.2143, 0 (sums to 1.0000; tolerance 0.0001).
+    reconciliation:
+      brand_id: aurelle
+      month: "2026-09"
+      total: "140.00"
+      buckets:
+        resolved: {amount: "60.00", order_items: 1, pct: "0.4286"}
+        creator_unresolved: {amount: "50.00", order_items: 1, pct: "0.3571"}
+        none: {amount: "30.00", order_items: 1, pct: "0.2143"}
+        conflict: {amount: "0.00", order_items: 0, pct: "0.0000"}
+    # sample_funnel_lag, threadline (see S10 derivation): stages sent 5 (GS1-GS5), delivered 4 (GS1-GS4), mature 3
+    # (GS1, GS2, GS4). Partition of sent: in_transit 1 (GS5), pending 1 (GS3), converted 1 (GS1), no_video_mature 2 (GS2,
+    # GS4), unknown 0 -> 1 + 1 + 1 + 2 + 0 = 5 = sent. Lag: GS1 is 16 days (15-21 bucket) -> 1; other buckets 0; sum 1 =
+    # converted. /samples counts: pending 2 = chart in_transit 1 + pending 1.
+    funnel:
+      brand_id: threadline
+      stages: {sent: 5, delivered: 4, mature: 3}
+      partition: {in_transit: 1, pending: 1, converted: 1, no_video_mature: 2, unknown: 0}
+      lag: {"0-7": 0, "8-14": 0, "15-21": 1, "22-30": 0}
+    # creator_concentration (ruling 3: ALL months through the cutoff; meta.basis "all months through <cutoff>"),
+    # crunchwell, cutoff 2026-10-15, gross attributed GMV of eligible resolved lines:
+    #   cr_0005 = V_C2 40.00 + V_C3 20.00 (Sep) + O_C1 45.00 (Oct 8, via V_C5) = 105.00
+    #   cr_0007 = V_C4 30.00 + V_C0 order 10.00 (Sep) = 40.00;   total 145.00
+    # share is a 0-1 ratio; cum_creator_pct / cum_gmv_pct are PERCENT values 0-100.
+    # rank 1 cr_0005 share 105/145 = 0.724138, cum_creator_pct 1/2 * 100 = 50, cum_gmv_pct 105/145 * 100 = 72.4138
+    # rank 2 cr_0007 share 40/145 = 0.275862, cum_creator_pct 100, cum_gmv_pct 100   (tolerance 0.0001 on share, 0.01 on pct)
+    concentration:
+      brand_id: crunchwell
+      month: "2026-10"
+      cutoff: "2026-10-15"
+      points:
+        - {x: 1, creator_id: cr_0005, gmv: "105.00", share: "0.724138", cum_creator_pct: "50", cum_gmv_pct: "72.4138"}
+        - {x: 2, creator_id: cr_0007, gmv: "40.00", share: "0.275862", cum_creator_pct: "100", cum_gmv_pct: "100"}
+    # retainer_cadence, threadline, cr_0012 (retainer 900.00, 4 posts/month, share 1, effective from 2026-09-16).
+    # Ruling 4: a point exists only for the trailing complete months (2026-07, 2026-08, 2026-09) in which the contract is
+    # effective for ANY part of the month. July and August: not effective -> no point for cr_0012 at all.
+    # September: effective days Sep 16-30 = 15 of 30 -> expected_posts = 4 * 1 * 15/30 = 2. Threadline weekly coverage
+    # (W33-W44, from 2026-08-10) is gap-free through Sep 30 -> posts 0 (no cr_0012 video), attainment 0/2 = 0.
+    cadence:
+      brand_id: threadline
+      creator_id: cr_0012
+      sep: {x: "2026-09", expected_posts: "2", posts: 0, attainment_pct: "0"}
+      absent_months: ["2026-07", "2026-08"]
+    # glowhaus videos chart: weekly gap -> points null with a status, never 0 (S7 data).
+    gap:
+      brand_id: glowhaus
+      series: pacing_trajectory
+      metric: videos
+      month: "2026-10"
+      cutoff: "2026-10-15"
+
+  # ---- S14 diagnostics, crunchwell, month 2026-10, cutoff 2026-10-15 (Oct 1-15 vs Sep 1-15)
+  # Baseline Sep 1-15: active creators A0 = cr_0005 + cr_0007 = 2; videos V_C2 (09-02), V_C4 (09-05), V_C3 (09-08) = 3 so
+  # V0 = 3/2 = 1.5 per active creator; attributed GMV to those videos 40 + 30 + 20 = 90 over 3 linked videos -> G0 = 30.
+  # Unlinked older GMV: O_C5 10.00 attributed to V_C0 (posted 08-25, outside the period) = 10.00. Total0 = 90 + 10 = 100.00.
+  # Current Oct 1-15: A1 = 1 (cr_0005), V_C5 only -> V1 = 1, O_C1 45.00 attributed to V_C5 -> G1 = 45; unlinked 0.
+  # Total1 = 45.00; delta = -55.00. Linked: 2 * 1.5 * 30 = 90 -> 1 * 1 * 45 = 45 (change -45).
+  # Shapley: effect_A = dA * [(V0G0 + V1G1)/3 + (V0G1 + V1G0)/6], dA = -1: V0G0 = 45, V1G1 = 45 -> 90/3 = 30;
+  #   V0G1 = 67.5, V1G0 = 30 -> 97.5/6 = 16.25; 46.25 * -1 = -46.25.
+  # effect_V = dV * [(A0G0 + A1G1)/3 + (A0G1 + A1G0)/6], dV = -0.5: 60, 45 -> 35; 90, 30 -> 20; 55 * -0.5 = -27.50.
+  # effect_G = dG * [(A0V0 + A1V1)/3 + (A0V1 + A1V0)/6], dG = +15: 3, 1 -> 4/3; 2, 1.5 -> 3.5/6; 11.5/6 * 15 = +28.75.
+  # Check: -46.25 - 27.50 + 28.75 = -45.00 (linked change); -45.00 + (0 - 10) = -55.00 = total change.
+  s14:
+    brand_id: crunchwell
+    month: "2026-10"
+    cutoff: "2026-10-15"
+    total: {baseline: "100.00", current: "45.00", delta: "-55.00"}
+    factors:   # order: active creators, videos per active creator, GMV per linked video
+      - {baseline: "2", current: "1", effect: "-46.25"}
+      - {baseline: "1.5", current: "1", effect: "-27.50"}
+      - {baseline: "30", current: "45", effect: "28.75"}
+    unlinked_older_gmv: {baseline: "10.00", current: "0.00", delta: "-10.00"}
+    null_brand: glowhaus      # incomplete video coverage (W41 gap) -> factor effects null
+
+  # ---- S15 notes (aurelle / cr_0001)
+  # body "  Called Mia about Q4 hooks  " is trimmed to "Called Mia about Q4 hooks" (25 chars). 2000 characters is accepted,
+  # 2001 rejected (422), empty or whitespace-only rejected (422). author = token user "demo". GET is newest first and
+  # total_count grows by exactly 1 per accepted POST. data_revision is identical before and after, and after replaying
+  # golden batch_1 and batch_2.
+  s15:
+    brand_id: aurelle
+    creator_id: cr_0001
+    body_raw: "  Called Mia about Q4 hooks  "
+    body_stored: "Called Mia about Q4 hooks"
+    author: demo
+    max_len: 2000
+
+  # ---- S16 evidence pagination (aurelle gmv 2026-09): included rows = L_A3_1, L_A4_1, L_A5_1 (3 distinct source rows)
+  s16:
+    params: {brand_id: aurelle, month: "2026-09", cutoff: "2026-10-15"}
+    metric: gmv
+    result: "140.00"
+    min_included_rows: 3
+
+  # ---- S18 portfolio KPIs after batch_3, month 2026-10, cutoff 2026-10-15
+  # gmv = aurelle 100.00 + verdant 50.00 + crunchwell 45.00 + glowhaus 40.00 + threadline 0.00 (orders file declared and
+  # empty for Oct) = 235.00; brands_covered 5 of 5.
+  s18:
+    month: "2026-10"
+    cutoff: "2026-10-15"
+    gmv: "235.00"
+    brands_total: 5
+
+# =====================================================================================================================
+# WAVE 3 (docs/api-contract-amendment-3.md): hand-derived from the raw golden files.
+# =====================================================================================================================
+w3:
+  # After stage 2 of run_blackbox.ps1 (batch_1, batch_2, then batch_bad). batch_bad has two files: crunchwell
+  # returns/2026-10.json (valid: one REJECTED return, accepted) and verdant orders/2026-10-extra.json (every order lacks
+  # order_id -> rejected). So brand_failed: verdant 1; aurelle, crunchwell, threadline, glowhaus 0. batch_overlap
+  # (aurelle W41 quarantine) is only ingested in the late stage, after these checks.
+  golden_failed_after_bad: {verdant: 1, aurelle: 0, crunchwell: 0, threadline: 0, glowhaus: 0}
+  # Shared-tracker row issue: samples.xlsx is ONE file for all brands (a shared tracker). Its row GS4 has
+  # brand_id threadline and creator cr_9999, which is on no roster -> an unresolved identity for threadline only.
+  # Aurelle's own unresolved id (u_9001, affiliate source, batch_3) must not appear for threadline either.
+  shared_row_issue: {raw_identifier: "cr_9999", brand_id: threadline, source: samples}
+  # Seeded FULL synthetic data (marker synth): batch_2 holds orders/verdant/2026-10-extra.json without order_id
+  # (rejected) and a threadline W41 weekly resend with changed numbers (quarantined) -> verdant 1, threadline 1, others 0.
+  synthetic_failed: {verdant: 1, threadline: 1, aurelle: 0, crunchwell: 0, glowhaus: 0}
+  # Open quality issues per brand on the FULL synthetic data (rules: backend/app/ingestion/silver.py). One
+  # creator_not_on_roster issue per (brand, raw creator id) from affiliate_orders (ruling 1) plus one per sample shipment whose
+  # creator is not on the brand roster; file_rejected / file_quarantined rows come from batch.py. Derived by reading the raw
+  # files (batch_1 roster vs batch_1+batch_2 affiliate records and the batch_2 samples snapshot):
+  #   aurelle    affiliate ids u_90001, u_90005, u_90015                             = 3
+  #   verdant    affiliate ids u_90011, u_90025 = 2, + file_rejected (orders-extra, no order_id) 1       = 3
+  #   crunchwell affiliate ids u_90006, u_90009, u_90014, u_90022, u_90026           = 5
+  #   threadline affiliate ids u_90002, u_90003, u_90021, u_90024 = 4, sample SHP-THR-027 (cr_0999) = 1,
+  #              + file_quarantined (W41 overlap resend) 1                           = 6
+  #   glowhaus   affiliate id u_90009                                                = 1
+  # (no other issue code is produced by this data: no duplicate lines, conflicts, orphans or currency mismatches.)
+  synthetic_open_issues: {aurelle: 3, crunchwell: 5, glowhaus: 1, threadline: 6, verdant: 3}
