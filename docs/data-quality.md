@@ -56,7 +56,7 @@ These are tiny sets with hand-written answers (`tests/golden/expected.yaml`).
 | `batch_allbad` | A crunchwell order file whose rows ALL lack `order_id`: no usable rows, so the file is rejected (exit 1, brand incomplete, projection unavailable, plain note naming Crunchwell). |
 | `batch_overlap` | Aurelle W41 resent with different numbers (quarantined). |
 
-**EUR order handling (golden fixture only; the synthetic batch_1 and batch_2 contain no non-USD order):** an order whose currency is not USD is excluded from USD GMV. The original amount and currency are stored. Raises `currency_mismatch` (warn) with message `currency EUR`. The evidence sheet lists the exclusion with reason `non_usd_currency`. No conversion is attempted (see `docs/rulings-after-verification.md`).
+**EUR order handling (golden fixture only; the synthetic batch_1 and batch_2 contain no non-USD order):** an order whose currency is not USD is excluded from USD GMV. The original amount and currency are stored. Raises `currency_mismatch` (warn) with message `currency EUR`. The evidence sheet lists the exclusion with reason `non_usd_currency`. No conversion is attempted.
 
 ## All quality issue codes
 

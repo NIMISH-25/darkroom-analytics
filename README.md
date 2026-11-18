@@ -13,7 +13,6 @@ The simulated "today" is **2026-10-15, end of day, US Pacific, USD**.
 | [docs/source-contracts.md](docs/source-contracts.md) | The source file formats |
 | [docs/data-quality.md](docs/data-quality.md) | Planted data problems and how ingestion handles each |
 | [docs/decisions.md](docs/decisions.md) | Nine assumed customer answers (no customer was available) |
-| [docs/rulings-after-verification.md](docs/rulings-after-verification.md) | Decisions made after the independent verification run |
 | [docs/PROJECT_EXPLAINER.md](docs/PROJECT_EXPLAINER.md) | Plain-English guide, glossary and field dictionary |
 | [docs/DEPLOYMENT_PLAN.md](docs/DEPLOYMENT_PLAN.md) | Plan for hosting (not executed) |
 | [data/README.md](data/README.md) | Guide to the generated synthetic datasets (what each file is, its fields and planted issues) |
@@ -56,7 +55,13 @@ psql -U postgres -c "CREATE DATABASE darkroom OWNER darkroom;"
 
 The default connection string is `postgresql://darkroom:darkroom@localhost:5432/darkroom`. Override it with the `DATABASE_URL` environment variable.
 
-**2. Backend install**
+**2. Environment files.** The backend reads `.env` from the folder it runs in. Copy the repo-root template (it has comments) and fill in the backend variables, then copy the `NEXT_PUBLIC_` lines into `frontend/.env.local`. Never commit either file.
+
+```powershell
+Copy-Item .env.example backend\.env
+```
+
+**3. Backend install**
 
 ```powershell
 cd F:\Interviews\Darkroom\darkroom-analytics\backend
@@ -65,19 +70,19 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-**3. Create the tables** (applies migrations 001 to 017: bronze_meta, silver, gold_core, gold_metrics, goal_progress_perf, perf_and_sample_coverage, notes, indexes, gold_mv, gold_charts, rulings_currency_roster_cadence, cadence_coverage_start, issue_brand_backfill, goal_progress_cutoff, goal_progress_video_precision, concentration_zero_samples_unresolved, no_unknown_as_zero):
+**4. Create the tables** (applies migrations 001 to 017: bronze_meta, silver, gold_core, gold_metrics, goal_progress_perf, perf_and_sample_coverage, notes, indexes, gold_mv, gold_charts, rulings_currency_roster_cadence, cadence_coverage_start, issue_brand_backfill, goal_progress_cutoff, goal_progress_video_precision, concentration_zero_samples_unresolved, no_unknown_as_zero):
 
 ```powershell
 python -m app.cli migrate
 ```
 
-**4. Ingest batch 1** (as-of 2026-10-15):
+**5. Ingest batch 1** (as-of 2026-10-15):
 
 ```powershell
 python -m app.cli ingest ../data/synthetic/batch_1
 ```
 
-**5. Ingest batch 2** (later delivery). One row of `orders/verdant/2026-10-extra.json` has no order number: that row alone is left out (the file loads, totals show a plain note, the command exits 0). Only a file with no usable rows is rejected (exit 1):
+**6. Ingest batch 2** (later delivery). One row of `orders/verdant/2026-10-extra.json` has no order number: that row alone is left out (the file loads, totals show a plain note, the command exits 0). Only a file with no usable rows is rejected (exit 1):
 
 ```powershell
 python -m app.cli ingest ../data/synthetic/batch_2
@@ -86,24 +91,27 @@ echo $LASTEXITCODE
 
 Replaying either batch changes no data. Replaying batch 2 exits 0 again with the same note. Other CLI commands: `profile <batch_dir>` and `reset`.
 
-**6. Start the API** (port 8000):
+**7. Start the API** (port 8000):
 
 ```powershell
 uvicorn app.main:app --port 8000
 ```
 
-**7. Start the frontend** (new terminal, port 3000):
+**8. Start the frontend** (new terminal, port 3000):
 
 ```powershell
 cd F:\Interviews\Darkroom\darkroom-analytics\frontend
-Copy-Item .env.example .env.local
 npm install
 npm run dev
 ```
 
-`.env.example` sets `NEXT_PUBLIC_USE_MOCKS=false` (real API at `NEXT_PUBLIC_API_BASE_URL=http://localhost:8000`). Set it to `true` to render local mock JSON with no backend.
+`frontend/.env.local` holds the `NEXT_PUBLIC_` lines from `.env.example`, which set `NEXT_PUBLIC_USE_MOCKS=false` (real API at `NEXT_PUBLIC_API_BASE_URL=http://localhost:8000`). Set it to `true` to render local mock JSON with no backend.
 
-**8. Open http://localhost:3000.** The login page has no inputs: it shows a notice that the workspace runs on pre-loaded synthetic demo data, and one **Enter Demo Workspace** button (it signs in as `demo` / `darkroom-demo` under the hood). A **Logout** button sits in the sidebar footer and the top bar. Details: [docs/api-contract-amendment-3.md](docs/api-contract-amendment-3.md).
+**9. Open http://localhost:3000.** The login page has Username and Password fields and a **Sign In** button. The demo credentials (`demo` / `darkroom-demo`) are shown below the fields. A **Logout** button sits in the sidebar footer and the top bar.
+
+On the Overview page the portfolio "Projected" value is plain text, and the progress bar only shows when a real progress value exists. The Videos posted and Active creators charts add up only the brands with complete video data and say which brands are left out.
+
+Keep-alive: while the app is open in a browser tab, the frontend sends a silent request to the backend's `/healthz` every 14 minutes, and the backend pings its own `/healthz` every 14 minutes. On Render's free tier a service still sleeps after about 15 minutes without outside traffic (the self-ping does not count), so use a free external uptime monitor on `https://<backend>.onrender.com/healthz` every 10 to 14 minutes if it must stay awake.
 
 ### Tests
 
@@ -156,20 +164,20 @@ Results of the last full verification (2026-11-18, clean database reset before e
 | TypeScript check and production build | clean |
 | Tests collected in the root `tests/` suite (with the Playwright-capable Python) | 304 |
 
-After the verification the database was left on the clean synthetic data: 280 files, 3,991 orders, 2 revisions. The Verdant extra orders file now loads with its one faulty record left out (see [docs/api-contract-amendment-4.md](docs/api-contract-amendment-4.md)); the only failed file is the quarantined Threadline weekly video file.
+After the verification the database was left on the clean synthetic data: 280 files, 3,991 orders, 2 revisions. The Verdant extra orders file now loads with its one faulty record left out; the only failed file is the quarantined Threadline weekly video file.
 
 ## Done and not done
 
 Done: simulated data with planted problems; Bronze/Silver/Gold ingestion with replay, quarantine and rejection; API with login, evidence, freshness, notes and charts; the screens above; golden fixture and blackbox suite.
 
 Not done:
-- Live deployment (plan only in [docs/DEPLOYMENT_PLAN.md](docs/DEPLOYMENT_PLAN.md); Neon, Vercel and Render paths not run).
+- Live deployment (plan only in [docs/DEPLOYMENT_PLAN.md](docs/DEPLOYMENT_PLAN.md); Neon and Render paths not run).
 - Real users, roles or password reset (one demo account).
 - Real TikTok data and scheduled file pickup (ingestion is a manual command).
 
 ## What I would do next
 
-- Deploy: Vercel for the UI, Render for the API, Neon for the database.
+- Deploy: Render for the UI and the API, Neon for the database.
 - Sync real TikTok Shop data instead of file drops.
 - Load Silver incrementally instead of rebuilding it on every publish.
 - Add real authentication with users and roles.

@@ -61,11 +61,11 @@ The full numbered list of assumed customer answers is in [decisions.md](decision
 
 ## 4. Scope
 
-**What it is:** an internal decision tool over five clients' creator programs. It shows goals against actuals with a projection and the reasoning; every creator's output, cost and value; the sample funnel; where every number came from; and whether each data source is fresh, late or missing. It also lists who needs attention in one ranked queue, traces a goal miss to a likely cause, suggests a rebook, nudge or drop action per creator with the visible rule, keeps team notes per creator, and draws charts with an info popover explaining each one. Data Health is brand-scoped, and login is a single "Enter Demo Workspace" button.
+**What it is:** an internal decision tool over five clients' creator programs. It shows goals against actuals with a projection and the reasoning; every creator's output, cost and value; the sample funnel; where every number came from; and whether each data source is fresh, late or missing. It also lists who needs attention in one ranked queue, traces a goal miss to a likely cause, suggests a rebook, nudge or drop action per creator with the visible rule, keeps team notes per creator, and draws charts with an info popover explaining each one. Data Health is brand-scoped, and login is a Username and Password form with the demo credentials shown below it.
 
 **What it is not:** finding or messaging creators, running ads, live calls to TikTok's API, real authentication or production infrastructure, or payout and settlement accounting. It does not forecast beyond month end, and it does not claim to prove why a number moved.
 
-**Built since the first draft:** goal-miss diagnostics (Oct 1-15 against Sep 1-15, on `/diagnostics` and the brand Diagnostics tab); `suggested_action` on creator rows with its rule; creator notes (API and a form in the creator sheet); the ranked Needs-attention queue (`/attention`); charts with info popovers; brand-scoped Data Health; one-click demo login. Non-USD orders are excluded from USD GMV, and unknown creator ids stay in an unresolved bucket (see `docs/rulings-after-verification.md`).
+**Built since the first draft:** goal-miss diagnostics (Oct 1-15 against Sep 1-15, on `/diagnostics` and the brand Diagnostics tab); `suggested_action` on creator rows with its rule; creator notes (API and a form in the creator sheet); the ranked Needs-attention queue (`/attention`); charts with info popovers; brand-scoped Data Health; one-click demo login. Non-USD orders are excluded from USD GMV, and unknown creator ids stay in an unresolved bucket.
 
 **Not built:**
 - Live deployment (a plan exists in `docs/DEPLOYMENT_PLAN.md`).
