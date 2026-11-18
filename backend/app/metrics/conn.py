@@ -33,11 +33,11 @@ def open_pool() -> None:
     url = get_settings().DATABASE_URL
     if _read is None:
         _read = ConnectionPool(url, min_size=2, max_size=10, open=False, configure=_cfg_read,
-                               kwargs={"row_factory": dict_row, "autocommit": False})
+                               kwargs={"row_factory": dict_row, "autocommit": False, "prepare_threshold": None})
         _read.open()
     if _write is None:
         _write = ConnectionPool(url, min_size=1, max_size=3, open=False,
-                                kwargs={"row_factory": dict_row, "autocommit": True})
+                                kwargs={"row_factory": dict_row, "autocommit": True, "prepare_threshold": None})
         _write.open()
 
 
@@ -72,7 +72,7 @@ def read_conn():
             _apply_cutoff(conn)
             yield conn
         return
-    conn = psycopg.connect(get_settings().DATABASE_URL, row_factory=dict_row, autocommit=False)
+    conn = psycopg.connect(get_settings().DATABASE_URL, row_factory=dict_row, autocommit=False, prepare_threshold=None)
     try:
         _cfg_read(conn)
         _apply_cutoff(conn)
@@ -88,7 +88,7 @@ def write_conn():
         with _write.connection() as conn:
             yield conn
         return
-    with psycopg.connect(get_settings().DATABASE_URL, row_factory=dict_row, autocommit=True) as conn:
+    with psycopg.connect(get_settings().DATABASE_URL, row_factory=dict_row, autocommit=True, prepare_threshold=None) as conn:
         yield conn
 
 
