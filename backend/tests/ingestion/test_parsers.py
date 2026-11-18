@@ -63,3 +63,30 @@ def test_alias_resolution_and_ambiguity():
     i.see("c1", "@Mia", t); i.see("c1", "mia.new", t); i.see("c2", "dup", t); i.see("c3", "@dup", t)
     assert i.resolve(None, "MIA") == "c1" and i.resolve(None, "mia.new") == "c1"
     assert i.resolve(None, "dup") is None and i.is_ambiguous("dup")
+
+
+def _orders(rows):
+    return json.dumps({"orders": rows}).encode()
+
+
+def _o(i, **kw):
+    d = {"order_id": f"o{i}", "shop_id": "s", "status": "X", "create_time": 1, "update_time": 1,
+         "line_items": [{"id": "l1", "product_id": "p", "sale_price": "1.00"}]}
+    d.update(kw)
+    return d
+
+
+def test_bad_rows_are_excluded_alone_and_all_counted():
+    d = _orders([_o(1), _o(2, order_id=None), _o(3), _o(4, line_items=[{"id": None, "product_id": "p"}])])
+    r = parse_file("orders", Path("o.json"), d)
+    assert r.status == "accepted" and len(r.records) == 2 and r.rows_total == 4
+    assert [x[0] for x in r.excluded] == [2, 4]
+
+
+def test_file_with_only_bad_rows_is_rejected():
+    r = parse_file("orders", Path("o.json"), _orders([_o(1, order_id=None), _o(2, shop_id="")]))
+    assert r.status == "rejected" and len(r.excluded) == 2
+
+
+def test_empty_orders_file_stays_accepted():
+    assert parse_file("orders", Path("o.json"), _orders([])).status == "accepted"

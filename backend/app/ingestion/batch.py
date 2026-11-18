@@ -30,6 +30,7 @@ class Report:
     rejected: list = field(default_factory=list)
     quarantined: list = field(default_factory=list)
     missing: list = field(default_factory=list)
+    excluded: list = field(default_factory=list)
     unlisted: list = field(default_factory=list)
     issues: dict = field(default_factory=dict)
     revision_id: int | None = None
@@ -39,7 +40,10 @@ class Report:
         L = [f"Batch {self.batch_id} (as_of {self.as_of})",
              f"  new accepted : {len(self.new)}", f"  unchanged    : {len(self.unchanged)}",
              f"  quarantined  : {len(self.quarantined)}", f"  rejected     : {len(self.rejected)}",
-             f"  missing      : {len(self.missing)}", f"  unlisted     : {len(self.unlisted)}"]
+             f"  missing      : {len(self.missing)}",
+             f"  rows left out: {sum(n for _, n, _ in self.excluded)}", f"  unlisted     : {len(self.unlisted)}"]
+        for p, n, tot in self.excluded:
+            L.append(f"    [Rows left out] {p}: {n} of {tot} rows left out; the file stays loaded")
         for title, items in (("Quarantined", self.quarantined), ("Rejected", self.rejected),
                              ("Missing", self.missing), ("Unlisted (ignored)", self.unlisted)):
             for p, e in items:
@@ -94,14 +98,14 @@ class _State:
         return None
 
 
-def _insert_file(conn, st: _State, run_id, batch_id, entry, scope, start, end, sha, status, error, upd, nrows, path):
+def _insert_file(conn, st: _State, run_id, batch_id, entry, scope, start, end, sha, status, error, upd, nrows, path, excluded=0):
     """Insert with ON CONFLICT DO NOTHING RETURNING; returns the new id, or None when the file is a replay."""
     row = conn.execute(
         "insert into bronze.source_file (batch_id, run_id, path, source_type, scope_key, coverage_start, coverage_end, kind,"
-        " sha256, parser_version, status, error, row_count, src_updated_at) values "
-        "(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) on conflict do nothing returning source_file_id",
+        " sha256, parser_version, status, error, row_count, src_updated_at, excluded_rows) values "
+        "(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) on conflict do nothing returning source_file_id",
         (batch_id, run_id, path, entry["source_type"], scope, start, end, KINDS.get(entry["source_type"], "increment"), sha,
-         PARSER_VERSION, status, error, nrows, upd)).fetchone()
+         PARSER_VERSION, status, error, nrows, upd, excluded)).fetchone()
     if row is None:
         return None
     st.files[(entry["source_type"], scope, start, end, sha, PARSER_VERSION)] = (row[0], status, error)
@@ -129,6 +133,18 @@ def _file_issue(conn, st, status, path, error, fid, scope, source_type):
     code = {"rejected": "file_rejected", "quarantined": "file_quarantined", "missing": "file_missing"}[status]
     _issue(conn, st, code, path, "error" if status != "quarantined" else "warn", error or code, fid,
            _brand_scope(scope), source_type)
+
+
+def _record_excluded(conn, st, fid, path, scope, source_type, res) -> None:
+    """Developer table of every bad row plus one plain quality issue per file (code rows_excluded)."""
+    with conn.cursor() as cur:
+        cur.executemany("insert into bronze.excluded_row (source_file_id, row_num, reason_code, detail) values (%s,%s,%s,%s) "
+                        "on conflict do nothing", [(fid, rn, code, detail) for rn, code, detail in res.excluded])
+    n, total = len(res.excluded), res.rows_total
+    reasons = sorted({c for _, c, _ in res.excluded})
+    _issue(conn, st, "rows_excluded", path, "warn",
+           f"{n} of {total} rows in {path} were left out ({', '.join(reasons)}); the rest of the file is loaded, totals may be low.",
+           fid, _brand_scope(scope), source_type)
 
 
 def _copy_records(conn, fid, records) -> None:
@@ -232,7 +248,8 @@ def ingest_batch(conn: psycopg.Connection, batch_dir: Path) -> Report:
                 if ov:
                     status, error = "quarantined", f"period {start}..{end} overlaps accepted file {ov[0]} ({ov[1]}..{ov[2]})"
             fid = _insert_file(conn, st, run_id, rep.batch_id, entry, scope, start, end, sha, status, error, upd,
-                               len(res.records) if status == "accepted" else None, path)
+                               len(res.records) if status == "accepted" else None, path,
+                               len(res.excluded) if status == "accepted" else 0)
             if fid is None:  # replay (concurrent writer registered this exact file first)
                 rep.unchanged.append((path, "replay"))
                 conn.commit()
@@ -243,6 +260,9 @@ def ingest_batch(conn: psycopg.Connection, batch_dir: Path) -> Report:
                 if res.unknown_headers:
                     _issue(conn, st, "unknown_extra_column", path, "info", f"extra columns kept in bronze only: {res.unknown_headers}", fid, _brand_scope(scope), entry["source_type"])
                 rep.new.append((path, f"{len(res.records)} rows"))
+                if res.excluded:
+                    _record_excluded(conn, st, fid, path, scope, entry["source_type"], res)
+                    rep.excluded.append((path, len(res.excluded), res.rows_total))
             elif status == "quarantined":
                 rep.quarantined.append((path, error))
                 _file_issue(conn, st, "quarantined", path, error, fid, scope, entry["source_type"])

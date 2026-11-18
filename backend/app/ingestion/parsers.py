@@ -66,6 +66,9 @@ class Parsed:
     headers: list[str] = field(default_factory=list)
     mapping: dict[str, str] = field(default_factory=dict)
     unknown_headers: list[str] = field(default_factory=list)
+    # rows left out on their own: (row_num, reason_code, detail); the file stays accepted
+    excluded: list[tuple[int, str, str]] = field(default_factory=list)
+    rows_total: int = 0
 
 
 def sha256_bytes(b: bytes) -> str:
@@ -167,29 +170,42 @@ def _parse_json(source_type: str, data: bytes) -> Parsed:
     if not isinstance(rows, list):
         return Parsed("rejected", f"missing top-level list '{key}'")
     out = Parsed()
+    out.rows_total = len(rows)
     for i, rec in enumerate(rows, start=1):
-        if not isinstance(rec, dict):
-            return Parsed("rejected", f"{key}[{i}] is not an object")
-        for k in JSON_REQUIRED[source_type]:
-            if k not in rec or rec[k] is None or (isinstance(rec[k], str) and not rec[k].strip()):
-                return Parsed("rejected", f"{key}[{i}] missing required field '{k}'")
-        for k in MONEY_KEYS[source_type]:
-            if not _check_money(rec.get(k)):
-                return Parsed("rejected", f"{key}[{i}] invalid amount in '{k}': {rec.get(k)!r}")
-        for k in TIME_KEYS[source_type]:
-            if not _check_time(rec.get(k)):
-                return Parsed("rejected", f"{key}[{i}] invalid timestamp in '{k}': {rec.get(k)!r}")
-        if source_type == "orders":
-            if not isinstance(rec["line_items"], list):
-                return Parsed("rejected", f"{key}[{i}] line_items is not a list")
-            for j, li in enumerate(rec["line_items"], start=1):
-                for k in LINE_REQUIRED:
-                    if not isinstance(li, dict) or li.get(k) in (None, ""):
-                        return Parsed("rejected", f"{key}[{i}].line_items[{j}] missing required field '{k}'")
-                if not _check_money(li.get("sale_price")):
-                    return Parsed("rejected", f"{key}[{i}].line_items[{j}] invalid sale_price {li.get('sale_price')!r}")
+        bad = _json_row_problem(source_type, key, i, rec)
+        if bad:
+            out.excluded.append((i, bad[0], bad[1]))
+            continue
         out.records.append((i, rec))
+    if rows and not out.records:
+        return Parsed("rejected", f"no usable rows: all {len(rows)} rows have problems (first: {out.excluded[0][2]})",
+                      excluded=out.excluded, rows_total=len(rows))
     return out
+
+
+def _json_row_problem(source_type: str, key: str, i: int, rec: Any) -> tuple[str, str] | None:
+    """Reason (code, detail) why one JSON row must be left out, or None when it is usable."""
+    if not isinstance(rec, dict):
+        return ("not_an_object", f"{key}[{i}] is not an object")
+    for k in JSON_REQUIRED[source_type]:
+        if k not in rec or rec[k] is None or (isinstance(rec[k], str) and not rec[k].strip()):
+            return ("missing_identifier", f"{key}[{i}] missing required field '{k}'")
+    for k in MONEY_KEYS[source_type]:
+        if not _check_money(rec.get(k)):
+            return ("invalid_amount", f"{key}[{i}] invalid amount in '{k}': {rec.get(k)!r}")
+    for k in TIME_KEYS[source_type]:
+        if not _check_time(rec.get(k)):
+            return ("invalid_timestamp", f"{key}[{i}] invalid timestamp in '{k}': {rec.get(k)!r}")
+    if source_type == "orders":
+        if not isinstance(rec["line_items"], list):
+            return ("bad_line_item", f"{key}[{i}] line_items is not a list")
+        for j, li in enumerate(rec["line_items"], start=1):
+            for k in LINE_REQUIRED:
+                if not isinstance(li, dict) or li.get(k) in (None, ""):
+                    return ("bad_line_item", f"{key}[{i}].line_items[{j}] missing required field '{k}'")
+            if not _check_money(li.get("sale_price")):
+                return ("invalid_amount", f"{key}[{i}].line_items[{j}] invalid sale_price {li.get('sale_price')!r}")
+    return None
 
 
 def _parse_plans(doc: Any) -> Parsed:
@@ -227,14 +243,25 @@ def _finish_tabular(source_type: str, headers: list[str], rows: list[tuple[int, 
         if source_type == "videos_weekly" and any(
                 isinstance(v, str) and v.strip().lower() == "total" for v in list(payload.values())[:2]):
             continue
+        problem = None
         for k in REQUIRED_VALUES[source_type]:
             if _blank(canon.get(k)):
-                return Parsed("rejected", f"row {rn} missing required value '{k}'", headers=hdrs, mapping=mapping)
-        for k in ("views", "gmv", "items_sold", "list_price", "unit_cost", "shipping_cost", "qty",
-                  "monthly_retainer", "posts_per_month", "allocation_share"):
-            if k in canon and not _check_money(canon[k]):
-                return Parsed("rejected", f"row {rn} invalid number in '{k}': {canon[k]!r}", headers=hdrs, mapping=mapping)
+                problem = ("missing_identifier", f"row {rn} missing required value '{k}'")
+                break
+        if problem is None:
+            for k in ("views", "gmv", "items_sold", "list_price", "unit_cost", "shipping_cost", "qty",
+                      "monthly_retainer", "posts_per_month", "allocation_share"):
+                if k in canon and not _check_money(canon[k]):
+                    problem = ("invalid_amount", f"row {rn} invalid number in '{k}': {canon[k]!r}")
+                    break
+        out.rows_total += 1
+        if problem:
+            out.excluded.append((rn, problem[0], problem[1]))
+            continue
         out.records.append((rn, payload))
+    if out.rows_total and not out.records:
+        return Parsed("rejected", f"no usable rows: all {out.rows_total} rows have problems (first: {out.excluded[0][2]})",
+                      headers=hdrs, mapping=mapping, excluded=out.excluded, rows_total=out.rows_total)
     return out
 
 
