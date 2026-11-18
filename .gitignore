@@ -21,3 +21,6 @@ __pycache__/
 .env.local
 frontend/.env.local
 backend/.env
+
+# TypeScript incremental build info
+*.tsbuildinfo
