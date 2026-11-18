@@ -1,4 +1,4 @@
--- Rulings 1, 2, 4 (docs/rulings-after-verification.md).
+-- Rulings 1, 2, 4.
 --  * silver.shop_order.currency (original payment currency); non-USD orders are not eligible
 --    (exclusion_reason = 'non_usd_currency'; paid_amount stays in the ORIGINAL currency, see sales_line.currency).
 --  * creator ids that are not on the brand roster resolve to bucket 'creator_unresolved' (creator_id NULL,

@@ -10,7 +10,7 @@ import type { PlainFile } from "./ext";
 const mono = "font-mono tabular-nums tracking-tight";
 const SHARED_LABEL = "Shared Cross-Brand Source";
 
-/** Amendment 3 fields (scope, source_label, counts) read defensively on top of the foundation type. */
+/** Extra fields (scope, source_label, counts) read defensively on top of the foundation type. */
 type Scoped = { scope?: "brand" | "shared"; brand_id?: string | null; source_label?: string | null };
 type Source = DataHealth["sources"][number] & Scoped;
 type Failed = DataHealth["failed_files"][number] & Scoped;

@@ -15,6 +15,8 @@ export interface KpiItem {
   /** API-provided progress ratio MV (actual/target, capped 1.5). The bar is drawn from this only. */
   progress?: MV | null;
   projection?: MV | null;
+  /** Render the projection as plain text (no evidence click). */
+  projectionStatic?: boolean;
   requiredPace?: MV | null;
   /** From the goal's required_pace_applicable. false (or no value) hides the Required daily pace row. */
   requiredPaceApplicable?: boolean;
@@ -88,21 +90,27 @@ function Cell({ item }: { item: KpiItem }) {
           {v!.status !== "current" && <StatusBadge status={v!.status} reason={reason} />}
         </div>
       )}
-      {(item.target !== undefined || item.progress !== undefined) && (
+      {w !== null && (
         <div className="space-y-1">
           <div className="h-1.5 w-full bg-muted">
-            {w !== null ? <div className={cn("h-full max-w-full", barColor(item))} style={{ width: w }} /> : (
-              <svg width="100%" height="6" aria-label="no progress data yet"><rect width="100%" height="6" fill="url(#missing-data-hatch)" /></svg>
-            )}
+            <div className={cn("h-full max-w-full", barColor(item))} style={{ width: w }} />
           </div>
           <div className="flex justify-between gap-2 text-sm text-muted-foreground">
-            <span>{w === null ? "Progress: no data yet" : "Target"}</span>
+            <span>Target</span>
             <NumButton mv={item.target} label={`${item.label} target`} />
           </div>
         </div>
       )}
+      {w === null && item.target !== undefined && item.target !== null && (
+        <div className="flex justify-between gap-2 text-sm text-muted-foreground">
+          <span>Target</span>
+          <NumButton mv={item.target} label={`${item.label} target`} />
+        </div>
+      )}
       <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm text-muted-foreground">
-        {item.projection !== undefined && (<><dt>Projected</dt><dd className="text-right text-foreground"><NumButton mv={item.projection} label={`${item.label} projected`} /></dd></>)}
+        {item.projection !== undefined && (<><dt>Projected</dt><dd className="text-right text-foreground">{item.projectionStatic || !item.projection?.evidence_url
+          ? (item.projection && item.projection.value !== null ? <span className="font-mono tabular-nums tracking-tight">{formatMV(item.projection)}</span> : <NoData reason={reasonText(item.projection?.status_reason, item.projection?.data_note)} />)
+          : <NumButton mv={item.projection} label={`${item.label} projected`} />}</dd></>)}
         {showPace && (
           <>
             <dt>Required daily pace</dt>

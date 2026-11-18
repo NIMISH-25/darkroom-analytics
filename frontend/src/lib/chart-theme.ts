@@ -1,4 +1,4 @@
-/** Shared chart theme: high-contrast tokens from docs/api-contract-amendment-3.md section 6 (>= 3.4:1 on white and on #18181B). */
+/** Shared chart theme: high-contrast tokens (>= 3.4:1 on white and on #18181B). */
 export const HATCH_ID = "missing-data-hatch";
 export const HATCH_FILL = `url(#${HATCH_ID})`;
 

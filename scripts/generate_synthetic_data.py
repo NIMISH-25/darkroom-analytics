@@ -603,7 +603,7 @@ def write_batches(creators, slots, videos, samples, orders, affs, returns):
     m2.add(rel, "videos_weekly", "threadline", wk41.isoformat(), (wk41 + timedelta(days=6)).isoformat(),
            "increment", "2026-10-19T03:00:00Z")
 
-    # batch 2: orders file for verdant with 4 orders, ONE without order_id: that row is left out, the file loads (amendment 4)
+    # batch 2: orders file for verdant with 4 orders, ONE without order_id: that row is left out, the file loads
     pv = PRODUCTS["verdant"][0]
     extra = [make_order(f"VX-{i}", SHOP["verdant"], "DELIVERED", D(2026, 10, 16 + i, 10, 0), D(2026, 10, 16 + i, 10, 5),
                         D(2026, 10, 18 + i, 9, 0), [make_line(f"VX-{i}-1", pv[0], pv[1], amt, amt)])

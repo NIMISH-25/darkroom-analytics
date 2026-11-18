@@ -9,7 +9,7 @@ pytestmark = [pytest.mark.mutating, pytest.mark.after_b2]
 
 
 def failed(client, brand=None):
-    """Brand-scoped failed files (amendment 3); without a brand: the portfolio view of all files."""
+    """Brand-scoped failed files; without a brand: the portfolio view of all files."""
     return get_json(client, f"{API}/data-health", brand_id=brand)["failed_files"]
 
 
@@ -27,7 +27,7 @@ def test_s11_alias_header_and_bom_files_were_accepted(client):
 
 
 def test_s11_faulty_rows_are_left_out_file_still_loads(client, ingest):
-    """Amendment 4: 2 of 5 orders in verdant's extra file have no order number; they are left out alone.
+    """2 of 5 orders in verdant's extra file have no order number; they are left out alone.
     exit 0, no failed file, brand current, a plain note naming Verdant, totals are floors (leaked $1,499.00 would show)."""
     e = EXPECTED["ingest"]
     params = {"brand_id": "verdant", "month": "2026-10", "cutoff": "2026-10-15"}

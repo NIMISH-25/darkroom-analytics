@@ -241,7 +241,7 @@ def build(root: str) -> None:
     rej = make_return("R_C_REJ", "O_C1", "L_C1_1", "REJECTED", None, D(2026, 10, 17, 9, 0), None,
                       D(2026, 10, 18, 9, 0))
     inc(mb, bb, "returns/crunchwell/2026-10.json", "returns", "crunchwell", P2, {"returns": [rej]}, SRC2)
-    # Faulty rows are left out on their own (amendment 4): 5 orders, 2 without order_id (left out), 3 good orders.
+    # Faulty rows are left out on their own: 5 orders, 2 without order_id (left out), 3 good orders.
     # The good orders are paid Oct 20 (after the 10-15 cutoff) so verdant Oct 1-15 totals stay unchanged:
     # verdant GMV at cutoff 2026-11-02 = 50.00 + 10.00 + 20.00 + 5.00 = 85.00.
     bad1 = _order("verdant", "O_BAD1", D(2026, 10, 8, 9, 0), "999.00", D(2026, 10, 9, 9, 0))

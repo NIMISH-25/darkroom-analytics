@@ -1,4 +1,4 @@
-"""S11b (amendment 4): a file whose rows are ALL invalid is rejected (exit 1), its brand turns incomplete, the goal
+"""S11b: a file whose rows are ALL invalid is rejected (exit 1), its brand turns incomplete, the goal
 projection is null and the note names the brand in plain English. Runs LAST (marker late) because it leaves crunchwell
 incomplete. Expected values: tests/golden/expected.yaml (ingest.batch_allbad, v2.essential.e12.unavailable)."""
 import pytest

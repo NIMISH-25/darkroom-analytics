@@ -255,6 +255,9 @@ def evidence(request: Request, metric_key: str, brand_id: str | None = None, cre
     params = {"brand_id": brand_id, "creator_id": creator_id, "month": month, "cutoff": cutoff, "goal_id": goal_id,
               "part": part, "date_from": date_from, "date_to": date_to, "bucket": bucket, "stage": stage,
               "metric": metric, "limit": limit, "offset": offset}
+    if metric_key == "goal_projection" and not goal_id and not brand_id:
+        metric_key = "portfolio_pacing"  # portfolio projection: sum of the brand goals, never a 422
+        params["part"] = part = part if part in ("projection", "target", "required_pace") else "projection"
     is_chart = charts.is_chart_evidence(metric_key, params)
     if not is_chart and metric_key not in META:
         raise HTTPException(404, "That figure is not available.")

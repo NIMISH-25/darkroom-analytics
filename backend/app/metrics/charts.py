@@ -104,10 +104,10 @@ class ChartsRepo:
             FROM d LEFT JOIN rc USING (brand_id, day) LEFT JOIN rp USING (brand_id, day) ORDER BY d.brand_id, d.day""",
                        {"f": d_from, "t": d_to, "c": cutoff, "brand": brand_id})
 
-    def video_daily(self, brand_id, d_from: date, d_to: date):
+    def video_daily(self, brand_id, d_from: date, d_to: date, brand_ids=None):
         """Per day: qualifying videos and creators whose FIRST qualifying video of the month is that day
         (brand_id None = portfolio, creators deduplicated across brands)."""
-        b = self._b(brand_id)
+        b = "AND brand_id = ANY(%(brands)s)" if brand_ids else self._b(brand_id)
         return self._q(f"""
             WITH v AS (SELECT brand_id, video_id, creator_id, local_date FROM gold.video_activity
                        WHERE qualifies AND local_date BETWEEN %(f)s AND %(t)s {b}),
@@ -116,7 +116,7 @@ class ChartsRepo:
             SELECT vd.day, vd.videos,
                    (SELECT count(*) FROM fc WHERE fc.day = vd.day) AS new_creators  -- creators first seen that day
             FROM vd ORDER BY vd.day""",
-                       {"f": d_from, "t": d_to, "brand": brand_id})
+                       {"f": d_from, "t": d_to, "brand": brand_id, "brands": list(brand_ids) if brand_ids else None})
 
     def reconciliation(self, brand_id, month, cutoff: date):
         return self._q(f"""
@@ -614,6 +614,7 @@ def _pacing(repo, brand_id, month, cutoff, metric):
     # daily actuals (cumulative)
     cum: dict[date, Decimal | None] = {}
     why: dict[date, str | None] = {}
+    excl_note = None
     if metric == "gmv":
         dp = _daily_points(repo, brand_id, month, cutoff)
         run, broke = Decimal(0), None
@@ -635,8 +636,30 @@ def _pacing(repo, brand_id, month, cutoff, metric):
             why[d] = None if run is not None else (v["reason"] or f"unknown from the coverage gap on {broke.isoformat()}")
     else:
         st0, rs0, cov0 = svc.status_for(["videos_weekly"], brand_id)
-        gaps = any((r.get("n_gaps") is not None and r["n_gaps"] > 0) for r in repo.freshness(brand_id) if r["source_type"] == "videos_weekly")
-        vrows = {r["day"]: r for r in repo.video_daily(brand_id, days[0], days[-1])}
+        fresh_v = [r for r in repo.freshness(brand_id) if r["source_type"] == "videos_weekly"]
+        gaps = any((r.get("n_gaps") is not None and r["n_gaps"] > 0) for r in fresh_v)
+        vrows = None
+        if brand_id is None and gaps:
+            # portfolio: sum only the brands whose weekly video coverage is usable
+            all_b = [(b["brand_id"], b["name"]) for b in repo.brands()]
+            ok_b, bad_b = [], []
+            for bid_, bname_ in all_b:
+                s_b, _r_b, c_b = svc.status_for(["videos_weekly"], bid_)
+                g_b = any((r.get("n_gaps") is not None and r["n_gaps"] > 0) for r in fresh_v if r["brand_id"] == bid_)
+                (bad_b if g_b or s_b == "unavailable" else ok_b).append((bid_, bname_, s_b, c_b))
+            if ok_b and bad_b:
+                names = [n for _i, n in sorted((b[0], b[1]) for b in bad_b)]
+                joined = names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
+                excl_note = (f"{joined} weekly video data is incomplete, so {'it is' if len(names) == 1 else 'they are'} "
+                             f"not included; totals may be low.")
+                gaps = False
+                st0 = worst([b[2] for b in ok_b])
+                covs = [str(b[3]) for b in ok_b if b[3] is not None]
+                cov0 = min(covs) if covs else None
+                rs0 = excl_note
+                vrows = {r["day"]: r for r in repo.video_daily(None, days[0], days[-1], brand_ids=[b[0] for b in ok_b])}
+        if vrows is None:
+            vrows = {r["day"]: r for r in repo.video_daily(brand_id, days[0], days[-1])}
         run = 0
         for d in days:
             if d > cut:
@@ -684,12 +707,15 @@ def _pacing(repo, brand_id, month, cutoff, metric):
             status, reason = "forecast", "after the cutoff"
         elif a is None:
             status, reason = "partial", why[d]
+        elif excl_note:
+            status, reason = "partial", excl_note
         else:
             status, reason = "current", None
         urls = {"actual": ev_actual(d) if d <= cut else None}
         if d >= cut:
             urls["projection"], urls["required"] = gurl("projection"), gurl("target")
-        pts.append(_pt(d.isoformat(), {"actual": fmt(a), "projection": fmt(p), "required": fmt(r_)}, status, reason, urls))
+        extra_pt = {"data_note": excl_note} if excl_note and d <= cut and a is not None else {}
+        pts.append(_pt(d.isoformat(), {"actual": fmt(a), "projection": fmt(p), "required": fmt(r_)}, status, reason, urls, **extra_pt))
     mixed = " (portfolio mixes goal bases)" if basis == "mixed" else ""
     meta = {
         "basis": mv_dict("goal_projection", basis, "text", f0, gstatus, greason, cov, rev, part="basis"),
@@ -700,9 +726,18 @@ def _pacing(repo, brand_id, month, cutoff, metric):
                                  gstatus if pace is not None else (gstatus if gstatus != "current" else "unavailable"),
                                  greason or (None if pace is not None else "required pace unavailable"), cov, rev, part="required_pace"),
         "metric": metric}
+    if brand_id is None:
+        # the portfolio goal-projection evidence has no goal to explain (422); use portfolio pacing evidence or none
+        meta["basis"] = dict(meta["basis"], evidence_url=None)
+        for k_ in ("target", "projection", "required_pace"):
+            meta[k_] = dict(meta[k_], evidence_url=evidence_url("portfolio_pacing", f0, rev, part=k_, metric=metric) if picked else None)
     srcs = ["orders", "affiliate_orders"] if metric == "gmv" else ["videos_weekly"]
     env = _envelope("pacing_trajectory", brand_id, month, cutoff, rev, svc, srcs,
                     {"actual": unit, "projection": unit, "required": unit}, meta, pts)
+    if excl_note:
+        env["status_reason"] = excl_note
+        if env["status"] == "unavailable":
+            env["status"] = "partial"
     if mixed:
         env["status_reason"] = (env["status_reason"] or "") + mixed
     return env
@@ -805,11 +840,16 @@ def build_kpis(repo, month: str, cutoff: str) -> dict:
               and (g["scope"] == ("shop" if key == "gmv" else "creator_attributed") if key in ("gmv", "creator_attributed_gmv") else True)]
         progress = None
         if tg:
-            tvals = [g.get("target_value") for g in tg]
-            tsum = None if any(x is None for x in tvals) or len(tg) < len(brand_ids) else sum((Decimal(str(x)) for x in tvals), Decimal(0))
-            pv, pst, prs = progress_ratio(v, tsum, st, reason)
-            if mixed_reason:
-                pv, pst, prs = None, "partial", mixed_reason
+            per_brand = {}
+            for g in tg:  # one goal per brand (first with a target)
+                if g.get("target_value") is not None and g["brand_id"] not in per_brand:
+                    per_brand[g["brand_id"]] = g
+            all_have = all(b in per_brand for b in brand_ids)
+            tsum = sum((Decimal(str(per_brand[b]["target_value"])) for b in brand_ids), Decimal(0)) if all_have and brand_ids else None
+            bases_ok = len({g.get("basis") for g in per_brand.values()}) <= 1
+            pv, pst, prs = progress_ratio(v, tsum, "partial" if v is not None and st == "unavailable" else st, reason)
+            if tsum is not None and not bases_ok:
+                pv, pst, prs = None, "partial", mixed_reason or "goal bases differ (gross and net), so progress is not comparable"
             if tsum is None and prs == "no target in plan":
                 prs = "a brand has no target, so the portfolio target is unknown"
             progress = dict(mv_dict(key, pv, "ratio", f, pst, prs, cov, rev), evidence_url=evidence_url("portfolio_pacing", f, rev, part="progress", metric=key))

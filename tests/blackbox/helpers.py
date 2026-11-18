@@ -123,7 +123,7 @@ def money_ok(v):
     return d == d.quantize(Decimal("0.01"))
 
 
-# ---------------------------------------------------------------- amendment 4: plain-language ban list
+# ---------------------------------------------------------------- plain-language ban list
 import json as _json
 import re as _re
 
@@ -152,7 +152,7 @@ def violations(text, extra_names=()):
 
 
 def sv(x):
-    """Value of a diagnostics side: amendment 4 sends {value, unavailable_reason}; older shape was a bare value."""
+    """Value of a diagnostics side: the current API sends {value, unavailable_reason}; older shape was a bare value."""
     return x["value"] if isinstance(x, dict) and "value" in x else x
 
 

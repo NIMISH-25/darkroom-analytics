@@ -1,4 +1,4 @@
-/* Amendment 4 response fields, read defensively on top of the foundation types (all optional). */
+/* Response fields, read defensively on top of the foundation types (all optional). */
 import type { AttentionItem, PortfolioKpis } from "@/lib/types";
 
 export interface BrandPaceGoal {

@@ -67,9 +67,12 @@ export function PacingTrajectoryChart({ brandId, month, cutoff }: ChartProps) {
           if (url) open(url, `${METRICS.find((m) => m.key === metric)?.label} · ${row?._p.x}`);
         };
         const dot = (field: "actual" | "projection" | "required") => ({ r: 4, onClick: ((p: { payload?: Row }) => openFor(p?.payload, field)) as DotClick as never });
-        const hasValues = rows.some((r) => r.actual !== null || r.projection !== null || r.required !== null);
+        const partialPt = rows.map((r) => r._p).find((p) => p.status === "partial" && ((p as { data_note?: string | null }).data_note || p.status_reason));
+        const partialNote = partialPt ? ((partialPt as { data_note?: string | null }).data_note ?? partialPt.status_reason) : null;
+        const hasValues =rows.some((r) => r.actual !== null || r.projection !== null || r.required !== null);
         return (
           <>
+            {partialNote && <p className="mb-2 text-sm text-muted-foreground">{partialNote}</p>}
             {!hasValues ? <AllMissingPlot xs={rows.map((r) => r.x)} note="No data yet for this period" /> : (
             <ChartContainer config={config} className="aspect-auto h-72 w-full">
               <ComposedChart data={rows} margin={CHART_MARGIN}>
@@ -88,11 +91,11 @@ export function PacingTrajectoryChart({ brandId, month, cutoff }: ChartProps) {
                   }
                 />
                 <defs><HatchPattern /></defs>
-                {hatchAreas(rows.map((r) => ({ x: r.x, status: r._p.status === "current" && r.actual === null && r.projection === null && r.required === null ? "unavailable" : r._p.status })))}
+                {hatchAreas(rows.map((r) => ({ x: r.x, status: r._p.status === "partial" ? "current" : r._p.status === "current" && r.actual === null && r.projection === null && r.required === null ? "unavailable" : r._p.status })))}
                 {targetNum !== null && (
                   <ReferenceLine y={targetNum} stroke={T.target} strokeWidth={2.5} strokeDasharray="2 4" ifOverflow="visible" label={{ value: `Target ${formatMV(target)}`, position: "insideTopLeft", fontSize: 12 }} />
                 )}
-                <Area dataKey="actual" type="monotone" stroke="var(--color-actual)" fill="var(--color-actual)" fillOpacity={0.12} strokeWidth={2.5} connectNulls={false} isAnimationActive={false} dot={{ r: 3, fill: T.actual }} activeDot={dot("actual")} />
+                <Area dataKey="actual" type="monotone" stroke="var(--color-actual)" fill="var(--color-actual)" fillOpacity={0.25} strokeWidth={2.5} connectNulls={false} isAnimationActive={false} dot={{ r: 3, fill: T.actual }} activeDot={dot("actual")} />
                 <Line dataKey="projection" type="monotone" stroke="var(--color-projection)" strokeWidth={2.5} strokeDasharray="6 4" dot={false} connectNulls={false} isAnimationActive={false} activeDot={dot("projection")} />
                 <Line dataKey="required" type="monotone" stroke="var(--color-required)" strokeWidth={2.5} strokeDasharray="1 4" dot={false} connectNulls={false} isAnimationActive={false} activeDot={dot("required")} />
               </ComposedChart>

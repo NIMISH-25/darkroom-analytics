@@ -1,4 +1,4 @@
-"""Wave 3 (docs/api-contract-amendment-3.md): brand-scoped Data Health, chart availability, evidence explainer, demo auth.
+"""Wave 3: brand-scoped Data Health, chart availability, evidence explainer, demo auth.
 Most tests are data-agnostic invariants (any ingested data). Tests marked `synth` assert the seeded FULL synthetic data
 (run `pytest -m synth` against a DB holding generated batch_1 + batch_2); `golden_bad` tests assume the golden stage order
 of run_blackbox.ps1 (batch_bad ingested in stage 2, before stage 3)."""
@@ -92,7 +92,7 @@ def test_w3_synthetic_failure_kinds(client):
 @pytest.mark.synth
 @pytest.mark.parametrize("brand,want", sorted(W3["synthetic_rows_excluded"].items()))
 def test_w3_synthetic_rows_excluded_are_not_failures(client, brand, want):
-    """Amendment 4: verdant's extra orders file loads with 1 of 4 rows left out; it is listed as loaded with exclusions."""
+    """verdant's extra orders file loads with 1 of 4 rows left out; it is listed as loaded with exclusions."""
     h = health(client, brand)
     assert h["counts"]["rows_excluded"] == want, h["counts"]
     ex = h["files_with_exclusions"]
@@ -107,7 +107,7 @@ def test_w3_synthetic_rows_excluded_are_not_failures(client, brand, want):
 @pytest.mark.golden_bad
 @pytest.mark.after_b3
 def test_w3_golden_bad_batch_leaves_rows_out_without_failing_a_file(client):
-    """After golden batch_bad (amendment 4, hand-derived in expected.yaml): verdant's extra file loads with 2 of 5 rows
+    """After golden batch_bad (hand-derived in expected.yaml): verdant's extra file loads with 2 of 5 rows
     left out, so no brand has a failed file and only verdant has excluded rows."""
     for brand, want in W3["golden_failed_after_bad"].items():
         h = health(client, brand)

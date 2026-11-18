@@ -258,7 +258,7 @@ def test_s20_no_dollar_zero_for_unknown_values(page, frontend_url):
     assert re.search("no data yet|unknown|stale|incomplete", page.inner_text("body"), re.I)
 
 
-# ---------------------------------------------------------------- wave 3 (docs/api-contract-amendment-3.md sections 5 and 7)
+# ---------------------------------------------------------------- wave 3
 def test_w3_login_is_one_click_without_credential_inputs(page, frontend_url):
     page.evaluate("localStorage.removeItem('darkroom_auth')")
     page.goto(frontend_url + "/login")
@@ -322,7 +322,7 @@ def test_w3_evidence_sheet_has_what_this_number_means_card(page, frontend_url):
     assert re.search("supporting records", text, re.I)
 
 
-# ---------------------------------------------------------------- S21 (amendment 4: plain-English operator interface)
+# ---------------------------------------------------------------- S21 (plain-English operator interface)
 from helpers import BAN, violations  # noqa: E402
 
 SIX_PAGES = ["/overview", "/brands/verdant", "/attention", "/creators", "/samples", "/diagnostics"]

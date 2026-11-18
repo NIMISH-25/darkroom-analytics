@@ -39,7 +39,7 @@ export function PortfolioKpiStrip() {
                 value: k.value,
                 progress: k.progress ?? null,
                 ...(paced
-                  ? { target: meta.target ?? null, projection: meta.projection ?? null, requiredPace: meta.required_pace ?? null, basis: basisOf(meta.basis) }
+                  ? { projectionStatic: true, target: meta.target ?? null, projection: meta.projection ?? null, requiredPace: meta.required_pace ?? null, basis: basisOf(meta.basis) }
                   : {}),
               };
             })}

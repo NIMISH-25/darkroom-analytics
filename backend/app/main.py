@@ -1,3 +1,4 @@
+import asyncio
 import threading
 from contextlib import asynccontextmanager
 
@@ -20,11 +21,34 @@ def _warm_bg() -> None:
         pass
 
 
+def _self_ping() -> None:
+    import os
+    import urllib.request
+    url = f"http://127.0.0.1:{os.environ.get('PORT', '8000')}/healthz"
+    with urllib.request.urlopen(url, timeout=10) as resp:
+        resp.read()
+
+
+async def _keep_alive() -> None:
+    while True:
+        await asyncio.sleep(840)
+        try:
+            await asyncio.to_thread(_self_ping)
+        except Exception:  # best effort only
+            pass
+
+
 @asynccontextmanager
 async def lifespan(_app):
     open_pool()
     threading.Thread(target=_warm_bg, daemon=True).start()
+    ka = asyncio.create_task(_keep_alive())
     yield
+    ka.cancel()
+    try:
+        await ka
+    except BaseException:
+        pass
     close_pool()
 
 

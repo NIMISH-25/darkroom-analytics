@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState, type ReactNode } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { AlertTriangle, Activity, LayoutDashboard, LogOut, Stethoscope, Users, Package, Store } from "lucide-react";
-import { clearToken, getToken, USE_MOCKS } from "@/lib/api";
+import { API_BASE, clearToken, getToken, USE_MOCKS } from "@/lib/api";
 import { useMeta } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -72,6 +72,12 @@ export function AppShell({ children }: { children: ReactNode }) {
     if (!isLogin && !getToken()) router.replace("/login");
     else setReady(true);
   }, [isLogin, router, path]);
+
+  useEffect(() => {
+    if (isLogin) return;
+    const id = setInterval(() => { fetch(`${API_BASE}/healthz`, { cache: "no-store" }).catch(() => {}); }, 840000);
+    return () => clearInterval(id);
+  }, [isLogin]);
 
   if (isLogin) return <main className="flex min-h-screen items-start justify-center pt-24">{children}</main>;
   if (!ready) return null;

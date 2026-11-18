@@ -1,6 +1,6 @@
-"""Amendment 4: plain-English operator interface (docs/api-contract-amendment-4.md). HTTP only.
+"""Plain-English operator interface. HTTP only.
 The crawl walks every operator-visible string field of the main responses and asserts none matches tests/banned_phrases.json
-(after entity names are stripped). Needs the amendment-4 backend; run after golden batch_3 (stage 3)."""
+(after entity names are stripped). Needs the plain-English backend; run after golden batch_3 (stage 3)."""
 import pytest
 
 from helpers import API, V2, EXPECTED, dec, get_json, sv, violations
@@ -12,7 +12,7 @@ SERIES = ["pacing_trajectory", "daily_gmv_refunds", "attribution_reconciliation"
 METRIC_KEYS = ["gmv", "creator_attributed_gmv", "net_attributed_sales", "videos", "active_creators", "goal_projection",
                "creator_videos", "creator_net_sales", "sample_conversion_rate", "creator_sales_after_costs"]
 
-# operator-visible string fields (amendment 4 section 2) plus the older explainer mirror and chart/diagnostic notes
+# operator-visible string fields plus the older explainer mirror and chart/diagnostic notes
 TEXT_KEYS = {"status_reason", "data_note", "what_this_means", "why_it_matters", "what_to_watch", "incomplete_reason",
              "why_needs_attention", "what_to_do", "plain_reason", "unavailable_reason", "required_pace_reason",
              "status_label", "goal_name", "actual_label", "target_label", "what_it_means", "how_calculated",

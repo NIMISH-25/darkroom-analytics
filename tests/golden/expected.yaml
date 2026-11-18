@@ -116,7 +116,7 @@ samples:
 # ---- S4 / S5 / S11 ingest facts
 ingest:
   batch_older_expected_crunchwell_gmv: "45.00"       # still 45.00 after the older $20.00 file is ingested
-  # Amendment 4 (faulty rows are left out alone). batch_bad verdant orders/verdant/2026-10-extra.json holds 5 orders:
+  # Faulty rows are left out alone). batch_bad verdant orders/verdant/2026-10-extra.json holds 5 orders:
   #   O_BAD1 ($999.00, paid Oct 8) and O_BAD2 ($500.00, paid Oct 9) have NO order_id -> 2 rows left out (N = 2 of 5);
   #   O_VX1 $10.00, O_VX2 $20.00, O_VX3 $5.00 (paid Oct 20) load normally. File status accepted, ingest exit code 0,
   #   no failed file, brand stays current, totals are floors with a plain note naming Verdant.
@@ -236,7 +236,7 @@ v2:
       mid_month:
         - {brand_id: aurelle, word: gmv, actual: "100.00", projection: "206.67"}
         - {brand_id: aurelle, word: video, actual: "1", projection: "2.0667"}
-        # verdant (amendment 4): the extra orders file loads with 2 of 5 rows left out (no order number). Independent
+        # verdant: the extra orders file loads with 2 of 5 rows left out (no order number). Independent
         # derivation from the raw files: verdant goal = net attributed GMV (plan), actual through the cutoff = O_B1 50.00
         # (attributed by AR_B1, no refunds); the two rows without an order number ($999 + $500) are left out and the three
         # good rows are paid Oct 20 (after the cutoff), so actual stays 50.00; 50.00 / 15 * 31 = 103.33. The value is a
@@ -374,14 +374,14 @@ v2:
     brands_total: 5
 
 # =====================================================================================================================
-# WAVE 3 (docs/api-contract-amendment-3.md): hand-derived from the raw golden files.
+# WAVE 3: hand-derived from the raw golden files.
 # =====================================================================================================================
 w3:
   # After stage 2 of run_blackbox.ps1 (batch_1, batch_2, then batch_bad). batch_bad has two files: crunchwell
   # returns/2026-10.json (valid: one REJECTED return, accepted) and verdant orders/2026-10-extra.json (every order lacks
   # order_id -> rejected). So brand_failed: verdant 1; aurelle, crunchwell, threadline, glowhaus 0. batch_overlap
   # (aurelle W41 quarantine) is only ingested in the late stage, after these checks.
-  # Amendment 4: batch_bad no longer fails a file: verdant's extra file loads with 2 of 5 rows left out, so every brand
+  # batch_bad no longer fails a file: verdant's extra file loads with 2 of 5 rows left out, so every brand
   # has 0 failed files; verdant counts.rows_excluded = 2 and files_with_exclusions lists the file once.
   golden_failed_after_bad: {verdant: 0, aurelle: 0, crunchwell: 0, threadline: 0, glowhaus: 0}
   golden_rows_excluded_after_bad: {verdant: 2, aurelle: 0, crunchwell: 0, threadline: 0, glowhaus: 0}
@@ -391,7 +391,7 @@ w3:
   shared_row_issue: {raw_identifier: "cr_9999", brand_id: threadline, source: samples}
   # Seeded FULL synthetic data (marker synth): batch_2 holds orders/verdant/2026-10-extra.json without order_id
   # (rejected) and a threadline W41 weekly resend with changed numbers (quarantined) -> verdant 1, threadline 1, others 0.
-  # Amendment 4: the verdant extra file now holds 4 orders, 1 without order_id -> loaded with 1 of 4 left out (0 failed
+  # the verdant extra file now holds 4 orders, 1 without order_id -> loaded with 1 of 4 left out (0 failed
   # files, rows_excluded 1); threadline's quarantined weekly file is still a failure.
   synthetic_failed: {verdant: 0, threadline: 1, aurelle: 0, crunchwell: 0, glowhaus: 0}
   synthetic_rows_excluded: {verdant: 1, threadline: 0, aurelle: 0, crunchwell: 0, glowhaus: 0}
